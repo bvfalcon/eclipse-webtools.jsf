@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Automatic-Module-Name: org.eclipse.jst.jsf.core.tests
 Bundle-Name: %Bundle-Name.0
 Bundle-SymbolicName: org.eclipse.jst.jsf.core.tests;singleton:=true
-Bundle-Version: 1.6.0.qualifier
+Bundle-Version: 1.6.100.qualifier
 Bundle-Activator: org.eclipse.jst.jsf.core.tests.TestsPlugin
 Bundle-Vendor: %Bundle-Vendor.0
 Bundle-Localization: plugin
