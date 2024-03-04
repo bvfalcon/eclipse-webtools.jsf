@@ -48,7 +48,7 @@ import org.xml.sax.SAXException;
  *
  */
 public class JsfDownloadableLibraryLocationTests extends TestCase {
-	private static final String CATALOG_URL_PREFIX = "http://www.eclipse.org/webtools/jsf/jsf-library";
+	private static final String CATALOG_URL_PREFIX = "https://www.eclipse.org/webtools/jsf/jsf-library";
 	//@formatter:off
 	private static final String[] CATALOG_URLS = {
 			CATALOG_URL_PREFIX + "/jsf-2.1-downloadable-libraries.xml",
