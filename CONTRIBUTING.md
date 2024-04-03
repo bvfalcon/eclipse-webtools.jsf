@@ -1,4 +1,4 @@
-# Contributing to Eclipse WTP Source Editing
+# Contributing to Eclipse Tools for Faces
 
 Thank you for your interest in this project.  Don't forget to sign your Eclipse Contributor Agreement before proposing any changes.
 
@@ -38,4 +38,4 @@ https://www.eclipse.org/projects/handbook/#resources-commit
 
 Contact the project developers via the project's "dev" list.
 
-* https://dev.eclipse.org/mailman/listinfo/wtp-dev
+* https://accounts.eclipse.org/mailing-list/wtp-jsf-dev
