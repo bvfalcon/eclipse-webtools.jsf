@@ -14,7 +14,7 @@
 <feature
       id="org.eclipse.jsf_sdk.feature"
       label="%name"
-      version="3.13.0.qualifier"
+      version="3.13.100.qualifier"
       provider-name="%provider"
       image="eclipse_update_120.jpg"
       license-feature="org.eclipse.license"

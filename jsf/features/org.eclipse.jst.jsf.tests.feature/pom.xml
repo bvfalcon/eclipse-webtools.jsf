@@ -16,7 +16,7 @@
   <parent>
     <groupId>org.eclipse.webtools.jsf</groupId>
     <artifactId>org.eclipse.webtools.jsf</artifactId>
-    <version>3.6.0-SNAPSHOT</version>
+    <version>3.6.100-SNAPSHOT</version>
     <relativePath>../../../</relativePath>
   </parent>
 
