@@ -594,75 +594,57 @@
   <extension point="org.eclipse.jst.common.project.facet.core.legacyLibraryProviderDetectors">
     <detector class="org.eclipse.jst.jsf.core.internal.project.facet.LegacyJSFLibraryProviderDetector"/>
   </extension>
-  <extension
-        point="org.eclipse.jst.common.project.facet.core.downloadableLibraries">
-     <import-definitions
-           url="http://www.eclipse.org/webtools/jsf/jsf-library/jsf-2.3-downloadable-libraries.xml">
-        <enablement>
-           <with
-                 variable="requestingProjectFacet">
-              <test
-                    forcePluginActivation="true"
-                    property="org.eclipse.wst.common.project.facet.core.projectFacet"
-                    value="jst.jsf:2.3">
-              </test>
-           </with>
-        </enablement>
-     </import-definitions>
-  </extension>
-  <extension
-        point="org.eclipse.jst.common.project.facet.core.downloadableLibraries">
-     <import-definitions
-           url="http://www.eclipse.org/webtools/jsf/jsf-library/jsf-2.2-downloadable-libraries.xml">
-        <enablement>
-           <with
-                 variable="requestingProjectFacet">
-              <test
-                    forcePluginActivation="true"
-                    property="org.eclipse.wst.common.project.facet.core.projectFacet"
-                    value="jst.jsf:2.2">
-              </test>
-           </with>
-        </enablement>
-     </import-definitions>
-  </extension>
 
+  <extension
+        point="org.eclipse.jst.common.project.facet.core.downloadableLibraries">
+   
+     <!-- JSF 2.3 Downloadable library provider -->
+     <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-2.3-downloadable-libraries.xml">
+            <enablement>
+                <with variable="requestingProjectFacet">
+                    <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:2.3" forcePluginActivation="true"/>
+                </with>
+            </enablement>
+     </import-definitions>
+   
+    <!-- JSF 2.2 Downloadable library provider -->
+     <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-2.2-downloadable-libraries.xml">
+            <enablement>
+                <with variable="requestingProjectFacet">
+                    <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:2.2" forcePluginActivation="true"/>
+                </with>
+            </enablement>
+     </import-definitions>
+   
     <!-- JSF 2.1 Downloadable library provider -->
-    <extension point="org.eclipse.jst.common.project.facet.core.downloadableLibraries">
-        <import-definitions url="http://www.eclipse.org/webtools/jsf/jsf-library/jsf-2.1-downloadable-libraries.xml">
+        <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-2.1-downloadable-libraries.xml">
             <enablement>
                 <with variable="requestingProjectFacet">
                     <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:2.1" forcePluginActivation="true"/>
                 </with>
             </enablement>
         </import-definitions>
-    </extension>
-
+   
     <!-- JSF 2.0 Downloadable library provider -->
-    <extension point="org.eclipse.jst.common.project.facet.core.downloadableLibraries">
-        <import-definitions url="http://www.eclipse.org/webtools/jsf/jsf-library/jsf-2.0-downloadable-libraries.xml">
+        <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-2.0-downloadable-libraries.xml">
             <enablement>
                 <with variable="requestingProjectFacet">
                     <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:2.0" forcePluginActivation="true"/>
                 </with>
             </enablement>
         </import-definitions>
-    </extension>
-
+   
     <!-- JSF 1.2 Downloadable library provider -->
-    <extension point="org.eclipse.jst.common.project.facet.core.downloadableLibraries">
-        <import-definitions url="http://www.eclipse.org/webtools/jsf/jsf-library/jsf-1.2-downloadable-libraries.xml">
+        <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-1.2-downloadable-libraries.xml">
             <enablement>
                 <with variable="requestingProjectFacet">
                     <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:1.2" forcePluginActivation="true"/>
                 </with>
             </enablement>
         </import-definitions>
-    </extension>
-
+   
     <!-- JSF 1.1 Downloadable library provider -->
-    <extension point="org.eclipse.jst.common.project.facet.core.downloadableLibraries">
-        <import-definitions url="http://www.eclipse.org/webtools/jsf/jsf-library/jsf-1.1-downloadable-libraries.xml">
+        <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-1.1-downloadable-libraries.xml">
             <enablement>
                 <with variable="requestingProjectFacet">
                     <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:1.1" forcePluginActivation="true"/>
