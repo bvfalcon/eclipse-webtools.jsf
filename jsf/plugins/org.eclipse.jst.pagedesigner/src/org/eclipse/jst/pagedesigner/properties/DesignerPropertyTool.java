@@ -326,7 +326,7 @@ public class DesignerPropertyTool {
 				if (nature == null) {
 					return null;
 				}
-                return (IJavaProject) nature;
+                return JavaCore.create(iProject);
 			} catch (Exception e) {
 				// Error.DesignerPropertyTool.NatureQuerying = Error in project
 				// java nature querying
