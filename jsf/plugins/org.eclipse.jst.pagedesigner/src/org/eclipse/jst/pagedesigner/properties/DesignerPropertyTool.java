@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2007 Sybase, Inc. and others.
+ * Copyright (c) 2006, 2024 Sybase, Inc. and others.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 2.0
@@ -53,11 +53,11 @@ import org.w3c.dom.Text;
 
 /**
  * This is util class most used by Property related operation.
- * 
+ *
  * @author mengbo
  */
 public class DesignerPropertyTool {
-	
+
 	/**
 	 * @param fNode
 	 * @param attributeDesc
@@ -86,7 +86,7 @@ public class DesignerPropertyTool {
 //	 * @param fNode
 //	 * @param filter
 //	 * @return array of attributes as objects
-//   * (unused)	
+//   * (unused)
 //	 */
 //	public static Object[] getElementReferedAttributes(Element fNode,
 //			String[] filter) {
@@ -134,7 +134,7 @@ public class DesignerPropertyTool {
 	 * ITextSelection 2. IStructuredSelection (Node) 3. IStructuredSelection
 	 * (EditPart) 4. DesignRange we want to normalize it to only #2. If the node
 	 * is ATTR or TEXT/CDATA_SECTION, will use it's parent node.
-	 * 
+	 *
 	 * @param selectingPart
 	 * @param selection
 	 * @param htmlEditor
@@ -143,7 +143,7 @@ public class DesignerPropertyTool {
 	public static Node normalizeSelectionToElement(
 			IWorkbenchPart selectingPart, ISelection selection,
 			HTMLEditor htmlEditor) {
-		
+
 		Node node = null;
 		if (selectingPart instanceof HTMLEditor) {
 			IEditorPart part = ((HTMLEditor) selectingPart).getActiveEditor();
@@ -184,7 +184,7 @@ public class DesignerPropertyTool {
 
 	/**
 	 * @param node as Object
-	 * @return element 
+	 * @return element
 	 */
 	public static Element getElementNode(Object node) {
 		Object model;
@@ -246,7 +246,7 @@ public class DesignerPropertyTool {
 
 	/**
 	 * The passed in selection should be normalized selection.
-	 * 
+	 *
 	 * @param selectingPart
 	 * @param selection
 	 * @return element
