@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-SymbolicName: org.eclipse.jst.pagedesigner;singleton:=true
 Bundle-Name: %pluginName
-Bundle-Version: 1.10.100.qualifier
+Bundle-Version: 1.10.200.qualifier
 Bundle-Activator: org.eclipse.jst.pagedesigner.PDPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
