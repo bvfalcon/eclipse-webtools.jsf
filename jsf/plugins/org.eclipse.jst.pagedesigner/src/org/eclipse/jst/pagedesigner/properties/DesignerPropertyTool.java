@@ -72,8 +72,8 @@ public class DesignerPropertyTool {
 		if (attrMap != null) {
 			Node attribute = attrMap.getNamedItem(attributeDesc.getNodeName());
 			if (attribute != null) {
-				if (attribute instanceof IDOMNode) {
-					returnedValue = ((IDOMNode) attribute).getValueSource();
+				if (attribute instanceof IDOMNode iDomNode) {
+					returnedValue = iDomNode.getValueSource();
 				} else {
 					returnedValue = attribute.getNodeValue();
 				}
@@ -107,8 +107,8 @@ public class DesignerPropertyTool {
 	 */
 	public static CMNamedNodeMap getElementDeclaredAttributes(Node fNode) {
 		IStructuredModel structModel = null;
-		if (fNode instanceof IDOMNode) {
-			structModel = ((IDOMNode) fNode).getModel();
+		if (fNode instanceof IDOMNode iDomNode) {
+			structModel = iDomNode.getModel();
 		}
 		if (null == structModel) {
 			return null;
@@ -145,34 +145,32 @@ public class DesignerPropertyTool {
 			HTMLEditor htmlEditor) {
 
 		Node node = null;
-		if (selectingPart instanceof HTMLEditor) {
-			IEditorPart part = ((HTMLEditor) selectingPart).getActiveEditor();
+		if (selectingPart instanceof HTMLEditor selectingPartHtmlEditor) {
+			IEditorPart part = selectingPartHtmlEditor.getActiveEditor();
 			if (part instanceof TextEditor) {
-				if (selection instanceof ITextSelection) {
-					IStructuredModel model = ((HTMLEditor) selectingPart)
+				if (selection instanceof ITextSelection iTextSelection) {
+					IStructuredModel model = selectingPartHtmlEditor
 							.getModel();
-					node = SelectionHelper.toNode(model,
-							(ITextSelection) selection);
+					node = SelectionHelper.toNode(model, iTextSelection);
 				}
 			} else if (part instanceof GraphicalEditor) {
-				if (selection instanceof IStructuredSelection) {
-					node = SelectionHelper
-							.toNode((IStructuredSelection) selection);
-				} else if (selection instanceof DesignRange) {
-					node = SelectionHelper.toNode((DesignRange) selection);
+				if (selection instanceof IStructuredSelection iStructuredSelection) {
+					node = SelectionHelper.toNode(iStructuredSelection);
+				} else if (selection instanceof DesignRange designRange) {
+					node = SelectionHelper.toNode(designRange);
 				}
 			}
-			if (node instanceof Attr) {
-				node = ((Attr) node).getOwnerElement();
+			if (node instanceof Attr attr) {
+				node = attr.getOwnerElement();
 			} else if (node instanceof Text || node instanceof CDATASection) {
 				node = node.getParentNode();
 			}
-		} else if (selectingPart instanceof ContentOutline) {
-			if (selection instanceof IStructuredSelection
-					&& ((ContentOutline) selectingPart).getCurrentPage() != null
-					&& ((ContentOutline) selectingPart).getCurrentPage()
+		} else if (selectingPart instanceof ContentOutline contentOutline) {
+			if (selection instanceof IStructuredSelection iStructuredSelection
+					&& contentOutline.getCurrentPage() != null
+					&& contentOutline.getCurrentPage()
 							.getControl().isFocusControl()) {
-				node = SelectionHelper.toNode((IStructuredSelection) selection);
+				node = SelectionHelper.toNode(iStructuredSelection);
 				if (node == null) {
 					node = htmlEditor.getDOMDocument();
 				}
@@ -195,13 +193,13 @@ public class DesignerPropertyTool {
 
 		if (node instanceof Element) {
 			element = (Element) node;
-		} else if (node instanceof AbstractEditPart) {
-			model = ((AbstractEditPart) node).getModel();
+		} else if (node instanceof AbstractEditPart abstractEditPart) {
+			model = abstractEditPart.getModel();
 			if (model instanceof Element) {
 				element = (Element) model;
 			}
-		} else if (node instanceof ISelection) {
-			element = getElement(null, (ISelection) node);
+		} else if (node instanceof ISelection iSelection) {
+			element = getElement(null, iSelection);
 		}
 		return element;
 	}
@@ -233,8 +231,7 @@ public class DesignerPropertyTool {
 		if (selection instanceof IStructuredSelection) {
 			Object obj = ((IStructuredSelection) selection).getFirstElement();
 			return (Node) obj;
-		} else if (selection instanceof DesignRange) {
-			DesignRange range = (DesignRange) selection;
+		} else if (selection instanceof DesignRange range) {
 			Node node1 = range.getStartPosition().getContainerNode();
 			Node node2 = range.getEndPosition().getContainerNode();
 			return DOMUtil.findCommonAncester(node1, node2);
@@ -254,12 +251,12 @@ public class DesignerPropertyTool {
 	public static Element getElement(IWorkbenchPart selectingPart,
 			ISelection selection) {
 		Node node = getCommonParent(selection);
-		if (node instanceof Element) {
-			return (Element) node;
+		if (node instanceof Element element) {
+			return element;
 		} else if (node != null) {
 			node = node.getParentNode();
-			if (node instanceof Element) {
-				return (Element) node;
+			if (node instanceof Element element) {
+				return element;
 			}
 		}
 		return null;
@@ -320,11 +317,11 @@ public class DesignerPropertyTool {
 		if (project == null) {
 			return null;
 		}
-		if (project instanceof IJavaProject) {
-			return (IJavaProject) project;
-		} else if (project instanceof IProject) {
+		if (project instanceof IJavaProject iJavaProject) {
+			return iJavaProject;
+		} else if (project instanceof IProject iProject) {
 			try {
-				IProjectNature nature = ((IProject) project)
+				IProjectNature nature = iProject
 						.getNature(JavaCore.NATURE_ID);
 				if (nature == null) {
 					return null;
