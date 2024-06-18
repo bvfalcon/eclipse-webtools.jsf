@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2011 Sybase, Inc. and others.
+ * Copyright (c) 2006, 2024 Sybase, Inc. and others.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 2.0
@@ -395,7 +395,7 @@ public class PaletteHelper {
 		item.setId(id);
 
 		item.setVisible(!expert);
-		category.getChildren().add(item);
+		category.add(item);
 		item.setParent(category);
 
 		return item;

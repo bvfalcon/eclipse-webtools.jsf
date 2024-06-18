@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2009, 2019 IBM Corporation and others.
+ * Copyright (c) 2009, 2024 IBM Corporation and others.
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 2.0
  * which accompanies this distribution, and is available at
@@ -108,7 +108,7 @@ public class BaseUserCustomizedTagCreatorTestCase extends BaseTagCreatorTestCase
                 category.getDefaultPrefix(), tagId.getTagName());
         final TagToolPaletteEntry paletteItem = new TagToolPaletteEntry(
                 tagDropSourceData, TAG_LABEL, TAG_DESCRIPTION_SHORT, null, null);
-        category.getChildren().add(paletteItem);
+        category.add(paletteItem);
         paletteItem.setParent(category);
     }
 }
