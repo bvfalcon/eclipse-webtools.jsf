@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Automatic-Module-Name: org.eclipse.jst.jsf.core
 Bundle-Name: %plugin.name
 Bundle-SymbolicName: org.eclipse.jst.jsf.core; singleton:=true
-Bundle-Version: 1.9.2.qualifier
+Bundle-Version: 1.9.3.qualifier
 Bundle-Activator: org.eclipse.jst.jsf.core.internal.JSFCorePlugin
 Bundle-Vendor: %plugin.provider
 Bundle-Localization: plugin

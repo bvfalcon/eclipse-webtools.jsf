@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2006, 2010 Sybase, Inc. and others.
+ * Copyright (c) 2006, 2024 Sybase, Inc. and others.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 2.0
@@ -15,9 +15,11 @@ package org.eclipse.jst.jsf.core.internal.tld;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
@@ -68,9 +70,16 @@ public class LoadBundleUtil {
 
 		return loadBundleResource;
 	}
+	private static IFile getSourceFile(IJavaProject javaProject, String baseName) throws JavaModelException {
+		return getSourceFile(javaProject, baseName, new HashSet<IProject>());
+	}
 
-	private static IFile getSourceFile(IJavaProject javaProject, String baseName)
+	private static IFile getSourceFile(IJavaProject javaProject, String baseName, Set<IProject> searchedProjects)
 			throws JavaModelException {
+		if (javaProject == null || searchedProjects.contains(javaProject.getProject())) {
+			return null;
+		}
+		searchedProjects.add(javaProject.getProject());
 		IClasspathEntry[] classpathEntries = javaProject.getRawClasspath();
 		for (int i = 0; i < classpathEntries.length; i++) {
 			if (classpathEntries[i].getEntryKind() == IClasspathEntry.CPE_SOURCE) {
@@ -83,13 +92,13 @@ public class LoadBundleUtil {
 				IProject project = ResourcesPlugin.getWorkspace().getRoot()
 						.getProject(classpathEntries[i].getPath().toString());
 				IJavaProject javaProject3 = JavaCore.create(project);
-				final IFile file = getSourceFile(javaProject3, baseName);
+				final IFile file = getSourceFile(javaProject3, baseName, searchedProjects);
 				if (file != null && file.exists()) {
 					return file;
 				}
 			}
 			else if (classpathEntries[i].getEntryKind() == IClasspathEntry.CPE_CONTAINER && classpathEntries[i].getPath().equals(new Path("org.eclipse.jst.j2ee.internal.module.container")))  //$NON-NLS-1$
-			{ 
+			{
 				IClasspathContainer container = JavaCore.getClasspathContainer(classpathEntries[i].getPath(), javaProject);
 				IClasspathEntry[] classpathEntries2 = container.getClasspathEntries();
 				for (int j = 0; j < classpathEntries2.length; j++) 
@@ -98,7 +107,7 @@ public class LoadBundleUtil {
 					{
 						IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(classpathEntries2[j].getPath().toString());
 						IJavaProject javaProject3 = JavaCore.create(project);
-						final IFile file = getSourceFile(javaProject3, baseName);
+						final IFile file = getSourceFile(javaProject3, baseName, searchedProjects);
 						if (file != null && file.exists())
 						{
 							return file;

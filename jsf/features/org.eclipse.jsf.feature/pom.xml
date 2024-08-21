@@ -22,7 +22,7 @@
 
   <groupId>org.eclipse.webtools.jsf</groupId>
   <artifactId>org.eclipse.jsf.feature</artifactId>
-  <version>3.13.1-SNAPSHOT</version>
+  <version>3.13.200-SNAPSHOT</version>
   <packaging>eclipse-feature</packaging>
 
   <build>
