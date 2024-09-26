@@ -31,8 +31,8 @@ import org.osgi.framework.Bundle;
  */
 public class ServletBeanProxyContributor extends ConfigurationContributorAdapter
 {
-    private static final String JAVAX_SERVLET_JSP = "javax.servlet.jsp"; //$NON-NLS-1$
-    private static final String JAVAX_SERVLET = "javax.servlet"; //$NON-NLS-1$
+    private static final String JAVAX_SERVLET_JSP = "jakarta.servlet.jsp"; //$NON-NLS-1$
+    private static final String JAVAX_SERVLET = "jakarta.servlet"; //$NON-NLS-1$
     private final JSFVersion _jsfVersion;
 
     /**

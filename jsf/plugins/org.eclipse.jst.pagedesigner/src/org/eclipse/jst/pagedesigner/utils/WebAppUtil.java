@@ -26,7 +26,7 @@ import org.eclipse.wst.common.componentcore.resources.IVirtualResource;
  * @version 1.5
  */
 public class WebAppUtil {
-	private final static String FACES_SERVLET_NAME = "javax.faces.webapp.FacesServlet"; //$NON-NLS-1$
+	private final static String FACES_SERVLET_NAME = "jakarta.faces.webapp.FacesServlet"; //$NON-NLS-1$
 
 	/**
 	 * @param url

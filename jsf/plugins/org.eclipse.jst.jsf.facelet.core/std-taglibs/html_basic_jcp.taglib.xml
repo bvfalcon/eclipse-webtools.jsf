@@ -74,8 +74,8 @@
             button
         </tag-name>
         <component>
-            <component-type>javax.faces.HtmlOutcomeTargetButton</component-type>
-            <renderer-type>javax.faces.Button</renderer-type>
+            <component-type>jakarta.faces.HtmlOutcomeTargetButton</component-type>
+            <renderer-type>jakarta.faces.Button</renderer-type>
         </component>
         <attribute>
             <description>
@@ -511,7 +511,7 @@
                 false
             </required>
             <type>
-                javax.faces.component.UIComponent
+                jakarta.faces.component.UIComponent
             </type>
         </attribute>
     </tag>
@@ -545,8 +545,8 @@
             link
         </tag-name>
         <component>
-            <component-type>javax.faces.HtmlOutcomeTargetLink</component-type>
-            <renderer-type>javax.faces.Link</renderer-type>
+            <component-type>jakarta.faces.HtmlOutcomeTargetLink</component-type>
+            <renderer-type>jakarta.faces.Link</renderer-type>
         </component>
         <attribute>
             <description>
@@ -1080,7 +1080,7 @@
                 false
             </required>
             <type>
-                javax.faces.component.UIComponent
+                jakarta.faces.component.UIComponent
             </type>
         </attribute>
     </tag>
@@ -1127,8 +1127,8 @@
             head
         </tag-name>
         <component>
-            <component-type>javax.faces.Output</component-type>
-            <renderer-type>javax.faces.Head</renderer-type>
+            <component-type>jakarta.faces.Output</component-type>
+            <renderer-type>jakarta.faces.Head</renderer-type>
         </component>
         <attribute>
             <description>
@@ -1172,7 +1172,7 @@
                 false
             </required>
             <type>
-                javax.faces.component.UIComponent
+                jakarta.faces.component.UIComponent
             </type>
         </attribute>
     </tag>
@@ -1219,8 +1219,8 @@
             body
         </tag-name>
         <component>
-            <component-type>javax.faces.Output</component-type>
-            <renderer-type>javax.faces.Body</renderer-type>
+            <component-type>jakarta.faces.Output</component-type>
+            <renderer-type>jakarta.faces.Body</renderer-type>
         </component>
         <attribute>
             <description>
@@ -1489,7 +1489,7 @@
                 false
             </required>
             <type>
-                javax.faces.component.UIComponent
+                jakarta.faces.component.UIComponent
             </type>
         </attribute>
     </tag>
@@ -1522,7 +1522,7 @@
             attribute, and convert it to lower case. If the result is equal
             to the String "reset" (without the quotes), return from
             &lt;code&gt;decode()&lt;/code&gt;. Otherwise, create a
-            &lt;code&gt;javax.faces.event.ActionEvent&lt;/code&gt; around the
+            &lt;code&gt;jakarta.faces.event.ActionEvent&lt;/code&gt; around the
             component,
             and pass it to the &lt;code&gt;queueEvent()&lt;/code&gt; method of
             the
@@ -1560,9 +1560,9 @@
             this renderer has any &lt;code&gt;UIParameter&lt;/code&gt; children,
             each one
             of them must be rendered using the renderer for component-family:
-            "javax.faces.Input" and renderer-type: "javax.faces.Hidden". For
+            "jakarta.faces.Input" and renderer-type: "jakarta.faces.Hidden". For
             discussion, this is called the hiddenRenderer. A component with
-            component-type "javax.faces.Input" must be created for local use
+            component-type "jakarta.faces.Input" must be created for local use
             in rendering each &lt;code&gt;UIParameter&lt;/code&gt; child. The
             "id"
             property of the temporary component must be set to the "name" of
@@ -1580,8 +1580,8 @@
         </description>
         <tag-name>commandButton</tag-name>
         <component>
-            <component-type>javax.faces.HtmlCommandButton</component-type>
-            <renderer-type>javax.faces.Button</renderer-type>
+            <component-type>jakarta.faces.HtmlCommandButton</component-type>
+            <renderer-type>jakarta.faces.Button</renderer-type>
         </component>
         <attribute>
             <description>
@@ -1612,7 +1612,7 @@
             </description>
             <name>actionListener</name>
             <required>false</required>
-            <method-signature>void actionListener(javax.faces.event.ActionEvent)
+            <method-signature>void actionListener(jakarta.faces.event.ActionEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -1929,7 +1929,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -1973,7 +1973,7 @@
             empty String, or the entry is not equal to the value of the
             "clientId" property, return immediately. If there is an entry,
             and its value is equal to the value of the "clientId" property,
-            create a new &lt;code&gt;javax.faces.event.ActionEvent&lt;/code&gt;
+            create a new &lt;code&gt;jakarta.faces.event.ActionEvent&lt;/code&gt;
             instance
             around the component and call &lt;code&gt;queueActionEvent()&lt;/code&gt;
             on
@@ -2052,8 +2052,8 @@
         </description>
         <tag-name>commandLink</tag-name>
         <component>
-            <component-type>javax.faces.HtmlCommandLink</component-type>
-            <renderer-type>javax.faces.Link</renderer-type>
+            <component-type>jakarta.faces.HtmlCommandLink</component-type>
+            <renderer-type>jakarta.faces.Link</renderer-type>
         </component>
         <attribute>
             <description>
@@ -2084,7 +2084,7 @@
             </description>
             <name>actionListener</name>
             <required>false</required>
-            <method-signature>void actionListener(javax.faces.event.ActionEvent)
+            <method-signature>void actionListener(jakarta.faces.event.ActionEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -2398,7 +2398,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -2519,8 +2519,8 @@
         </description>
         <tag-name>dataTable</tag-name>
         <component>
-            <component-type>javax.faces.HtmlDataTable</component-type>
-            <renderer-type>javax.faces.Table</renderer-type>
+            <component-type>jakarta.faces.HtmlDataTable</component-type>
+            <renderer-type>jakarta.faces.Table</renderer-type>
         </component>
         <attribute>
             <description>
@@ -2892,7 +2892,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -2945,7 +2945,7 @@
             with the
             value from &lt;code&gt;ExternalContext.encodeActionURL()&lt;/code&gt;.
             If they are different,
-            render a hidden field with the name &lt;code&gt;javax.faces.encodedURL&lt;/code&gt;
+            render a hidden field with the name &lt;code&gt;jakarta.faces.encodedURL&lt;/code&gt;
             and the value
             of this hidden field as the value from &lt;code&gt;ExternalContext.encodePartialActionURL&lt;/code&gt;.&lt;/p&gt;
             Call &lt;code&gt;ViewHandler.writeState()&lt;/code&gt;
@@ -2974,8 +2974,8 @@
         </description>
         <tag-name>form</tag-name>
         <component>
-            <component-type>javax.faces.HtmlForm</component-type>
-            <renderer-type>javax.faces.Form</renderer-type>
+            <component-type>jakarta.faces.HtmlForm</component-type>
+            <renderer-type>jakarta.faces.Form</renderer-type>
         </component>
         <attribute>
             <description>
@@ -3206,7 +3206,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -3219,7 +3219,7 @@
             &lt;p&gt;Handling the Value&lt;/p&gt;
             &lt;ul&gt;
             &lt;p&gt;If the "name" attribute is present, execute algorithm &lt;a
-            href="javax.faces.Outputjavax.faces.resource.Script.html#ResourceCommonGetResource"&gt;Common
+            href="jakarta.faces.Outputjakarta.faces.resource.Script.html#ResourceCommonGetResource"&gt;Common
             Algorithm for Obtaining A Resource to Render&lt;/a&gt; to obtain a
             &lt;code&gt;Resource&lt;/code&gt; instance. Call
             &lt;code&gt;Resource.getRequestPath()&lt;/code&gt; and output the
@@ -3246,8 +3246,8 @@
         </description>
         <tag-name>graphicImage</tag-name>
         <component>
-            <component-type>javax.faces.HtmlGraphicImage</component-type>
-            <renderer-type>javax.faces.Image</renderer-type>
+            <component-type>jakarta.faces.HtmlGraphicImage</component-type>
+            <renderer-type>jakarta.faces.Image</renderer-type>
         </component>
         <attribute>
             <description>
@@ -3503,7 +3503,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -3513,7 +3513,7 @@
             &lt;p&gt;Decode Behavior&lt;/p&gt;
             &lt;ul&gt;
             &lt;p&gt;See the decode description for the &lt;a
-            href="javax.faces.Inputjavax.faces.Text.html#encode"&gt;Input
+            href="jakarta.faces.Inputjakarta.faces.Text.html#encode"&gt;Input
             Text&lt;/a&gt; renderer.&lt;/p&gt;
             &lt;/ul&gt;
             &lt;p&gt;Encode Behavior&lt;/p&gt;
@@ -3525,8 +3525,8 @@
         </description>
         <tag-name>inputHidden</tag-name>
         <component>
-            <component-type>javax.faces.HtmlInputHidden</component-type>
-            <renderer-type>javax.faces.Hidden</renderer-type>
+            <component-type>jakarta.faces.HtmlInputHidden</component-type>
+            <renderer-type>jakarta.faces.Hidden</renderer-type>
         </component>
         <attribute>
             <description>
@@ -3534,7 +3534,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -3609,8 +3609,8 @@
             </description>
             <name>validator</name>
             <required>false</required>
-            <method-signature>void validate(javax.faces.context.FacesContext,
-                javax.faces.component.UIComponent, java.lang.Object)
+            <method-signature>void validate(jakarta.faces.context.FacesContext,
+                jakarta.faces.component.UIComponent, java.lang.Object)
             </method-signature>
         </attribute>
         <attribute>
@@ -3650,7 +3650,7 @@
             <name>valueChangeListener</name>
             <required>false</required>
             <method-signature>void
-                valueChange(javax.faces.event.ValueChangeEvent)
+                valueChange(jakarta.faces.event.ValueChangeEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -3660,7 +3660,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -3669,7 +3669,7 @@
             &lt;p&gt;Decode Behavior&lt;/p&gt;
             &lt;ul&gt;
             &lt;p&gt;See the decode description for the &lt;a
-            href="javax.faces.Inputjavax.faces.Text.html#encode"&gt;Input
+            href="jakarta.faces.Inputjakarta.faces.Text.html#encode"&gt;Input
             Text&lt;/a&gt; renderer.&lt;/p&gt;
             &lt;/ul&gt;
             &lt;p&gt;Encode Behavior&lt;/p&gt;
@@ -3685,8 +3685,8 @@
         </description>
         <tag-name>inputSecret</tag-name>
         <component>
-            <component-type>javax.faces.HtmlInputSecret</component-type>
-            <renderer-type>javax.faces.Secret</renderer-type>
+            <component-type>jakarta.faces.HtmlInputSecret</component-type>
+            <renderer-type>jakarta.faces.Secret</renderer-type>
         </component>
         <attribute>
             <description>
@@ -3694,7 +3694,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -3769,8 +3769,8 @@
             </description>
             <name>validator</name>
             <required>false</required>
-            <method-signature>void validate(javax.faces.context.FacesContext,
-                javax.faces.component.UIComponent, java.lang.Object)
+            <method-signature>void validate(jakarta.faces.context.FacesContext,
+                jakarta.faces.component.UIComponent, java.lang.Object)
             </method-signature>
         </attribute>
         <attribute>
@@ -3810,7 +3810,7 @@
             <name>valueChangeListener</name>
             <required>false</required>
             <method-signature>void
-                valueChange(javax.faces.event.ValueChangeEvent)
+                valueChange(jakarta.faces.event.ValueChangeEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -4095,7 +4095,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -4126,8 +4126,8 @@
         </description>
         <tag-name>inputText</tag-name>
         <component>
-            <component-type>javax.faces.HtmlInputText</component-type>
-            <renderer-type>javax.faces.Text</renderer-type>
+            <component-type>jakarta.faces.HtmlInputText</component-type>
+            <renderer-type>jakarta.faces.Text</renderer-type>
         </component>
         <attribute>
             <description>
@@ -4135,7 +4135,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -4210,8 +4210,8 @@
             </description>
             <name>validator</name>
             <required>false</required>
-            <method-signature>void validate(javax.faces.context.FacesContext,
-                javax.faces.component.UIComponent, java.lang.Object)
+            <method-signature>void validate(jakarta.faces.context.FacesContext,
+                jakarta.faces.component.UIComponent, java.lang.Object)
             </method-signature>
         </attribute>
         <attribute>
@@ -4251,7 +4251,7 @@
             <name>valueChangeListener</name>
             <required>false</required>
             <method-signature>void
-                valueChange(javax.faces.event.ValueChangeEvent)
+                valueChange(jakarta.faces.event.ValueChangeEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -4524,7 +4524,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -4533,7 +4533,7 @@
             &lt;p&gt;Decode Behavior&lt;/p&gt;
             &lt;ul&gt;
             &lt;p&gt;See the encode description for the &lt;a
-            href="javax.faces.Inputjavax.faces.Text.html#encode"&gt;Input
+            href="jakarta.faces.Inputjakarta.faces.Text.html#encode"&gt;Input
             Text&lt;/a&gt; renderer.&lt;/p&gt;
             &lt;/ul&gt;
             &lt;p&gt;Encode Behavior&lt;/p&gt;
@@ -4545,8 +4545,8 @@
         </description>
         <tag-name>inputTextarea</tag-name>
         <component>
-            <component-type>javax.faces.HtmlInputTextarea</component-type>
-            <renderer-type>javax.faces.Textarea</renderer-type>
+            <component-type>jakarta.faces.HtmlInputTextarea</component-type>
+            <renderer-type>jakarta.faces.Textarea</renderer-type>
         </component>
         <attribute>
             <description>
@@ -4554,7 +4554,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -4629,8 +4629,8 @@
             </description>
             <name>validator</name>
             <required>false</required>
-            <method-signature>void validate(javax.faces.context.FacesContext,
-                javax.faces.component.UIComponent, java.lang.Object)
+            <method-signature>void validate(jakarta.faces.context.FacesContext,
+                jakarta.faces.component.UIComponent, java.lang.Object)
             </method-signature>
         </attribute>
         <attribute>
@@ -4670,7 +4670,7 @@
             <name>valueChangeListener</name>
             <required>false</required>
             <method-signature>void
-                valueChange(javax.faces.event.ValueChangeEvent)
+                valueChange(jakarta.faces.event.ValueChangeEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -4917,7 +4917,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -4984,8 +4984,8 @@
         </description>
         <tag-name>message</tag-name>
         <component>
-            <component-type>javax.faces.HtmlMessage</component-type>
-            <renderer-type>javax.faces.Message</renderer-type>
+            <component-type>jakarta.faces.HtmlMessage</component-type>
+            <renderer-type>jakarta.faces.Message</renderer-type>
         </component>
         <attribute>
             <description>
@@ -5170,7 +5170,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -5208,8 +5208,8 @@
         </description>
         <tag-name>messages</tag-name>
         <component>
-            <component-type>javax.faces.HtmlMessages</component-type>
-            <renderer-type>javax.faces.Messages</renderer-type>
+            <component-type>jakarta.faces.HtmlMessages</component-type>
+            <renderer-type>jakarta.faces.Messages</renderer-type>
         </component>
         <attribute>
             <description>
@@ -5418,7 +5418,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -5451,8 +5451,8 @@
         </description>
         <tag-name>outputFormat</tag-name>
         <component>
-            <component-type>javax.faces.HtmlOutputFormat</component-type>
-            <renderer-type>javax.faces.Format</renderer-type>
+            <component-type>jakarta.faces.HtmlOutputFormat</component-type>
+            <renderer-type>jakarta.faces.Format</renderer-type>
         </component>
         <attribute>
             <description>
@@ -5460,7 +5460,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -5554,7 +5554,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -5571,8 +5571,8 @@
         </description>
         <tag-name>outputLabel</tag-name>
         <component>
-            <component-type>javax.faces.HtmlOutputLabel</component-type>
-            <renderer-type>javax.faces.Label</renderer-type>
+            <component-type>jakarta.faces.HtmlOutputLabel</component-type>
+            <renderer-type>jakarta.faces.Label</renderer-type>
         </component>
         <attribute>
             <description>
@@ -5580,7 +5580,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -5808,7 +5808,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -5844,8 +5844,8 @@
         </description>
         <tag-name>outputLink</tag-name>
         <component>
-            <component-type>javax.faces.HtmlOutputLink</component-type>
-            <renderer-type>javax.faces.Link</renderer-type>
+            <component-type>jakarta.faces.HtmlOutputLink</component-type>
+            <renderer-type>jakarta.faces.Link</renderer-type>
         </component>
         <attribute>
             <description>
@@ -5853,7 +5853,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -6152,7 +6152,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -6170,8 +6170,8 @@
         </description>
         <tag-name>outputText</tag-name>
         <component>
-            <component-type>javax.faces.HtmlOutputText</component-type>
-            <renderer-type>javax.faces.Text</renderer-type>
+            <component-type>jakarta.faces.HtmlOutputText</component-type>
+            <renderer-type>jakarta.faces.Text</renderer-type>
         </component>
         <attribute>
             <description>
@@ -6179,7 +6179,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -6273,7 +6273,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -6298,7 +6298,7 @@
             "<code>target</code>" in the component's attribute <code>Map</code>.  If
             and only if such a key is present, the implementation of
             <code>processEvent()</code> must pass the component to <a target="_"
-            href="../../javadocs/javax/faces/component/UIViewRoot.html#addComponentResource(javax.faces.context.FacesContext,%20javax.faces.component.UIComponent)"><code>UIViewRoot.addComponentResource()</code></a>.</p>
+            href="../../javadocs/javax/faces/component/UIViewRoot.html#addComponentResource(jakarta.faces.context.FacesContext,%20jakarta.faces.component.UIComponent)"><code>UIViewRoot.addComponentResource()</code></a>.</p>
             
             <p>Decode Behavior</p>
             
@@ -6421,8 +6421,8 @@
             outputScript
         </tag-name>
         <component>
-            <component-type>javax.faces.Output</component-type>
-            <renderer-type>javax.faces.resource.Script</renderer-type>
+            <component-type>jakarta.faces.Output</component-type>
+            <renderer-type>jakarta.faces.resource.Script</renderer-type>
         </component>
         <attribute>
             <description>
@@ -6435,7 +6435,7 @@
                 false
             </required>
             <type>
-                javax.faces.convert.Converter
+                jakarta.faces.convert.Converter
             </type>
         </attribute>
         <attribute>
@@ -6538,7 +6538,7 @@
                 false
             </required>
             <type>
-                javax.faces.component.UIComponent
+                jakarta.faces.component.UIComponent
             </type>
         </attribute>
     </tag>
@@ -6567,7 +6567,7 @@
             <code>getRendersChildren()</code>.</p>
             
             <p>For <code>encodeEnd()</code>, use the algorithm <a
-            href="javax.faces.Outputjavax.faces.resource.Script.html#ResourceCommonGetResource">Common
+            href="jakarta.faces.Outputjakarta.faces.resource.Script.html#ResourceCommonGetResource">Common
             Algorithm for Obtaining A Resource to Render</a> to obtain a
             reference to the <code>Resource</code> to be encoded.</p>
             
@@ -6589,7 +6589,7 @@
             which this renderer must do.  The implementation of
             <code>processEvent()</code> must extract the <code>UIComponent</code>
             from the argument event pass it to <a target="_"
-            href="../../javadocs/javax/faces/component/UIViewRoot.html#addComponentResource(javax.faces.context.FacesContext,%20javax.faces.component.UIComponent,%20java.lang.String)"><code>UIViewRoot.addComponentResource()</code></a>, specifying
+            href="../../javadocs/javax/faces/component/UIViewRoot.html#addComponentResource(jakarta.faces.context.FacesContext,%20jakarta.faces.component.UIComponent,%20java.lang.String)"><code>UIViewRoot.addComponentResource()</code></a>, specifying
             the literal string "<code>head</code>" as the last argument.</p>
             
             <p>The stylsheet renderer must ensure that any stylesheets are included in the &lt;head&gt; of the document.
@@ -6601,8 +6601,8 @@
             outputStylesheet
         </tag-name>
         <component>
-            <component-type>javax.faces.Output</component-type>
-            <renderer-type>javax.faces.resource.Stylesheet</renderer-type>
+            <component-type>jakarta.faces.Output</component-type>
+            <renderer-type>jakarta.faces.resource.Stylesheet</renderer-type>
         </component>
         <attribute>
             <description>
@@ -6615,7 +6615,7 @@
                 false
             </required>
             <type>
-                javax.faces.convert.Converter
+                jakarta.faces.convert.Converter
             </type>
         </attribute>
         <attribute>
@@ -6704,7 +6704,7 @@
                 false
             </required>
             <type>
-                javax.faces.component.UIComponent
+                jakarta.faces.component.UIComponent
             </type>
         </attribute>
     </tag>
@@ -6748,8 +6748,8 @@
         </description>
         <tag-name>panelGrid</tag-name>
         <component>
-            <component-type>javax.faces.HtmlPanelGrid</component-type>
-            <renderer-type>javax.faces.Grid</renderer-type>
+            <component-type>jakarta.faces.HtmlPanelGrid</component-type>
+            <renderer-type>jakarta.faces.Grid</renderer-type>
         </component>
         <attribute>
             <description>
@@ -7085,7 +7085,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -7109,8 +7109,8 @@
         </description>
         <tag-name>panelGroup</tag-name>
         <component>
-            <component-type>javax.faces.HtmlPanelGroup</component-type>
-            <renderer-type>javax.faces.Group</renderer-type>
+            <component-type>jakarta.faces.HtmlPanelGroup</component-type>
+            <renderer-type>jakarta.faces.Group</renderer-type>
         </component>
         <attribute>
             <description>
@@ -7168,7 +7168,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -7203,9 +7203,9 @@
         </description>
         <tag-name>selectBooleanCheckbox</tag-name>
         <component>
-            <component-type>javax.faces.HtmlSelectBooleanCheckbox
+            <component-type>jakarta.faces.HtmlSelectBooleanCheckbox
             </component-type>
-            <renderer-type>javax.faces.Checkbox</renderer-type>
+            <renderer-type>jakarta.faces.Checkbox</renderer-type>
         </component>
         <attribute>
             <description>
@@ -7213,7 +7213,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -7288,8 +7288,8 @@
             </description>
             <name>validator</name>
             <required>false</required>
-            <method-signature>void validate(javax.faces.context.FacesContext,
-                javax.faces.component.UIComponent, java.lang.Object)
+            <method-signature>void validate(jakarta.faces.context.FacesContext,
+                jakarta.faces.component.UIComponent, java.lang.Object)
             </method-signature>
         </attribute>
         <attribute>
@@ -7329,7 +7329,7 @@
             <name>valueChangeListener</name>
             <required>false</required>
             <method-signature>void
-                valueChange(javax.faces.event.ValueChangeEvent)
+                valueChange(jakarta.faces.event.ValueChangeEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -7560,7 +7560,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -7635,8 +7635,8 @@
         </description>
         <tag-name>selectManyCheckbox</tag-name>
         <component>
-            <component-type>javax.faces.HtmlSelectManyCheckbox</component-type>
-            <renderer-type>javax.faces.Checkbox</renderer-type>
+            <component-type>jakarta.faces.HtmlSelectManyCheckbox</component-type>
+            <renderer-type>jakarta.faces.Checkbox</renderer-type>
         </component>
         <attribute>
             <description>
@@ -7644,7 +7644,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -7719,8 +7719,8 @@
             </description>
             <name>validator</name>
             <required>false</required>
-            <method-signature>void validate(javax.faces.context.FacesContext,
-                javax.faces.component.UIComponent, java.lang.Object)
+            <method-signature>void validate(jakarta.faces.context.FacesContext,
+                jakarta.faces.component.UIComponent, java.lang.Object)
             </method-signature>
         </attribute>
         <attribute>
@@ -7760,7 +7760,7 @@
             <name>valueChangeListener</name>
             <required>false</required>
             <method-signature>void
-                valueChange(javax.faces.event.ValueChangeEvent)
+                valueChange(jakarta.faces.event.ValueChangeEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -8073,7 +8073,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -8145,7 +8145,7 @@
             &lt;p&gt;The only valid children of this component are
             &lt;code&gt;UISelectItem&lt;/code&gt; or &lt;code&gt;UISelectItems&lt;/code&gt;
             instances. Iterate over the children of this component, and accrue
-            a list of &lt;code&gt;javax.faces.model.SelectItem&lt;/code&gt;
+            a list of &lt;code&gt;jakarta.faces.model.SelectItem&lt;/code&gt;
             instances.
             &lt;span class="changed_added_2_0"&gt;If the current child is a
             &lt;code&gt;SelectItem&lt;/code&gt; whose &lt;code&gt;noSelctionProperty&lt;/code&gt;
@@ -8245,8 +8245,8 @@
         </description>
         <tag-name>selectManyListbox</tag-name>
         <component>
-            <component-type>javax.faces.HtmlSelectManyListbox</component-type>
-            <renderer-type>javax.faces.Listbox</renderer-type>
+            <component-type>jakarta.faces.HtmlSelectManyListbox</component-type>
+            <renderer-type>jakarta.faces.Listbox</renderer-type>
         </component>
         <attribute>
             <description>
@@ -8254,7 +8254,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -8329,8 +8329,8 @@
             </description>
             <name>validator</name>
             <required>false</required>
-            <method-signature>void validate(javax.faces.context.FacesContext,
-                javax.faces.component.UIComponent, java.lang.Object)
+            <method-signature>void validate(jakarta.faces.context.FacesContext,
+                jakarta.faces.component.UIComponent, java.lang.Object)
             </method-signature>
         </attribute>
         <attribute>
@@ -8370,7 +8370,7 @@
             <name>valueChangeListener</name>
             <required>false</required>
             <method-signature>void
-                valueChange(javax.faces.event.ValueChangeEvent)
+                valueChange(jakarta.faces.event.ValueChangeEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -8653,7 +8653,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -8686,8 +8686,8 @@
         </description>
         <tag-name>selectManyMenu</tag-name>
         <component>
-            <component-type>javax.faces.HtmlSelectManyMenu</component-type>
-            <renderer-type>javax.faces.Menu</renderer-type>
+            <component-type>jakarta.faces.HtmlSelectManyMenu</component-type>
+            <renderer-type>jakarta.faces.Menu</renderer-type>
         </component>
         <attribute>
             <description>
@@ -8695,7 +8695,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -8770,8 +8770,8 @@
             </description>
             <name>validator</name>
             <required>false</required>
-            <method-signature>void validate(javax.faces.context.FacesContext,
-                javax.faces.component.UIComponent, java.lang.Object)
+            <method-signature>void validate(jakarta.faces.context.FacesContext,
+                jakarta.faces.component.UIComponent, java.lang.Object)
             </method-signature>
         </attribute>
         <attribute>
@@ -8811,7 +8811,7 @@
             <name>valueChangeListener</name>
             <required>false</required>
             <method-signature>void
-                valueChange(javax.faces.event.ValueChangeEvent)
+                valueChange(jakarta.faces.event.ValueChangeEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -9085,7 +9085,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -9117,8 +9117,8 @@
         </description>
         <tag-name>selectOneListbox</tag-name>
         <component>
-            <component-type>javax.faces.HtmlSelectOneListbox</component-type>
-            <renderer-type>javax.faces.Listbox</renderer-type>
+            <component-type>jakarta.faces.HtmlSelectOneListbox</component-type>
+            <renderer-type>jakarta.faces.Listbox</renderer-type>
         </component>
         <attribute>
             <description>
@@ -9126,7 +9126,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -9201,8 +9201,8 @@
             </description>
             <name>validator</name>
             <required>false</required>
-            <method-signature>void validate(javax.faces.context.FacesContext,
-                javax.faces.component.UIComponent, java.lang.Object)
+            <method-signature>void validate(jakarta.faces.context.FacesContext,
+                jakarta.faces.component.UIComponent, java.lang.Object)
             </method-signature>
         </attribute>
         <attribute>
@@ -9242,7 +9242,7 @@
             <name>valueChangeListener</name>
             <required>false</required>
             <method-signature>void
-                valueChange(javax.faces.event.ValueChangeEvent)
+                valueChange(jakarta.faces.event.ValueChangeEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -9511,7 +9511,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -9541,8 +9541,8 @@
         </description>
         <tag-name>selectOneMenu</tag-name>
         <component>
-            <component-type>javax.faces.HtmlSelectOneMenu</component-type>
-            <renderer-type>javax.faces.Menu</renderer-type>
+            <component-type>jakarta.faces.HtmlSelectOneMenu</component-type>
+            <renderer-type>jakarta.faces.Menu</renderer-type>
         </component>
         <attribute>
             <description>
@@ -9550,7 +9550,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -9625,8 +9625,8 @@
             </description>
             <name>validator</name>
             <required>false</required>
-            <method-signature>void validate(javax.faces.context.FacesContext,
-                javax.faces.component.UIComponent, java.lang.Object)
+            <method-signature>void validate(jakarta.faces.context.FacesContext,
+                jakarta.faces.component.UIComponent, java.lang.Object)
             </method-signature>
         </attribute>
         <attribute>
@@ -9666,7 +9666,7 @@
             <name>valueChangeListener</name>
             <required>false</required>
             <method-signature>void
-                valueChange(javax.faces.event.ValueChangeEvent)
+                valueChange(jakarta.faces.event.ValueChangeEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -9926,7 +9926,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -9987,8 +9987,8 @@
         </description>
         <tag-name>selectOneRadio</tag-name>
         <component>
-            <component-type>javax.faces.HtmlSelectOneRadio</component-type>
-            <renderer-type>javax.faces.Radio</renderer-type>
+            <component-type>jakarta.faces.HtmlSelectOneRadio</component-type>
+            <renderer-type>jakarta.faces.Radio</renderer-type>
         </component>
         <attribute>
             <description>
@@ -9996,7 +9996,7 @@
             </description>
             <name>converter</name>
             <required>false</required>
-            <type>javax.faces.convert.Converter</type>
+            <type>jakarta.faces.convert.Converter</type>
         </attribute>
         <attribute>
             <description>
@@ -10071,8 +10071,8 @@
             </description>
             <name>validator</name>
             <required>false</required>
-            <method-signature>void validate(javax.faces.context.FacesContext,
-                javax.faces.component.UIComponent, java.lang.Object)
+            <method-signature>void validate(jakarta.faces.context.FacesContext,
+                jakarta.faces.component.UIComponent, java.lang.Object)
             </method-signature>
         </attribute>
         <attribute>
@@ -10112,7 +10112,7 @@
             <name>valueChangeListener</name>
             <required>false</required>
             <method-signature>void
-                valueChange(javax.faces.event.ValueChangeEvent)
+                valueChange(jakarta.faces.event.ValueChangeEvent)
             </method-signature>
         </attribute>
         <attribute>
@@ -10393,7 +10393,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
     </tag>
     <tag>
@@ -10403,7 +10403,7 @@
         </description>
         <tag-name>column</tag-name>
         <component>
-            <component-type>javax.faces.Column</component-type>
+            <component-type>jakarta.faces.Column</component-type>
             <renderer-type/>
         </component>
         <attribute>
@@ -10423,7 +10423,7 @@
             </description>
             <name>binding</name>
             <required>false</required>
-            <type>javax.faces.component.UIComponent</type>
+            <type>jakarta.faces.component.UIComponent</type>
         </attribute>
         <attribute>
             <description>

@@ -94,11 +94,11 @@ public class TypeComparatorTests extends TestCase
                                       , "Ljava.lang.String;");
     private final static String actionListenerSig = 
         Signature.createMethodSignature
-            (new String[]{"Ljavax.faces.event.ActionEvent;"}
+            (new String[]{"Ljakarta.faces.event.ActionEvent;"}
                           , Signature.SIG_VOID);
     private final static String hasReturnAndArgSig =
         Signature.createMethodSignature
-            (new String[]{"Ljavax.faces.event.ActionEvent;"}
+            (new String[]{"Ljakarta.faces.event.ActionEvent;"}
                         , "Ljava.lang.String;");
     private final static String sameNumArgsDiffTypeSig =
         Signature.createMethodSignature

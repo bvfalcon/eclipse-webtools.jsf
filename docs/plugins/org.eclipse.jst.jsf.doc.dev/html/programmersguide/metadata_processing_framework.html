@@ -12,7 +12,7 @@
 <h3>Overview</h3>
 <p>This framework makes use of the meta-data contributed by the <a href="./metadata_framework.html">Design-time Meta-data Framework</a>.   It's intention in this release is to simplify how services like Content Assist and Validation can be provided in source editors for tag library based attributes values.</p>
 <p>The goal for this framework is to allow developers to assign "runtime type" information to an attibute's value using meta-data and then, because based on that type, "features" can naturally be exposed.</p>
-<p>To make this more concrete, let's consider the example of the JSF Core <code>actionListener</code> tag and its <code>type</code> attribute.  The value should resolve to a Java class type that implements the interface <code>javax.faces.event.ActionListener</code>.   Having this knowledge is enough to provide:</p>
+<p>To make this more concrete, let's consider the example of the JSF Core <code>actionListener</code> tag and its <code>type</code> attribute.  The value should resolve to a Java class type that implements the interface <code>jakarta.faces.event.ActionListener</code>.   Having this knowledge is enough to provide:</p>
 <ul>
 <li>Validation - ensure that the specified class can be found and implements the correct interface</li>
 <li>Content Assist - provide a list of all of the classes that can be found that implement the interface</li>
@@ -41,7 +41,7 @@
 				&lt;/value&gt;
 			&lt;/trait&gt;
 			&lt;trait id="valid-interfaces"&gt;
-				&lt;value&gt;javax.faces.event.ActionListener&lt;/value&gt;
+				&lt;value&gt;jakarta.faces.event.ActionListener&lt;/value&gt;
 			&lt;/trait&gt;		
 		&lt;/entity&gt;
 	&lt;/entity&gt;

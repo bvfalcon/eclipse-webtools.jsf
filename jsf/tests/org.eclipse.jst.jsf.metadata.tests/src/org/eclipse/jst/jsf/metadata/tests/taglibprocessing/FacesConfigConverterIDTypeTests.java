@@ -50,18 +50,18 @@ public class FacesConfigConverterIDTypeTests extends SingleJSPTestCase {
 		assertPossibleValues(pv.getPossibleValues(),
 			new String[]{
 				"com.foo.myconverter",
-				"javax.faces.BigDecimal", 
-				"javax.faces.BigInteger",
-				"javax.faces.Byte",
-				"javax.faces.Boolean",
-				"javax.faces.Character",
-				"javax.faces.DateTime",
-				"javax.faces.Double",
-				"javax.faces.Float",
-				"javax.faces.Integer",
-				"javax.faces.Number",
-				"javax.faces.Long",
-				"javax.faces.Short"} );
+				"jakarta.faces.BigDecimal", 
+				"jakarta.faces.BigInteger",
+				"jakarta.faces.Byte",
+				"jakarta.faces.Boolean",
+				"jakarta.faces.Character",
+				"jakarta.faces.DateTime",
+				"jakarta.faces.Double",
+				"jakarta.faces.Float",
+				"jakarta.faces.Integer",
+				"jakarta.faces.Number",
+				"jakarta.faces.Long",
+				"jakarta.faces.Short"} );
 
 	}
 	public void testGetExpectedRuntimeValue() {
@@ -80,18 +80,18 @@ public class FacesConfigConverterIDTypeTests extends SingleJSPTestCase {
 		assertNotNull(vv);
 		
 		assertTrue(vv.isValidValue("com.foo.myconverter"));
-		assertTrue(vv.isValidValue("javax.faces.BigDecimal"));
-		assertTrue(vv.isValidValue("javax.faces.BigInteger"));
-		assertTrue(vv.isValidValue("javax.faces.Byte"));
-		assertTrue(vv.isValidValue("javax.faces.Boolean"));
-		assertTrue(vv.isValidValue("javax.faces.Character"));
-		assertTrue(vv.isValidValue("javax.faces.DateTime"));
-		assertTrue(vv.isValidValue("javax.faces.Double"));
-		assertTrue(vv.isValidValue("javax.faces.Float"));
-		assertTrue(vv.isValidValue("javax.faces.Integer"));
-		assertTrue(vv.isValidValue("javax.faces.Number"));
-		assertTrue(vv.isValidValue("javax.faces.Long"));
-		assertTrue(vv.isValidValue("javax.faces.Short"));
+		assertTrue(vv.isValidValue("jakarta.faces.BigDecimal"));
+		assertTrue(vv.isValidValue("jakarta.faces.BigInteger"));
+		assertTrue(vv.isValidValue("jakarta.faces.Byte"));
+		assertTrue(vv.isValidValue("jakarta.faces.Boolean"));
+		assertTrue(vv.isValidValue("jakarta.faces.Character"));
+		assertTrue(vv.isValidValue("jakarta.faces.DateTime"));
+		assertTrue(vv.isValidValue("jakarta.faces.Double"));
+		assertTrue(vv.isValidValue("jakarta.faces.Float"));
+		assertTrue(vv.isValidValue("jakarta.faces.Integer"));
+		assertTrue(vv.isValidValue("jakarta.faces.Number"));
+		assertTrue(vv.isValidValue("jakarta.faces.Long"));
+		assertTrue(vv.isValidValue("jakarta.faces.Short"));
 		
 		assertFalse(vv.isValidValue("com.foo.myconvertersubclass1"));
 	}

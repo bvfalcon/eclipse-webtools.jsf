@@ -1,9 +1,9 @@
 package com.foo;
 
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
+import jakarta.faces.component.UIComponent;
+import jakarta.faces.context.FacesContext;
 
-public class MyConverter implements javax.faces.convert.Converter{
+public class MyConverter implements jakarta.faces.convert.Converter{
 
 	public Object getAsObject(FacesContext arg0, UIComponent arg1, String arg2) {
 		return null;

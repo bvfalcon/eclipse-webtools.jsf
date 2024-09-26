@@ -14,7 +14,7 @@
 package org.eclipse.jst.pagedesigner.jsf.ui.converter.jsfhtml;
 
 /**
- * This class emulate a javax.faces.model.SelectItem
+ * This class emulate a jakarta.faces.model.SelectItem
  * 
  * @author mengbo
  * @version 1.5

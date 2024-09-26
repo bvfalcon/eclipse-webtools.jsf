@@ -82,487 +82,487 @@ public final class DefaultTagTypeInfo
     }
 
     private static final ComponentTypeInfo      COMPINFO_PARAM                 = new ComponentTypeInfo(
-                                                                                       "javax.faces.Parameter", //$NON-NLS-1$
-                                                                                       "javax.faces.component.UIParameter", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Parameter", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.UIParameter", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
-                                                                                       { "javax.faces.component.StateHolder", }, //$NON-NLS-1$
-                                                                                       "javax.faces.Parameter", //$NON-NLS-1$
+                                                                                       { "jakarta.faces.component.StateHolder", }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Parameter", //$NON-NLS-1$
                                                                                        null);
 
     private static final ComponentTypeInfo      COMPINFO_SELECTITEM            = new ComponentTypeInfo(
-                                                                                       "javax.faces.SelectItem", //$NON-NLS-1$
-                                                                                       "javax.faces.component.UISelectItem", //$NON-NLS-1$
+                                                                                       "jakarta.faces.SelectItem", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.UISelectItem", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
-                                                                                       { "javax.faces.component.StateHolder", }, //$NON-NLS-1$
-                                                                                       "javax.faces.SelectItem", //$NON-NLS-1$
+                                                                                       { "jakarta.faces.component.StateHolder", }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.SelectItem", //$NON-NLS-1$
                                                                                        null);
 
     private static final ComponentTypeInfo      COMPINFO_SELECTITEMS           = new ComponentTypeInfo(
-                                                                                       "javax.faces.SelectItems", //$NON-NLS-1$
-                                                                                       "javax.faces.component.UISelectItems", //$NON-NLS-1$
+                                                                                       "jakarta.faces.SelectItems", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.UISelectItems", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
-                                                                                       { "javax.faces.component.StateHolder", }, //$NON-NLS-1$
-                                                                                       "javax.faces.SelectItems", //$NON-NLS-1$
+                                                                                       { "jakarta.faces.component.StateHolder", }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.SelectItems", //$NON-NLS-1$
                                                                                        null);
 
     private static final ComponentTypeInfo      COMPINFO_SUBVIEW               = new ComponentTypeInfo(
-                                                                                       "javax.faces.NamingContainer", //$NON-NLS-1$
-                                                                                       "javax.faces.component.UINamingContainer", //$NON-NLS-1$
+                                                                                       "jakarta.faces.NamingContainer", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.UINamingContainer", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.NamingContainer", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.NamingContainer", //$NON-NLS-1$
+            "jakarta.faces.component.NamingContainer", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.NamingContainer", //$NON-NLS-1$
                                                                                        null);
 
     private static final ComponentTypeInfo      COMPINFO_VERBATIM              = new ComponentTypeInfo(
-                                                                                       "javax.faces.Output", //$NON-NLS-1$
-                                                                                       "javax.faces.component.UIOutput", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Output", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.UIOutput", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.Output", //$NON-NLS-1$
-                                                                                       "javax.faces.Text"); //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Output", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Text"); //$NON-NLS-1$
 
     private static final ComponentTypeInfo      COMPINFO_VIEW                  = new ComponentTypeInfo(
-                                                                                       "javax.faces.ViewRoot", //$NON-NLS-1$
-                                                                                       "javax.faces.component.UIViewRoot", //$NON-NLS-1$
+                                                                                       "jakarta.faces.ViewRoot", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.UIViewRoot", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
-                                                                                       { "javax.faces.component.StateHolder", }, //$NON-NLS-1$
-                                                                                       "javax.faces.ViewRoot", //$NON-NLS-1$
+                                                                                       { "jakarta.faces.component.StateHolder", }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.ViewRoot", //$NON-NLS-1$
                                                                                        null);
 
     private static final ComponentTypeInfo      COMPINFO_VIEWPARAM            = new ComponentTypeInfo(
-    		                                                                          "javax.faces.ViewParameter", //$NON-NLS-1$
-    		                                                                          "javax.faces.component.UIViewParameter", //$NON-NLS-1$
+    		                                                                          "jakarta.faces.ViewParameter", //$NON-NLS-1$
+    		                                                                          "jakarta.faces.component.UIViewParameter", //$NON-NLS-1$
                                                                                       new String[]
                                                                                       {
-           "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-           "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-           "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+           "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+           "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+           "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                       new String[]
                                                                                       {
-           "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-           "javax.faces.component.ValueHolder", //$NON-NLS-1$
-           "javax.faces.component.StateHolder"                                       }, //$NON-NLS-1$
-    		                                                                          "javax.faces.ViewParameter", //$NON-NLS-1$
+           "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+           "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+           "jakarta.faces.component.StateHolder"                                       }, //$NON-NLS-1$
+    		                                                                          "jakarta.faces.ViewParameter", //$NON-NLS-1$
     		                                                                          null);
 
     // expected type info for jsf/html components
     private static final ComponentTypeInfo      COMPINFO_COLUMN                = new ComponentTypeInfo(
-                                                                                       "javax.faces.Column", //$NON-NLS-1$
-                                                                                       "javax.faces.component.UIColumn", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Column", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.UIColumn", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
-                                                                                       { "javax.faces.component.StateHolder" }, //$NON-NLS-1$
-                                                                                       "javax.faces.Column", //$NON-NLS-1$
+                                                                                       { "jakarta.faces.component.StateHolder" }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Column", //$NON-NLS-1$
                                                                                        null);
     private static final ComponentTypeInfo      COMPINFO_COMMAND               = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlCommandButton", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlCommandButton", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlCommandButton", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlCommandButton", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UICommand", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UICommand", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.ActionSource", //$NON-NLS-1$
-            "javax.faces.component.StateHolder"                                       }, //$NON-NLS-1$
-                                                                                       "javax.faces.Command", //$NON-NLS-1$
-                                                                                       "javax.faces.Button"); //$NON-NLS-1$
+            "jakarta.faces.component.ActionSource", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder"                                       }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Command", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Button"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_COMMANDLINK           = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlCommandLink", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlCommandLink", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlCommandLink", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlCommandLink", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UICommand", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UICommand", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.ActionSource", //$NON-NLS-1$
-            "javax.faces.component.StateHolder"                                       }, //$NON-NLS-1$
-                                                                                       "javax.faces.Command", //$NON-NLS-1$
-                                                                                       "javax.faces.Link"); //$NON-NLS-1$
+            "jakarta.faces.component.ActionSource", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder"                                       }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Command", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Link"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_DATATABLE             = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlDataTable", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlDataTable", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlDataTable", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlDataTable", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIData", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIData", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.NamingContainer", //$NON-NLS-1$
-            "javax.faces.component.StateHolder"                                       }, //$NON-NLS-1$
-                                                                                       "javax.faces.Data", //$NON-NLS-1$
-                                                                                       "javax.faces.Table"); //$NON-NLS-1$
+            "jakarta.faces.component.NamingContainer", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder"                                       }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Data", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Table"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_FORM                  = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlForm", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlForm", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlForm", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlForm", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIForm", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIForm", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.NamingContainer", //$NON-NLS-1$
-            "javax.faces.component.StateHolder"                                       }, //$NON-NLS-1$
-                                                                                       "javax.faces.Form", //$NON-NLS-1$
-                                                                                       "javax.faces.Form"); //$NON-NLS-1$
+            "jakarta.faces.component.NamingContainer", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder"                                       }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Form", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Form"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_GRAPHIC               = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlGraphicImage", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlGraphicImage", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlGraphicImage", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlGraphicImage", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIGraphic", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIGraphic", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
-                                                                                       { "javax.faces.component.StateHolder", }, //$NON-NLS-1$
-                                                                                       "javax.faces.Graphic", //$NON-NLS-1$
-                                                                                       "javax.faces.Image"); //$NON-NLS-1$
+                                                                                       { "jakarta.faces.component.StateHolder", }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Graphic", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Image"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_HIDDEN                = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlInputHidden", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlInputHidden", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlInputHidden", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlInputHidden", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.Input", //$NON-NLS-1$
-                                                                                       "javax.faces.Hidden"); //$NON-NLS-1$
+            "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Input", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Hidden"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_SECRET                = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlInputSecret", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlInputSecret", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlInputSecret", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlInputSecret", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder"                                       }, //$NON-NLS-1$
-                                                                                       "javax.faces.Input", //$NON-NLS-1$
-                                                                                       "javax.faces.Secret"); //$NON-NLS-1$
+            "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder"                                       }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Input", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Secret"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_INPUTTEXT             = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlInputText", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlInputText", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlInputText", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlInputText", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object"                   }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder"                                       }, //$NON-NLS-1$
-                                                                                       "javax.faces.Input", //$NON-NLS-1$
-                                                                                       "javax.faces.Text"); //$NON-NLS-1$
+            "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder"                                       }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Input", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Text"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_INPUTTEXTAREA         = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlInputTextarea", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlInputTextarea", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlInputTextarea", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlInputTextarea", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.Input", //$NON-NLS-1$
-                                                                                       "javax.faces.Textarea"); //$NON-NLS-1$
+            "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Input", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Textarea"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_MESSAGE               = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlMessage", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlMessage", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlMessage", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlMessage", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIMessage", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIMessage", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
-                                                                                       { "javax.faces.component.StateHolder", }, //$NON-NLS-1$
-                                                                                       "javax.faces.Message", //$NON-NLS-1$
-                                                                                       "javax.faces.Message"); //$NON-NLS-1$
+                                                                                       { "jakarta.faces.component.StateHolder", }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Message", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Message"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_MESSAGES              = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlMessages", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlMessages", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlMessages", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlMessages", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIMessages", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIMessages", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
-                                                                                       { "javax.faces.component.StateHolder", }, //$NON-NLS-1$
-                                                                                       "javax.faces.Messages", //$NON-NLS-1$
-                                                                                       "javax.faces.Messages"); //$NON-NLS-1$
+                                                                                       { "jakarta.faces.component.StateHolder", }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Messages", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Messages"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_OUTPUTFORMAT          = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlOutputFormat", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlOutputFormat", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlOutputFormat", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlOutputFormat", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIOutput", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIOutput", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.Output", //$NON-NLS-1$
-                                                                                       "javax.faces.Format"); //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Output", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Format"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_OUTPUTLABEL           = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlOutputLabel", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlOutputLabel", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlOutputLabel", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlOutputLabel", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIOutput", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIOutput", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.Output", //$NON-NLS-1$
-                                                                                       "javax.faces.Label"); //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Output", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Label"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_OUTPUTLINK            = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlOutputLink", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlOutputLink", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlOutputLink", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlOutputLink", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIOutput", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIOutput", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.Output", //$NON-NLS-1$
-                                                                                       "javax.faces.Link"); //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Output", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Link"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_OUTPUTTEXT            = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlOutputText", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlOutputText", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlOutputText", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlOutputText", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIOutput", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIOutput", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.Output", //$NON-NLS-1$
-                                                                                       "javax.faces.Text"); //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Output", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Text"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_PANELGRID             = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlPanelGrid", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlPanelGrid", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlPanelGrid", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlPanelGrid", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIPanel", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIPanel", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
-                                                                                       { "javax.faces.component.StateHolder", }, //$NON-NLS-1$
-                                                                                       "javax.faces.Panel", //$NON-NLS-1$
-                                                                                       "javax.faces.Grid"); //$NON-NLS-1$
+                                                                                       { "jakarta.faces.component.StateHolder", }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Panel", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Grid"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_PANELGROUP            = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlPanelGroup", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlPanelGroup", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlPanelGroup", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlPanelGroup", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UIPanel", //$NON-NLS-1$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIPanel", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
-                                                                                       { "javax.faces.component.StateHolder", }, //$NON-NLS-1$
-                                                                                       "javax.faces.Panel", //$NON-NLS-1$
-                                                                                       "javax.faces.Group"); //$NON-NLS-1$
+                                                                                       { "jakarta.faces.component.StateHolder", }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.Panel", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Group"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_SELECTBOOLEANCHECKBOX = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlSelectBooleanCheckbox", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlSelectBooleanCheckbox", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlSelectBooleanCheckbox", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlSelectBooleanCheckbox", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UISelectBoolean", //$NON-NLS-1$
-            "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UISelectBoolean", //$NON-NLS-1$
+            "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.SelectBoolean", //$NON-NLS-1$
-                                                                                       "javax.faces.Checkbox"); //$NON-NLS-1$
+            "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.SelectBoolean", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Checkbox"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_SELECTMANYCHECKBOX    = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlSelectManyCheckbox", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlSelectManyCheckbox", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlSelectManyCheckbox", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlSelectManyCheckbox", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UISelectMany", //$NON-NLS-1$
-            "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UISelectMany", //$NON-NLS-1$
+            "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.SelectMany", //$NON-NLS-1$
-                                                                                       "javax.faces.Checkbox"); //$NON-NLS-1$
+            "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.SelectMany", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Checkbox"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_SELECTMANYLISTBOX     = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlSelectManyListbox", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlSelectManyListbox", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlSelectManyListbox", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlSelectManyListbox", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UISelectMany", //$NON-NLS-1$
-            "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UISelectMany", //$NON-NLS-1$
+            "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.SelectMany", //$NON-NLS-1$
-                                                                                       "javax.faces.Listbox"); //$NON-NLS-1$
+            "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.SelectMany", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Listbox"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_SELECTMANYMENU        = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlSelectManyMenu", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlSelectManyMenu", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlSelectManyMenu", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlSelectManyMenu", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UISelectMany", //$NON-NLS-1$
-            "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UISelectMany", //$NON-NLS-1$
+            "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.SelectMany", //$NON-NLS-1$
-                                                                                       "javax.faces.Menu"); //$NON-NLS-1$
+            "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.SelectMany", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Menu"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_SELECTONELISTBOX      = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlSelectOneListbox", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlSelectOneListbox", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlSelectOneListbox", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlSelectOneListbox", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UISelectOne", //$NON-NLS-1$
-            "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UISelectOne", //$NON-NLS-1$
+            "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.SelectOne", //$NON-NLS-1$
-                                                                                       "javax.faces.Listbox"); //$NON-NLS-1$
+            "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.SelectOne", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Listbox"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_SELECTONEMENU         = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlSelectOneMenu", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlSelectOneMenu", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlSelectOneMenu", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlSelectOneMenu", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UISelectOne", //$NON-NLS-1$
-            "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UISelectOne", //$NON-NLS-1$
+            "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.SelectOne", //$NON-NLS-1$
-                                                                                       "javax.faces.Menu"); //$NON-NLS-1$
+            "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.SelectOne", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Menu"); //$NON-NLS-1$
     private static final ComponentTypeInfo      COMPINFO_SELECTONERADIO        = new ComponentTypeInfo(
-                                                                                       "javax.faces.HtmlSelectOneRadio", //$NON-NLS-1$
-                                                                                       "javax.faces.component.html.HtmlSelectOneRadio", //$NON-NLS-1$
+                                                                                       "jakarta.faces.HtmlSelectOneRadio", //$NON-NLS-1$
+                                                                                       "jakarta.faces.component.html.HtmlSelectOneRadio", //$NON-NLS-1$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.UISelectOne", //$NON-NLS-1$
-            "javax.faces.component.UIInput", "javax.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
-            "javax.faces.component.UIComponentBase", //$NON-NLS-1$
-            "javax.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UISelectOne", //$NON-NLS-1$
+            "jakarta.faces.component.UIInput", "jakarta.faces.component.UIOutput", //$NON-NLS-1$ //$NON-NLS-2$
+            "jakarta.faces.component.UIComponentBase", //$NON-NLS-1$
+            "jakarta.faces.component.UIComponent", "java.lang.Object",                  }, //$NON-NLS-1$ //$NON-NLS-2$
                                                                                        new String[]
                                                                                        {
-            "javax.faces.component.EditableValueHolder", //$NON-NLS-1$
-            "javax.faces.component.ValueHolder", //$NON-NLS-1$
-            "javax.faces.component.StateHolder",                                      }, //$NON-NLS-1$
-                                                                                       "javax.faces.SelectOne", //$NON-NLS-1$
-                                                                                       "javax.faces.Radio"); //$NON-NLS-1$
+            "jakarta.faces.component.EditableValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.ValueHolder", //$NON-NLS-1$
+            "jakarta.faces.component.StateHolder",                                      }, //$NON-NLS-1$
+                                                                                       "jakarta.faces.SelectOne", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Radio"); //$NON-NLS-1$
 
     // default converters
     private static final ConverterTypeInfo      CONVERTERINFO_DATETIME         = new ConverterTypeInfo(
-                                                                                       "javax.faces.convert.DateTimeConverter", //$NON-NLS-1$
-                                                                                       "javax.faces.DateTime"); //$NON-NLS-1$
+                                                                                       "jakarta.faces.convert.DateTimeConverter", //$NON-NLS-1$
+                                                                                       "jakarta.faces.DateTime"); //$NON-NLS-1$
 
     private static final ConverterTypeInfo      CONVERTERINFO_NUMBER           = new ConverterTypeInfo(
-                                                                                       "javax.faces.convert.NumberConverter", //$NON-NLS-1$
-                                                                                       "javax.faces.Number"); //$NON-NLS-1$
+                                                                                       "jakarta.faces.convert.NumberConverter", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Number"); //$NON-NLS-1$
 
     // default validators
     private static final ValidatorTypeInfo      VALIDATORINFO_BEAN             = new ValidatorTypeInfo(
-    		                                                                           "javax.faces.validator.BeanValidator", //$NON-NLS-1$
-    		                                                                           "javax.faces.Bean"); //$NON-NLS-1$
+    		                                                                           "jakarta.faces.validator.BeanValidator", //$NON-NLS-1$
+    		                                                                           "jakarta.faces.Bean"); //$NON-NLS-1$
 
     private static final ValidatorTypeInfo      VALIDATORINFO_DOUBLERANGE      = new ValidatorTypeInfo(
-                                                                                       "javax.faces.validator.DoubleRangeValidator", //$NON-NLS-1$
-                                                                                       "javax.faces.DoubleRange"); //$NON-NLS-1$
+                                                                                       "jakarta.faces.validator.DoubleRangeValidator", //$NON-NLS-1$
+                                                                                       "jakarta.faces.DoubleRange"); //$NON-NLS-1$
 
     private static final ValidatorTypeInfo      VALIDATORINFO_LENGTH           = new ValidatorTypeInfo(
-                                                                                       "javax.faces.validator.LengthValidator", //$NON-NLS-1$
-                                                                                       "javax.faces.Length"); //$NON-NLS-1$
+                                                                                       "jakarta.faces.validator.LengthValidator", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Length"); //$NON-NLS-1$
 
     private static final ValidatorTypeInfo      VALIDATORINFO_LONGRANGE        = new ValidatorTypeInfo(
-                                                                                       "javax.faces.validator.LongRangeValidator", //$NON-NLS-1$
-                                                                                       "javax.faces.LongRange"); //$NON-NLS-1$
+                                                                                       "jakarta.faces.validator.LongRangeValidator", //$NON-NLS-1$
+                                                                                       "jakarta.faces.LongRange"); //$NON-NLS-1$
 
     private static final ValidatorTypeInfo      VALIDATORINFO_REGEX            = new ValidatorTypeInfo(
-    		                                                                           "javax.faces.validator.RegexValidator", //$NON-NLS-1$
-                                                                                       "javax.faces.RegularExpression"); //$NON-NLS-1$
+    		                                                                           "jakarta.faces.validator.RegexValidator", //$NON-NLS-1$
+                                                                                       "jakarta.faces.RegularExpression"); //$NON-NLS-1$
 
     private static final ValidatorTypeInfo      VALIDATORINFO_REQUIRED         = new ValidatorTypeInfo(
-                                                                                       "javax.faces.validator.RequiredValidator", //$NON-NLS-1$
-                                                                                       "javax.faces.Required"); //$NON-NLS-1$
+                                                                                       "jakarta.faces.validator.RequiredValidator", //$NON-NLS-1$
+                                                                                       "jakarta.faces.Required"); //$NON-NLS-1$
 
     private static Map<TagIdentifier, TypeInfo> JSF11_ELEMENTS;
     private static Map<TagIdentifier, TypeInfo> JSF12_ELEMENTS;

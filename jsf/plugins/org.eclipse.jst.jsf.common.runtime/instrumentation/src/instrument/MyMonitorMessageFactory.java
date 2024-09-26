@@ -17,9 +17,9 @@ import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.util.Iterator;
 
-import javax.faces.component.UIComponent;
-import javax.faces.component.UIInput;
-import javax.faces.component.UIOutput;
+import jakarta.faces.component.UIComponent;
+import jakarta.faces.component.UIInput;
+import jakarta.faces.component.UIOutput;
 
 import org.eclipse.jst.jsf.common.runtime.internal.debug.JSFMonitorMessage;
 import org.eclipse.jst.jsf.common.runtime.internal.model.component.ComponentFactory;

@@ -52,7 +52,7 @@ public class WebappConfiguration
     /**
      * The param key for Facelet 2.0 libraries declared in web.xml
      */
-    public static final String JSF20_FACELET_LIBRARIES_CONTEXT_PARAM_NAME = "javax.faces.FACELETS_LIBRARIES"; //$NON-NLS-1$
+    public static final String JSF20_FACELET_LIBRARIES_CONTEXT_PARAM_NAME = "jakarta.faces.FACELETS_LIBRARIES"; //$NON-NLS-1$
     private final IProject _project;
     /**
      * Cached instance of ContextParamAdapter.
@@ -166,7 +166,7 @@ public class WebappConfiguration
 
     /**
      * Gets list of application configuration file names as listed in the JSF
-     * CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES"). Will return
+     * CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES"). Will return
      * an empty list if WebArtifactEdit is null, if WebApp is null, if context
      * parameter does not exist, or if trimmed context parameter's value is an
      * empty String.
@@ -176,7 +176,7 @@ public class WebappConfiguration
      *            value.
      * @param modelProvider
      * @return List of application configuration file names as listed in the JSF
-     *         CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES"); list
+     *         CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES"); list
      *         may be empty.
      */
     public static List<String> getConfigFilesFromContextParam(

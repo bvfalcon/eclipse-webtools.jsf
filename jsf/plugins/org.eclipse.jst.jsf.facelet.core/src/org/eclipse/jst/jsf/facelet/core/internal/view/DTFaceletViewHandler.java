@@ -43,7 +43,7 @@ public class DTFaceletViewHandler extends DefaultDTViewHandler
 {
 
     private static final String ORG_ECLIPSE_WST_HTML_CORE_HTMLSOURCE = "org.eclipse.wst.html.core.htmlsource"; //$NON-NLS-1$
-    private static final String JAVAX_FACES_VIEW_ROOT = "javax.faces.ViewRoot"; //$NON-NLS-1$
+    private static final String JAVAX_FACES_VIEW_ROOT = "jakarta.faces.ViewRoot"; //$NON-NLS-1$
 
     @Override
     public String calculateLocale(DTFacesContext context)

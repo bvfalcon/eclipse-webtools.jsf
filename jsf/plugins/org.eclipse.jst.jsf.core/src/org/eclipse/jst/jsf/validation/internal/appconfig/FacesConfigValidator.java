@@ -16,6 +16,7 @@ import java.util.List;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jst.jsf.core.IJSFCoreConstants;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigPackage;
 import org.eclipse.jst.jsf.facesconfig.emf.PhaseListenerType;
 
@@ -88,7 +89,9 @@ public class FacesConfigValidator extends EObjectValidationVisitor
             }
 
             protected String getInstanceOf() {
-                return "javax.faces.event.PhaseListener"; //$NON-NLS-1$
+                return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+                        "jakarta.faces.event.PhaseListener": //$NON-NLS-1$
+                        "jakarta.faces.event.PhaseListener"; //$NON-NLS-1$
             }
 
             protected EObjectValidationVisitor[] getChildNodeValidators() {

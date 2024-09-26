@@ -119,13 +119,13 @@ public class BuiltInSymbolsTestCase extends SingleJSPTestCase
         assertNoError(1024, TypeConstants.TYPE_MAP);
         assertNoError(1069, TypeConstants.TYPE_MAP);
         assertNoError(1114, TypeConstants.TYPE_MAP);
-        assertNoError(1153, "Ljavax.faces.context.FacesContext;");
+        assertNoError(1153, "Ljakarta.faces.context.FacesContext;");
         assertNoError(1198, TypeConstants.TYPE_MAP);
         assertNoError(1237, TypeConstants.TYPE_MAP);
         assertNoError(1282, TypeConstants.TYPE_MAP);
         assertNoError(1324, TypeConstants.TYPE_MAP);
         assertNoError(1362, TypeConstants.TYPE_MAP);
-        assertNoError(1406, "Ljavax.faces.component.UIViewRoot;");
+        assertNoError(1406, "Ljakarta.faces.component.UIViewRoot;");
         assertNoError(1492, "Lbeans.MapBean;");
         assertNoError(1596, "Lbeans.MyBean;");
         assertNoError(1645, "Lbeans.MapBean;");

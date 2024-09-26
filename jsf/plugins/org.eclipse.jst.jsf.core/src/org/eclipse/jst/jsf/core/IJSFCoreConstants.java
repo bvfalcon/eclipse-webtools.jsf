@@ -12,6 +12,9 @@
  *******************************************************************************/
 package org.eclipse.jst.jsf.core;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.eclipse.wst.common.project.facet.core.IProjectFacet;
 
 /**
@@ -92,6 +95,32 @@ public final class IJSFCoreConstants
 	 * The version string for a JSF 2.3 project
 	 */
 	public static final String JSF_VERSION_2_3 = FACET_VERSION_2_3;
+	/**
+	 * The facet version for a JSF 3.0 project
+	 */
+	public static final String FACET_VERSION_3_0 = "3.0"; //$NON-NLS-1$
+	/**
+	 * The version string for a JSF 3.0 project
+	 */
+	public static final String JSF_VERSION_3_0 = FACET_VERSION_3_0;
+	/**
+	 * The facet version for a JSF 4.0 project
+	 */
+	public static final String FACET_VERSION_4_0 = "4.0"; //$NON-NLS-1$
+	/**
+	 * The version string for a JSF 4.0 project
+	 */
+	public static final String JSF_VERSION_4_0 = FACET_VERSION_4_0;
+
+	public static List<String> JAVAX_NAMESPACE_VERSIONS = Arrays.asList(
+			JSF_VERSION_1_0,
+			JSF_VERSION_1_1,
+			JSF_VERSION_1_2,
+			JSF_VERSION_2_0,
+			JSF_VERSION_2_1,
+			JSF_VERSION_2_2,
+			JSF_VERSION_2_3
+		);
 
     /**
      * @param facet
@@ -101,6 +130,10 @@ public final class IJSFCoreConstants
     public static boolean isJSFFacet(final IProjectFacet facet)
     {
         return JSF_CORE_FACET_ID.equals(facet.getId());
+    }
+    public static boolean isJakartaNamespace(String jsfVersion)
+    {
+        return !JAVAX_NAMESPACE_VERSIONS.contains(jsfVersion);
     }
     private IJSFCoreConstants()
     {

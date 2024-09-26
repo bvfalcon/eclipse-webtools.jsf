@@ -92,16 +92,16 @@ public class ImplicitRuntimeJSFAppConfigProvider extends AbstractJSFAppConfigPro
 			converters.add(createConverter("Enum")); //$NON-NLS-1$
 		}
 		// converters by for-class (see spec 3.3.3 -- Standard Converter Implementions
-		converters.add(createForClassConverter("java.lang.Boolean", "javax.faces.convert.BooleanConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Byte", "javax.faces.convert.ByteConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Character", "javax.faces.convert.CharacterConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Double", "javax.faces.convert.DoubleConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Float", "javax.faces.convert.FloatConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Integer", "javax.faces.convert.IntegerConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Long", "javax.faces.convert.LongConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Short", "javax.faces.converter.ShortConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Boolean", "jakarta.faces.convert.BooleanConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Byte", "jakarta.faces.convert.ByteConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Character", "jakarta.faces.convert.CharacterConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Double", "jakarta.faces.convert.DoubleConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Float", "jakarta.faces.convert.FloatConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Integer", "jakarta.faces.convert.IntegerConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Long", "jakarta.faces.convert.LongConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Short", "jakarta.faces.converter.ShortConverter")); //$NON-NLS-1$ //$NON-NLS-2$
 		if (isAtLeastJSF20Project) {
-			converters.add(createForClassConverter("java.lang.Enum", "javax.faces.converter.EnumConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+			converters.add(createForClassConverter("java.lang.Enum", "jakarta.faces.converter.EnumConverter")); //$NON-NLS-1$ //$NON-NLS-2$
 		}
 		//create and add validators
 		EList validators = facesConfig.getValidator();
@@ -176,14 +176,14 @@ public class ImplicitRuntimeJSFAppConfigProvider extends AbstractJSFAppConfigPro
 		//set converter-id
 		ConverterIdType converterIdType = FacesConfigFactory.eINSTANCE.createConverterIdType();
 		StringBuffer sb = new StringBuffer();
-		sb.append("javax.faces."); //$NON-NLS-1$
+		sb.append("jakarta.faces."); //$NON-NLS-1$
 		sb.append(name);
 		converterIdType.setTextContent(sb.toString());
 		converterType.setConverterId(converterIdType);
 		//set converter-class
 		ConverterClassType converterClassType = FacesConfigFactory.eINSTANCE.createConverterClassType();
 		sb = new StringBuffer();
-		sb.append("javax.faces.convert."); //$NON-NLS-1$
+		sb.append("jakarta.faces.convert."); //$NON-NLS-1$
 		sb.append(name);
 		sb.append("Converter"); //$NON-NLS-1$
 		converterClassType.setTextContent(sb.toString());
@@ -217,14 +217,14 @@ public class ImplicitRuntimeJSFAppConfigProvider extends AbstractJSFAppConfigPro
 		//set validator-id
 		ValidatorIdType validatorIdType = FacesConfigFactory.eINSTANCE.createValidatorIdType();
 		StringBuffer sb = new StringBuffer();
-		sb.append("javax.faces."); //$NON-NLS-1$
+		sb.append("jakarta.faces."); //$NON-NLS-1$
 		sb.append(id);
 		validatorIdType.setTextContent(sb.toString());
 		validatorType.setValidatorId(validatorIdType);
 		//set validator-class
 		ValidatorClassType validatorClassType = FacesConfigFactory.eINSTANCE.createValidatorClassType();
 		sb = new StringBuffer();
-		sb.append("javax.faces.validator."); //$NON-NLS-1$
+		sb.append("jakarta.faces.validator."); //$NON-NLS-1$
 		sb.append(classname);
 		sb.append("Validator"); //$NON-NLS-1$
 		validatorClassType.setTextContent(sb.toString());
@@ -256,14 +256,14 @@ public class ImplicitRuntimeJSFAppConfigProvider extends AbstractJSFAppConfigPro
 		//set component-type
 		ComponentTypeType componentTypeType = FacesConfigFactory.eINSTANCE.createComponentTypeType();
 		StringBuffer sb = new StringBuffer();
-		sb.append("javax.faces."); //$NON-NLS-1$
+		sb.append("jakarta.faces."); //$NON-NLS-1$
 		sb.append(name);
 		componentTypeType.setTextContent(sb.toString());
 		componentType.setComponentType(componentTypeType);
 		//set component-class
 		ComponentClassType componentClassType = FacesConfigFactory.eINSTANCE.createComponentClassType();
 		sb = new StringBuffer();
-		sb.append("javax.faces.component.UI"); //$NON-NLS-1$
+		sb.append("jakarta.faces.component.UI"); //$NON-NLS-1$
 		sb.append(name);
 		componentClassType.setTextContent(sb.toString());
 		componentType.setComponentClass(componentClassType);
@@ -283,14 +283,14 @@ public class ImplicitRuntimeJSFAppConfigProvider extends AbstractJSFAppConfigPro
 		//set component-type
 		ComponentTypeType componentTypeType = FacesConfigFactory.eINSTANCE.createComponentTypeType();
 		StringBuffer sb = new StringBuffer();
-		sb.append("javax.faces."); //$NON-NLS-1$
+		sb.append("jakarta.faces."); //$NON-NLS-1$
 		sb.append(name);
 		componentTypeType.setTextContent(sb.toString());
 		componentType.setComponentType(componentTypeType);
 		//set component-class
 		ComponentClassType componentClassType = FacesConfigFactory.eINSTANCE.createComponentClassType();
 		sb = new StringBuffer();
-		sb.append("javax.faces.component.html."); //$NON-NLS-1$
+		sb.append("jakarta.faces.component.html."); //$NON-NLS-1$
 		sb.append(name);
 		componentClassType.setTextContent(sb.toString());
 		componentType.setComponentClass(componentClassType);

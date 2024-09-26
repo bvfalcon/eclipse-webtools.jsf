@@ -145,9 +145,9 @@ public class AppConfigValidationUtilTestCase extends TestCase
         assertNotNull(error);
         assertEquals(DiagnosticFactory.FULLY_QUALIFIED_NAME_MUST_BE_A_CLASS_ID, ((ILocalizedMessage)error).getErrorCode());
         
-        // must be an instanceof javax.faces.Converter but is not
+        // must be an instanceof jakarta.faces.Converter but is not
         error = AppConfigValidationUtil.validateClassName
-            ("com.test.TestBean1", "javax.faces.Converter", true, project);
+            ("com.test.TestBean1", "jakarta.faces.Converter", true, project);
         assertNotNull(error);
         assertEquals(DiagnosticFactory.CLASS_MUST_BE_INSTANCE_OF_ID, ((ILocalizedMessage)error).getErrorCode());
     }

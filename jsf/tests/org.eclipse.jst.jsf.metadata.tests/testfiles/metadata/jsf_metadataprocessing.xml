@@ -113,7 +113,7 @@
 			<value>org.eclipse.jst.jsf.core.IdentifierType</value>
 		</trait>
 	  	<trait id="identifier-type">
-	  		<value>javax.faces.validator</value>
+	  		<value>jakarta.faces.validator</value>
 	  	</trait>
   	</entity>
   </entity>

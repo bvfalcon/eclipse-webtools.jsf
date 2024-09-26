@@ -62,82 +62,82 @@ public interface IFacesConfigConstants {
 	/**
 	 * 
 	 */
-	public static final String COMPONENT_SUPER_CLASS = "javax.faces.component.UIComponent"; //$NON-NLS-1$
+	public static final String COMPONENT_SUPER_CLASS = "jakarta.faces.component.UIComponent"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String RENDER_KIT_SUPER_CLASS = "javax.faces.render.RenderKit"; //$NON-NLS-1$
+	public static final String RENDER_KIT_SUPER_CLASS = "jakarta.faces.render.RenderKit"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String CONVERTER_INTERFACE = "javax.faces.convert.Converter"; //$NON-NLS-1$
+	public static final String CONVERTER_INTERFACE = "jakarta.faces.convert.Converter"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String VALIDATOR_INTERFACE = "javax.faces.validator.Validator"; //$NON-NLS-1$
+	public static final String VALIDATOR_INTERFACE = "jakarta.faces.validator.Validator"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String RENDERER_SUPER_CLASS = "javax.faces.render.Renderer"; //$NON-NLS-1$
+	public static final String RENDERER_SUPER_CLASS = "jakarta.faces.render.Renderer"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String ACTION_LISTENER_INTERFACE = "javax.faces.event.ActionListener"; //$NON-NLS-1$
+	public static final String ACTION_LISTENER_INTERFACE = "jakarta.faces.event.ActionListener"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String NAVIGATION_HANDLE_SUPER_CLASS = "javax.faces.application.NavigationHandler"; //$NON-NLS-1$
+	public static final String NAVIGATION_HANDLE_SUPER_CLASS = "jakarta.faces.application.NavigationHandler"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String PROPERTY_RESOLVER_SUPER_CLASS = "javax.faces.el.PropertyResolver"; //$NON-NLS-1$
+	public static final String PROPERTY_RESOLVER_SUPER_CLASS = "jakarta.faces.el.PropertyResolver"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String STATE_MANAGER_SUPER_CLASS = "javax.faces.application.StateManager"; //$NON-NLS-1$
+	public static final String STATE_MANAGER_SUPER_CLASS = "jakarta.faces.application.StateManager"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String VARIABLE_RESOLVER_SUPER_CLASS = "javax.faces.el.VariableResolver"; //$NON-NLS-1$
+	public static final String VARIABLE_RESOLVER_SUPER_CLASS = "jakarta.faces.el.VariableResolver"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String VIEW_HANDLER_SUPER_CLASS = "javax.faces.application.ViewHandler"; //$NON-NLS-1$
+	public static final String VIEW_HANDLER_SUPER_CLASS = "jakarta.faces.application.ViewHandler"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String APPLICATION_FACTORY_SUPER_CLASS = "javax.faces.application.ApplicationFactory"; //$NON-NLS-1$
+	public static final String APPLICATION_FACTORY_SUPER_CLASS = "jakarta.faces.application.ApplicationFactory"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String FACES_CONTEXT_FACTORY_SUPER_CLASS = "javax.faces.context.FacesContextFactory"; //$NON-NLS-1$
+	public static final String FACES_CONTEXT_FACTORY_SUPER_CLASS = "jakarta.faces.context.FacesContextFactory"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String LIFECYCLE_FACTORY_SUPER_CLASS = "javax.faces.lifecycle.LifecycleFactory"; //$NON-NLS-1$
+	public static final String LIFECYCLE_FACTORY_SUPER_CLASS = "jakarta.faces.lifecycle.LifecycleFactory"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String RENDER_KIT_FACTORY_SUPER_CLASS = "javax.faces.render.RenderKitFactory"; //$NON-NLS-1$
+	public static final String RENDER_KIT_FACTORY_SUPER_CLASS = "jakarta.faces.render.RenderKitFactory"; //$NON-NLS-1$
 
 	/**
 	 * 
 	 */
-	public static final String PHASE_LISTENER_INTERFACE = "javax.faces.event.PhaseListener"; //$NON-NLS-1$
+	public static final String PHASE_LISTENER_INTERFACE = "jakarta.faces.event.PhaseListener"; //$NON-NLS-1$
 
 	/**
 	 * 

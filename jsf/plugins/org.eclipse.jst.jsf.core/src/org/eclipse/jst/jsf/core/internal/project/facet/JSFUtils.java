@@ -57,16 +57,16 @@ public abstract class JSFUtils {
 	/**
 	 * The default name of the Faces servlet class
 	 */
-	public static final String JSF_SERVLET_CLASS = "javax.faces.webapp.FacesServlet"; //$NON-NLS-1$
+	public static final String JSF_SERVLET_CLASS = "jakarta.faces.webapp.FacesServlet"; //$NON-NLS-1$
 	/**
 	 * The name of the context parameter used for JSF configuration files
 	 */
-	public static final String JSF_CONFIG_CONTEXT_PARAM = "javax.faces.CONFIG_FILES"; //$NON-NLS-1$
+	public static final String JSF_CONFIG_CONTEXT_PARAM = "jakarta.faces.CONFIG_FILES"; //$NON-NLS-1$
 	
 	/**
 	 * The name of the context parameter used for defining the default JSP file extension
 	 */
-	public static final String JSF_DEFAULT_SUFFIX_CONTEXT_PARAM = "javax.faces.DEFAULT_SUFFIX"; //$NON-NLS-1$
+	public static final String JSF_DEFAULT_SUFFIX_CONTEXT_PARAM = "jakarta.faces.DEFAULT_SUFFIX"; //$NON-NLS-1$
 	
 	/**
 	 * The path to the default application configuration file

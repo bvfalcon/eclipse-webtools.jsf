@@ -196,11 +196,11 @@ public enum JSFVersion {
                 IJavaProject javaProj = JavaCore.create(project);
                 if (javaProj != null && javaProj.exists())
                 {
-                    if (javaProj.findType("javax.faces.component.html.HtmlBody") != null) //$NON-NLS-1$
+                    if (javaProj.findType("jakarta.faces.component.html.HtmlBody") != null) //$NON-NLS-1$
                     {
                         // at least 2.0 inside here
                         jsfVersion = JSFVersion.V2_0;
-                        if (javaProj.findType("javax.faces.view.facelets.FaceletCacheFactory") != null) //$NON-NLS-1$
+                        if (javaProj.findType("jakarta.faces.view.facelets.FaceletCacheFactory") != null) //$NON-NLS-1$
                         {
                             // add in 2.1
                             jsfVersion = JSFVersion.V2_1;

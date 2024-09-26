@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import javax.servlet.jsp.el.ELException;
+import jakarta.el.ELException;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IStorage;
@@ -112,7 +112,7 @@ public class PageExpressionContext {
 	 */
 	public Object evaluateExpression(String expression, Class expectedClass, Map options)
 			throws ELException {
-		//Bug 319317 - Third-party plug-in providing javax.servlet.jsp.el version 2.1 or greater breaks WPE preview
+		//Bug 319317 - Third-party plug-in providing jakarta.servlet.jsp.el version 2.1 or greater breaks WPE preview
 		String ret = expression;
 		if (options != null) {
 			Object objElement = options.get("ELEMENT"); //$NON-NLS-1$

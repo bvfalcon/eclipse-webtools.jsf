@@ -36,7 +36,7 @@
 				</value>
 			</trait>
 			<trait id="valid-interfaces">
-				<value xsi:type="mdt:StringValue">javax.faces.event.ActionListener</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.event.ActionListener</value>
 			</trait>		
 		</entity>
 	</entity>
@@ -70,7 +70,7 @@
 				<value xsi:type="mdt:StringValue">void</value>
 			</trait>			
 			<trait id="runtime-param-types">
-				<value xsi:type="mdt:StringValue">javax.faces.event.AjaxBehaviorEvent</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.event.AjaxBehaviorEvent</value>
 			</trait>	
 			<trait id="category">
 				<value xsi:type="mdt:StringValue">%property.category.jsf</value>
@@ -293,7 +293,7 @@
 				</value>
 			</trait>
 			<trait id="config-type">
-				<value xsi:type="mdt:StringValue">javax.faces.convert.Converter</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.convert.Converter</value>
 			</trait>
 		</entity>
 	</entity>
@@ -320,7 +320,7 @@
 				<value xsi:type="mdt:StringValue">void</value>
 			</trait>			
 			<trait id="runtime-param-types">
-				<value xsi:type="mdt:StringValue">javax.faces.event.ComponentSystemEvent</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.event.ComponentSystemEvent</value>
 			</trait>	
 			<trait id="category">
 				<value xsi:type="mdt:StringValue">%property.category.jsf</value>
@@ -461,7 +461,7 @@
 				</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.model.SelectItem</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.model.SelectItem</value>
 			</trait>				
 		</entity>
 		<entity id="noSelectionOption">
@@ -555,7 +555,7 @@
 				</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.validator.BeanValidator</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.validator.BeanValidator</value>
 			</trait>				
 		</entity>
 		<entity id="for">
@@ -598,7 +598,7 @@
 				</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.validator.DoubleRangeValidator</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.validator.DoubleRangeValidator</value>
 			</trait>				
 		</entity>
 		<entity id="for">
@@ -643,7 +643,7 @@
 				</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.validator.LengthValidator</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.validator.LengthValidator</value>
 			</trait>				
 		</entity>
 		<entity id="for">
@@ -686,7 +686,7 @@
 				</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.validator.LongRangeValidator</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.validator.LongRangeValidator</value>
 			</trait>				
 		</entity>
 		<entity id="for">
@@ -716,7 +716,7 @@
 				</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.validator.RegexValidator</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.validator.RegexValidator</value>
 			</trait>				
 		</entity>
 		<entity id="for">
@@ -738,7 +738,7 @@
 				</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.validator.RequiredValidator</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.validator.RequiredValidator</value>
 			</trait>				
 		</entity>
 		<entity id="for">
@@ -759,7 +759,7 @@
 				</value>
 			</trait>
 			<trait id="config-type">
-				<value xsi:type="mdt:StringValue">javax.faces.validator.Validator</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.validator.Validator</value>
 			</trait>
 		</entity>
 		<entity id="disabled">
@@ -776,7 +776,7 @@
 				</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.validator.Validator</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.validator.Validator</value>
 			</trait>				
 		</entity>
 		<entity id="for">
@@ -797,7 +797,7 @@
 				</value>
 			</trait>
 			<trait id="valid-interfaces">
-				<value xsi:type="mdt:StringValue">javax.faces.event.ValueChangeListener</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.event.ValueChangeListener</value>
 			</trait>			
 		</entity>
 	</entity>
@@ -860,7 +860,7 @@
 				</value>
 			</trait>
 			<trait id="config-type">
-				<value xsi:type="mdt:StringValue">javax.faces.convert.Converter</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.convert.Converter</value>
 			</trait>
 			<trait id="category">
 				<value xsi:type="mdt:StringValue">%property.category.jsf</value>
@@ -903,7 +903,7 @@
 				</value>
 			</trait>
 			<trait id="config-type">
-				<value xsi:type="mdt:StringValue">javax.faces.convert.Validator</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.convert.Validator</value>
 			</trait>
 			<trait id="category">
 				<value xsi:type="mdt:StringValue">%property.category.jsf</value>
@@ -927,7 +927,7 @@
 				<value xsi:type="mdt:StringValue">void</value>
 			</trait>			
 			<trait id="runtime-param-types">
-				<value xsi:type="mdt:StringValue">javax.faces.event.ValueChangeEvent</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.event.ValueChangeEvent</value>
 			</trait>	
 			<trait id="category">
 				<value xsi:type="mdt:StringValue">%property.category.jsf</value>
@@ -953,7 +953,7 @@
 				</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.component.UIComponent</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.component.UIComponent</value>
 			</trait>				
 		</entity>			
 		<entity id="id">

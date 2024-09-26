@@ -74,9 +74,9 @@ import org.eclipse.wst.common.project.facet.core.ProjectFacetsManager;
 public class JSFAppConfigUtils {
 
 	/**
-	 * Name of JSF CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES").
+	 * Name of JSF CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES").
 	 */
-	public static final String CONFIG_FILES_CONTEXT_PARAM_NAME = "javax.faces.CONFIG_FILES"; //$NON-NLS-1$
+	public static final String CONFIG_FILES_CONTEXT_PARAM_NAME = "jakarta.faces.CONFIG_FILES"; //$NON-NLS-1$
 
 	/**
 	 * Location in JAR file of application configuration resource file
@@ -219,7 +219,7 @@ public class JSFAppConfigUtils {
 
 	/**
 	 * Gets list of application configuration file names as listed in the JSF
-	 * CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES"). Will return
+	 * CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES"). Will return
 	 * an empty list if WebArtifactEdit is null, if WebApp is null, if context
 	 * parameter does not exist, or if trimmed context parameter's value is
 	 * an empty String.
@@ -227,7 +227,7 @@ public class JSFAppConfigUtils {
 	 * @param project IProject instance for which to get the context
 	 * parameter's value.
 	 * @return List of application configuration file names as listed in the
-	 * JSF CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES"); list
+	 * JSF CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES"); list
 	 * may be empty.
 	 */
 	public static List getConfigFilesFromContextParam(IProject project) {

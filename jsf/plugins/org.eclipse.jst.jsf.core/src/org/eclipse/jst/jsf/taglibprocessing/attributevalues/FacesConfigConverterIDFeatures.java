@@ -36,7 +36,7 @@ public class FacesConfigConverterIDFeatures extends FacesConfigIdentifierFeature
 	/**
 	 * Faces converter classname
 	 */
-	protected static final String CONVERTER = "javax.faces.convert.Converter"; //$NON-NLS-1$
+	protected static final String CONVERTER = "jakarta.faces.convert.Converter"; //$NON-NLS-1$
 	/**
 	 * Imagename to use when displaying converter
 	 */

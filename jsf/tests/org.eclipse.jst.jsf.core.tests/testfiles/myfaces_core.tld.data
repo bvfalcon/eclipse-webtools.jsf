@@ -62,7 +62,7 @@
 -->
    <tag>
       <name>attribute</name>
-      <tag-class>javax.faces.webapp.AttributeTag</tag-class>
+      <tag-class>jakarta.faces.webapp.AttributeTag</tag-class>
       <body-content>empty</body-content>
       <description>
             This tag associates an attribute with the nearest parent
@@ -165,7 +165,7 @@
    </tag>
    <tag>
       <name>converter</name>
-      <tag-class>javax.faces.webapp.ConverterTag</tag-class>
+      <tag-class>jakarta.faces.webapp.ConverterTag</tag-class>
       <body-content>empty</body-content>
       <description>
             This tag creates an instance of the specified Converter, and
@@ -271,7 +271,7 @@
 -->
    <tag>
       <name>facet</name>
-      <tag-class>javax.faces.webapp.FacetTag</tag-class>
+      <tag-class>jakarta.faces.webapp.FacetTag</tag-class>
       <body-content>JSP</body-content>
       <description>
             This tag adds its child as a facet of the nearest parent UIComponent.
@@ -457,7 +457,7 @@
          <rtexprvalue>false</rtexprvalue>
          <type>java.lang.String</type>
          <description>
-        An EL expression that refers to a javax.faces.model.SelectItem instance.
+        An EL expression that refers to a jakarta.faces.model.SelectItem instance.
     </description>
       </attribute>
    </tag>
@@ -669,7 +669,7 @@
    </tag>
    <tag>
       <name>validator</name>
-      <tag-class>javax.faces.webapp.ValidatorTag</tag-class>
+      <tag-class>jakarta.faces.webapp.ValidatorTag</tag-class>
       <body-content>empty</body-content>
       <description>
         Creates a validator and associates it with the nearest parent

@@ -52,9 +52,9 @@ public class FacesConfigValidatorIDTypeTests extends SingleJSPTestCase {
 		assertPossibleValues(pv.getPossibleValues(),
 			new String[]{
 				"com.foo.myvalidator",
-				"javax.faces.DoubleRange", 
-				"javax.faces.Length",
-				"javax.faces.LongRange"} );
+				"jakarta.faces.DoubleRange", 
+				"jakarta.faces.Length",
+				"jakarta.faces.LongRange"} );
 
 	}
 	
@@ -74,9 +74,9 @@ public class FacesConfigValidatorIDTypeTests extends SingleJSPTestCase {
 		assertNotNull(vv);
 		
 		assertTrue(vv.isValidValue("com.foo.myvalidator"));
-		assertTrue(vv.isValidValue("javax.faces.DoubleRange"));
-		assertTrue(vv.isValidValue("javax.faces.Length"));
-		assertTrue(vv.isValidValue("javax.faces.LongRange"));
+		assertTrue(vv.isValidValue("jakarta.faces.DoubleRange"));
+		assertTrue(vv.isValidValue("jakarta.faces.Length"));
+		assertTrue(vv.isValidValue("jakarta.faces.LongRange"));
 		
 		assertFalse(vv.isValidValue("com.foo.myconverter"));
 	}

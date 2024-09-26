@@ -137,7 +137,7 @@
 				</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.component.UIComponent</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.component.UIComponent</value>
 			</trait>
 		</entity>
 	</entity>
@@ -251,7 +251,7 @@
 				</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.component.UIComponent</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.component.UIComponent</value>
 			</trait>
 		</entity>
 	</entity>

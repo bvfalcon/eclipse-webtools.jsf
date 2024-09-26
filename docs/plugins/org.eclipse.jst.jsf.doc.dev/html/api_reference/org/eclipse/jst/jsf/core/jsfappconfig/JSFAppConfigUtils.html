@@ -125,7 +125,7 @@ JSFAppConfigUtils provides utility methods useful in processing of a JSF
 <TD><CODE><B><A HREF="../../../../../../org/eclipse/jst/jsf/core/jsfappconfig/JSFAppConfigUtils.html#CONFIG_FILES_CONTEXT_PARAM_NAME">CONFIG_FILES_CONTEXT_PARAM_NAME</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name of JSF CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES").</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name of JSF CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES").</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -178,7 +178,7 @@ JSFAppConfigUtils provides utility methods useful in processing of a JSF
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets list of application configuration file names as listed in the JSF
- CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES").</TD>
+ CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES").</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -254,7 +254,7 @@ CONFIG_FILES_CONTEXT_PARAM_NAME</H3>
 <PRE>
 public static final java.lang.String <B>CONFIG_FILES_CONTEXT_PARAM_NAME</B></PRE>
 <DL>
-<DD>Name of JSF CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES").
+<DD>Name of JSF CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES").
 <P>
 <DL>
 <DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#org.eclipse.jst.jsf.core.jsfappconfig.JSFAppConfigUtils.CONFIG_FILES_CONTEXT_PARAM_NAME">Constant Field Values</A></DL>
@@ -389,7 +389,7 @@ getConfigFilesFromContextParam</H3>
 public static java.util.List <B>getConfigFilesFromContextParam</B>(IProject&nbsp;project)</PRE>
 <DL>
 <DD>Gets list of application configuration file names as listed in the JSF
- CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES"). Will return
+ CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES"). Will return
  an empty list if WebArtifactEdit is null, if WebApp is null, if context
  parameter does not exist, or if trimmed context parameter's value is
  an empty String.
@@ -398,7 +398,7 @@ public static java.util.List <B>getConfigFilesFromContextParam</B>(IProject&nbsp
 <DT><B>Parameters:</B><DD><CODE>project</CODE> - IProject instance for which to get the context
  parameter's value.
 <DT><B>Returns:</B><DD>List of application configuration file names as listed in the
- JSF CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES"); list
+ JSF CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES"); list
  may be empty.</DL>
 </DD>
 </DL>

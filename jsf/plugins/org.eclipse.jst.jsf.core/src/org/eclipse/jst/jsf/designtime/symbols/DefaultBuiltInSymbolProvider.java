@@ -73,8 +73,8 @@ public class DefaultBuiltInSymbolProvider
     private static final String PARAM_VALUES_IMPLICIT_OBJ           = "paramValues";                     //$NON-NLS-1$
     private static final String VIEW_IMPLICIT_OBJ                   = "view";                            //$NON-NLS-1$
 
-    private static final String FACES_CONTEXT_FULLY_QUALIFIED_CLASS = "javax.faces.context.FacesContext"; //$NON-NLS-1$
-    private static final String VIEW_FULLY_QUALIFIED_CLASS          = "javax.faces.component.UIViewRoot"; //$NON-NLS-1$
+    private static final String FACES_CONTEXT_FULLY_QUALIFIED_CLASS = "jakarta.faces.context.FacesContext"; //$NON-NLS-1$
+    private static final String VIEW_FULLY_QUALIFIED_CLASS          = "jakarta.faces.component.UIViewRoot"; //$NON-NLS-1$
     
     private static final ISymbol SYMBOL_COOKIE_IMPLICIT_OBJ;
     private static final ISymbol SYMBOL_HEADER_IMPLICIT_OBJ;
@@ -90,7 +90,7 @@ public class DefaultBuiltInSymbolProvider
     private static final String COMPONENT_IMPLICIT_OBJ              = "component";                      //$NON-NLS-1$
     private static final String RESOURCE_IMPLICIT_OBJ               = "resource";                       //$NON-NLS-1$
     
-    private static final String UICOMPONENT_FULLY_QUALIFIED_CLASS       = "javax.faces.component.UIComponent";//$NON-NLS-1$
+    private static final String UICOMPONENT_FULLY_QUALIFIED_CLASS       = "jakarta.faces.component.UIComponent";//$NON-NLS-1$
     
     static
     {

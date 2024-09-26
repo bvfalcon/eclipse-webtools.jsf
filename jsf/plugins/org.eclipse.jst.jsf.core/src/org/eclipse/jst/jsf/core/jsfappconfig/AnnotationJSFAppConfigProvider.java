@@ -42,26 +42,26 @@ import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigType;
  */
 public class AnnotationJSFAppConfigProvider extends AbstractJSFAppConfigProvider {
 
-    static final String MANAGED_BEAN_ANNOTATION_CLASS = "javax.faces.bean.ManagedBean"; //$NON-NLS-1$
-    static final String REFERENCED_BEAN_ANNOTATION_CLASS = "javax.faces.bean.ReferencedBean"; //$NON-NLS-1$
-    static final String FACES_COMPONENT_ANNOTATION_CLASS = "javax.faces.component.FacesComponent"; //$NON-NLS-1$
-    static final String FACES_CONVERTER_ANNOTATION_CLASS = "javax.faces.convert.FacesConverter"; //$NON-NLS-1$
-    static final String FACES_RENDERER_ANNOTATION_CLASS = "javax.faces.render.FacesRenderer"; //$NON-NLS-1$
-    static final String FACES_VALIDATOR_ANNOTATION_CLASS = "javax.faces.validator.FacesValidator"; //$NON-NLS-1$
+    static final String MANAGED_BEAN_ANNOTATION_CLASS = "jakarta.faces.bean.ManagedBean"; //$NON-NLS-1$
+    static final String REFERENCED_BEAN_ANNOTATION_CLASS = "jakarta.faces.bean.ReferencedBean"; //$NON-NLS-1$
+    static final String FACES_COMPONENT_ANNOTATION_CLASS = "jakarta.faces.component.FacesComponent"; //$NON-NLS-1$
+    static final String FACES_CONVERTER_ANNOTATION_CLASS = "jakarta.faces.convert.FacesConverter"; //$NON-NLS-1$
+    static final String FACES_RENDERER_ANNOTATION_CLASS = "jakarta.faces.render.FacesRenderer"; //$NON-NLS-1$
+    static final String FACES_VALIDATOR_ANNOTATION_CLASS = "jakarta.faces.validator.FacesValidator"; //$NON-NLS-1$
     
-    static final String NONE_SCOPED_ANNOTATION_CLASS = "javax.faces.bean.NoneScoped"; //$NON-NLS-1$
-    static final String VIEW_SCOPED_ANNOTATION_CLASS = "javax.faces.bean.ViewScoped"; //$NON-NLS-1$
-    static final String SESSION_SCOPED_ANNOTATION_CLASS = "javax.faces.bean.SessionScoped"; //$NON-NLS-1$
-    static final String APPLICATION_SCOPED_ANNOTATION_CLASS = "javax.faces.bean.ApplicationScoped"; //$NON-NLS-1$
-    static final String CUSTOM_SCOPED_ANNOTATION_CLASS = "javax.faces.bean.CustomScoped";  //$NON-NLS-1$
+    static final String NONE_SCOPED_ANNOTATION_CLASS = "jakarta.faces.bean.NoneScoped"; //$NON-NLS-1$
+    static final String VIEW_SCOPED_ANNOTATION_CLASS = "jakarta.faces.bean.ViewScoped"; //$NON-NLS-1$
+    static final String SESSION_SCOPED_ANNOTATION_CLASS = "jakarta.faces.bean.SessionScoped"; //$NON-NLS-1$
+    static final String APPLICATION_SCOPED_ANNOTATION_CLASS = "jakarta.faces.bean.ApplicationScoped"; //$NON-NLS-1$
+    static final String CUSTOM_SCOPED_ANNOTATION_CLASS = "jakarta.faces.bean.CustomScoped";  //$NON-NLS-1$
 
-    static final String CDI_NAMED_BEAN_ANNOTATION_CLASS = "javax.inject.Named"; //$NON-NLS-1$
-    static final String CDI_MODEL_BEAN_ANNOTATION_CLASS = "javax.enterprise.inject.Model"; //$NON-NLS-1$
+    static final String CDI_NAMED_BEAN_ANNOTATION_CLASS = "jakarta.inject.Named"; //$NON-NLS-1$
+    static final String CDI_MODEL_BEAN_ANNOTATION_CLASS = "jakarta.enterprise.inject.Model"; //$NON-NLS-1$
 
-    static final String CDI_REQUEST_SCOPED_ANNOTATION_CLASS = "javax.enterprise.context.RequestScoped"; //$NON-NLS-1$
-    static final String CDI_CONVERSATION_SCOPED_ANNOTATION_CLASS = "javax.enterprise.context.ConversationScoped"; //$NON-NLS-1$
-    static final String CDI_SESSION_SCOPED_ANNOTATION_CLASS = "javax.enterprise.context.SessionScoped"; //$NON-NLS-1$
-    static final String CDI_APPLICATION_SCOPED_ANNOTATION_CLASS = "javax.enterprise.context.ApplicationScoped"; //$NON-NLS-1$
+    static final String CDI_REQUEST_SCOPED_ANNOTATION_CLASS = "jakarta.enterprise.context.RequestScoped"; //$NON-NLS-1$
+    static final String CDI_CONVERSATION_SCOPED_ANNOTATION_CLASS = "jakarta.enterprise.context.ConversationScoped"; //$NON-NLS-1$
+    static final String CDI_SESSION_SCOPED_ANNOTATION_CLASS = "jakarta.enterprise.context.SessionScoped"; //$NON-NLS-1$
+    static final String CDI_APPLICATION_SCOPED_ANNOTATION_CLASS = "jakarta.enterprise.context.ApplicationScoped"; //$NON-NLS-1$
 
     /**
      * Cached {@link FacesConfigType} instance.

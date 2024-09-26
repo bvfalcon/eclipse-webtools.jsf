@@ -105,7 +105,7 @@ public class XMLViewObjectConstructionStrategy extends
                 final ComponentTypeInfo typeInfo = ((IComponentTagElement) tagElement)
                         .getComponent();
 
-                if (!"javax.faces.ViewRoot".equals(typeInfo.getComponentType())) //$NON-NLS-1$
+                if (!"jakarta.faces.ViewRoot".equals(typeInfo.getComponentType())) //$NON-NLS-1$
                 {
                     id = calculateId(element, _constructionData);
                 }

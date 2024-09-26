@@ -70,7 +70,7 @@ public class TestTagAnalyzer extends BaseTestClass
     {
         final String componentType = TagAnalyzer.findComponentType(
                 _inputTextTag, _webProjectTestEnv.getTestProject());
-        assertEquals("javax.faces.HtmlInputText", componentType);
+        assertEquals("jakarta.faces.HtmlInputText", componentType);
     }
 
     // TODO: introspection of converters and validators is flaky at best
@@ -92,7 +92,7 @@ public class TestTagAnalyzer extends BaseTestClass
 //
 //        // TODO: this doesn't work and may never work for JSF 1.2 without
 //        // meta-data because of the *ELTag's.
-//        assertEquals("javax.faces.DoubleRange", validatorType);
+//        assertEquals("jakarta.faces.DoubleRange", validatorType);
 //    }
 
     public void testCreateTLDTagElement()
@@ -129,16 +129,16 @@ public class TestTagAnalyzer extends BaseTestClass
         assertEquals(TagType.COMPONENT, componentTagElement.getType());
         final ComponentTypeInfo componentTypeInfo = componentTagElement
                 .getComponent();
-        assertEquals("javax.faces.component.html.HtmlCommandButton",
+        assertEquals("jakarta.faces.component.html.HtmlCommandButton",
                 componentTypeInfo.getClassName());
-        assertEquals("javax.faces.HtmlCommandButton", componentTypeInfo
+        assertEquals("jakarta.faces.HtmlCommandButton", componentTypeInfo
                 .getComponentType());
-        assertEquals("javax.faces.Command", componentTypeInfo
+        assertEquals("jakarta.faces.Command", componentTypeInfo
                 .getComponentFamily());
         
         new Exception("TODO: derive renderer type from configuration files where possible")
             .printStackTrace(System.err);
-        //assertEquals("javax.faces.Button", componentTypeInfo.getRenderFamily());
+        //assertEquals("jakarta.faces.Button", componentTypeInfo.getRenderFamily());
     }
 
     // TODO: converter and validator introspection are flaky at best
@@ -157,9 +157,9 @@ public class TestTagAnalyzer extends BaseTestClass
 //        assertEquals(TagType.CONVERTER, converterTagElement.getType());
 //        final ConverterTypeInfo converterTypeInfo = converterTagElement
 //                .getConverter();
-//        assertEquals("javax.faces.convert.NumberConverter", converterTypeInfo
+//        assertEquals("jakarta.faces.convert.NumberConverter", converterTypeInfo
 //                .getClassName());
-//        assertEquals("javax.faces.Number", converterTypeInfo.getConverterId());
+//        assertEquals("jakarta.faces.Number", converterTypeInfo.getConverterId());
 //    }
 //
 //    public void testCreateValidatorTagElement()
@@ -177,9 +177,9 @@ public class TestTagAnalyzer extends BaseTestClass
 //        assertEquals(TagType.VALIDATOR, validatorTagElement.getType());
 //        final ValidatorTypeInfo converterTypeInfo = validatorTagElement
 //                .getValidator();
-//        assertEquals("javax.faces.validator.LengthValidator", converterTypeInfo
+//        assertEquals("jakarta.faces.validator.LengthValidator", converterTypeInfo
 //                .getClassName());
-//        assertEquals("javax.faces.Length", converterTypeInfo.getValidatorId());
+//        assertEquals("jakarta.faces.Length", converterTypeInfo.getValidatorId());
 //    }
 
     public void testCreateHandlerTagElement() throws Exception
