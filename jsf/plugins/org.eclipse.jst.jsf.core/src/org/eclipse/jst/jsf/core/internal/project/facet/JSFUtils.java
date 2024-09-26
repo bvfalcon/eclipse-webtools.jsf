@@ -59,14 +59,26 @@ public abstract class JSFUtils {
 	 */
 	public static final String JSF_SERVLET_CLASS = "javax.faces.webapp.FacesServlet"; //$NON-NLS-1$
 	/**
+	 * The default name of the Faces servlet class for Jakarta EE
+	 */
+	public static final String JSF_SERVLET_CLASS_JAKARTA = "jakarta.faces.webapp.FacesServlet"; //$NON-NLS-1$
+	/**
 	 * The name of the context parameter used for JSF configuration files
 	 */
 	public static final String JSF_CONFIG_CONTEXT_PARAM = "javax.faces.CONFIG_FILES"; //$NON-NLS-1$
+	/**
+	 * The name of the context parameter used for JSF configuration files (for Jakarta EE)
+	 */
+	public static final String JSF_CONFIG_CONTEXT_PARAM_JAKARTA = "jakarta.faces.CONFIG_FILES"; //$NON-NLS-1$
 	
 	/**
-	 * The name of the context parameter used for defining the default JSP file extension
+	 * The name of the context parameter used for defining the default JSF file extension
 	 */
 	public static final String JSF_DEFAULT_SUFFIX_CONTEXT_PARAM = "javax.faces.DEFAULT_SUFFIX"; //$NON-NLS-1$
+	/**
+	 * The name of the context parameter used for defining the default JSF file extension (for Jakarta EE)
+	 */
+	public static final String JSF_DEFAULT_SUFFIX_CONTEXT_PARAM_JAKARTA = "jakarta.faces.DEFAULT_SUFFIX"; //$NON-NLS-1$
 	
 	/**
 	 * The path to the default application configuration file
@@ -77,6 +89,11 @@ public abstract class JSFUtils {
 	 * Default URL mapping to faces servlet
 	 */
 	public static final String JSF_DEFAULT_URL_MAPPING = "/faces/*"; //$NON-NLS-1$
+
+	/**
+	 * Default URL mapping to faces servlet (for Jakarta EE)
+	 */
+	public static final String JSF_DEFAULT_URL_MAPPING_JAKARTA = "*.xhtml"; //$NON-NLS-1$
 
 	/**
 	 * the key for implementation libraries in persistent properties
@@ -91,7 +108,7 @@ public abstract class JSFUtils {
 	 */
 	public static final String PP_JSF_IMPLEMENTATION_TYPE = "jsf.implementation.type"; //$NON-NLS-1$
 
-	private static final String DEFAULT_DEFAULT_MAPPING_SUFFIX = "jsp"; //$NON-NLS-1$
+	private static final String DEFAULT_DEFAULT_MAPPING_SUFFIX = "xhtml"; //$NON-NLS-1$
 
 	/**
 	 * In cases where there is no servlet mapping defined (where it can be implicit and provided
@@ -99,7 +116,7 @@ public abstract class JSFUtils {
 	 * mapping.
 	 */
 	private static final String SYS_PROP_SERVLET_MAPPING = "org.eclipse.jst.jsf.servletMapping"; //$NON-NLS-1$
-
+	
 	private final JSFVersion  _version;
     private final IModelProvider _modelProvider;
 	
@@ -136,7 +153,7 @@ public abstract class JSFUtils {
 	 * @param config
 	 * @return servlet display name to use from wizard data model
 	 */
-	protected final String getServletClassname(IDataModel config) {
+	protected String getServletClassname(IDataModel config) {
 		String className = config.getStringProperty(IJSFFacetInstallDataModelProperties.SERVLET_CLASSNAME);
 		if (className == null || className.trim().equals("")) //$NON-NLS-1$
 			className = JSF_SERVLET_CLASS;
@@ -208,7 +225,7 @@ public abstract class JSFUtils {
      * @param pw
      */
     public abstract void doVersionSpecificConfigFile(final PrintWriter pw);
-    
+
     
     /**
      * @param webAppObj 
@@ -265,8 +282,8 @@ public abstract class JSFUtils {
     	//Bug 313830 - JSFUtils should use content type instead file extension in isValidKnownExtension.
     	List<String> validKnownExtensions = new ArrayList<String>();
     	for (String contentTypeId: new String[]{
-    			"org.eclipse.jst.jsp.core.jspsource", //$NON-NLS-1$
-    			"org.eclipse.jst.jsp.core.jspfragmentsource", //$NON-NLS-1$
+    			"org.eclipse.jst.jsf.core.jsfsource", //$NON-NLS-1$
+    			"org.eclipse.jst.jsf.core.jsffragmentsource", //$NON-NLS-1$
     			"jsf.facelet"}) { //$NON-NLS-1$
         	IContentType contentType = Platform.getContentTypeManager().getContentType(contentTypeId);
         	if (contentType != null) {
@@ -300,15 +317,14 @@ public abstract class JSFUtils {
     /**
      * @param webApp
      * @return the default file extension from the context param. Default is
-     *         "jsp" if no context param.
+     *         "xhtml" if no context param.
      */
     protected String getDefaultSuffix(Object webApp) {
     	String contextParam = null;
     	if (webApp != null) {
-	    	if(isJavaEE(webApp)) {
+    		if (isJavaEE(webApp)) {
 	    		contextParam = JEEUtils.getContextParam((org.eclipse.jst.javaee.web.WebApp) webApp, JSF_DEFAULT_SUFFIX_CONTEXT_PARAM);
-	    	}
-	    	else {
+	    	} else {
 	    		contextParam = J2EEUtils.getContextParam((org.eclipse.jst.j2ee.webapplication.WebApp) webApp, JSF_DEFAULT_SUFFIX_CONTEXT_PARAM);
 	    	}
     	}
@@ -334,8 +350,8 @@ public abstract class JSFUtils {
     protected final String calculateSuffix(final String name, final String value)
     {
         if (name != null
-                && JSF_DEFAULT_SUFFIX_CONTEXT_PARAM.equals(name
-                        .trim()))
+                && (JSF_DEFAULT_SUFFIX_CONTEXT_PARAM.equals(name.trim())
+                        || (JSF_DEFAULT_SUFFIX_CONTEXT_PARAM_JAKARTA.equals(name.trim()))))
         {
             return normalizeSuffix(value != null ? value.trim() : null);
         }
@@ -521,10 +537,9 @@ public abstract class JSFUtils {
      * @param webApp
      */
     protected void removeJSFContextParams(final Object webApp) {
-    	if(isJavaEE(webApp)) {
+    	if (isJavaEE(webApp)) {
     		JEEUtils.removeContextParam((org.eclipse.jst.javaee.web.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM);
-    	}
-    	else {
+    	} else {
     		J2EEUtils.removeContextParam((org.eclipse.jst.j2ee.webapplication.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM);
     	}
     }
@@ -537,14 +552,12 @@ public abstract class JSFUtils {
 	protected void setupContextParams(final Object webApp, final IDataModel config) {
         final String paramValue = config.getStringProperty(IJSFFacetInstallDataModelProperties.CONFIG_PATH);
         if (paramValue != null && !paramValue.equals(JSF_DEFAULT_CONFIG_PATH)) {
-        	if(isJavaEE(webApp)) {
+        	if (isJavaEE(webApp)) {
         		JEEUtils.setupContextParam((org.eclipse.jst.javaee.web.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM, paramValue);
-        	}
-        	else {
+        	} else {
         		J2EEUtils.setupContextParam((org.eclipse.jst.j2ee.webapplication.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM, paramValue);
         	}
         }
-
 	}
 	
     /**
@@ -692,6 +705,13 @@ public abstract class JSFUtils {
     }
 
     /**
+     * @return default url mapping
+     * */
+    protected String getDefaultUrlMapping() {
+        return JSF_DEFAULT_URL_MAPPING;
+    }
+
+    /**
      * This creates a servlet and servlet mapping suitable for
      * {@link #getFileUrlPath(Object, IResource, IPath)} to be able to proceed, but the returned
      * objects are not fully-initialized for any and all purposes. USE WITH CAUTION.
@@ -704,7 +724,7 @@ public abstract class JSFUtils {
     	Object servlet;
     	String sysPropServletMapping = System.getProperty(SYS_PROP_SERVLET_MAPPING);
     	if (sysPropServletMapping == null) {
-    		sysPropServletMapping = JSF_DEFAULT_URL_MAPPING;
+    		sysPropServletMapping = getDefaultUrlMapping();
     	}
     	if (isJavaEE(webApp)) {
     		servlet = WebFactory.eINSTANCE.createServlet();

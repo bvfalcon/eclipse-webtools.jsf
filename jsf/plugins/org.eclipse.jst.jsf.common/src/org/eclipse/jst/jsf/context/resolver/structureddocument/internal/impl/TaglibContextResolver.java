@@ -16,7 +16,7 @@ package org.eclipse.jst.jsf.context.resolver.structureddocument.internal.impl;
 
 import java.util.Iterator;
 
-import org.eclipse.jst.jsf.common.internal.JSPUtil;
+import org.eclipse.jst.jsf.common.internal.JSFUtil;
 import org.eclipse.jst.jsf.context.IModelContext;
 import org.eclipse.jst.jsf.context.resolver.structureddocument.ITaglibContextResolver;
 import org.eclipse.jst.jsf.context.structureddocument.IStructuredDocumentContext;
@@ -149,7 +149,7 @@ class TaglibContextResolver implements ITaglibContextResolver
             try
             {
                 smodel = StructuredModelManager.getModelManager().getModelForRead((IStructuredDocument)context.getStructuredDocument());
-                return JSPUtil.isJSPContentType(smodel.getContentTypeIdentifier());
+                return JSFUtil.isJSFContentType(smodel.getContentTypeIdentifier());
             }
             finally
             {

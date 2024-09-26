@@ -114,7 +114,7 @@ public final class JSFSymbolFactory extends InitializedSymbolFactory
     /**
      * @param type
      * @return <code>true</code>, if the given {@link ValueType} represents
-     *         an instance of <code>javax.faces.model.DataModel</code>
+     *         an instance of <code>jakarta.faces.model.DataModel</code>
      */
     private boolean isFacesDataModel(ValueType type)
     {
@@ -122,7 +122,7 @@ public final class JSFSymbolFactory extends InitializedSymbolFactory
     }
 
     /**
-     * Tries to guess the row type of a <code>javax.faces.DataModel</code>
+     * Tries to guess the row type of a <code>jakarta.faces.DataModel</code>
      * instance. This will only work if <code>type</code> is a descendant that
      * narrows down the return type of "getRowData()".
      * 

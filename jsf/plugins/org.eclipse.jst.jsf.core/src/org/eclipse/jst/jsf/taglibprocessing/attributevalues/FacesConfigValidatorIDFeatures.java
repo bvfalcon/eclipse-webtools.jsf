@@ -36,7 +36,7 @@ public class FacesConfigValidatorIDFeatures extends FacesConfigIdentifierFeature
 	/**
 	 * Faces validator classname
 	 */
-	protected static final String VALIDATOR = "javax.faces.validator.Validator"; //$NON-NLS-1$
+	protected static final String VALIDATOR = "jakarta.faces.validator.Validator"; //$NON-NLS-1$
 	/**
 	 * Imagename to use when displaying validator
 	 */

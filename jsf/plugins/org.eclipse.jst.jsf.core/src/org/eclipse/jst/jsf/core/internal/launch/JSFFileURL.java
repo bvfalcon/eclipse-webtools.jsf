@@ -36,8 +36,8 @@ public class JSFFileURL implements FileURL
 	 * If this is a JSP page, this will return a URL using the first valid servlet-mapping to the Faces Servlet
 	 * if found.   If the faces servlet is not defined in the web.xml or there is no servlet-mapping, this will return null.
 	 * 
-	 * The resource's file extension is compared with the javax.faces.DEFAULT_SUFFIX context-param if set.   If the same, then 
-	 * extension mapping will be used if found in the web.xml.  If not set, "jsp" default is assumed.   If resource does not have the default
+	 * The resource's file extension is compared with the jakarta.faces.DEFAULT_SUFFIX context-param if set.   If the same, then 
+	 * extension mapping will be used if found in the web.xml.  If not set, "xhtml" default is assumed.   If resource does not have the default
 	 * file extension, then it must have either: jsp,jspx, or jsf file extensions in order to be considered for launch.
 	 * 
 	 * This will not guarentee a page to be run.  The user will still need a properly configured server with valid URL mappings and

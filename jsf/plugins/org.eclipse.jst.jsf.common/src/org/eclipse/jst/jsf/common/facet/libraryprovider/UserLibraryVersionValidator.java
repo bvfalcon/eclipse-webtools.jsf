@@ -17,6 +17,7 @@ package org.eclipse.jst.jsf.common.facet.libraryprovider;
 import java.io.File;
 import java.io.IOException;
 import java.util.Enumeration;
+import java.util.function.Predicate;
 import java.util.jar.Attributes;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
@@ -43,15 +44,15 @@ public abstract class UserLibraryVersionValidator extends KeyClassesValidator
     private static final String MANIFEST_SPECIFICATION_VERSION = "Specification-Version"; //$NON-NLS-1$
     private static final String MANIFEST_IMPLEMENTATION_VERSION = "Implementation-Version"; //$NON-NLS-1$
 
-    private final String classNameIdentifyingImplementationJar;
+    private final Predicate<String> classNameIdentifyingImplementationJarPredicate;
 
 
     /**
-     * @param classNameIdentifyingImplementationJar
+     * @param classNameIdentifyingImplementationJarPredicate
      */
-    public UserLibraryVersionValidator (final String classNameIdentifyingImplementationJar)
+    public UserLibraryVersionValidator (final Predicate<String> classNameIdentifyingImplementationJarPredicate)
     {
-        this.classNameIdentifyingImplementationJar = classNameIdentifyingImplementationJar;
+        this.classNameIdentifyingImplementationJarPredicate = classNameIdentifyingImplementationJarPredicate;
     }
 
 
@@ -112,7 +113,7 @@ public abstract class UserLibraryVersionValidator extends KeyClassesValidator
                 {
                     final File libraryFile = cpe.getPath().toFile();
 
-                    if (libraryFile.exists() && isCorrectLibraryJar(cpe, this.classNameIdentifyingImplementationJar))
+                    if (libraryFile.exists() && isCorrectLibraryJar(cpe, this.classNameIdentifyingImplementationJarPredicate))
                     {
                         JarFile jarFile = null;
                         try
@@ -145,7 +146,7 @@ public abstract class UserLibraryVersionValidator extends KeyClassesValidator
 
 
     private boolean isCorrectLibraryJar (final IClasspathEntry cpe,
-                                         final String classNameIdentifyingJar)
+                                         final Predicate<String> classNameIdentifyingJarPredicate)
     throws IOException
     {
         final File libraryFile = cpe.getPath().toFile();
@@ -163,7 +164,7 @@ public abstract class UserLibraryVersionValidator extends KeyClassesValidator
             {
                 final ZipEntry entry = entries.nextElement();
                 final String entryName = entry.getName();
-                if (entryName.equals(classNameIdentifyingJar))
+                if (classNameIdentifyingJarPredicate.test(entryName))
                     return true;
             }
         }

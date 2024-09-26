@@ -74,9 +74,9 @@ import org.eclipse.wst.common.project.facet.core.ProjectFacetsManager;
 public class JSFAppConfigUtils {
 
 	/**
-	 * Name of JSF CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES").
+	 * Name of JSF CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES").
 	 */
-	public static final String CONFIG_FILES_CONTEXT_PARAM_NAME = "javax.faces.CONFIG_FILES"; //$NON-NLS-1$
+	public static final String CONFIG_FILES_CONTEXT_PARAM_NAME = "jakarta.faces.CONFIG_FILES"; //$NON-NLS-1$
 
 	/**
 	 * Location in JAR file of application configuration resource file
@@ -219,7 +219,7 @@ public class JSFAppConfigUtils {
 
 	/**
 	 * Gets list of application configuration file names as listed in the JSF
-	 * CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES"). Will return
+	 * CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES"). Will return
 	 * an empty list if WebArtifactEdit is null, if WebApp is null, if context
 	 * parameter does not exist, or if trimmed context parameter's value is
 	 * an empty String.
@@ -227,7 +227,7 @@ public class JSFAppConfigUtils {
 	 * @param project IProject instance for which to get the context
 	 * parameter's value.
 	 * @return List of application configuration file names as listed in the
-	 * JSF CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES"); list
+	 * JSF CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES"); list
 	 * may be empty.
 	 */
 	public static List getConfigFilesFromContextParam(IProject project) {
@@ -531,13 +531,13 @@ public class JSFAppConfigUtils {
 
 		private List<IFile> files;
 		private IContentTypeManager contentTypeMgr;
-		private IContentType jspSourceType;
+		private IContentType jsfSourceType;
 		private IContentType htmlSourceType;
 
 		public ImplicitNavigationResourceProxyVisitor(List<IFile> files) {
 			this.files = files;
 			this.contentTypeMgr = Platform.getContentTypeManager();
-			this.jspSourceType = contentTypeMgr.getContentType("org.eclipse.jst.jsp.core.jspsource"); //$NON-NLS-1$
+			this.jsfSourceType = contentTypeMgr.getContentType("org.eclipse.jst.jsf.core.jsfsource"); //$NON-NLS-1$
 			this.htmlSourceType = contentTypeMgr.getContentType("org.eclipse.wst.html.core.htmlsource"); //$NON-NLS-1$
 		}
 
@@ -548,7 +548,7 @@ public class JSFAppConfigUtils {
 			case IResource.FILE:
 				IContentType contentType = contentTypeMgr.findContentTypeFor(proxy.getName());
 				if (contentType != null) {
-					if (contentType.isKindOf(jspSourceType) || contentType.isKindOf(htmlSourceType)) {
+					if (contentType.isKindOf(jsfSourceType) || contentType.isKindOf(htmlSourceType)) {
 						files.add((IFile)proxy.requestResource());
 					}
 				}

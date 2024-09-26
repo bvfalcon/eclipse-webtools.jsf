@@ -145,7 +145,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
          */
         public ActionListenerValidationVisitor(final String version) {
             super(FacesConfigPackage.eINSTANCE.getApplicationType_ActionListener(),
-                    version,"javax.faces.event.ActionListener", true); //$NON-NLS-1$
+                    version,"jakarta.faces.event.ActionListener", true); //$NON-NLS-1$
         }
     }
     
@@ -156,7 +156,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
          */
         public NavigationHandlerValidationVisitor(final String version) {
             super(FacesConfigPackage.eINSTANCE.getApplicationType_NavigationHandler(),
-                    version,"javax.faces.application.NavigationHandler", true); //$NON-NLS-1$
+                    version,"jakarta.faces.application.NavigationHandler", true); //$NON-NLS-1$
         }
     }
     
@@ -165,7 +165,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
         ViewHandlerValidationVisitor(final String version)
         {
             super(FacesConfigPackage.eINSTANCE.getApplicationType_ViewHandler(),
-                    version,"javax.faces.application.ViewHandler", true); //$NON-NLS-1$
+                    version,"jakarta.faces.application.ViewHandler", true); //$NON-NLS-1$
         }
     }
     
@@ -176,7 +176,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
             // must a concrete class with a zero arg constructor:
             //   JSF1.1_3.2.3.2 and JSF1.2_3.2.4.2
             super(FacesConfigPackage.eINSTANCE.getApplicationType_StateManager(),
-                    version,"javax.faces.application.StateManager", true); //$NON-NLS-1$
+                    version,"jakarta.faces.application.StateManager", true); //$NON-NLS-1$
         }    
     }
     
@@ -185,7 +185,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
         PropertyResolverValidationVisitor(final String version)
         {
             super(FacesConfigPackage.eINSTANCE.getApplicationType_PropertyResolver(),
-                    version,"javax.faces.el.PropertyResolver", true); //$NON-NLS-1$
+                    version,"jakarta.faces.el.PropertyResolver", true); //$NON-NLS-1$
         }
 
         protected void doValidate(EObject object, List messages, IFile file) {
@@ -209,7 +209,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
         VariableResolverValidationVisitor(final String version)
         {
             super(FacesConfigPackage.eINSTANCE.getApplicationType_VariableResolver(),
-                    version, "javax.faces.el.VariableResolver", true); //$NON-NLS-1$
+                    version, "jakarta.faces.el.VariableResolver", true); //$NON-NLS-1$
         }
 
         protected void doValidate(EObject object, List messages, IFile file) {
@@ -235,7 +235,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
             // must be a class and have zero-arg constructor
             //   JSF1.2_5.6.1.4
             super(FacesConfigPackage.eINSTANCE.getApplicationType_ELResolver(),
-               version, "javax.el.ELResolver", true); //$NON-NLS-1$
+               version, "jakarta.el.ELResolver", true); //$NON-NLS-1$
         }
 
         protected void doValidate(EObject object, List messages, IFile file) {
@@ -307,7 +307,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
 //    	PartialTraversalValidationVisitor(final String version)
 //        {
 //            super(FacesConfigPackage.eINSTANCE.getApplicationType_PartialTraversal(),
-//                    version,"javax.faces.application.PartialTraversal", true); //$NON-NLS-1$
+//                    version,"jakarta.faces.application.PartialTraversal", true); //$NON-NLS-1$
 //        }
 //    }
     
@@ -316,7 +316,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
 	  ResourceHandlerValidationVisitor(final String version)
       {
           super(FacesConfigPackage.eINSTANCE.getApplicationType_ResourceHandler(),
-                  version,"javax.faces.application.ResourceHandler", true); //$NON-NLS-1$
+                  version,"jakarta.faces.application.ResourceHandler", true); //$NON-NLS-1$
       }
   }
     
@@ -325,7 +325,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
 //  	PartialTraversalValidationVisitor(final String version)
 //      {
 //          super(FacesConfigPackage.eINSTANCE.getApplicationType_PartialTraversal(),
-//                  version,"javax.faces.application.PartialTraversal", true); //$NON-NLS-1$
+//                  version,"jakarta.faces.application.PartialTraversal", true); //$NON-NLS-1$
 //      }
 //  }
     
@@ -376,7 +376,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
 	  SystemEventListenerValidationVisitor(final String version)
       {
           super(FacesConfigPackage.eINSTANCE.getSystemEventListenerType_SystemEventListenerClass(),
-                  version,"javax.faces.event.SystemEventListener", true); //$NON-NLS-1$
+                  version,"jakarta.faces.event.SystemEventListener", true); //$NON-NLS-1$
       }	  
   }
   
@@ -385,7 +385,7 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
 	  SystemEventListenerClassValidationVisitor(final String version)
       {
           super(FacesConfigPackage.eINSTANCE.getSystemEventListenerType_SystemEventClass(),
-                  version,"javax.faces.event.SystemEvent", true); //$NON-NLS-1$
+                  version,"jakarta.faces.event.SystemEvent", true); //$NON-NLS-1$
       }	  
   }
   

@@ -60,7 +60,19 @@ public enum JSFVersion {
 	/**
 	 * Supports JSF Version 2.3
 	 */
-	V2_3;
+	V2_3,
+	/**
+	 * Supports JSF Version 3.0
+	 */
+	V3_0,
+	/**
+	 * Supports JSF Version 4.0
+	 */
+	V4_0,
+	/**
+	 * Supports JSF Version 4.1
+	 */
+	V4_1;
 	
 	// WARNING: you MUST add newer versions to the end; the ordinal value of
 	// of the version is used in compareTo.
@@ -77,11 +89,17 @@ public enum JSFVersion {
             case V2_0:
                 return IJSFCoreConstants.JSF_VERSION_2_0;
             case V2_1:
-            	return IJSFCoreConstants.JSF_VERSION_2_1;
+                return IJSFCoreConstants.JSF_VERSION_2_1;
             case V2_2:
-            	return IJSFCoreConstants.JSF_VERSION_2_2;
+                return IJSFCoreConstants.JSF_VERSION_2_2;
             case V2_3:
-            	return IJSFCoreConstants.JSF_VERSION_2_3;
+                return IJSFCoreConstants.JSF_VERSION_2_3;
+            case V3_0:
+                return IJSFCoreConstants.JSF_VERSION_3_0;
+            case V4_0:
+                return IJSFCoreConstants.JSF_VERSION_4_0;
+            case V4_1:
+                return IJSFCoreConstants.JSF_VERSION_4_1;
             case UNKNOWN:
                 return "unknown"; //$NON-NLS-1$
             default:
@@ -113,15 +131,27 @@ public enum JSFVersion {
         }
         else if (IJSFCoreConstants.JSF_VERSION_2_1.equals(valueAsString))
         {
-        	return V2_1;
+            return V2_1;
         }
         else if (IJSFCoreConstants.JSF_VERSION_2_2.equals(valueAsString))
         {
-        	return V2_2;
+            return V2_2;
         }
         else if (IJSFCoreConstants.JSF_VERSION_2_3.equals(valueAsString))
         {
-        	return V2_3;
+            return V2_3;
+        }
+        else if (IJSFCoreConstants.JSF_VERSION_3_0.equals(valueAsString))
+        {
+            return V3_0;
+        }
+        else if (IJSFCoreConstants.JSF_VERSION_4_0.equals(valueAsString))
+        {
+            return V4_0;
+        }
+        else if (IJSFCoreConstants.JSF_VERSION_4_1.equals(valueAsString))
+        {
+            return V4_1;
         }
         else if ("unknown".equals(valueAsString)) //$NON-NLS-1$
         {
@@ -196,11 +226,11 @@ public enum JSFVersion {
                 IJavaProject javaProj = JavaCore.create(project);
                 if (javaProj != null && javaProj.exists())
                 {
-                    if (javaProj.findType("javax.faces.component.html.HtmlBody") != null) //$NON-NLS-1$
+                    if (javaProj.findType("jakarta.faces.component.html.HtmlBody") != null) //$NON-NLS-1$
                     {
                         // at least 2.0 inside here
                         jsfVersion = JSFVersion.V2_0;
-                        if (javaProj.findType("javax.faces.view.facelets.FaceletCacheFactory") != null) //$NON-NLS-1$
+                        if (javaProj.findType("jakarta.faces.view.facelets.FaceletCacheFactory") != null) //$NON-NLS-1$
                         {
                             // add in 2.1
                             jsfVersion = JSFVersion.V2_1;

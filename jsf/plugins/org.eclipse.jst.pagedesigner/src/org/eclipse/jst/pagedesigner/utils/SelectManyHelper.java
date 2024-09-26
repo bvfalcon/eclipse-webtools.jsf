@@ -70,12 +70,12 @@ public class SelectManyHelper {
 			return null;
 		}
 		// TODO: this query is not cached.
-		String prefixNode = JSPUtil.getPrefix(xmlModel,
+		String prefixNode = JSFUtil.getPrefix(xmlModel,
 				ITLDConstants.URI_JSF_HTML);
 		if (prefixNode != null && node.getPrefix() != null
 				&& node.getPrefix().equals(prefixNode)) {
 			if (JSF_SELECT_TAGS.contains(node.getLocalName())) {
-				String prefixItem = JSPUtil.getPrefix(xmlModel,
+				String prefixItem = JSFUtil.getPrefix(xmlModel,
 						ITLDConstants.URI_JSF_CORE);
 				List result = new ArrayList();
 				NodeList items = node.getElementsByTagName(prefixItem
@@ -157,7 +157,7 @@ public class SelectManyHelper {
 
 			if (JSF_SELECT_TAGS.contains(node.getLocalName())) {
 				IDOMModel model = ((IDOMElement) node).getModel();
-				String jsfcorePrefix = JSPUtil.getPrefix(model,
+				String jsfcorePrefix = JSFUtil.getPrefix(model,
 						ITLDConstants.URI_JSF_CORE);
 				if (jsfcorePrefix != null) {
 					NodeList nl = node.getElementsByTagName(jsfcorePrefix + ":" //$NON-NLS-1$

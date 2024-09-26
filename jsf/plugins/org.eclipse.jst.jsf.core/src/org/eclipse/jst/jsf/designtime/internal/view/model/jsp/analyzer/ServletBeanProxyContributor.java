@@ -45,12 +45,12 @@ class ServletBeanProxyContributor extends ConfigurationContributorAdapter
     {
         if (_jsfVersion != null && _jsfVersion.compareTo(JSFVersion.V1_2) < 0)
         {
-            final Bundle servletBundle = Platform.getBundle("javax.servlet"); //$NON-NLS-1$
+            final Bundle servletBundle = Platform.getBundle("jakarta.servlet"); //$NON-NLS-1$
             controller.contributeClasspath(servletBundle, (IPath) null,
                     IConfigurationContributionController.APPEND_USER_CLASSPATH,
                     true);
 
-            final Bundle jspBundle = Platform.getBundle("javax.servlet.jsp"); //$NON-NLS-1$
+            final Bundle jspBundle = Platform.getBundle("jakarta.servlet.jsp"); //$NON-NLS-1$
             controller.contributeClasspath(jspBundle, (IPath) null,
                     IConfigurationContributionController.APPEND_USER_CLASSPATH,
                     true);

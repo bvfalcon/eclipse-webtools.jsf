@@ -30,7 +30,7 @@ import org.eclipse.jst.pagedesigner.editors.palette.impl.PaletteItemManager;
 import org.eclipse.jst.pagedesigner.itemcreation.CreationData;
 import org.eclipse.jst.pagedesigner.itemcreation.customizer.ICustomizationData;
 import org.eclipse.jst.pagedesigner.utils.CommandUtil;
-import org.eclipse.jst.pagedesigner.utils.JSPUtil;
+import org.eclipse.jst.pagedesigner.utils.JSFUtil;
 import org.eclipse.wst.xml.core.internal.provisional.document.IDOMModel;
 import org.w3c.dom.Element;
 
@@ -95,7 +95,7 @@ public class UserCustomizedElementCustomizationCommand extends
 
                     // Setup child node
                     Element childNode = _element.getOwnerDocument().createElement(child.getTagIdentifier().getTagName());
-                    String prefix = JSPUtil.getOrCreatePrefix(_model, child.getTagIdentifier().getUri(), null);
+                    String prefix = JSFUtil.getOrCreatePrefix(_model, child.getTagIdentifier().getUri(), null);
                     childNode.setPrefix(prefix);
 
                     // Attach to child the attributes from the customization data 
