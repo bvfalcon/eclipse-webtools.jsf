@@ -22,7 +22,7 @@ import org.eclipse.jface.viewers.ColumnPixelData;
 import org.eclipse.jface.viewers.TableLayout;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.Separator;
 import org.eclipse.jst.jsf.facesconfig.ui.pageflow.PageflowMessages;
-import org.eclipse.jst.jsf.facesconfig.ui.pageflow.util.JSPUtil;
+import org.eclipse.jst.jsf.facesconfig.ui.pageflow.util.JSFUtil;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
@@ -325,7 +325,7 @@ public class ActionOutcomeSelectionDialog extends Dialog {
 	 * 
 	 */
 	private void addActionsInJSP() {
-		List actionNodes = JSPUtil.getActionListInJSPFile(jspName);
+		List actionNodes = JSFUtil.getActionListInJSFFile(jspName);
 
 		if (actionNodes != null) {
 			for (int i = 0, n = actionNodes.size(); i < n; i++) {

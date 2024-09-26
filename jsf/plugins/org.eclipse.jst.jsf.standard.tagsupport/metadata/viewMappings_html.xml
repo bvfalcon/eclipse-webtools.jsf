@@ -19,19 +19,19 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlSelectOneMenu</className>
-            <superClasses>javax.faces.component.UISelectOne</superClasses>
-            <superClasses>javax.faces.component.UIInput</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlSelectOneMenu</className>
+            <superClasses>jakarta.faces.component.UISelectOne</superClasses>
+            <superClasses>jakarta.faces.component.UIInput</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.EditableValueHolder</interfaces>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlSelectOneMenu</componentType>
-            <componentFamily>javax.faces.SelectOne</componentFamily>
-            <renderType>javax.faces.Menu</renderType>
+            <interfaces>jakarta.faces.component.EditableValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlSelectOneMenu</componentType>
+            <componentFamily>jakarta.faces.SelectOne</componentFamily>
+            <renderType>jakarta.faces.Menu</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -43,19 +43,19 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlSelectManyListbox</className>
-            <superClasses>javax.faces.component.UISelectMany</superClasses>
-            <superClasses>javax.faces.component.UIInput</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlSelectManyListbox</className>
+            <superClasses>jakarta.faces.component.UISelectMany</superClasses>
+            <superClasses>jakarta.faces.component.UIInput</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.EditableValueHolder</interfaces>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlSelectManyListbox</componentType>
-            <componentFamily>javax.faces.SelectMany</componentFamily>
-            <renderType>javax.faces.Listbox</renderType>
+            <interfaces>jakarta.faces.component.EditableValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlSelectManyListbox</componentType>
+            <componentFamily>jakarta.faces.SelectMany</componentFamily>
+            <renderType>jakarta.faces.Listbox</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -66,16 +66,16 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlForm</className>
-            <superClasses>javax.faces.component.UIForm</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlForm</className>
+            <superClasses>jakarta.faces.component.UIForm</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.NamingContainer</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlForm</componentType>
-            <componentFamily>javax.faces.Form</componentFamily>
-            <renderType>javax.faces.Form</renderType>
+            <interfaces>jakarta.faces.component.NamingContainer</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlForm</componentType>
+            <componentFamily>jakarta.faces.Form</componentFamily>
+            <renderType>jakarta.faces.Form</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -86,15 +86,15 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlMessage</className>
-            <superClasses>javax.faces.component.UIMessage</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlMessage</className>
+            <superClasses>jakarta.faces.component.UIMessage</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlMessage</componentType>
-            <componentFamily>javax.faces.Message</componentFamily>
-            <renderType>javax.faces.Message</renderType>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlMessage</componentType>
+            <componentFamily>jakarta.faces.Message</componentFamily>
+            <renderType>jakarta.faces.Message</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -105,15 +105,15 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlGraphicImage</className>
-            <superClasses>javax.faces.component.UIGraphic</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlGraphicImage</className>
+            <superClasses>jakarta.faces.component.UIGraphic</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlGraphicImage</componentType>
-            <componentFamily>javax.faces.Graphic</componentFamily>
-            <renderType>javax.faces.Image</renderType>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlGraphicImage</componentType>
+            <componentFamily>jakarta.faces.Graphic</componentFamily>
+            <renderType>jakarta.faces.Image</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -124,13 +124,13 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.UIColumn</className>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.UIColumn</className>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.Column</componentType>
-            <componentFamily>javax.faces.Column</componentFamily>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.Column</componentType>
+            <componentFamily>jakarta.faces.Column</componentFamily>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -143,16 +143,16 @@
         <beanMappedProperties>value</beanMappedProperties>
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlOutputFormat</className>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlOutputFormat</className>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlOutputFormat</componentType>
-            <componentFamily>javax.faces.Output</componentFamily>
-            <renderType>javax.faces.Format</renderType>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlOutputFormat</componentType>
+            <componentFamily>jakarta.faces.Output</componentFamily>
+            <renderType>jakarta.faces.Format</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -164,19 +164,19 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlSelectManyMenu</className>
-            <superClasses>javax.faces.component.UISelectMany</superClasses>
-            <superClasses>javax.faces.component.UIInput</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlSelectManyMenu</className>
+            <superClasses>jakarta.faces.component.UISelectMany</superClasses>
+            <superClasses>jakarta.faces.component.UIInput</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.EditableValueHolder</interfaces>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlSelectManyMenu</componentType>
-            <componentFamily>javax.faces.SelectMany</componentFamily>
-            <renderType>javax.faces.Menu</renderType>
+            <interfaces>jakarta.faces.component.EditableValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlSelectManyMenu</componentType>
+            <componentFamily>jakarta.faces.SelectMany</componentFamily>
+            <renderType>jakarta.faces.Menu</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -188,19 +188,19 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlSelectOneRadio</className>
-            <superClasses>javax.faces.component.UISelectOne</superClasses>
-            <superClasses>javax.faces.component.UIInput</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlSelectOneRadio</className>
+            <superClasses>jakarta.faces.component.UISelectOne</superClasses>
+            <superClasses>jakarta.faces.component.UIInput</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.EditableValueHolder</interfaces>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlSelectOneRadio</componentType>
-            <componentFamily>javax.faces.SelectOne</componentFamily>
-            <renderType>javax.faces.Radio</renderType>
+            <interfaces>jakarta.faces.component.EditableValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlSelectOneRadio</componentType>
+            <componentFamily>jakarta.faces.SelectOne</componentFamily>
+            <renderType>jakarta.faces.Radio</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -211,15 +211,15 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlPanelGroup</className>
-            <superClasses>javax.faces.component.UIPanel</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlPanelGroup</className>
+            <superClasses>jakarta.faces.component.UIPanel</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlPanelGroup</componentType>
-            <componentFamily>javax.faces.Panel</componentFamily>
-            <renderType>javax.faces.Group</renderType>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlPanelGroup</componentType>
+            <componentFamily>jakarta.faces.Panel</componentFamily>
+            <renderType>jakarta.faces.Group</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -231,19 +231,19 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlSelectOneListbox</className>
-            <superClasses>javax.faces.component.UISelectOne</superClasses>
-            <superClasses>javax.faces.component.UIInput</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlSelectOneListbox</className>
+            <superClasses>jakarta.faces.component.UISelectOne</superClasses>
+            <superClasses>jakarta.faces.component.UIInput</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.EditableValueHolder</interfaces>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlSelectOneListbox</componentType>
-            <componentFamily>javax.faces.SelectOne</componentFamily>
-            <renderType>javax.faces.Listbox</renderType>
+            <interfaces>jakarta.faces.component.EditableValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlSelectOneListbox</componentType>
+            <componentFamily>jakarta.faces.SelectOne</componentFamily>
+            <renderType>jakarta.faces.Listbox</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -254,16 +254,16 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlCommandButton</className>
-            <superClasses>javax.faces.component.UICommand</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlCommandButton</className>
+            <superClasses>jakarta.faces.component.UICommand</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.ActionSource</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlCommandButton</componentType>
-            <componentFamily>javax.faces.Command</componentFamily>
-            <renderType>javax.faces.Button</renderType>
+            <interfaces>jakarta.faces.component.ActionSource</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlCommandButton</componentType>
+            <componentFamily>jakarta.faces.Command</componentFamily>
+            <renderType>jakarta.faces.Button</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -275,18 +275,18 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlInputText</className>
-            <superClasses>javax.faces.component.UIInput</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlInputText</className>
+            <superClasses>jakarta.faces.component.UIInput</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.EditableValueHolder</interfaces>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlInputText</componentType>
-            <componentFamily>javax.faces.Input</componentFamily>
-            <renderType>javax.faces.Text</renderType>
+            <interfaces>jakarta.faces.component.EditableValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlInputText</componentType>
+            <componentFamily>jakarta.faces.Input</componentFamily>
+            <renderType>jakarta.faces.Text</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -297,16 +297,16 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlDataTable</className>
-            <superClasses>javax.faces.component.UIData</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlDataTable</className>
+            <superClasses>jakarta.faces.component.UIData</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.NamingContainer</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlDataTable</componentType>
-            <componentFamily>javax.faces.Data</componentFamily>
-            <renderType>javax.faces.Table</renderType>
+            <interfaces>jakarta.faces.component.NamingContainer</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlDataTable</componentType>
+            <componentFamily>jakarta.faces.Data</componentFamily>
+            <renderType>jakarta.faces.Table</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -318,19 +318,19 @@
        <md:value xsi:type="viewMap:TagMapping">
          <versionedTagToViewMappings>
            <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-             <className>javax.faces.component.html.HtmlSelectBooleanCheckbox</className>
-             <superClasses>javax.faces.component.UISelectBoolean</superClasses>
-             <superClasses>javax.faces.component.UIInput</superClasses>
-             <superClasses>javax.faces.component.UIOutput</superClasses>
-             <superClasses>javax.faces.component.UIComponentBase</superClasses>
-             <superClasses>javax.faces.component.UIComponent</superClasses>
+             <className>jakarta.faces.component.html.HtmlSelectBooleanCheckbox</className>
+             <superClasses>jakarta.faces.component.UISelectBoolean</superClasses>
+             <superClasses>jakarta.faces.component.UIInput</superClasses>
+             <superClasses>jakarta.faces.component.UIOutput</superClasses>
+             <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+             <superClasses>jakarta.faces.component.UIComponent</superClasses>
              <superClasses>java.lang.Object</superClasses>
-             <interfaces>javax.faces.component.EditableValueHolder</interfaces>
-             <interfaces>javax.faces.component.ValueHolder</interfaces>
-             <interfaces>javax.faces.component.StateHolder</interfaces>
-             <componentType>javax.faces.HtmlSelectBooleanCheckbox</componentType>
-             <componentFamily>javax.faces.SelectBoolean</componentFamily>
-             <renderType>javax.faces.Checkbox</renderType>
+             <interfaces>jakarta.faces.component.EditableValueHolder</interfaces>
+             <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+             <interfaces>jakarta.faces.component.StateHolder</interfaces>
+             <componentType>jakarta.faces.HtmlSelectBooleanCheckbox</componentType>
+             <componentFamily>jakarta.faces.SelectBoolean</componentFamily>
+             <renderType>jakarta.faces.Checkbox</renderType>
            </typeInfo>
          </versionedTagToViewMappings>
        </md:value>
@@ -342,16 +342,16 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlOutputText</className>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlOutputText</className>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlOutputText</componentType>
-            <componentFamily>javax.faces.Output</componentFamily>
-            <renderType>javax.faces.Text</renderType>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlOutputText</componentType>
+            <componentFamily>jakarta.faces.Output</componentFamily>
+            <renderType>jakarta.faces.Text</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -363,19 +363,19 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlSelectManyCheckbox</className>
-            <superClasses>javax.faces.component.UISelectMany</superClasses>
-            <superClasses>javax.faces.component.UIInput</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlSelectManyCheckbox</className>
+            <superClasses>jakarta.faces.component.UISelectMany</superClasses>
+            <superClasses>jakarta.faces.component.UIInput</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.EditableValueHolder</interfaces>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlSelectManyCheckbox</componentType>
-            <componentFamily>javax.faces.SelectMany</componentFamily>
-            <renderType>javax.faces.Checkbox</renderType>
+            <interfaces>jakarta.faces.component.EditableValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlSelectManyCheckbox</componentType>
+            <componentFamily>jakarta.faces.SelectMany</componentFamily>
+            <renderType>jakarta.faces.Checkbox</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -387,18 +387,18 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlInputSecret</className>
-            <superClasses>javax.faces.component.UIInput</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlInputSecret</className>
+            <superClasses>jakarta.faces.component.UIInput</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.EditableValueHolder</interfaces>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlInputSecret</componentType>
-            <componentFamily>javax.faces.Input</componentFamily>
-            <renderType>javax.faces.Secret</renderType>
+            <interfaces>jakarta.faces.component.EditableValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlInputSecret</componentType>
+            <componentFamily>jakarta.faces.Input</componentFamily>
+            <renderType>jakarta.faces.Secret</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -409,15 +409,15 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlPanelGrid</className>
-            <superClasses>javax.faces.component.UIPanel</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlPanelGrid</className>
+            <superClasses>jakarta.faces.component.UIPanel</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlPanelGrid</componentType>
-            <componentFamily>javax.faces.Panel</componentFamily>
-            <renderType>javax.faces.Grid</renderType>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlPanelGrid</componentType>
+            <componentFamily>jakarta.faces.Panel</componentFamily>
+            <renderType>jakarta.faces.Grid</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -428,16 +428,16 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlCommandLink</className>
-            <superClasses>javax.faces.component.UICommand</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlCommandLink</className>
+            <superClasses>jakarta.faces.component.UICommand</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.ActionSource</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlCommandLink</componentType>
-            <componentFamily>javax.faces.Command</componentFamily>
-            <renderType>javax.faces.Link</renderType>
+            <interfaces>jakarta.faces.component.ActionSource</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlCommandLink</componentType>
+            <componentFamily>jakarta.faces.Command</componentFamily>
+            <renderType>jakarta.faces.Link</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -449,18 +449,18 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlInputHidden</className>
-            <superClasses>javax.faces.component.UIInput</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlInputHidden</className>
+            <superClasses>jakarta.faces.component.UIInput</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.EditableValueHolder</interfaces>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlInputHidden</componentType>
-            <componentFamily>javax.faces.Input</componentFamily>
-            <renderType>javax.faces.Hidden</renderType>
+            <interfaces>jakarta.faces.component.EditableValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlInputHidden</componentType>
+            <componentFamily>jakarta.faces.Input</componentFamily>
+            <renderType>jakarta.faces.Hidden</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -472,18 +472,18 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlInputTextarea</className>
-            <superClasses>javax.faces.component.UIInput</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlInputTextarea</className>
+            <superClasses>jakarta.faces.component.UIInput</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.EditableValueHolder</interfaces>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlInputTextarea</componentType>
-            <componentFamily>javax.faces.Input</componentFamily>
-            <renderType>javax.faces.Textarea</renderType>
+            <interfaces>jakarta.faces.component.EditableValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlInputTextarea</componentType>
+            <componentFamily>jakarta.faces.Input</componentFamily>
+            <renderType>jakarta.faces.Textarea</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -495,16 +495,16 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlOutputLabel</className>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlOutputLabel</className>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlOutputLabel</componentType>
-            <componentFamily>javax.faces.Output</componentFamily>
-            <renderType>javax.faces.Label</renderType>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlOutputLabel</componentType>
+            <componentFamily>jakarta.faces.Output</componentFamily>
+            <renderType>jakarta.faces.Label</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -516,16 +516,16 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlOutputLink</className>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlOutputLink</className>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlOutputLink</componentType>
-            <componentFamily>javax.faces.Output</componentFamily>
-            <renderType>javax.faces.Link</renderType>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlOutputLink</componentType>
+            <componentFamily>jakarta.faces.Output</componentFamily>
+            <renderType>jakarta.faces.Link</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -536,15 +536,15 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlMessages</className>
-            <superClasses>javax.faces.component.UIMessages</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlMessages</className>
+            <superClasses>jakarta.faces.component.UIMessages</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlMessages</componentType>
-            <componentFamily>javax.faces.Messages</componentFamily>
-            <renderType>javax.faces.Messages</renderType>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlMessages</componentType>
+            <componentFamily>jakarta.faces.Messages</componentFamily>
+            <renderType>jakarta.faces.Messages</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -555,17 +555,17 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlOutcomeTargetButton</className>
-            <superClasses>javax.faces.component.UIOutcomeTarget</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlOutcomeTargetButton</className>
+            <superClasses>jakarta.faces.component.UIOutcomeTarget</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlOutcomeTargetButton</componentType>
-            <componentFamily>javax.faces.OutcomeTarget</componentFamily>
-            <renderType>javax.faces.Button</renderType>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlOutcomeTargetButton</componentType>
+            <componentFamily>jakarta.faces.OutcomeTarget</componentFamily>
+            <renderType>jakarta.faces.Button</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -576,17 +576,17 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.html.HtmlOutcomeTargetLink</className>
-            <superClasses>javax.faces.component.UIOutcomeTarget</superClasses>
-            <superClasses>javax.faces.component.UIOutput</superClasses>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.html.HtmlOutcomeTargetLink</className>
+            <superClasses>jakarta.faces.component.UIOutcomeTarget</superClasses>
+            <superClasses>jakarta.faces.component.UIOutput</superClasses>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.HtmlOutcomeTargetLink</componentType>
-            <componentFamily>javax.faces.OutcomeTarget</componentFamily>
-            <renderType>javax.faces.Link</renderType>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.HtmlOutcomeTargetLink</componentType>
+            <componentFamily>jakarta.faces.OutcomeTarget</componentFamily>
+            <renderType>jakarta.faces.Link</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>

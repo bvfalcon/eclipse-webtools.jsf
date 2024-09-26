@@ -22,7 +22,7 @@ import org.w3c.dom.Element;
 
 import org.eclipse.jst.jsf.core.internal.tld.ITLDConstants;
 import org.eclipse.jst.pagedesigner.commands.DesignerCommand;
-import org.eclipse.jst.pagedesigner.utils.JSPUtil;
+import org.eclipse.jst.pagedesigner.utils.JSFUtil;
 
 /**
  * @author mengbo
@@ -86,7 +86,7 @@ public class AddJSFCoreChildCommand extends DesignerCommand
      */
     protected void doExecute()
     {
-        String prefix = JSPUtil.getOrCreatePrefix(this.getModel(), ITLDConstants.URI_JSF_CORE, "f"); //$NON-NLS-1$
+        String prefix = JSFUtil.getOrCreatePrefix(this.getModel(), ITLDConstants.URI_JSF_CORE, "f"); //$NON-NLS-1$
         String tag = _coreChildLocalName;
         Element child = _parent.getOwnerDocument().createElement(tag);
         child.setPrefix(prefix);

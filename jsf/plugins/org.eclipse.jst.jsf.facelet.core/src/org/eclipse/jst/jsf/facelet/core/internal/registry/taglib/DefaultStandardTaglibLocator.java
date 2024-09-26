@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Collections;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -26,6 +27,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facelet.core.internal.FaceletCorePlugin;
 import org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.IFaceletTagRecord.TagRecordDescriptor;
 import org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.FaceletTaglib;
@@ -36,32 +38,21 @@ import org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.F
  */
 public class DefaultStandardTaglibLocator extends AbstractFaceletTaglibLocator
 {
-    private static final Set<String> taglibLocations;
-    static
+    private static final String TAGLIBS_ROOT = "/std-taglibs"; //$NON-NLS-1$
+    private Set<MyTagRecordDescriptor> readStdTaglibs(JSFVersion jsfVersion)
     {
-        final Set<String> set = new HashSet<String>();
-        set.add("/std-taglibs/html_basic.taglib.xml"); //$NON-NLS-1$
-        set.add("/std-taglibs/html_basic_jcp.taglib.xml"); //$NON-NLS-1$
-        set.add("/std-taglibs/composite.taglib.xml"); //$NON-NLS-1$
-        set.add("/std-taglibs/composite_jcp.taglib.xml"); //$NON-NLS-1$
-        set.add("/std-taglibs/facelets_jsf_core.taglib.xml"); //$NON-NLS-1$
-        set.add("/std-taglibs/facelets_jsf_core_jcp.taglib.xml"); //$NON-NLS-1$
-        set.add("/std-taglibs/jstl-core.taglib.xml"); //$NON-NLS-1$
-        set.add("/std-taglibs/jstl-fn.taglib.xml"); //$NON-NLS-1$
-        set.add("/std-taglibs/ui.taglib.xml"); //$NON-NLS-1$
-        set.add("/std-taglibs/ui_jcp.taglib.xml"); //$NON-NLS-1$
-        taglibLocations = Collections.unmodifiableSet(set);
-    }
-    private static final Set<MyTagRecordDescriptor> DEFAULT_TAGLIBS;
-    static
-    {
-        Set<MyTagRecordDescriptor>  taglibs = new HashSet<MyTagRecordDescriptor>();
-        for (final String location : taglibLocations)
+        if (jsfVersion == null || jsfVersion == JSFVersion.UNKNOWN)
         {
+            jsfVersion = JSFVersion.values()[JSFVersion.values().length - 1];
+        }
+        Enumeration<String> taglibLocations = FaceletCorePlugin.getDefault().getBundle().getEntryPaths(TAGLIBS_ROOT + "/jsf-" + jsfVersion); //$NON-NLS-1$
+        Set<MyTagRecordDescriptor> taglibs = new HashSet<MyTagRecordDescriptor>();
+        while (taglibLocations.hasMoreElements())
+        {
+            String location = taglibLocations.nextElement();
             try
             {
-                final URL url = FaceletCorePlugin.getDefault().getBundle()
-                        .getEntry(location);
+                final URL url = FaceletCorePlugin.getDefault().getBundle().getEntry(location);
                 final URL fileURL = FileLocator.toFileURL(url);
                 File file = new File(fileURL.getPath());
                 final InputStream openStream = fileURL.openStream();
@@ -77,7 +68,7 @@ public class DefaultStandardTaglibLocator extends AbstractFaceletTaglibLocator
                         "Trying to load default taglib for: " + location, e); //$NON-NLS-1$
             }
         }
-        DEFAULT_TAGLIBS = Collections.unmodifiableSet(taglibs);
+        return Collections.unmodifiableSet(taglibs);
     }
     private HashMap<String, IFaceletTagRecord> _defaultRecords;
 
@@ -87,16 +78,16 @@ public class DefaultStandardTaglibLocator extends AbstractFaceletTaglibLocator
     public DefaultStandardTaglibLocator()
     {
         super("", ""); //$NON-NLS-1$//$NON-NLS-2$
-        _defaultRecords = new HashMap<String, IFaceletTagRecord>();
     }
 
     @Override
     public void start(IProject project)
     {
-        final TagRecordFactory factory = new TagRecordFactory(project,
-                false);
-        
-        for (final MyTagRecordDescriptor desc : DEFAULT_TAGLIBS)
+        _defaultRecords = new HashMap<String, IFaceletTagRecord>();
+        final TagRecordFactory factory = new TagRecordFactory(project, false);
+        JSFVersion jsfVersion = JSFVersion.valueOfProject(project);
+        Set<MyTagRecordDescriptor> defaultTaglibs = readStdTaglibs(jsfVersion);
+        for (final MyTagRecordDescriptor desc : defaultTaglibs)
         {
             final IFaceletTagRecord record = factory.createRecords(desc.getTaglib(),
                     desc);

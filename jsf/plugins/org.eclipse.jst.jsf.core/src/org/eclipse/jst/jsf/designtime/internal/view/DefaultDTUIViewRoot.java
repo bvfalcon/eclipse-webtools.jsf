@@ -47,8 +47,8 @@ public class DefaultDTUIViewRoot extends DTUIViewRoot
     public DefaultDTUIViewRoot(final DTFacesContext facesContext)
     {
         // TODO: refactor constants
-        super(null, null, new ComponentTypeInfo("javax.faces.ViewRoot", //$NON-NLS-1$
-                "javax.faces.component.UIViewRoot", "javax.faces.ViewRoot", //$NON-NLS-1$ //$NON-NLS-2$
+        super(null, null, new ComponentTypeInfo("jakarta.faces.ViewRoot", //$NON-NLS-1$
+                "jakarta.faces.component.UIViewRoot", "jakarta.faces.ViewRoot", //$NON-NLS-1$ //$NON-NLS-2$
                 null));
         _defaultServices = new DefaultServices();
     	_facesContext = facesContext;

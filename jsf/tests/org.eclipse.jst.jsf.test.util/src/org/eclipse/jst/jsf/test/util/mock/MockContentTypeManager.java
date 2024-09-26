@@ -41,10 +41,10 @@ public class MockContentTypeManager implements IContentTypeManager
                 .createContentType("org.eclipse.wst.html.core.htmlsource",
                         new String[]
                         { "xhtml" , "html", "htm"}, new String[0]));
-        map.put("org.eclipse.jst.jsp.core.jspsource", MockContentType
-                .createContentType("org.eclipse.jst.jsp.core.jspsource",
+        map.put("org.eclipse.jst.jsf.core.jsfsource", MockContentType
+                .createContentType("org.eclipse.jst.jsf.core.jsfsource",
                         new String[]
-                        { "jsp", "jspx", "jsv", "jtpl" }, new String[0]));
+                        { "xhtml" }, new String[0]));
 
         return map;
     }

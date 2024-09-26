@@ -34,7 +34,7 @@ public class ModelUtil {
 	/**
 	 * Get the super class's name of certain element. For example, a class for
 	 * <action-listener> should implement interface
-	 * "javax.faces.event.ActionListener".
+	 * "jakarta.faces.event.ActionListener".
 	 * 
 	 * 
 	 * 

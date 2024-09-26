@@ -100,7 +100,7 @@ public class TypeConstants
     /**
      * Type signature for the JSF Data Model type
      */
-    public static final String TYPE_DATA_MODEL = "Ljavax.faces.model.DataModel;"; //$NON-NLS-1$
+    public static final String TYPE_DATA_MODEL = "Ljakarta.faces.model.DataModel;"; //$NON-NLS-1$
     /**
      * Type signature for the Result Set type
      */
@@ -108,7 +108,7 @@ public class TypeConstants
     /**
      * Type signature for the JSTL ResultSet type
      */
-    public static final String TYPE_JAVAX_SERVLET_JSP_JSTL_SQL_RESULT = "Ljavax.servlet.jsp.jstl.sql.Result;"; //$NON-NLS-1$
+    public static final String TYPE_JAVAX_SERVLET_JSP_JSTL_SQL_RESULT = "Ljakarta.servlet.jsp.jstl.sql.Result;"; //$NON-NLS-1$
     /**
      * Type signature of the base type of all enum types
      */

@@ -60,17 +60,17 @@ import org.eclipse.jst.jsp.core.internal.contentmodel.tld.provisional.TLDElement
  */
 public final class TagAnalyzer
 {
-    private static final String JAVAX_FACES_WEBAPP_CONVERTER_TAG = "javax.faces.webapp.ConverterTag"; //$NON-NLS-1$
-    private static final String JAVAX_FACES_WEBAPP_CONVERTER_ELTAG = "javax.faces.webapp.ConverterELTag"; //$NON-NLS-1$
-    private static final String JAVAX_FACES_WEBAPP_VALIDATOR_TAG = "javax.faces.webapp.ValidatorTag"; //$NON-NLS-1$
-    private static final String JAVAX_FACES_WEBAPP_VALIDATOR_ELTAG = "javax.faces.webapp.ValidatorELTag"; //$NON-NLS-1$
-    private static final String JAVAX_FACES_WEBAPP_FACET_TAG = "javax.faces.webapp.FacetTag"; //$NON-NLS-1$
+    private static final String JAVAX_FACES_WEBAPP_CONVERTER_TAG = "jakarta.faces.webapp.ConverterTag"; //$NON-NLS-1$
+    private static final String JAVAX_FACES_WEBAPP_CONVERTER_ELTAG = "jakarta.faces.webapp.ConverterELTag"; //$NON-NLS-1$
+    private static final String JAVAX_FACES_WEBAPP_VALIDATOR_TAG = "jakarta.faces.webapp.ValidatorTag"; //$NON-NLS-1$
+    private static final String JAVAX_FACES_WEBAPP_VALIDATOR_ELTAG = "jakarta.faces.webapp.ValidatorELTag"; //$NON-NLS-1$
+    private static final String JAVAX_FACES_WEBAPP_FACET_TAG = "jakarta.faces.webapp.FacetTag"; //$NON-NLS-1$
 
     // private static final String JAVAX_FACES_WEBAPP_ACTIONLISTENER_TAG =
-    // "javax.faces.webapp.ActionListenerTag";
+    // "jakarta.faces.webapp.ActionListenerTag";
     // private static final String JAVAX_FACES_WEBAPP_VALUECHANGELISTENER_TAG =
-    // "javax.faces.webapp.ValueChangeListenerTag";
-    private static final String JAVAX_FACES_WEBAPP_ATTRIBUTE_TAG = "javax.faces.webapp.AttributeTag"; //$NON-NLS-1$
+    // "jakarta.faces.webapp.ValueChangeListenerTag";
+    private static final String JAVAX_FACES_WEBAPP_ATTRIBUTE_TAG = "jakarta.faces.webapp.AttributeTag"; //$NON-NLS-1$
 
     private final static Set<String> COMPONENT_TAG_HANDLER_TYPES_JSF11;
     private final static Set<String> COMPONENT_TAG_HANDLER_TYPES_JSF12;
@@ -100,14 +100,14 @@ public final class TagAnalyzer
         // components
         // JSF 1.1
         Set<String> set = new HashSet<String>(8);
-        set.add("javax.faces.webapp.UIComponentTag"); //$NON-NLS-1$
-        set.add("javax.faces.webapp.UIComponentBodyTag"); //$NON-NLS-1$
+        set.add("jakarta.faces.webapp.UIComponentTag"); //$NON-NLS-1$
+        set.add("jakarta.faces.webapp.UIComponentBodyTag"); //$NON-NLS-1$
         COMPONENT_TAG_HANDLER_TYPES_JSF11 = Collections.unmodifiableSet(set);
 
         // JSF 1.2+
         set = new HashSet<String>(8);
         set.addAll(COMPONENT_TAG_HANDLER_TYPES_JSF11);
-        set.add("javax.faces.webapp.UIComponentELTag"); //$NON-NLS-1$
+        set.add("jakarta.faces.webapp.UIComponentELTag"); //$NON-NLS-1$
         COMPONENT_TAG_HANDLER_TYPES_JSF12 = Collections.unmodifiableSet(set);
 
         // converters
@@ -268,7 +268,7 @@ public final class TagAnalyzer
             final IBeanTypeProxy classTypeProxy, final IProject project)
     {
         final IBeanTypeProxy nullPageContextType = factory
-                .getBeanTypeProxy("javax.servlet.jsp.PageContext"); //$NON-NLS-1$
+                .getBeanTypeProxy("jakarta.servlet.jsp.PageContext"); //$NON-NLS-1$
         final BeanProxyWrapper classTypeWrapper = new BeanProxyWrapper(project,
                 classTypeProxy);
 
@@ -322,7 +322,7 @@ public final class TagAnalyzer
         final BeanProxyWrapper classTypeWrapper = new BeanProxyWrapper(project,
                 classTypeProxy);
         final IBeanTypeProxy elExpressionType = factory
-                .getBeanTypeProxy("javax.el.ValueExpression"); //$NON-NLS-1$
+                .getBeanTypeProxy("jakarta.el.ValueExpression"); //$NON-NLS-1$
 
         if (elExpressionType == null)
         {

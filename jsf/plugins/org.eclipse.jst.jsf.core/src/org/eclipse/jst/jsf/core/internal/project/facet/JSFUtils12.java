@@ -57,7 +57,7 @@ import org.eclipse.wst.common.frameworks.datamodel.IDataModel;
         { '"' });
         final String schemaVersionString = getVersion().toString().replaceAll("\\.", "_");  //$NON-NLS-1$//$NON-NLS-2$
         pw.write("<?xml version=" + QUOTE + "1.0" + QUOTE + " encoding=" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                + QUOTE + "UTF-8" + QUOTE + "?>\n\n"); //$NON-NLS-1$ //$NON-NLS-2$
+                + QUOTE + "UTF-8" + QUOTE + "?>\n"); //$NON-NLS-1$ //$NON-NLS-2$
         pw.write("<faces-config\n"); //$NON-NLS-1$
         pw.write("    " + "xmlns=" + QUOTE //$NON-NLS-1$ //$NON-NLS-2$
                 + "http://java.sun.com/xml/ns/javaee" + QUOTE + "\n"); //$NON-NLS-1$ //$NON-NLS-2$

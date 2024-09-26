@@ -104,7 +104,7 @@ public class JSPViewDefnAdapter extends TaglibBasedViewDefnAdapter
     {
         final String prefix = element.getPrefix();
 
-        // TODO: merge back with JSPUtil.findUri()
+        // TODO: merge back with JSFUtil.findUri()
         final TLDCMDocumentManager m =
             TaglibController.getTLDCMDocumentManager(doc);
 

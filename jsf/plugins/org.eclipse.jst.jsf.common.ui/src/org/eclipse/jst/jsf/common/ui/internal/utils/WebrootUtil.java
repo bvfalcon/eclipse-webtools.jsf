@@ -265,7 +265,7 @@ public class WebrootUtil {
 	public static String[] getJSPFileExtensions() {
 		IContentTypeManager typeManager = Platform.getContentTypeManager();
 		IContentType jspContentType = typeManager
-				.getContentType("org.eclipse.jst.jsp.core.jspsource"); //$NON-NLS-1$
+				.getContentType("org.eclipse.jst.jsf.core.jsfsource"); //$NON-NLS-1$
 		if (jspContentType != null) {
 			return jspContentType
 					.getFileSpecs(IContentType.FILE_EXTENSION_SPEC);
