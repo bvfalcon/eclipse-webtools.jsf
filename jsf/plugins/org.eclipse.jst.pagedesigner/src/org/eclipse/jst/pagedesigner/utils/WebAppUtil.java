@@ -16,6 +16,8 @@ package org.eclipse.jst.pagedesigner.utils;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.jst.j2ee.internal.web.deployables.WebDeployableArtifactUtil;
 import org.eclipse.jst.jsf.common.ui.IFileFolderConstants;
+import org.eclipse.jst.jsf.core.IJSFCoreConstants;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.core.internal.tld.ITLDConstants;
 import org.eclipse.wst.common.componentcore.ComponentCore;
 import org.eclipse.wst.common.componentcore.resources.IVirtualComponent;
@@ -26,6 +28,7 @@ import org.eclipse.wst.common.componentcore.resources.IVirtualResource;
  * @version 1.5
  */
 public class WebAppUtil {
+	private final static String FACES_SERVLET_NAME_JAKARTA = "jakarta.faces.webapp.FacesServlet"; //$NON-NLS-1$
 	private final static String FACES_SERVLET_NAME = "javax.faces.webapp.FacesServlet"; //$NON-NLS-1$
 
 	/**
@@ -34,12 +37,12 @@ public class WebAppUtil {
 	 * @return the transformed url
 	 */
 	public static String transformJSPURL(String url, IFile openedFile) {
-		boolean canSupportJSF = JSPUtil.supportTaglib(
+		boolean canSupportJSF = JSFUtil.supportTaglib(
 				ITLDConstants.URI_JSF_HTML, openedFile);
 		if (canSupportJSF
 				&& url != null
 				&& url.endsWith(IFileFolderConstants.DOT
-						+ IFileFolderConstants.EXT_JSP)) {
+						+ IFileFolderConstants.EXT_JSF)) {
 			String urlPattern = ""; //$NON-NLS-1$
 			IVirtualResource[] resources = ComponentCore
 					.createResources(openedFile);
@@ -48,15 +51,17 @@ public class WebAppUtil {
 				component = resources[0].getComponent();
 			}
 			if (component != null) {
+				JSFVersion jsfVersion = JSFVersion.valueOfProject(openedFile.getProject());
 				urlPattern = WebDeployableArtifactUtil.getServletMapping(
-						openedFile.getProject(), true, FACES_SERVLET_NAME,
+						openedFile.getProject(), true,
+						jsfVersion != null && IJSFCoreConstants.isJakartaEE(jsfVersion.toString()) ? FACES_SERVLET_NAME_JAKARTA : FACES_SERVLET_NAME,
 						component.getName());
 			}
 			if (urlPattern.lastIndexOf(IFileFolderConstants.DOT) != -1) {
 				String extension = urlPattern.substring(urlPattern
 						.lastIndexOf(IFileFolderConstants.DOT));
 				url = url.substring(0, url.lastIndexOf(IFileFolderConstants.DOT
-						+ IFileFolderConstants.EXT_JSP))
+						+ IFileFolderConstants.EXT_JSF))
 						+ extension;
 			}
 		}

@@ -273,7 +273,7 @@
 				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.ComponentBindingType</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.component.UIComponent</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.component.UIComponent</value>
 			</trait>	
 			<trait id="category">
 				<value xsi:type="mdt:StringValue">%property.category.jsf</value>
@@ -977,7 +977,7 @@
 				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.ComponentBindingType</value>
 			</trait>
 			<trait id="runtime-return-type">
-				<value xsi:type="mdt:StringValue">javax.faces.component.UIComponent</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.component.UIComponent</value>
 			</trait>	
 			<trait id="category">
 				<value xsi:type="mdt:StringValue">%property.category.jsf</value>
@@ -988,7 +988,7 @@
 				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.FacesConfigConverterIDType</value>
 			</trait>			
 			<trait id="config-type">
-				<value xsi:type="mdt:StringValue">javax.faces.convert.Converter</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.convert.Converter</value>
 			</trait>	
 			<trait id="category">
 				<value xsi:type="mdt:StringValue">%property.category.jsf</value>
@@ -1037,7 +1037,7 @@
 				<value xsi:type="mdt:StringValue">void</value>
 			</trait>			
 			<trait id="runtime-param-types">
-				<value xsi:type="mdt:StringValue">javax.faces.event.ValueChangeEvent</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.event.ValueChangeEvent</value>
 			</trait>	
 			<trait id="category">
 				<value xsi:type="mdt:StringValue">%property.category.jsf</value>
@@ -1052,8 +1052,8 @@
 			</trait>			
 			<trait id="runtime-param-types">
 				<value xsi:type="mdt:ListOfValues">
-					<item>javax.faces.context.FacesContext</item>
-					<item>javax.faces.component.UIComponent</item>
+					<item>jakarta.faces.context.FacesContext</item>
+					<item>jakarta.faces.component.UIComponent</item>
 					<item>java.lang.Object</item>		
 				</value>						
 			</trait>	
@@ -1083,7 +1083,7 @@
 				<value xsi:type="mdt:StringValue">void</value>
 			</trait>			
 			<trait id="runtime-param-types">
-				<value xsi:type="mdt:StringValue">javax.faces.event.ActionEvent</value>
+				<value xsi:type="mdt:StringValue">jakarta.faces.event.ActionEvent</value>
 			</trait>	
 			<trait id="category">
 				<value xsi:type="mdt:StringValue">%property.category.jsf</value>

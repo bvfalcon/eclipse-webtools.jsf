@@ -48,7 +48,7 @@ public class ProjectWebPageSelectionDialog extends CommonResourceDialog {
 
 	private void init() {
 		setResourceDescription(PageflowMessages.ProjectWebPageSelectionDialog_Description);
-		setSuffixs(new String[] { "jsp", "jspx", "jsf", "html", "htm" }); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
+		setSuffixs(new String[] { "jsp", "jspx", "jsf", "html", "htm", "xhtml" }); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$
 	}
 
 	/**

@@ -41,7 +41,8 @@ public class JSFCoreConvertDateTimeGroup extends AttributeGroup//AttributeGroup
     private StyleComboDialogField      _timeStyleField;
     private StyleComboDialogField      _patternField;
 
-    final private static String[] TYPES            = { "date", "time", "both" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+    final private static String[] TYPES            = { "date", "time", "both", //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ 
+            "localDate", "localDateTime", "localTime", "offsetTime", "offsetDateTime", "zonedDateTime"//$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$
                                                    };
     final private static String[] DATESTYLES       = { "default", "short", "medium", "long", "full", "custom" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$
                                                    };
@@ -179,7 +180,7 @@ public class JSFCoreConvertDateTimeGroup extends AttributeGroup//AttributeGroup
         String dateStyle = _dateStyleField.getText();
         String timeStyle = _timeStyleField.getText();
 
-        if (type.equalsIgnoreCase(TYPES[0]))
+        if (type.equalsIgnoreCase(TYPES[0]) || type.equalsIgnoreCase(TYPES[3]))
         {
             _dateStyleField.setEnabled(true);
             _timeStyleField.setEnabled(false);
@@ -192,7 +193,7 @@ public class JSFCoreConvertDateTimeGroup extends AttributeGroup//AttributeGroup
                 _patternField.setEnabled(false);
             }
         }
-        else if (type.equalsIgnoreCase(TYPES[1]))
+        else if (type.equalsIgnoreCase(TYPES[1]) || type.equalsIgnoreCase(TYPES[5]) || type.equalsIgnoreCase(TYPES[6]))
         {
             _dateStyleField.setEnabled(false);
             _timeStyleField.setEnabled(true);
@@ -205,7 +206,8 @@ public class JSFCoreConvertDateTimeGroup extends AttributeGroup//AttributeGroup
                 _patternField.setEnabled(false);
             }
         }
-        else if (type.equalsIgnoreCase(TYPES[2]))
+        else if (type.equalsIgnoreCase(TYPES[2]) || type.equalsIgnoreCase(TYPES[4]) || type.equalsIgnoreCase(TYPES[7])
+                || type.equalsIgnoreCase(TYPES[8]))
         {
             _dateStyleField.setEnabled(true);
             _timeStyleField.setEnabled(true);
@@ -226,19 +228,20 @@ public class JSFCoreConvertDateTimeGroup extends AttributeGroup//AttributeGroup
         String dateStyle = _dateStyleField.getText();
         String timeStyle = _timeStyleField.getText();
 
-        if (type.equalsIgnoreCase(TYPES[0]) && dateStyle.equalsIgnoreCase(DATESTYLES[5]))
+        if ((type.equalsIgnoreCase(TYPES[0]) || type.equalsIgnoreCase(TYPES[3])) && dateStyle.equalsIgnoreCase(DATESTYLES[5]))
         {
             _patternField.getComboControl(null, null).removeAll();
             _patternField.getComboControl(null, null).setItems(DATEPATTERNS);
         }
 
-        if (type.equalsIgnoreCase(TYPES[1]) && timeStyle.equalsIgnoreCase(TIMESTYLES[5]))
+        if ((type.equalsIgnoreCase(TYPES[1]) || type.equalsIgnoreCase(TYPES[5]) || type.equalsIgnoreCase(TYPES[6]))
+                && timeStyle.equalsIgnoreCase(TIMESTYLES[5]))
         {
             _patternField.getComboControl(null, null).removeAll();
             _patternField.getComboControl(null, null).setItems(TIMEPATTERNS);
         }
 
-        if (type.equalsIgnoreCase(TYPES[2])
+        if ((type.equalsIgnoreCase(TYPES[2]) || type.equalsIgnoreCase(TYPES[4]) || type.equalsIgnoreCase(TYPES[7]) || type.equalsIgnoreCase(TYPES[8]))
                 && (dateStyle.equalsIgnoreCase(DATESTYLES[5]) || timeStyle.equalsIgnoreCase(TIMESTYLES[5])))
         {
             _patternField.getComboControl(null, null).removeAll();

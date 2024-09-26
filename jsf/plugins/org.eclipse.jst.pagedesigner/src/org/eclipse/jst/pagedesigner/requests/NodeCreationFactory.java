@@ -19,7 +19,7 @@ import java.util.Map;
 import org.eclipse.gef.requests.CreationFactory;
 import org.eclipse.jst.jsf.core.internal.tld.ITLDConstants;
 import org.eclipse.jst.pagedesigner.editors.HTMLEditor;
-import org.eclipse.jst.pagedesigner.utils.JSPUtil;
+import org.eclipse.jst.pagedesigner.utils.JSFUtil;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
@@ -126,6 +126,6 @@ public class NodeCreationFactory implements CreationFactory {
 			return null;
 
 		// now handles custom tag lib
-		return JSPUtil.getOrCreatePrefix(model, uri, suggested);
+		return JSFUtil.getOrCreatePrefix(model, uri, suggested);
 	}
 }

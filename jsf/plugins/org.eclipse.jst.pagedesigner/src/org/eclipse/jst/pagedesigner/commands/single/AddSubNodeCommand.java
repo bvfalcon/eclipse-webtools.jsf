@@ -17,7 +17,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 import org.eclipse.jst.jsf.core.internal.tld.ITLDConstants;
-import org.eclipse.jst.pagedesigner.utils.JSPUtil;
+import org.eclipse.jst.pagedesigner.utils.JSFUtil;
 import org.eclipse.wst.xml.core.internal.provisional.document.IDOMElement;
 
 /**
@@ -60,7 +60,7 @@ public class AddSubNodeCommand extends SingleNodeCommand {
 		if (ITLDConstants.URI_HTML.equals(_url)) {
 			nodeName = _tagName;
 		} else {
-			String prefix = JSPUtil.getOrCreatePrefix(_parent.getModel(), _url, null);
+			String prefix = JSFUtil.getOrCreatePrefix(_parent.getModel(), _url, null);
 			nodeName = prefix + ":" + _tagName; //$NON-NLS-1$
 		}
 

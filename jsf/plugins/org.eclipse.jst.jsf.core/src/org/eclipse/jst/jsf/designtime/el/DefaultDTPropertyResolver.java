@@ -47,7 +47,7 @@ import org.eclipse.jst.jsf.designtime.symbols.JSFSymbolFactory;
  */
 public class DefaultDTPropertyResolver extends AbstractDTPropertyResolver
 {
-	private static final String UICOMPONENT_SYMBOL_SIGNATURE 	= "Ljavax.faces.component.UIComponent;"; //$NON-NLS-1$
+	private static final String UICOMPONENT_SYMBOL_SIGNATURE 	= "Ljakarta.faces.component.UIComponent;"; //$NON-NLS-1$
 	private static final String ATTRS_SYMBOL_NAME 				= "attrs"; //$NON-NLS-1$
 
 	private JSFSymbolFactory 	_symbolFactory 					= new JSFSymbolFactory();

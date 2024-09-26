@@ -18,13 +18,13 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.UIViewRoot</className>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.UIViewRoot</className>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.ViewRoot</componentType>
-            <componentFamily>javax.faces.ViewRoot</componentFamily>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.ViewRoot</componentType>
+            <componentFamily>jakarta.faces.ViewRoot</componentFamily>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -35,8 +35,8 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ValidatorTypeInfo_">
-            <className>javax.faces.validator.BeanValidator</className>
-            <validatorId>javax.faces.Bean</validatorId>
+            <className>jakarta.faces.validator.BeanValidator</className>
+            <validatorId>jakarta.faces.Bean</validatorId>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -47,8 +47,8 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ValidatorTypeInfo_">
-            <className>javax.faces.validator.DoubleRangeValidator</className>
-            <validatorId>javax.faces.DoubleRange</validatorId>
+            <className>jakarta.faces.validator.DoubleRangeValidator</className>
+            <validatorId>jakarta.faces.DoubleRange</validatorId>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -59,8 +59,8 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ValidatorTypeInfo_">
-            <className>javax.faces.validator.LongRangeValidator</className>
-            <validatorId>javax.faces.LongRange</validatorId>
+            <className>jakarta.faces.validator.LongRangeValidator</className>
+            <validatorId>jakarta.faces.LongRange</validatorId>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -71,8 +71,8 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ValidatorTypeInfo_">
-            <className>javax.faces.validator.RegexValidator</className>
-            <validatorId>javax.faces.RegularExpression</validatorId>
+            <className>jakarta.faces.validator.RegexValidator</className>
+            <validatorId>jakarta.faces.RegularExpression</validatorId>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -83,8 +83,8 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ValidatorTypeInfo_">
-            <className>javax.faces.validator.RequiredValidator</className>
-            <validatorId>javax.faces.Required</validatorId>
+            <className>jakarta.faces.validator.RequiredValidator</className>
+            <validatorId>jakarta.faces.Required</validatorId>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -95,14 +95,14 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.UINamingContainer</className>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.UINamingContainer</className>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <interfaces>javax.faces.component.NamingContainer</interfaces>
-            <componentType>javax.faces.NamingContainer</componentType>
-            <componentFamily>javax.faces.NamingContainer</componentFamily>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <interfaces>jakarta.faces.component.NamingContainer</interfaces>
+            <componentType>jakarta.faces.NamingContainer</componentType>
+            <componentFamily>jakarta.faces.NamingContainer</componentFamily>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -122,8 +122,8 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ConverterTypeInfo_">
-            <className>javax.faces.convert.NumberConverter</className>
-            <converterId>javax.faces.Number</converterId>
+            <className>jakarta.faces.convert.NumberConverter</className>
+            <converterId>jakarta.faces.Number</converterId>
             <forClass>java.lang.Number</forClass>
           </typeInfo>
         </versionedTagToViewMappings>
@@ -135,8 +135,8 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ValidatorTypeInfo_">
-            <className>javax.faces.validator.LongRangeValidator</className>
-            <validatorId>javax.faces.LongRange</validatorId>
+            <className>jakarta.faces.validator.LongRangeValidator</className>
+            <validatorId>jakarta.faces.LongRange</validatorId>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -147,8 +147,8 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ValidatorTypeInfo_">
-            <className>javax.faces.validator.LengthValidator</className>
-            <validatorId>javax.faces.Length</validatorId>
+            <className>jakarta.faces.validator.LengthValidator</className>
+            <validatorId>jakarta.faces.Length</validatorId>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -159,8 +159,8 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ConverterTypeInfo_">
-            <className>javax.faces.convert.DateTimeConverter</className>
-            <converterId>javax.faces.DateTime</converterId>
+            <className>jakarta.faces.convert.DateTimeConverter</className>
+            <converterId>jakarta.faces.DateTime</converterId>
             <forClass>java.util.Date</forClass>
           </typeInfo>
         </versionedTagToViewMappings>
@@ -181,15 +181,15 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.UIOutput</className>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.UIOutput</className>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <interfaces>javax.faces.component.ValueHolder</interfaces>
-            <componentType>javax.faces.Output</componentType>
-            <componentFamily>javax.faces.Output</componentFamily>
-            <renderType>javax.faces.Text</renderType>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <interfaces>jakarta.faces.component.ValueHolder</interfaces>
+            <componentType>jakarta.faces.Output</componentType>
+            <componentFamily>jakarta.faces.Output</componentFamily>
+            <renderType>jakarta.faces.Text</renderType>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -200,13 +200,13 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.UISelectItem</className>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.UISelectItem</className>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.SelectItem</componentType>
-            <componentFamily>javax.faces.SelectItem</componentFamily>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.SelectItem</componentType>
+            <componentFamily>jakarta.faces.SelectItem</componentFamily>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -217,13 +217,13 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.UISelectItems</className>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.UISelectItems</className>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.SelectItems</componentType>
-            <componentFamily>javax.faces.SelectItems</componentFamily>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.SelectItems</componentType>
+            <componentFamily>jakarta.faces.SelectItems</componentFamily>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>
@@ -234,13 +234,13 @@
       <md:value xsi:type="viewMap:TagMapping">
         <versionedTagToViewMappings>
           <typeInfo xsi:type="viewMap:ComponentTypeInfo_">
-            <className>javax.faces.component.UIParameter</className>
-            <superClasses>javax.faces.component.UIComponentBase</superClasses>
-            <superClasses>javax.faces.component.UIComponent</superClasses>
+            <className>jakarta.faces.component.UIParameter</className>
+            <superClasses>jakarta.faces.component.UIComponentBase</superClasses>
+            <superClasses>jakarta.faces.component.UIComponent</superClasses>
             <superClasses>java.lang.Object</superClasses>
-            <interfaces>javax.faces.component.StateHolder</interfaces>
-            <componentType>javax.faces.Parameter</componentType>
-            <componentFamily>javax.faces.Parameter</componentFamily>
+            <interfaces>jakarta.faces.component.StateHolder</interfaces>
+            <componentType>jakarta.faces.Parameter</componentType>
+            <componentFamily>jakarta.faces.Parameter</componentFamily>
           </typeInfo>
         </versionedTagToViewMappings>
       </md:value>

@@ -81,7 +81,6 @@ public class JSFFacetInstallPage extends DataModelWizardPage implements
 			+ ".jsfFacetInstall"; //$NON-NLS-1$
 	private static final String SETTINGS_CONFIG = "configPath"; //$NON-NLS-1$
 	private static final String SETTINGS_SERVLET = "servletName"; //$NON-NLS-1$
-	private static final String SETTINGS_SERVLET_CLASSNAME = "servletClassname"; //$NON-NLS-1$
 	private static final String SETTINGS_URL_MAPPINGS = "urlMappings"; //$NON-NLS-1$
 	private static final String SETTINGS_URL_PATTERN = "pattern"; //$NON-NLS-1$
 	private static final String SETTINGS_CONFIGURE_SERVLET = "configureServlet"; //$NON-NLS-1$
@@ -292,13 +291,8 @@ public class JSFFacetInstallPage extends DataModelWizardPage implements
 		}
 		txtJSFServletName.setText(servletName);
 
-		String servletClassname = null;
-		if (root != null)
-			servletClassname = root.get(SETTINGS_SERVLET_CLASSNAME);
-		if (servletClassname == null || servletClassname.equals("")) { //$NON-NLS-1$
-			servletClassname = (String) model
-					.getDefaultProperty(IJSFFacetInstallDataModelProperties.SERVLET_CLASSNAME);
-		}
+		String servletClassname = (String) model
+				.getDefaultProperty(IJSFFacetInstallDataModelProperties.SERVLET_CLASSNAME);
 		txtJSFServletClassName.setText(servletClassname);
 
 		loadURLMappingPatterns(root);
@@ -338,7 +332,6 @@ public class JSFFacetInstallPage extends DataModelWizardPage implements
 		root.put(SETTINGS_CONFIGURE_SERVLET, getConfigureServlet());
 		root.put(SETTINGS_CONFIG, getJSFConfig());
 		root.put(SETTINGS_SERVLET, getJSFServletName());
-		root.put(SETTINGS_SERVLET_CLASSNAME, getJSFServletClassname());
 		DialogSettings mappings = new DialogSettings(SETTINGS_URL_MAPPINGS);
 		root.addSection(mappings);
 		mappings.put(SETTINGS_URL_PATTERN, getJSFPatterns());
@@ -350,10 +343,6 @@ public class JSFFacetInstallPage extends DataModelWizardPage implements
 
 	private String getJSFServletName() {
 		return txtJSFServletName.getText().trim();
-	}
-
-	private String getJSFServletClassname() {
-		return txtJSFServletClassName.getText().trim();
 	}
 	
 	private String[] getJSFPatterns() {

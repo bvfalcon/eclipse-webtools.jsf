@@ -524,7 +524,7 @@ public final class JSFCoreUtilHelper
             final IContentTypeManager typeManager = Platform.getContentTypeManager();
             
             IContentType jspContentType = 
-                typeManager.getContentType("org.eclipse.jst.jsp.core.jspsource");
+                typeManager.getContentType("org.eclipse.jst.jsf.core.jsfsource");
             contentTypes.add(jspContentType);
             Set<ITagRegistryFactoryInfo>  infos = new HashSet<ITagRegistryFactoryInfo>();
             infos.add(new MyTagRegistryFactoryInfo(contentTypes, new MyTagRegistryFactory(), "JSP Test Factory", "Test ONLY!!! USER SHOULD NEVER SEE THIS"));

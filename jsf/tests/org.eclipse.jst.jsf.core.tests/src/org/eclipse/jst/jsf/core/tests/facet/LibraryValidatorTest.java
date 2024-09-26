@@ -16,6 +16,8 @@ package org.eclipse.jst.jsf.core.tests.facet;
 
 import junit.framework.TestCase;
 
+import java.util.function.Predicate;
+
 import org.eclipse.core.runtime.IStatus;
 
 
@@ -25,7 +27,7 @@ import org.eclipse.core.runtime.IStatus;
  */
 public abstract class LibraryValidatorTest extends TestCase
 {
-    private String classNameIdentifyingJarToUse;
+    private Predicate<String> classNameIdentifyingJarToUsePredicate;
     /*
     private String jarPath;
     private String jarPathWithoutImplementationVersionEntry;
@@ -45,7 +47,7 @@ public abstract class LibraryValidatorTest extends TestCase
 
 
     public LibraryValidatorTest (final String name,
-                                 final String classNameIdentifyingJarToUse
+                                 final Predicate<String> classNameIdentifyingJarToUsePredicate
                                  /*
                                  final String jarPath,
                                  final String jarPathWithoutImplementationVersionEntry,
@@ -55,7 +57,7 @@ public abstract class LibraryValidatorTest extends TestCase
     {
         super(name);
 
-        this.classNameIdentifyingJarToUse = classNameIdentifyingJarToUse;
+        this.classNameIdentifyingJarToUsePredicate = classNameIdentifyingJarToUsePredicate;
         /*
         this.jarPath = jarPath;
         this.jarPathWithoutImplementationVersionEntry = jarPathWithoutImplementationVersionEntry;
@@ -63,7 +65,7 @@ public abstract class LibraryValidatorTest extends TestCase
         this.expectedLibraryVersion = expectedLibraryVersion;
         */
 
-        this.validator = new UserLibraryVersionValidatorProxy(this.classNameIdentifyingJarToUse);
+        this.validator = new UserLibraryVersionValidatorProxy(this.classNameIdentifyingJarToUsePredicate);
     }
 
 

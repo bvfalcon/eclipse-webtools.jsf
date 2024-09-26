@@ -15,6 +15,7 @@
 package org.eclipse.jst.jsf.core.tests.facet;
 
 import java.io.IOException;
+import java.util.function.Predicate;
 import java.util.jar.JarFile;
 
 
@@ -33,9 +34,9 @@ import org.eclipse.jst.jsf.common.facet.libraryprovider.UserLibraryVersionValida
  */
 public class UserLibraryVersionValidatorProxy extends UserLibraryVersionValidator
 {
-    public UserLibraryVersionValidatorProxy (final String classNameIdentifyingJar)
+    public UserLibraryVersionValidatorProxy (final Predicate<String> classNameIdentifyingJarPredicate)
     {
-        super(classNameIdentifyingJar);
+        super(classNameIdentifyingJarPredicate);
     }
 
 

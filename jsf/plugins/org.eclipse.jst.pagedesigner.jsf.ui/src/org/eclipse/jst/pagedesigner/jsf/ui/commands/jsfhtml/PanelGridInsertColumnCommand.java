@@ -26,7 +26,7 @@ import org.eclipse.jst.pagedesigner.commands.DesignerCommand;
 import org.eclipse.jst.pagedesigner.jsf.core.dom.JSFDOMUtil;
 import org.eclipse.jst.pagedesigner.jsf.ui.elementedit.util.PanelGridUtil;
 import org.eclipse.jst.pagedesigner.utils.DOMUtil;
-import org.eclipse.jst.pagedesigner.utils.JSPUtil;
+import org.eclipse.jst.pagedesigner.utils.JSFUtil;
 import org.eclipse.jst.pagedesigner.viewer.IHTMLGraphicalViewer;
 
 /**
@@ -145,7 +145,7 @@ public class PanelGridInsertColumnCommand extends DesignerCommand
 
     private Node createDefaultNode()
     {
-        String prefix = JSPUtil.getOrCreatePrefix(getModel(), ITLDConstants.URI_JSF_HTML, "h"); //$NON-NLS-1$
+        String prefix = JSFUtil.getOrCreatePrefix(getModel(), ITLDConstants.URI_JSF_HTML, "h"); //$NON-NLS-1$
         Element child = _panelGridEle.getOwnerDocument().createElement(IJSFConstants.TAG_OUTPUTTEXT);
         child.setPrefix(prefix);
         return child;

@@ -19,7 +19,7 @@ import org.eclipse.jst.jsf.core.internal.tld.ITLDConstants;
 import org.eclipse.jst.pagedesigner.actions.link.AbstractLinkCreator;
 import org.eclipse.jst.pagedesigner.actions.link.LinkUtil;
 import org.eclipse.jst.pagedesigner.parts.TextEditPart;
-import org.eclipse.jst.pagedesigner.utils.JSPUtil;
+import org.eclipse.jst.pagedesigner.utils.JSFUtil;
 import org.eclipse.jst.pagedesigner.viewer.DesignPosition;
 import org.eclipse.jst.pagedesigner.viewer.DesignRange;
 import org.eclipse.wst.xml.core.internal.provisional.document.IDOMModel;
@@ -48,8 +48,8 @@ public class JSFOutputLinkCreator extends AbstractLinkCreator
             Document doc = (parentNode instanceof Document) ? (Document) parentNode : (parentNode.getOwnerDocument());
 
             IDOMModel model = ((IDOMNode) parentNode).getModel();
-            String prefix = JSPUtil.getOrCreatePrefix(model, ITLDConstants.URI_JSF_HTML, "h"); //$NON-NLS-1$
-            String fPrefix = JSPUtil.getOrCreatePrefix(model, ITLDConstants.URI_JSF_CORE, "f"); //$NON-NLS-1$
+            String prefix = JSFUtil.getOrCreatePrefix(model, ITLDConstants.URI_JSF_HTML, "h"); //$NON-NLS-1$
+            String fPrefix = JSFUtil.getOrCreatePrefix(model, ITLDConstants.URI_JSF_CORE, "f"); //$NON-NLS-1$
 
             Element outputLink = doc.createElement(IJSFConstants.TAG_OUTPUTLINK);
             outputLink.setPrefix(prefix);

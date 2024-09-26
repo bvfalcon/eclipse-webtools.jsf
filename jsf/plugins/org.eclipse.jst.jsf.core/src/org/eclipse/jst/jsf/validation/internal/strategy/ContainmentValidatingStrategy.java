@@ -18,7 +18,7 @@ import java.util.List;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.jst.jsf.common.dom.DOMAdapter;
 import org.eclipse.jst.jsf.common.dom.TagIdentifier;
-import org.eclipse.jst.jsf.common.internal.JSPUtil;
+import org.eclipse.jst.jsf.common.internal.JSFUtil;
 import org.eclipse.jst.jsf.common.metadata.Entity;
 import org.eclipse.jst.jsf.common.metadata.Trait;
 import org.eclipse.jst.jsf.common.metadata.internal.IMetaDataDomainContext;
@@ -119,7 +119,7 @@ public class ContainmentValidatingStrategy extends
         // in the JSP files that include them
         // also only validate the first instance of containment violation in a
         // file
-        if (JSPUtil.isJSPFragment(jsfValidationContext.getFile())
+        if (JSFUtil.isJSFFragment(jsfValidationContext.getFile())
                 || _containmentValidationCount > 0)
         {
             return;

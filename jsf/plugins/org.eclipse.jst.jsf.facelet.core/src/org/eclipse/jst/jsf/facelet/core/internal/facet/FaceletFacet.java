@@ -41,7 +41,7 @@ public final class FaceletFacet
     static final String COM_SUN_FACES_APPLICATION_WEBAPP_LIFECYCLE_LISTENER = "com.sun.faces.application.WebappLifecycleListener"; //$NON-NLS-1$
     static final String COM_SUN_FACES_CONFIG_CONFIGURE_LISTENER             = "com.sun.faces.config.ConfigureListener";           //$NON-NLS-1$
     static final String XHTML                                               = ".xhtml";                                           //$NON-NLS-1$
-    static final String JAVAX_FACES_DEFAULT_SUFFIX                          = "javax.faces.DEFAULT_SUFFIX";                       //$NON-NLS-1$
+    static final String JAVAX_FACES_DEFAULT_SUFFIX                          = "jakarta.faces.DEFAULT_SUFFIX";                       //$NON-NLS-1$
 
     private FaceletFacet()
     {

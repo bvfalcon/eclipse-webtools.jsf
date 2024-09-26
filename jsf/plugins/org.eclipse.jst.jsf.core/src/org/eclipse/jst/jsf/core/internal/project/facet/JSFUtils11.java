@@ -46,7 +46,7 @@ import org.eclipse.wst.common.frameworks.datamodel.IDataModel;
         final String QUOTE = new String(new char[]
         { '"' });
         pw.write("<?xml version=" + QUOTE + "1.0" + QUOTE + " encoding=" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-                + QUOTE + "UTF-8" + QUOTE + "?>\n\n"); //$NON-NLS-1$ //$NON-NLS-2$
+                + QUOTE + "UTF-8" + QUOTE + "?>\n"); //$NON-NLS-1$ //$NON-NLS-2$
 
         pw.write("<!DOCTYPE faces-config PUBLIC\n"); //$NON-NLS-1$
         pw.write("    " //$NON-NLS-1$
@@ -55,7 +55,7 @@ import org.eclipse.wst.common.frameworks.datamodel.IDataModel;
                 + QUOTE + "\n"); //$NON-NLS-1$
         pw.write("    " + QUOTE //$NON-NLS-1$
                 + "http://java.sun.com/dtd/web-facesconfig_1_1.dtd" //$NON-NLS-1$
-                + QUOTE + ">\n\n"); //$NON-NLS-1$
+                + QUOTE + ">\n"); //$NON-NLS-1$
 
         pw.write("<faces-config>\n\n"); //$NON-NLS-1$
         pw.write("</faces-config>\n"); //$NON-NLS-1$
