@@ -25,6 +25,10 @@ public interface ITLDConstants {
      */
     public static final String URI_JSF_CORE = "http://java.sun.com/jsf/core"; //$NON-NLS-1$
     /**
+     * The JSF core (f) component URI for Jakarta EE
+     */
+    public static final String URI_JSF_CORE_JAKARTA = "jakarta.faces.core"; //$NON-NLS-1$
+    /**
      * The JCP version of the JSF core (f) component URI
      */
     public static final String URI_JSF_CORE_JCP = "http://xmlns.jcp.org/jsf/core"; //$NON-NLS-1$
@@ -32,6 +36,10 @@ public interface ITLDConstants {
      * The JSF html (h) component URI
      */
     public static final String URI_JSF_HTML = "http://java.sun.com/jsf/html"; //$NON-NLS-1$
+    /**
+     * The JSF html (h) component URI for Jakarta EE
+     */
+    public static final String URI_JSF_HTML_JAKARTA = "jakarta.faces.html"; //$NON-NLS-1$
     /**
      * The JCP version of the JSF html (h) component URI
      */

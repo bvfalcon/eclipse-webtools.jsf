@@ -272,19 +272,33 @@ public interface IJSFConstants
      */
     final static TagIdentifier TAG_IDENTIFIER_VIEW =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_VIEW);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_VIEW
+     */
+    final static TagIdentifier TAG_IDENTIFIER_VIEW_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_VIEW);
 
     /**
      * TagIdentifier for TAG_VIEWPARAM
      */
     final static TagIdentifier TAG_IDENTIFIER_VIEWPARAM =
     	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_VIEWPARAM);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_VIEWPARAM
+     */
+    final static TagIdentifier TAG_IDENTIFIER_VIEWPARAM_JAKARTA =
+    	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_VIEWPARAM);
 
     /**
      * TagIdentifier for TAG_LOADBUNDLE
      */
     final static TagIdentifier TAG_IDENTIFIER_LOADBUNDLE =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_LOADBUNDLE);
-
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_LOADBUNDLE
+     */
+    final static TagIdentifier TAG_IDENTIFIER_LOADBUNDLE_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_LOADBUNDLE);
     /**
      * JCP version of TagIdentifier for TAG_LOADBUNDLE
      */
@@ -296,7 +310,11 @@ public interface IJSFConstants
      */
     final static TagIdentifier TAG_IDENTIFIER_FACET =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_FACET);
-    
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_FACET
+     */
+    final static TagIdentifier TAG_IDENTIFIER_FACET_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_FACET);
     /**
      * JCP version of TagIdentifier for TAG_FACET
      */
@@ -314,7 +332,11 @@ public interface IJSFConstants
      */
     final static TagIdentifier TAG_IDENTIFIER_DATA_TABLE = 
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_DATATABLE);
-
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_DATATABLE
+     */
+    final static TagIdentifier TAG_IDENTIFIER_DATA_TABLE_JAKARTA = 
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_DATATABLE);
     /**
      * JCP version of TagIdentifier for TAG_DATATABLE
      */
@@ -326,7 +348,11 @@ public interface IJSFConstants
      */
     final static TagIdentifier TAG_IDENTIFIER_PANEL_GRID =
        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_PANELGRID);
-
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_PANELGRID
+     */
+    final static TagIdentifier TAG_IDENTIFIER_PANEL_GRID_JAKARTA =
+       TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_PANELGRID);
     /**
      * JCP version of TagIdentifier for TAG_PANELGRID
      */
@@ -338,7 +364,11 @@ public interface IJSFConstants
      */
     final static TagIdentifier TAG_IDENTIFIER_COLUMN =
        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_COLUMN);
-
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_COLUMN
+     */
+    final static TagIdentifier TAG_IDENTIFIER_COLUMN_JAKARTA =
+       TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_COLUMN);
     /**
      * JCP version of TagIdentifier for TAG_COLUMN
      */
@@ -350,192 +380,352 @@ public interface IJSFConstants
      */
     final static TagIdentifier TAG_IDENTIFIER_FORM =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_FORM);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_FORM
+     */
+    final static TagIdentifier TAG_IDENTIFIER_FORM_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_FORM);
 
     /**
      * TagIdentifier for TAG_INPUTTEXT
      */
     final static TagIdentifier TAG_IDENTIFIER_INPUTTEXT =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_INPUTTEXT);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_INPUTTEXT
+     */
+    final static TagIdentifier TAG_IDENTIFIER_INPUTTEXT_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_INPUTTEXT);
     
     /**
      * TagIdentifier for TAG_INPUTSECRET
      */
     final static TagIdentifier TAG_IDENTIFIER_INPUTSECRET =
     	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_INPUTSECRET);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_INPUTSECRET
+     */
+    final static TagIdentifier TAG_IDENTIFIER_INPUTSECRET_JAKARTA =
+    	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_INPUTSECRET);
 
     /**
      * TagIdentifier for TAG_INPUTTEXTAREA
      */
     final static TagIdentifier TAG_IDENTIFIER_INPUTTEXTAREA =
     	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_INPUTTEXTAREA);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_INPUTTEXTAREA
+     */
+    final static TagIdentifier TAG_IDENTIFIER_INPUTTEXTAREA_JAKARTA =
+    	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_INPUTTEXTAREA);
 
     /**
      * TagIdentifier for TAG_OUTPUTTEXT
      */
     final static TagIdentifier TAG_IDENTIFIER_OUTPUTTEXT =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_OUTPUTTEXT);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_OUTPUTTEXT
+     */
+    final static TagIdentifier TAG_IDENTIFIER_OUTPUTTEXT_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_OUTPUTTEXT);
     
     /**
      * TagIdentifier for TAG_OUTPUTLABEL
      */
     final static TagIdentifier TAG_IDENTIFIER_OUTPUTLABEL =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_OUTPUTLABEL);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_OUTPUTLABEL
+     */
+    final static TagIdentifier TAG_IDENTIFIER_OUTPUTLABEL_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_OUTPUTLABEL);
     
     /**
      * TagIdentifier for TAG_GRAPHICIMAGE
      */
     final static TagIdentifier TAG_IDENTIFIER_GRAPHICIMAGE =
     	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_GRAPHICIMAGE);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_GRAPHICIMAGE
+     */
+    final static TagIdentifier TAG_IDENTIFIER_GRAPHICIMAGE_JAKARTA =
+    	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_GRAPHICIMAGE);
 
     /**
      * TagIdentifier for TAG_COMMANDBUTTON
      */
     final static TagIdentifier TAG_IDENTIFIER_COMMANDBUTTON =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_COMMANDBUTTON);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_COMMANDBUTTON
+     */
+    final static TagIdentifier TAG_IDENTIFIER_COMMANDBUTTON_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_COMMANDBUTTON);
 
     /**
      * TagIdentifier for TAG_COMMANDLINK
      */
     final static TagIdentifier TAG_IDENTIFIER_COMMANDLINK =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_COMMANDLINK);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_COMMANDLINK
+     */
+    final static TagIdentifier TAG_IDENTIFIER_COMMANDLINK_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_COMMANDLINK);
 
     /**
      * TagIdentifier for TAG_INPUTHIDDEN
      */
     final static TagIdentifier TAG_IDENTIFIER_INPUTHIDDEN =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_INPUTHIDDEN);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_INPUTHIDDEN
+     */
+    final static TagIdentifier TAG_IDENTIFIER_INPUTHIDDEN_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_INPUTHIDDEN);
 
     /**
      * TagIdentifier for TAG_MESSAGE
      */
     final static TagIdentifier TAG_IDENTIFIER_MESSAGE =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_MESSAGE);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_MESSAGE
+     */
+    final static TagIdentifier TAG_IDENTIFIER_MESSAGE_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_MESSAGE);
 
     /**
      * TagIdentifier for TAG_MESSAGES
      */
     final static  TagIdentifier TAG_IDENTIFIER_MESSAGES =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_MESSAGES);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_MESSAGES
+     */
+    final static  TagIdentifier TAG_IDENTIFIER_MESSAGES_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_MESSAGES);
 
     /**
      * TagIdentifier for TAG_OUTPUTFORMAT
      */
     final static TagIdentifier TAG_IDENTIFIER_OUTPUTFORMAT =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_OUTPUTFORMAT);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_OUTPUTFORMAT
+     */
+    final static TagIdentifier TAG_IDENTIFIER_OUTPUTFORMAT_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_OUTPUTFORMAT);
 
     /**
      * TagIdentifier for TAG_OUTPUTLINK
      */
     final static TagIdentifier TAG_IDENTIFIER_OUTPUTLINK =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_OUTPUTLINK);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_OUTPUTLINK
+     */
+    final static TagIdentifier TAG_IDENTIFIER_OUTPUTLINK_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_OUTPUTLINK);
 
     /**
      * TagIdentifier for TAG_PANELGROUP
      */
     final static TagIdentifier TAG_IDENTIFIER_PANEL_GROUP =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_PANELGROUP);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_PANELGROUP
+     */
+    final static TagIdentifier TAG_IDENTIFIER_PANEL_GROUP_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_PANELGROUP);
 
     /**
      * TagIdentifier for TAG_SELECTBOOLEANCHECKBOX
      */
     final static TagIdentifier TAG_IDENTIFIER_SELECTBOOLEANCHECKBOX = 
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_SELECTBOOLEANCHECKBOX);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_SELECTBOOLEANCHECKBOX
+     */
+    final static TagIdentifier TAG_IDENTIFIER_SELECTBOOLEANCHECKBOX_JAKARTA = 
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_SELECTBOOLEANCHECKBOX);
 
     /**
      * TagIdentifier for TAG_SELECTMANYCHECKBOX
      */
     final static TagIdentifier TAG_IDENTIFIER_SELECTMANYCHECKBOX = 
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_SELECTMANYCHECKBOX);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_SELECTMANYCHECKBOX
+     */
+    final static TagIdentifier TAG_IDENTIFIER_SELECTMANYCHECKBOX_JAKARTA = 
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_SELECTMANYCHECKBOX);
 
     /**
      * TagIdentifier for TAG_SELECTMANYLISTBOX
      */
     final static TagIdentifier TAG_IDENTIFIER_SELECTMANYLISTBOX = 
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_SELECTMANYLISTBOX);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_SELECTMANYLISTBOX
+     */
+    final static TagIdentifier TAG_IDENTIFIER_SELECTMANYLISTBOX_JAKARTA = 
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_SELECTMANYLISTBOX);
 
     /**
      * TagIdentifier for TAG_SELECTMANYMENU
      */
     final static  TagIdentifier TAG_IDENTIFIER_SELECTMANYMENU =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_SELECTMANYMENU);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_SELECTMANYMENU
+     */
+    final static  TagIdentifier TAG_IDENTIFIER_SELECTMANYMENU_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_SELECTMANYMENU);
 
     /**
      * TagIdentifier for TAG_SELECTONELISTBOX
      */
     final static TagIdentifier TAG_IDENTIFIER_SELECTONELISTBOX =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_SELECTONELISTBOX);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_SELECTONELISTBOX
+     */
+    final static TagIdentifier TAG_IDENTIFIER_SELECTONELISTBOX_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_SELECTONELISTBOX);
     
     /**
      * TagIdentifier for TAG_SELECTONEMENU
      */
     final static TagIdentifier TAG_IDENTIFIER_SELECTONEMENU =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_SELECTONEMENU);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_SELECTONEMENU
+     */
+    final static TagIdentifier TAG_IDENTIFIER_SELECTONEMENU_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_SELECTONEMENU);
 
     /**
      * TagIdentifier for TAG_SELECTONERADIO
      */
     final static TagIdentifier TAG_IDENTIFIER_SELECTONERADIO =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML, TAG_SELECTONERADIO);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_SELECTONERADIO
+     */
+    final static TagIdentifier TAG_IDENTIFIER_SELECTONERADIO_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_HTML_JAKARTA, TAG_SELECTONERADIO);
 
     /**
      * TagIdentifier for TAG_ACTIONLISTENER
      */
     final static TagIdentifier TAG_IDENTIFIER_ACTIONLISTENER = 
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_ACTIONLISTENER);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_ACTIONLISTENER
+     */
+    final static TagIdentifier TAG_IDENTIFIER_ACTIONLISTENER_JAKARTA = 
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_ACTIONLISTENER);
 
     /**
      * TagIdentifier for TAG_ATTRIBUTE
      */
     final static TagIdentifier TAG_IDENTIFIER_ATTRIBUTE = 
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_ATTRIBUTE);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_ATTRIBUTE
+     */
+    final static TagIdentifier TAG_IDENTIFIER_ATTRIBUTE_JAKARTA = 
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_ATTRIBUTE);
 
     /**
      * TagIdentifier for TAG_CONVERTDATETIME
      */
     final static TagIdentifier TAG_IDENTIFIER_CONVERTDATETIME = 
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_CONVERTDATETIME);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_CONVERTDATETIME
+     */
+    final static TagIdentifier TAG_IDENTIFIER_CONVERTDATETIME_JAKARTA = 
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_CONVERTDATETIME);
 
     /**
      * TagIdentifier for TAG_CONVERTNUMBER
      */
     final static TagIdentifier TAG_IDENTIFIER_CONVERTNUMBER = 
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_CONVERTNUMBER);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_CONVERTNUMBER
+     */
+    final static TagIdentifier TAG_IDENTIFIER_CONVERTNUMBER_JAKARTA = 
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_CONVERTNUMBER);
 
     /**
      * TagIdentifier for TAG_CONVERTER
      */
     final static TagIdentifier TAG_IDENTIFIER_CONVERTER = 
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_CONVERTER);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_CONVERTER
+     */
+    final static TagIdentifier TAG_IDENTIFIER_CONVERTER_JAKARTA = 
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_CONVERTER);
 
     /**
      * TagIdentifier for TAG_PARAM
      */
     final static TagIdentifier TAG_IDENTIFIER_PARAM =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_PARAM);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_PARAM
+     */
+    final static TagIdentifier TAG_IDENTIFIER_PARAM_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_PARAM);
 
     /**
      * TagIdentifier for TAG_PHASELISTENER
      */
     final static TagIdentifier TAG_IDENTIFIER_PHASELISTENER =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_PHASELISTENER);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_PHASELISTENER
+     */
+    final static TagIdentifier TAG_IDENTIFIER_PHASELISTENER_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_PHASELISTENER);
 
     /**
      * TagIdentifier for TAG_SELECTITEM
      */
     final static TagIdentifier TAG_IDENTIFIER_SELECTITEM = 
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_SELECTITEM);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_SELECTITEM
+     */
+    final static TagIdentifier TAG_IDENTIFIER_SELECTITEM_JAKARTA = 
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_SELECTITEM);
 
     /**
      * TagIdentifier for TAG_SELECTITEMS
      */
     final static TagIdentifier TAG_IDENTIFIER_SELECTITEMS =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_SELECTITEMS);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_SELECTITEMS
+     */
+    final static TagIdentifier TAG_IDENTIFIER_SELECTITEMS_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_SELECTITEMS);
 
     /**
      * TagIdentifier for TAG_SETPROPERTYACTIONLISTENER
      */
     final static TagIdentifier TAG_IDENTIFIER_SETPROPERTYACTIONLISTENER =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_SETPROPERTYACTIONLISTENER);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_SETPROPERTYACTIONLISTENER
+     */
+    final static TagIdentifier TAG_IDENTIFIER_SETPROPERTYACTIONLISTENER_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_SETPROPERTYACTIONLISTENER);
 
     /**
      * TagIdentifier for TAG_SUBVIEW
@@ -548,48 +738,88 @@ public interface IJSFConstants
      */
     final static TagIdentifier TAG_IDENTIFIER_VALIDATEBEAN =
     	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_VALIDATEBEAN);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_VALIDATEBEAN
+     */
+    final static TagIdentifier TAG_IDENTIFIER_VALIDATEBEAN_JAKARTA =
+    	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_VALIDATEBEAN);
 
     /**
      * TagIdentifier for TAG_VALIDATEDOUBLERANGE
      */
     final static TagIdentifier TAG_IDENTIFIER_VALIDATEDOUBLERANGE =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_VALIDATEDOUBLERANGE);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_VALIDATEDOUBLERANGE
+     */
+    final static TagIdentifier TAG_IDENTIFIER_VALIDATEDOUBLERANGE_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_VALIDATEDOUBLERANGE);
 
     /**
      * TagIdentifier for TAG_VALIDATELENGTH
      */
     final static TagIdentifier TAG_IDENTIFIER_VALIDATELENGTH =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_VALIDATELENGTH);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_VALIDATELENGTH
+     */
+    final static TagIdentifier TAG_IDENTIFIER_VALIDATELENGTH_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_VALIDATELENGTH);
 
     /**
      * TagIdentifier for TAG_VALIDATELONGRANGE
      */
     final static TagIdentifier TAG_IDENTIFIER_VALIDATELONGRANGE =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_VALIDATELONGRANGE);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_VALIDATELONGRANGE
+     */
+    final static TagIdentifier TAG_IDENTIFIER_VALIDATELONGRANGE_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_VALIDATELONGRANGE);
 
     /**
      * TagIdentifier for TAG_VALIDATEREGEX
      */
     final static TagIdentifier TAG_IDENTIFIER_VALIDATEREGEX =
     	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_VALIDATEREGEX);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_VALIDATEREGEX
+     */
+    final static TagIdentifier TAG_IDENTIFIER_VALIDATEREGEX_JAKARTA =
+    	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_VALIDATEREGEX);
 
     /**
      * TagIdentifier for TAG_VALIDATEREQUIRED
      */
     final static TagIdentifier TAG_IDENTIFIER_VALIDATEREQUIRED =
     	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_VALIDATEREQUIRED);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_VALIDATEREQUIRED
+     */
+    final static TagIdentifier TAG_IDENTIFIER_VALIDATEREQUIRED_JAKARTA =
+    	TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_VALIDATEREQUIRED);
 
     /**
      * TagIdentifier for TAG_VALIDATOR
      */
     final static TagIdentifier TAG_IDENTIFIER_VALIDATOR =
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_VALIDATOR);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_VALIDATOR
+     */
+    final static TagIdentifier TAG_IDENTIFIER_VALIDATOR_JAKARTA =
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_VALIDATOR);
 
     /**
      * TagIdentifier for TAG_VALUECHANGELISTENER
      */
     final static TagIdentifier TAG_IDENTIFIER_VALUECHANGELISTENER = 
         TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE, TAG_VALUECHANGELISTENER);
+    /**
+     * Jakarta EE version of TagIdentifier for TAG_VALUECHANGELISTENER
+     */
+    final static TagIdentifier TAG_IDENTIFIER_VALUECHANGELISTENER_JAKARTA = 
+        TagIdentifierFactory.createJSPTagWrapper(ITLDConstants.URI_JSF_CORE_JAKARTA, TAG_VALUECHANGELISTENER);
 
     // attribute names
 	/**

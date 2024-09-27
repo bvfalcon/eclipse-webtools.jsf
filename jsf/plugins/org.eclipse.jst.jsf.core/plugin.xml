@@ -81,7 +81,7 @@
           <and>
              <requires
                    facet="jst.web"
-                   version="[2.5">
+                   version="[3.0">
              </requires>
           </and>
        </constraint>
@@ -89,10 +89,31 @@
 	<project-facet-version facet="jst.jsf" version="2.3">
 	   <constraint>
 	      <and>
-	         <requires facet="jst.web" version="[2.5" />
+	         <requires facet="jst.web" version="[3.0" />
 	      </and>
 	   </constraint>
-	`</project-facet-version>
+	</project-facet-version>
+	<project-facet-version facet="jst.jsf" version="3.0">
+	   <constraint>
+	      <and>
+	         <requires facet="jst.web" version="[5.0" />
+	      </and>
+	   </constraint>
+	</project-facet-version>
+	<project-facet-version facet="jst.jsf" version="4.0">
+	   <constraint>
+	      <and>
+	         <requires facet="jst.web" version="[6.0" />
+	      </and>
+	   </constraint>
+	</project-facet-version>
+	<project-facet-version facet="jst.jsf" version="4.1">
+	   <constraint>
+	      <and>
+	         <requires facet="jst.web" version="[6.0" />
+	      </and>
+	   </constraint>
+	</project-facet-version>
 
     <action id="jst.jsf.v11.install" facet="jst.jsf" type="INSTALL" version="1.1">
       	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
@@ -128,6 +149,12 @@
       	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
         <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider"/>
     </action>
+
+    <action id="jst.jsf.v21.uninstall" facet="jst.jsf" version="2.1" type="UNINSTALL">
+        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
+	 	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
+ 	</action>
+
   <action
         facet="jst.jsf"
         id="jst.jsf.v22.install"
@@ -140,11 +167,6 @@
            class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider">
      </config-factory>
   </action>  
-      
-    <action id="jst.jsf.v21.uninstall" facet="jst.jsf" version="2.1" type="UNINSTALL">
-        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
-	 	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
- 	</action>
     <action
           facet="jst.jsf"
           id="jst.jsf.v22.uninstall"
@@ -181,7 +203,78 @@
              class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate">
        </delegate>
     </action>
-	      	
+  <action
+        facet="jst.jsf"
+        id="jst.jsf.v30.install"
+        type="INSTALL"
+        version="3.0">
+     <delegate
+           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate">
+     </delegate>
+     <config-factory
+           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider">
+     </config-factory>
+  </action>  
+    <action
+          facet="jst.jsf"
+          id="jst.jsf.v30.uninstall"
+          type="UNINSTALL"
+          version="3.0">
+       <config-factory
+             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory">
+       </config-factory>
+       <delegate
+             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate">
+       </delegate>
+    </action>
+  <action
+        facet="jst.jsf"
+        id="jst.jsf.v40.install"
+        type="INSTALL"
+        version="4.0">
+     <delegate
+           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate">
+     </delegate>
+     <config-factory
+           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider">
+     </config-factory>
+  </action>  
+    <action
+          facet="jst.jsf"
+          id="jst.jsf.v40.uninstall"
+          type="UNINSTALL"
+          version="4.0">
+       <config-factory
+             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory">
+       </config-factory>
+       <delegate
+             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate">
+       </delegate>
+    </action>
+  <action
+        facet="jst.jsf"
+        id="jst.jsf.v41.install"
+        type="INSTALL"
+        version="4.1">
+     <delegate
+           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate">
+     </delegate>
+     <config-factory
+           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider">
+     </config-factory>
+  </action>  
+    <action
+          facet="jst.jsf"
+          id="jst.jsf.v41.uninstall"
+          type="UNINSTALL"
+          version="4.1">
+       <config-factory
+             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory">
+       </config-factory>
+       <delegate
+             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate">
+       </delegate>
+    </action>
   </extension> 
   
   <extension
@@ -284,13 +377,36 @@
 	   <facet id="jst.jsf" version="2.3" />
 	   <description>%JSFv23PresetDesc</description>
 	</static-preset>
-	
+
+	<static-preset extends="default.configuration" id="preset.jst.jsf.v3_0">
+	   <label>%JSFv30Project</label>
+	   <facet id="jst.java" version="1.8" />
+	   <facet id="jst.web" version="5.0" />
+	   <facet id="jst.jsf" version="3.0" />
+	   <description>%JSFv30PresetDesc</description>
+	</static-preset>
+
+	<static-preset extends="default.configuration" id="preset.jst.jsf.v4_0">
+	   <label>%JSFv23Project</label>
+	   <facet id="jst.java" version="11" />
+	   <facet id="jst.web" version="6.0" />
+	   <facet id="jst.jsf" version="4.0" />
+	   <description>%JSFv40PresetDesc</description>
+	</static-preset>
+
+	<static-preset extends="default.configuration" id="preset.jst.jsf.v4_1">
+	   <label>%JSFv23Project</label>
+	   <facet id="jst.java" version="11" />
+	   <facet id="jst.web" version="6.0" />
+	   <facet id="jst.jsf" version="4.1" />
+	   <description>%JSFv40PresetDesc</description>
+	</static-preset>
   </extension>
 
   <extension point="org.eclipse.wst.common.project.facet.core.runtimes">
     <supported>
 		<runtime-component any="true"/>
-        	<facet id="jst.jsf" version="1.1,1.2,2.0,2.1,2.2,2.3"/> 
+        	<facet id="jst.jsf" version="1.1,1.2,2.0,2.1,2.2,2.3,3.0,4.0,4.1"/> 
     </supported>
   </extension>
     
@@ -597,6 +713,33 @@
 
   <extension
         point="org.eclipse.jst.common.project.facet.core.downloadableLibraries">
+
+     <!-- JSF 4.1 Downloadable library provider -->
+     <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-4.1-downloadable-libraries.xml">
+            <enablement>
+                <with variable="requestingProjectFacet">
+                    <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:4.1" forcePluginActivation="true"/>
+                </with>
+            </enablement>
+     </import-definitions>
+   
+     <!-- JSF 4.0 Downloadable library provider -->
+     <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-4.0-downloadable-libraries.xml">
+            <enablement>
+                <with variable="requestingProjectFacet">
+                    <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:4.0" forcePluginActivation="true"/>
+                </with>
+            </enablement>
+     </import-definitions>
+   
+     <!-- JSF 3.0 Downloadable library provider -->
+     <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-3.0-downloadable-libraries.xml">
+            <enablement>
+                <with variable="requestingProjectFacet">
+                    <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:3.0" forcePluginActivation="true"/>
+                </with>
+            </enablement>
+     </import-definitions>
    
      <!-- JSF 2.3 Downloadable library provider -->
      <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-2.3-downloadable-libraries.xml">

@@ -111,6 +111,14 @@ public final class IJSFCoreConstants
 	 * The version string for a JSF 4.0 project
 	 */
 	public static final String JSF_VERSION_4_0 = FACET_VERSION_4_0;
+	/**
+	 * The facet version for a JSF 4.1 project
+	 */
+	public static final String FACET_VERSION_4_1 = "4.1"; //$NON-NLS-1$
+	/**
+	 * The version string for a JSF 4.1 project
+	 */
+	public static final String JSF_VERSION_4_1 = FACET_VERSION_4_1;
 
 	public static List<String> JAVAX_NAMESPACE_VERSIONS = Arrays.asList(
 			JSF_VERSION_1_0,
@@ -131,6 +139,11 @@ public final class IJSFCoreConstants
     {
         return JSF_CORE_FACET_ID.equals(facet.getId());
     }
+    /**
+     * @param jsfVersion
+     * @return true if the jsfVersion is a specification of Jakarta EE.
+     * 
+     */
     public static boolean isJakartaNamespace(String jsfVersion)
     {
         return !JAVAX_NAMESPACE_VERSIONS.contains(jsfVersion);

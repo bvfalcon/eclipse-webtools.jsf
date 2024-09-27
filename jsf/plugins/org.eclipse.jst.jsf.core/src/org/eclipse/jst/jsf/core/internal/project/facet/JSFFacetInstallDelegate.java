@@ -47,7 +47,7 @@ import org.eclipse.wst.common.project.facet.core.IDelegate;
 import org.eclipse.wst.common.project.facet.core.IProjectFacetVersion;
 
 /**
- * JSF Facet Install Delegate for WTP faceted web projects.  Deals with 2.3, 2.4 and 2.5 web app models.
+ * JSF Facet Install Delegate for WTP faceted web projects.  Deals with 2.3, 2.4 and 2.5, 3.0, 5.0, 6.0 web app models.
  * 
  * Uses <code>com.eclispe.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider<code> for model
  * 	 <li> creates JSF configuration file if not already present.  It will not attempt to upgrade or downgrade the version if there is a mismatch.
