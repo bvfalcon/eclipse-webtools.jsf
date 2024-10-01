@@ -34,7 +34,7 @@ public class WebAppUtil {
 	 * @return the transformed url
 	 */
 	public static String transformJSPURL(String url, IFile openedFile) {
-		boolean canSupportJSF = JSPUtil.supportTaglib(
+		boolean canSupportJSF = JSFUtil.supportTaglib(
 				ITLDConstants.URI_JSF_HTML, openedFile);
 		if (canSupportJSF
 				&& url != null

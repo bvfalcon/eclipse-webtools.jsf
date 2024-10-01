@@ -58,12 +58,12 @@ import org.w3c.dom.Node;
  * 
  * @author mengbo
  */
-public class JSPUtil {
+public class JSFUtil {
 	
 	/**
-	 * JSP source contenttype
+	 * JSF source contenttype
 	 */
-	public static final IContentType JSP_CONTENTTYPE = Platform.getContentTypeManager().getContentType("org.eclipse.jst.jsp.core.jspsource"); //$NON-NLS-1$
+	public static final IContentType JSF_CONTENTTYPE = Platform.getContentTypeManager().getContentType("org.eclipse.jst.jsf.core.jsfsource"); //$NON-NLS-1$
 	/**
 	 * find out whether the specified taglib has been defined in the IDOMModel.
 	 * If found, then return the prefix. If can't find, then will try to add a
@@ -340,9 +340,9 @@ public class JSPUtil {
 
 	/**
 	 * @param model
-	 * @return true if model is a JSP contenttype
+	 * @return true if model is a JSF contenttype
 	 */
-	public static boolean isJSPModel(IDOMModel model) {		
+	public static boolean isJSFModel(IDOMModel model) {		
 		final IContentTypeManager typeManager = Platform.getContentTypeManager();
 		final IStructuredDocumentContext context = IStructuredDocumentContextFactory.INSTANCE.getContext(model.getStructuredDocument(), 0);
 		final IWorkspaceContextResolver resolver = IStructuredDocumentContextResolverFactory.INSTANCE.getWorkspaceContextResolver(context);
@@ -350,6 +350,6 @@ public class JSPUtil {
         final IContentType contentType = 
             typeManager.findContentTypeFor(file.getName());
         
-		return contentType.isKindOf(JSP_CONTENTTYPE);
+		return contentType.isKindOf(JSF_CONTENTTYPE);
 	}
 }

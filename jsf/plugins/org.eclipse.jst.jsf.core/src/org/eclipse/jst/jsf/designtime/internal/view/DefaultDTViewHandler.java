@@ -30,7 +30,7 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.jface.text.IDocument;
-import org.eclipse.jst.jsf.common.internal.JSPUtil;
+import org.eclipse.jst.jsf.common.internal.JSFUtil;
 import org.eclipse.jst.jsf.common.internal.resource.EventResult;
 import org.eclipse.jst.jsf.common.internal.resource.IResourceLifecycleListener;
 import org.eclipse.jst.jsf.common.internal.resource.ImmutableLifecycleListener;
@@ -148,7 +148,7 @@ public class DefaultDTViewHandler extends AbstractDTViewHandler
                 {
                     final IFile srcFile = (IFile) res;
                     final ITagRegistry registry = findTagRegistry(srcFile);
-                    if (JSPUtil.isJSPContentType(srcFile) && registry != null)
+                    if (JSFUtil.isJSFContentType(srcFile) && registry != null)
                     {
                         // if we have a jsp file, then return the default
                         // adapter
@@ -258,7 +258,7 @@ public class DefaultDTViewHandler extends AbstractDTViewHandler
     public boolean supportsViewDefinition(final IFile file)
     {
         // currently only JSP content type is supported
-        return (JSPUtil.isJSPContentType(file));
+        return (JSFUtil.isJSFContentType(file));
     }
 
     @Override

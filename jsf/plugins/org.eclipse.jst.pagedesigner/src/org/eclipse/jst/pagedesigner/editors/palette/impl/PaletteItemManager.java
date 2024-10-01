@@ -36,7 +36,7 @@ import org.eclipse.core.runtime.content.IContentType;
 import org.eclipse.core.runtime.content.IContentTypeManager;
 import org.eclipse.gef.palette.PaletteDrawer;
 import org.eclipse.gef.palette.PaletteEntry;
-import org.eclipse.jst.jsf.common.internal.JSPUtil;
+import org.eclipse.jst.jsf.common.internal.JSFUtil;
 import org.eclipse.jst.jsf.common.runtime.internal.view.model.common.Namespace;
 import org.eclipse.jst.jsf.core.internal.CompositeTagRegistryFactory;
 import org.eclipse.jst.jsf.core.internal.CompositeTagRegistryFactory.TagRegistryIdentifier;
@@ -151,8 +151,8 @@ public class PaletteItemManager implements IPaletteItemManager,
 	        }
 	        return null;
 		}
-		//to support legacy null projects.   Allows HTML and JSP tag libs to be displayed.
-	    return new TagRegistryIdentifier(null, org.eclipse.jst.pagedesigner.utils.JSPUtil.JSP_CONTENTTYPE);
+		//to support legacy null projects.   Allows HTML and JSF tag libs to be displayed.
+	    return new TagRegistryIdentifier(null, org.eclipse.jst.pagedesigner.utils.JSFUtil.JSF_CONTENTTYPE);
 
 	}
 
@@ -321,7 +321,7 @@ public class PaletteItemManager implements IPaletteItemManager,
 
 	private boolean isJSP(final TagRegistryIdentifier tagRegistryId) {
 		final IContentType ct = tagRegistryId.getContentType();
-		if (JSPUtil.isJSPContentType(ct.getId()))
+		if (JSFUtil.isJSFContentType(ct.getId()))
 			return true;
 		return false;
 	}

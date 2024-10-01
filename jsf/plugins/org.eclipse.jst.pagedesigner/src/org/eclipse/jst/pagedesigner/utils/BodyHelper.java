@@ -270,7 +270,7 @@ public class BodyHelper {
 			return null; // should not happen
 		}
 
-		final String prefix = JSPUtil.getOrCreatePrefix(((IDOMNode) node).getModel(),
+		final String prefix = JSFUtil.getOrCreatePrefix(((IDOMNode) node).getModel(),
 				body.getNamespaceURI(), defaultPrefix);
 		final Element ele = ownerDoc.createElement((prefix == null ? "" //$NON-NLS-1$
 				: (prefix + ":")) //$NON-NLS-1$

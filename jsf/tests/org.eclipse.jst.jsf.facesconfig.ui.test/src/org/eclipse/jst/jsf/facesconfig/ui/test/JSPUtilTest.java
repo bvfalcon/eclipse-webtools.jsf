@@ -16,7 +16,7 @@ package org.eclipse.jst.jsf.facesconfig.ui.test;
 
 import java.util.List;
 
-import org.eclipse.jst.jsf.facesconfig.ui.pageflow.util.JSPUtil;
+import org.eclipse.jst.jsf.facesconfig.ui.pageflow.util.JSFUtil;
 import org.eclipse.jst.jsf.facesconfig.ui.test.util.TestUtil;
 
 /**
@@ -26,13 +26,13 @@ import org.eclipse.jst.jsf.facesconfig.ui.test.util.TestUtil;
 public class JSPUtilTest extends FacesConfigEditorTest {
 
 	/**
-	 * Test method for {@link org.eclipse.jst.jsf.facesconfig.ui.pageflow.util.JSPUtil#getActionListInJSPFile(java.lang.String)}.
+	 * Test method for {@link org.eclipse.jst.jsf.facesconfig.ui.pageflow.util.JSfUtil#getActionListInJSFFile(java.lang.String)}.
 	 * @throws Exception 
 	 */
 	public void testGetActionListInJSPFile() throws Exception {
 		TestUtil.copyFile(project, "WebContent", "page1.jsp");
 		
-		List<?> actionNodes = JSPUtil.getActionListInJSPFile("/emptyjsfproject/WebContent/page1.jsp");
+		List<?> actionNodes = JSFUtil.getActionListInJSFFile("/emptyjsfproject/WebContent/page1.jsp");
 		assertEquals(3, actionNodes.size());
 	}
 

@@ -25,7 +25,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.eclipse.jst.jsf.common.ui.internal.logging.Logger;
 import org.eclipse.jst.pagedesigner.PDPlugin;
 import org.eclipse.jst.pagedesigner.editors.palette.MetadataTagDropSourceData;
-import org.eclipse.jst.pagedesigner.utils.JSPUtil;
+import org.eclipse.jst.pagedesigner.utils.JSFUtil;
 import org.eclipse.wst.xml.core.internal.provisional.document.IDOMModel;
 import org.eclipse.wst.xml.core.internal.provisional.document.IDOMText;
 import org.w3c.dom.Attr;
@@ -146,7 +146,7 @@ public class PaletteElementTemplateHelper {
 		if (node != null && refNode != null) {
 			String uri = refNode.getAttribute(PREFIX_ATTRIBUTE);
 			if (uri != null) {
-				String prefix = JSPUtil.getOrCreatePrefix(model, uri, null);
+				String prefix = JSFUtil.getOrCreatePrefix(model, uri, null);
 				node.setPrefix(prefix);
 			}
 		}

@@ -74,7 +74,7 @@ public class TestOverrideableCreationData extends
 		
 		Verification v = new Verification(OVERRIDDEN_TAGNAME,
 				IJSFConstants.TAG_IDENTIFIER_COMMANDBUTTON.getUri(), OVERRIDDEN_DEFAULT_PREFIX,
-				OVERRIDDEN_TAGNAME, "h");//<-- changes are required to JSPUtil.getPrefix() before the DefPrefixOverride is picked up in all cases when URI is not overridden
+				OVERRIDDEN_TAGNAME, "h");//<-- changes are required to JSFUtil.getPrefix() before the DefPrefixOverride is picked up in all cases when URI is not overridden
 
 		doCreateTestOverridden(IJSFConstants.TAG_IDENTIFIER_COMMANDBUTTON,
 				"jspx", "jspx", 495, false, getCustomizationData(), v);

@@ -18,40 +18,40 @@ import org.eclipse.core.runtime.content.IContentType;
 import org.eclipse.core.runtime.content.IContentTypeManager;
 
 /**
- * Utility JSP methods
+ * Utility JSF methods
  * @author cbateman
  *
  */
-public final class JSPUtil 
+public final class JSFUtil 
 {
-    private final static String  CTYPE_JSPSOURCE = 
-        "org.eclipse.jst.jsp.core.jspsource"; //$NON-NLS-1$
-    private final static String  CTYPE_JSPFRAGMENTSOURCE = 
-        "org.eclipse.jst.jsp.core.jspfragmentsource"; //$NON-NLS-1$
+    private final static String  CTYPE_JSFSOURCE = 
+        "org.eclipse.jst.jsf.core.jsfsource"; //$NON-NLS-1$
+    private final static String  CTYPE_JSFFRAGMENTSOURCE = 
+        "org.eclipse.jst.jsf.core.jsffragmentsource"; //$NON-NLS-1$
     /**
      * @param contentType
      * @return true if contentType is one of the content types registered
      * for JSP files
      */
-    public static boolean isJSPContentType(final String contentType)
+    public static boolean isJSFContentType(final String contentType)
     {
-        return CTYPE_JSPSOURCE.equals(contentType)
-                    || CTYPE_JSPFRAGMENTSOURCE.equals(contentType);
+        return CTYPE_JSFSOURCE.equals(contentType)
+                    || CTYPE_JSFFRAGMENTSOURCE.equals(contentType);
     }
     
     /**
      * @param file
      * @return true if file is associated with a JSP or JSP fragment content type
      */
-    public static boolean isJSPContentType(final IFile file)
+    public static boolean isJSFContentType(final IFile file)
     {
-    	final boolean isJSPSource = isJSPSource(file);
+    	final boolean isJSPSource = isJSFSource(file);
         if (isJSPSource)
         {
             return true;
         }
 
-        final boolean isJSPFragment = isJSPFragment(file);
+        final boolean isJSPFragment = isJSFFragment(file);
         
         if  (isJSPFragment)
         {
@@ -61,7 +61,7 @@ public final class JSPUtil
         return false;
     }
     
-    private JSPUtil()
+    private JSFUtil()
     {
         // no instantiation
     }
@@ -71,16 +71,16 @@ public final class JSPUtil
 	 * @return true if file is associated with the JSP source content type
 	 * (returns if JSP fragment)
 	 */
-	public static boolean isJSPSource(IFile file) {
-		return isAssociatedWithContentType(file, CTYPE_JSPSOURCE);
+	public static boolean isJSFSource(IFile file) {
+		return isAssociatedWithContentType(file, CTYPE_JSFSOURCE);
 	}
 
 	/**
 	 * @param file
 	 * @return true if the file is associated with the JSP fragment content type
 	 */
-	public static boolean isJSPFragment(IFile file) {
-		return isAssociatedWithContentType(file, CTYPE_JSPFRAGMENTSOURCE);
+	public static boolean isJSFFragment(IFile file) {
+		return isAssociatedWithContentType(file, CTYPE_JSFFRAGMENTSOURCE);
 	}
 	
 	private static boolean isAssociatedWithContentType(final IFile file, final String contentType)

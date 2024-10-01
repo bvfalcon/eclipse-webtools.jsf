@@ -27,7 +27,7 @@ import org.eclipse.jst.jsf.core.internal.tld.ITLDConstants;
 import org.eclipse.jst.jsf.core.internal.tld.TagIdentifierFactory;
 import org.eclipse.jst.pagedesigner.dom.IDOMPosition;
 import org.eclipse.jst.pagedesigner.editors.palette.ITagDropSourceData;
-import org.eclipse.jst.pagedesigner.utils.JSPUtil;
+import org.eclipse.jst.pagedesigner.utils.JSFUtil;
 import org.eclipse.wst.xml.core.internal.provisional.contentmodel.CMDocType;
 import org.eclipse.wst.xml.core.internal.provisional.document.IDOMModel;
 
@@ -130,7 +130,7 @@ public final class CreationData
         }
 
         // now handles custom tag lib
-        return JSPUtil.getOrCreatePrefix(model, uri, suggested);
+        return JSFUtil.getOrCreatePrefix(model, uri, suggested);
     }
     
     /**
@@ -246,13 +246,13 @@ public final class CreationData
         return false;
     }
 
-	/**
-	 * @return flag indicating that jsf view container ancestor is required
-	 */
-	public boolean isJSFViewTagRequired() {
-		return JSPUtil.isJSPModel(_model);		
-	}
-	
+    /**
+     * @return flag indicating that jsf view container ancestor is required
+     */
+    public boolean isJSFViewTagRequired() {
+        return JSFUtil.isJSFModel(_model);
+    }
+
     /**
      * @return the metadata context for the tag
      */

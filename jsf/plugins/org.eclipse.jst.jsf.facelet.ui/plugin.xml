@@ -91,7 +91,7 @@
                 nameFilter="faces-config.xml">
             </filter>
             <markerId
-               markerIdValue="JSPSemanticsValidatorMarker">
+               markerIdValue="JSFSemanticsValidatorMarker">
             </markerId>
             <helper 
                 class="org.eclipse.wst.validation.internal.operations.WorkbenchContext">

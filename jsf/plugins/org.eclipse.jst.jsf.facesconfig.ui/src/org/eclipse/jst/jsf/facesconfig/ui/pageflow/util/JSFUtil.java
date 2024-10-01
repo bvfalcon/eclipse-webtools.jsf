@@ -22,40 +22,40 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 
 /**
- * utility class for JSP related information.
+ * utility class for JSF related information.
  * 
  * @author Yang Liu
  */
-public class JSPUtil {
+public class JSFUtil {
 
 	/**
 	 * get the action list in the jsp file
-	 * @param jspFileName 
+	 * @param jsfFileName 
 	 * 
 	 * @return - action list
 	 */
-	public static List getActionListInJSPFile(String jspFileName) {
-		/** jsp dom adapter */
+	public static List getActionListInJSFFile(String jsfFileName) {
+		/** jsf dom adapter */
 
         List actions = new ArrayList();
 
         // convert the relative directory to project directory, e.g., /a.jsp to
-        // /testproject/webroot/a.sjp
-        String physicalJspPath = jspFileName;
-        if (physicalJspPath != null && physicalJspPath.length() > 0)
+        // /testproject/webroot/a.jsp
+        String physicalJsfPath = jsfFileName;
+        if (physicalJsfPath != null && physicalJsfPath.length() > 0)
         {
-            IPath jspPath = new Path(physicalJspPath);
-            IFile jspFile = ResourcesPlugin.getWorkspace().getRoot().getFile(
-                    jspPath);
+            IPath jsfPath = new Path(physicalJsfPath);
+            IFile jsfFile = ResourcesPlugin.getWorkspace().getRoot().getFile(
+                    jsfPath);
 
-            if (jspFile != null && jspFile.exists())
+            if (jsfFile != null && jsfFile.exists())
             {
                 JSPDomAdapter jspAdapter = null;
                 try
                 {
                     jspAdapter = new JSPDomAdapter();
                     // initialize the adapter to initialize the model of jsp
-                    if (jspAdapter.initialize(jspFile))
+                    if (jspAdapter.initialize(jsfFile))
                     {
                         // the prefix of JSF HTML TagLib
                         String prefix = jspAdapter

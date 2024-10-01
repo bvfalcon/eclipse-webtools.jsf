@@ -353,4 +353,63 @@ public class Messages extends NLS {
      * see messages.properties
      */
     public static String Hyperlink_Open_JavaElement;
+
+    /**
+     * see messages.properties
+     */
+    public static String _UI_WIZARD_NEW_TITLE;
+
+    /**
+     * see messages.properties
+     */
+    public static String _UI_WIZARD_NEW_HEADING;
+
+    /**
+     * see messages.properties
+     */
+    public static String _UI_WIZARD_NEW_DESCRIPTION;
+
+    /**
+     * see messages.properties
+     */
+    public static String _WARNING_FOLDER_MUST_BE_INSIDE_WEB_CONTENT;
+
+    /**
+     * see messages.properties
+     */
+    public static String NewJSFTemplatesWizardPage_0;
+
+    /**
+     * see messages.properties
+     */
+    public static String NewJSFTemplatesWizardPage_1;
+
+    /**
+     * see messages.properties
+     */
+    public static String NewJSFTemplatesWizardPage_2;
+    /**
+     * see messages.properties
+     */
+    public static String NewJSFTemplatesWizardPage_3;
+
+    /**
+     * see messages.properties
+     */
+    public static String NewJSFTemplatesWizardPage_4;
+
+    /**
+     * see messages.properties
+     */
+    public static String NewJSFTemplatesWizardPage_5;
+
+    /**
+     * see messages.properties
+     */
+    public static String NewJSFTemplatesWizardPage_6;
+
+    /**
+     * see messages.properties
+     */
+    public static String NewJSFTemplatesWizardPage_7;
 }

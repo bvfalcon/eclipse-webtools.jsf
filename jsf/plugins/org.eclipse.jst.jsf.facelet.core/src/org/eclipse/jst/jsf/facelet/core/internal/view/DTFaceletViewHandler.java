@@ -22,7 +22,7 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.content.IContentType;
 import org.eclipse.core.runtime.content.IContentTypeManager;
-import org.eclipse.jst.jsf.common.internal.JSPUtil;
+import org.eclipse.jst.jsf.common.internal.JSFUtil;
 import org.eclipse.jst.jsf.common.runtime.internal.model.component.ComponentInfo;
 import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.designtime.context.DTFacesContext;
@@ -134,7 +134,7 @@ public class DTFaceletViewHandler extends DefaultDTViewHandler
     public boolean supportsViewDefinition(final IFile file)
     {
         return JSFVersion.guessAtLeast(JSFVersion.V2_0, file.getProject()) &&
-            (JSPUtil.isJSPContentType(file) || isHTMLContent(file));
+            (JSFUtil.isJSFContentType(file) || isHTMLContent(file));
     }
 
     boolean isHTMLContent(final IFile file)

@@ -25,7 +25,7 @@ import org.eclipse.core.runtime.IExtensionRegistry;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jst.pagedesigner.extensionpoint.IContextMenuItemContributor;
-import org.eclipse.jst.pagedesigner.utils.JSPUtil;
+import org.eclipse.jst.pagedesigner.utils.JSFUtil;
 import org.eclipse.jst.pagedesigner.utils.StructuredModelUtil;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.ui.actions.ActionGroup;
@@ -94,7 +94,7 @@ public class CustomedContextMenuActionGroup extends ActionGroup {
 					.get(i);
 			IFile file = StructuredModelUtil.getFileFor(_model);
 			if (file != null && contributor.getURI() != null) {
-				if (JSPUtil.supportTaglib(contributor.getURI(), file)) {
+				if (JSFUtil.supportTaglib(contributor.getURI(), file)) {
 					contributor.fillContextMenu(menuMgr, getContext()
 							.getSelection(), _model, _parentControl);
 				}

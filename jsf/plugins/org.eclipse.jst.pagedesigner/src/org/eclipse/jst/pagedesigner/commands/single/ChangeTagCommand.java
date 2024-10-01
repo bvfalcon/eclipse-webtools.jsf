@@ -18,7 +18,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 import org.eclipse.jst.jsf.core.internal.tld.ITLDConstants;
-import org.eclipse.jst.pagedesigner.utils.JSPUtil;
+import org.eclipse.jst.pagedesigner.utils.JSFUtil;
 import org.eclipse.wst.xml.core.internal.provisional.document.IDOMElement;
 import org.w3c.dom.Attr;
 import org.w3c.dom.NamedNodeMap;
@@ -75,7 +75,7 @@ public class ChangeTagCommand extends SingleNodeCommand {
 			} else if (ITLDConstants.URI_JSP.equals(_uri)) {
 				tag = "jsp:" + _localTag; //$NON-NLS-1$
 			} else {
-				tag = JSPUtil.getOrCreatePrefix(getModel(), _uri, null)
+				tag = JSFUtil.getOrCreatePrefix(getModel(), _uri, null)
 						+ _localTag;
 			}
 		}

@@ -22,7 +22,7 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.IRegion;
-import org.eclipse.jst.jsf.common.internal.JSPUtil;
+import org.eclipse.jst.jsf.common.internal.JSFUtil;
 import org.eclipse.jst.jsf.core.internal.JSFCorePlugin;
 import org.eclipse.jst.jsf.core.jsfappconfig.JSFAppConfigUtils;
 import org.eclipse.jst.jsf.validation.internal.IJSFViewValidator;
@@ -194,7 +194,7 @@ public class JSFValidator extends JSPValidator implements ISourceValidator
 
     private boolean shouldValidate(final IFile file)
     {
-        return (JSPUtil.isJSPContentType(file)
+        return (JSFUtil.isJSFContentType(file)
                 && JSFAppConfigUtils.isValidJSFProject(file.getProject()));
     }
 }

@@ -17,7 +17,7 @@ package org.eclipse.jst.jsf.designtime.internal.jsp;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
-import org.eclipse.jst.jsf.common.internal.JSPUtil;
+import org.eclipse.jst.jsf.common.internal.JSFUtil;
 import org.eclipse.jst.jsf.core.internal.JSFCorePlugin;
 import org.eclipse.jst.jsf.core.jsfappconfig.JSFAppConfigUtils;
 import org.eclipse.ui.IEditorInput;
@@ -134,13 +134,13 @@ public class StartupHandler implements IStartup
             // do nothing
         }
 
-        private boolean isJSPEditor(final IEditorReference editorRef)
+        private boolean isJSFEditor(final IEditorReference editorRef)
         {
             final IFile file = getIFile(editorRef);
 
             if (file != null)
             {
-                return JSPUtil.isJSPContentType(file);
+                return JSFUtil.isJSFContentType(file);
             }
 
             return false;
@@ -157,7 +157,7 @@ public class StartupHandler implements IStartup
 
             return file != null &&
                     JSFAppConfigUtils.isValidJSFProject(file.getProject()) &&
-                        isJSPEditor(editorRef);
+                        isJSFEditor(editorRef);
         }
 
         boolean isValidJSPEditor(final IWorkbenchPartReference partRef)
