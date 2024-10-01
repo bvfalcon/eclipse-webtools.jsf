@@ -74,17 +74,17 @@ public class JSFUtilFactory
         case V2_0:
             return new JSFUtils20(modelProvider);
         case V2_1:
-        	return new JSFUtils21(modelProvider);
+            return new JSFUtils21(modelProvider);
         case V2_2:
-        	return new JSFUtils22(modelProvider);
+            return new JSFUtils22(modelProvider);
         case V2_3:
-        	return new JSFUtils23(modelProvider);
+            return new JSFUtils23(modelProvider);
         case V3_0:
-        	return new JSFUtils30(modelProvider);
+            return new JSFUtils30(modelProvider);
         case V4_0:
-        	return new JSFUtils40(modelProvider);
+            return new JSFUtils40(modelProvider);
         case V4_1:
-        	return new JSFUtils41(modelProvider);
+            return new JSFUtils41(modelProvider);
         default:
             throw new IllegalArgumentException("Unknown version: "+version); //$NON-NLS-1$
         }

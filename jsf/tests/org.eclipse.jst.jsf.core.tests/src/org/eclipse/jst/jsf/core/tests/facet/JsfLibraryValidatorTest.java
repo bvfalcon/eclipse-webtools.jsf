@@ -14,6 +14,7 @@
 
 package org.eclipse.jst.jsf.core.tests.facet;
 
+import java.util.function.Predicate;
 
 /**
  * @author Debajit Adhikary
@@ -21,7 +22,8 @@ package org.eclipse.jst.jsf.core.tests.facet;
  */
 public class JsfLibraryValidatorTest extends LibraryValidatorTest
 {
-    private static final String CLASS_NAME_IDENTIFYING_IMPLEMENTATION_JAR = "javax/faces/render/RenderKit.class"; //$NON-NLS-1$
+    private static final Predicate<String> CLASS_NAME_IDENTIFYING_IMPLEMENTATION_JAR_PREDICATE = jarEntry -> "javax/faces/render/RenderKit.class".equals(jarEntry) || //$NON-NLS-1$
+            "jakarta/faces/render/RenderKit.class".equals(jarEntry); //$NON-NLS-1$
     /*
     private static final String JARFILE = "testfiles/facet/jsflibrary-api-1.1.3.jar";  //$NON-NLS-1$
     private static final String JARFILE_WITHOUT_IMPLEMENTATION_VERSION_ENTRY = "testfiles/facet/no-version-entry/jsflibrary-api-1.1.3.jar"; //$NON-NLS-1$
@@ -35,7 +37,7 @@ public class JsfLibraryValidatorTest extends LibraryValidatorTest
     public JsfLibraryValidatorTest (final String name)
     {
         super(name,
-              CLASS_NAME_IDENTIFYING_IMPLEMENTATION_JAR
+              CLASS_NAME_IDENTIFYING_IMPLEMENTATION_JAR_PREDICATE
               /*
               JARFILE,
               JARFILE_WITHOUT_IMPLEMENTATION_VERSION_ENTRY,

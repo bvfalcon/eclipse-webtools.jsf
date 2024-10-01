@@ -34,6 +34,7 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.ISchedulingRule;
 import org.eclipse.jst.jsf.core.IJSFCoreConstants;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.core.internal.JSFCorePlugin;
 import org.eclipse.jst.jsf.core.jsfappconfig.JSFAppConfigUtils;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigType;
@@ -202,43 +203,30 @@ public class AppConfigValidator extends AbstractValidator implements IValidator 
 
     /**
      * Ensure that the expected project version (facet) jives with what is in
-     * the faces-config.  Generally this means:
-     *
-     * if (version == 1.1) then no 1.2 artifacts (error)
-     * if (version == 1.2) then warn if using old artifacts (warning)
+     * the faces-config
      */
     private String validateVersioning(final IFile file, final FacesConfigArtifactEdit facesConfigEdit, final IReporter reporter)
     {
-        final String appConfigFileVersion = getAppConfigFileVersion(facesConfigEdit);
+        final JSFVersion appConfigFileVersion = JSFVersion.valueOfString(getAppConfigFileVersion(facesConfigEdit));
+        final JSFVersion projectVersion = JSFVersion.valueOfString(getJSFVersion(file.getProject()));
 
-        if (appConfigFileVersion != null)
+        if (appConfigFileVersion != null && projectVersion != null)
         {
-            final String projectVersion = getJSFVersion(file.getProject());
-
-            if (IJSFCoreConstants.FACET_VERSION_1_1.equals(projectVersion)
-                    || IJSFCoreConstants.FACET_VERSION_1_0.equals(projectVersion))
+            if (projectVersion.ordinal() < appConfigFileVersion.ordinal())
             {
-                if (IJSFCoreConstants.FACET_VERSION_1_2.equals(appConfigFileVersion))
-                {
-                    reporter.addMessage(this,
-                        DiagnosticFactory
-                            .create_APP_CONFIG_IS_NEWER_THAN_JSF_VERSION(file));
-                }
+                reporter.addMessage(this,
+                    DiagnosticFactory
+                        .create_APP_CONFIG_IS_NEWER_THAN_JSF_VERSION(file));
             }
-            else if (IJSFCoreConstants.FACET_VERSION_1_2.equals(projectVersion))
+            else if (projectVersion.ordinal() > appConfigFileVersion.ordinal())
             {
-                if (IJSFCoreConstants.FACET_VERSION_1_1.equals(appConfigFileVersion)
-                        || IJSFCoreConstants.FACET_VERSION_1_0.equals(appConfigFileVersion))
-                {
-                    reporter.addMessage(this,
-                        DiagnosticFactory
-                            .create_APP_CONFIG_IS_OLDER_THAN_JSF_VERSION(file
-                                    , appConfigFileVersion, projectVersion));
-                }
+                reporter.addMessage(this,
+                    DiagnosticFactory
+                        .create_APP_CONFIG_IS_OLDER_THAN_JSF_VERSION(file
+                                , appConfigFileVersion.toString(), projectVersion.toString()));
             }
-            // if no exact match, don't make any assumptions
         }
-        return appConfigFileVersion;
+        return appConfigFileVersion != null ? appConfigFileVersion.toString() : null;
     }
 
     /**

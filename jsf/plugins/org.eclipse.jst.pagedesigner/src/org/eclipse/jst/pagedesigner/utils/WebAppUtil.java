@@ -39,7 +39,7 @@ public class WebAppUtil {
 		if (canSupportJSF
 				&& url != null
 				&& url.endsWith(IFileFolderConstants.DOT
-						+ IFileFolderConstants.EXT_JSP)) {
+						+ IFileFolderConstants.EXT_JSF)) {
 			String urlPattern = ""; //$NON-NLS-1$
 			IVirtualResource[] resources = ComponentCore
 					.createResources(openedFile);
@@ -56,7 +56,7 @@ public class WebAppUtil {
 				String extension = urlPattern.substring(urlPattern
 						.lastIndexOf(IFileFolderConstants.DOT));
 				url = url.substring(0, url.lastIndexOf(IFileFolderConstants.DOT
-						+ IFileFolderConstants.EXT_JSP))
+						+ IFileFolderConstants.EXT_JSF))
 						+ extension;
 			}
 		}

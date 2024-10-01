@@ -89,17 +89,17 @@ public enum JSFVersion {
             case V2_0:
                 return IJSFCoreConstants.JSF_VERSION_2_0;
             case V2_1:
-            	return IJSFCoreConstants.JSF_VERSION_2_1;
+                return IJSFCoreConstants.JSF_VERSION_2_1;
             case V2_2:
-            	return IJSFCoreConstants.JSF_VERSION_2_2;
+                return IJSFCoreConstants.JSF_VERSION_2_2;
             case V2_3:
-            	return IJSFCoreConstants.JSF_VERSION_2_3;
+                return IJSFCoreConstants.JSF_VERSION_2_3;
             case V3_0:
-            	return IJSFCoreConstants.JSF_VERSION_3_0;
+                return IJSFCoreConstants.JSF_VERSION_3_0;
             case V4_0:
-            	return IJSFCoreConstants.JSF_VERSION_4_0;
+                return IJSFCoreConstants.JSF_VERSION_4_0;
             case V4_1:
-            	return IJSFCoreConstants.JSF_VERSION_4_1;
+                return IJSFCoreConstants.JSF_VERSION_4_1;
             case UNKNOWN:
                 return "unknown"; //$NON-NLS-1$
             default:
@@ -131,23 +131,27 @@ public enum JSFVersion {
         }
         else if (IJSFCoreConstants.JSF_VERSION_2_1.equals(valueAsString))
         {
-        	return V2_1;
+            return V2_1;
         }
         else if (IJSFCoreConstants.JSF_VERSION_2_2.equals(valueAsString))
         {
-        	return V2_2;
+            return V2_2;
         }
         else if (IJSFCoreConstants.JSF_VERSION_2_3.equals(valueAsString))
         {
-        	return V2_3;
+            return V2_3;
         }
         else if (IJSFCoreConstants.JSF_VERSION_3_0.equals(valueAsString))
         {
-        	return V3_0;
+            return V3_0;
         }
         else if (IJSFCoreConstants.JSF_VERSION_4_0.equals(valueAsString))
         {
-        	return V4_0;
+            return V4_0;
+        }
+        else if (IJSFCoreConstants.JSF_VERSION_4_1.equals(valueAsString))
+        {
+            return V4_1;
         }
         else if ("unknown".equals(valueAsString)) //$NON-NLS-1$
         {

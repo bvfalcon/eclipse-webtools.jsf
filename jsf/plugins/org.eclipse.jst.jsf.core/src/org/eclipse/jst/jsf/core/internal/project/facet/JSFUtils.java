@@ -64,7 +64,7 @@ public abstract class JSFUtils {
 	public static final String JSF_CONFIG_CONTEXT_PARAM = "jakarta.faces.CONFIG_FILES"; //$NON-NLS-1$
 	
 	/**
-	 * The name of the context parameter used for defining the default JSP file extension
+	 * The name of the context parameter used for defining the default JSF file extension
 	 */
 	public static final String JSF_DEFAULT_SUFFIX_CONTEXT_PARAM = "jakarta.faces.DEFAULT_SUFFIX"; //$NON-NLS-1$
 	
@@ -91,7 +91,7 @@ public abstract class JSFUtils {
 	 */
 	public static final String PP_JSF_IMPLEMENTATION_TYPE = "jsf.implementation.type"; //$NON-NLS-1$
 
-	private static final String DEFAULT_DEFAULT_MAPPING_SUFFIX = "jsp"; //$NON-NLS-1$
+	private static final String DEFAULT_DEFAULT_MAPPING_SUFFIX = "xhtml"; //$NON-NLS-1$
 
 	/**
 	 * In cases where there is no servlet mapping defined (where it can be implicit and provided
@@ -300,7 +300,7 @@ public abstract class JSFUtils {
     /**
      * @param webApp
      * @return the default file extension from the context param. Default is
-     *         "jsp" if no context param.
+     *         "xhtml" if no context param.
      */
     protected String getDefaultSuffix(Object webApp) {
     	String contextParam = null;

@@ -92,6 +92,12 @@
               class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
         </page>
      </wizard-pages>
+     <wizard-pages
+           action="jst.jsf.v41.install">
+        <page
+              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
+        </page>
+     </wizard-pages>
   </extension>  
   
   <extension point="org.eclipse.wst.sse.ui.editorConfiguration"> 
@@ -261,83 +267,21 @@
        <template
              autoinsert="true"
              contextTypeId="jsp_new"
-             description="%NewJSFPage_html_description"
-             id="org.eclipse.jst.jsf.ui.new_jsf_page_html"
-             name="%NewJSFPage_html">
-          <pattern>
-             &lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=${encoding}&quot; pageEncoding=&quot;${encoding}&quot;%&gt;
-&lt;%@ taglib prefix=&quot;f&quot;  uri=&quot;http://java.sun.com/jsf/core&quot;%&gt;
-&lt;%@ taglib prefix=&quot;h&quot;  uri=&quot;http://java.sun.com/jsf/html&quot;%&gt;
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=${encoding}&quot;&gt;
-&lt;title&gt;Insert title here&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;f:view&gt;
-${cursor}
-&lt;/f:view&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-          </pattern>
-       </template>
-      
-       <template
-             autoinsert="true"
-             contextTypeId="jsp_new"
-             description="%NewJSFPage_xhtml_xmlsyntax_description"
-             id="org.eclipse.jst.jsf.ui.new_jsf_page_html_xhtml_xmllsyntax"
-             name="%NewJSFPage_xhtml_xmlsyntax">
-          <pattern>
-             &lt;?xml version=&quot;1.0&quot; encoding=&quot;${encoding}&quot; ?&gt;
-&lt;jsp:root xmlns:jsp=&quot;http://java.sun.com/JSP/Page&quot; xmlns:f=&quot;http://java.sun.com/jsf/core&quot; xmlns:h=&quot;http://java.sun.com/jsf/html&quot; version=&quot;2.0&quot;&gt;
-    &lt;jsp:directive.page language=&quot;java&quot;
-        contentType=&quot;text/html; charset=${encoding}&quot; pageEncoding=&quot;${encoding}&quot; /&gt;
-    &lt;jsp:text&gt;
-        &lt;![CDATA[ &lt;?xml version=&quot;1.0&quot; encoding=&quot;${encoding}&quot; ?&gt; ]]&gt;
-    &lt;/jsp:text&gt;
-    &lt;jsp:text&gt;
-        &lt;![CDATA[ &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt; ]]&gt;
-    &lt;/jsp:text&gt;
-&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=${encoding}&quot; /&gt;
-&lt;title&gt;Insert title here&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;f:view&gt;
-${cursor}
-&lt;/f:view&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-&lt;/jsp:root&gt;
-             
-             
-             
-          </pattern>
-       </template>
-       <template
-             autoinsert="true"
-             contextTypeId="jsp_new"
              description="%NewJSFPage_xhtml_description"
              id="org.eclipse.jst.jsf.ui.new_jsf_page_xhtml"
              name="%NewJSFPage_xhtml">
           <pattern>
-             &lt;?xml version=&quot;1.0&quot; encoding=&quot;${encoding}&quot; ?&gt;
-&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=${encoding}&quot;
-    pageEncoding=&quot;${encoding}&quot;%&gt;
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
-&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:f=&quot;http://java.sun.com/jsf/core&quot; xmlns:h=&quot;http://java.sun.com/jsf/html&quot;&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=${encoding}&quot; /&gt;
+             &lt;?xml version=&quot;1.0&quot; encoding=&quot;${encoding}&quot;?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:f=&quot;jakarta.faces.core&quot; xmlns:h=&quot;jakarta.faces.html&quot;&gt;
+&lt;f:view contentType=&quot;text/html&quot; encoding=&quot;${encoding}&quot;&gt;
+&lt;h:head&gt;
 &lt;title&gt;Insert title here&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;f:view&gt;
+&lt;/h:head&gt;
+&lt;h:body&gt;
 ${cursor}
+&lt;/h:body&gt;
 &lt;/f:view&gt;
-&lt;/body&gt;
 &lt;/html&gt;
           </pattern>
        </template>

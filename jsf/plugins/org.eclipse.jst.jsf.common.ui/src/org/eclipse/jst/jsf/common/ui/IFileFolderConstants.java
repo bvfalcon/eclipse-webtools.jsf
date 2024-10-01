@@ -47,9 +47,9 @@ public interface IFileFolderConstants {
 
 
 	/**
-	 * jsp file extension
+	 * jsf file extension
 	 */
-	public static final String EXT_JSP = "jsp"; //$NON-NLS-1$
+	public static final String EXT_JSF = "xhtml"; //$NON-NLS-1$
 
 	/**
 	 * properties file extension
