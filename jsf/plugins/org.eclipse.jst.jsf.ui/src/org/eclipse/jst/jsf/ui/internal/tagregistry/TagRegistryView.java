@@ -12,7 +12,7 @@
  *******************************************************************************/
 package org.eclipse.jst.jsf.ui.internal.tagregistry;
 
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
@@ -56,7 +56,7 @@ public class TagRegistryView extends ViewPart
     public void init(IViewSite site) throws PartInitException
     {
         super.init(site);
-        setTitleImage(JSFUiPlugin.getDefault().getImage(LIBRARY_OBJ_IMAGE_FILE));
+        setTitleImage(JSFUIPlugin.getDefault().getImage(LIBRARY_OBJ_IMAGE_FILE));
     }
 
     /**

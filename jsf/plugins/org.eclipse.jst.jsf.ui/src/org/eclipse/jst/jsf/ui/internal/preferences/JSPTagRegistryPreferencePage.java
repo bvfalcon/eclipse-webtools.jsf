@@ -32,7 +32,7 @@ import org.eclipse.jst.jsf.designtime.internal.view.model.TagRegistryFactory.Tag
 import org.eclipse.jst.jsf.designtime.internal.view.model.jsp.registry.TLDRegistryManager;
 import org.eclipse.jst.jsf.designtime.internal.view.model.jsp.registry.TLDRegistryPreferences;
 import org.eclipse.jst.jsf.designtime.internal.view.model.jsp.registry.TLDRegistryPreferences.StrategyIdentifier;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
@@ -107,7 +107,7 @@ public class JSPTagRegistryPreferencePage extends PreferencePage implements
                         } 
                         catch (TagRegistryFactoryException e)
                         {
-                            JSFUiPlugin.log(IStatus.ERROR, "Error getting JSP tag registry on project: "+project.getName(), e); //$NON-NLS-1$
+                            JSFUIPlugin.log(IStatus.ERROR, "Error getting JSP tag registry on project: "+project.getName(), e); //$NON-NLS-1$
                         }
                     }
                 }

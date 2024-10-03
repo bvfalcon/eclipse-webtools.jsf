@@ -17,7 +17,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jst.jsf.core.internal.IJSFPreferenceModel;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.validation.internal.ELValidationPreferences;
 import org.eclipse.jst.jsf.validation.internal.JSFTypeComparatorPreferences;
 import org.eclipse.jst.jsf.validation.internal.Severity;
@@ -171,7 +171,7 @@ import org.eclipse.ui.preferences.IWorkbenchPreferenceContainer;
         
         if (EXPECTED_PREFS != keys.length)
         {
-            JSFUiPlugin.log(IStatus.WARNING, "Expected "+EXPECTED_PREFS+" preferences but was "+keys.length, new Throwable()); //$NON-NLS-1$ //$NON-NLS-2$
+            JSFUIPlugin.log(IStatus.WARNING, "Expected "+EXPECTED_PREFS+" preferences but was "+keys.length, new Throwable()); //$NON-NLS-1$ //$NON-NLS-2$
         }
 
         return keys;
@@ -400,7 +400,7 @@ import org.eclipse.ui.preferences.IWorkbenchPreferenceContainer;
 
         new Label(composite, SWT.NONE);
         
-        IDialogSettings section= JSFUiPlugin.getDefault().getDialogSettings().getSection(SETTINGS_SECTION_NAME);
+        IDialogSettings section= JSFUIPlugin.getDefault().getDialogSettings().getSection(SETTINGS_SECTION_NAME);
         restoreSectionExpansionStates(section);
         
         return sc1;
@@ -464,7 +464,7 @@ import org.eclipse.ui.preferences.IWorkbenchPreferenceContainer;
      * @see org.eclipse.jdt.internal.ui.preferences.OptionsConfigurationBlock#dispose()
      */
     public void dispose() {
-        IDialogSettings section= JSFUiPlugin.getDefault().getDialogSettings().addNewSection(SETTINGS_SECTION_NAME);
+        IDialogSettings section= JSFUIPlugin.getDefault().getDialogSettings().addNewSection(SETTINGS_SECTION_NAME);
         storeSectionExpansionStates(section);
         super.dispose();
     }

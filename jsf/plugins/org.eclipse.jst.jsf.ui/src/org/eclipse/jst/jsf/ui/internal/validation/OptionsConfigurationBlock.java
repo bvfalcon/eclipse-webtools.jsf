@@ -33,7 +33,7 @@ import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.jst.jsf.core.internal.IJSFPreferenceModel;
 import org.eclipse.jst.jsf.core.internal.JSFCorePlugin;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.validation.internal.Severity;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
@@ -310,7 +310,7 @@ abstract class OptionsConfigurationBlock
     private void testIfOptionsComplete(Key[] allKeys) {
         for (int i= 0; i < allKeys.length; i++) {
             if (allKeys[i].getCurValue(_prefs, fLookupOrder, false, fManager) == null) {
-                JSFUiPlugin.log(IStatus.ERROR, "preference option missing: " + allKeys[i] + " (" + this.getClass().getName() +')');  //$NON-NLS-1$//$NON-NLS-2$
+                JSFUIPlugin.log(IStatus.ERROR, "preference option missing: " + allKeys[i] + " (" + this.getClass().getName() +')');  //$NON-NLS-1$//$NON-NLS-2$
             }
         }
     }
@@ -843,7 +843,7 @@ abstract class OptionsConfigurationBlock
             try {
                 fManager.applyChanges();
             } catch (BackingStoreException e) {
-                JSFUiPlugin.log(IStatus.ERROR, "Error applying changes", e); //$NON-NLS-1$
+                JSFUIPlugin.log(IStatus.ERROR, "Error applying changes", e); //$NON-NLS-1$
                 return false;
             }
             if (doBuild) {
