@@ -24,7 +24,7 @@ import org.eclipse.jst.jsf.context.symbol.IBeanMethodSymbol;
 import org.eclipse.jst.jsf.context.symbol.IBeanPropertySymbol;
 import org.eclipse.jst.jsf.context.symbol.ISymbol;
 import org.eclipse.jst.jsf.context.symbol.internal.impl.JavaUtil;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.ui.IEditorPart;
@@ -99,7 +99,7 @@ class BeanSuffixHyperlink implements IHyperlink,ITestHyperlink {
 	            }
 	        }
 	        catch (final Exception e) {
-	            JSFUiPlugin.log(IStatus.WARNING, e.getMessage(), e);
+	            JSFUIPlugin.log(IStatus.WARNING, e.getMessage(), e);
 	        }
 	    }
 	}

@@ -4,7 +4,7 @@ Automatic-Module-Name: org.eclipse.jst.jsf.ui
 Bundle-Name: %plugin.name
 Bundle-SymbolicName: org.eclipse.jst.jsf.ui; singleton:=true
 Bundle-Version: 1.7.0.qualifier
-Bundle-Activator: org.eclipse.jst.jsf.ui.internal.JSFUiPlugin
+Bundle-Activator: org.eclipse.jst.jsf.ui.internal.JSFUIPlugin
 Bundle-Vendor: %plugin.provider
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.jst.jsf.core;bundle-version="[1.1.0,2.0.0)",

@@ -29,19 +29,19 @@ import org.osgi.framework.BundleContext;
  * 
  * @author Gerry Kessler - Oracle, Ian Trimble - Oracle
  */
-public class JSFUiPlugin extends AbstractUIPlugin {
+public class JSFUIPlugin extends AbstractUIPlugin {
 
 	/**
 	 * The plugin id
 	 */
 	public static final String PLUGIN_ID = "org.eclipse.jst.jsf.ui"; //$NON-NLS-1$
 	//The shared instance.
-	private static JSFUiPlugin plugin;
+	private static JSFUIPlugin plugin;
 
 	/**
 	 * The constructor.
 	 */
-	public JSFUiPlugin() {
+	public JSFUIPlugin() {
 		plugin = this;
 	}
 
@@ -64,7 +64,7 @@ public class JSFUiPlugin extends AbstractUIPlugin {
 	 * Returns the shared instance.
 	 * @return the default plugin instance
 	 */
-	public static JSFUiPlugin getDefault() {
+	public static JSFUIPlugin getDefault() {
 		return plugin;
 	}
 
