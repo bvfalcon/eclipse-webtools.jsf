@@ -134,7 +134,7 @@ public class JSFFacetInstallDataModelProvider extends
 		} else if (propertyName.equals(SERVLET_NAME)) {
 			return JSFUtils.JSF_DEFAULT_SERVLET_NAME;
 		} else if (propertyName.equals(SERVLET_CLASSNAME)) {
-			return JSFUtils.JSF_SERVLET_CLASS;	
+			return getServletClassName();
 		} else if (propertyName.equals(SERVLET_URL_PATTERNS)) {
 			return new String[] {JSFUtils.JSF_DEFAULT_URL_MAPPING };
 		} else if (propertyName.equals(FACET_ID)) {
@@ -150,7 +150,11 @@ public class JSFFacetInstallDataModelProvider extends
 		}
 		return super.getDefaultProperty(propertyName);
 	}
-	
+
+	protected String getServletClassName() {
+		return JSFUtils.JSF_SERVLET_CLASS;
+	}
+
 	@Override
     public boolean propertySet( final String propertyName,
                                 final Object propertyValue )
@@ -276,7 +280,6 @@ public class JSFFacetInstallDataModelProvider extends
     {
         return PATTERN_FOR_VALID_CONFIG_FILE_NAME.matcher(configFileName).matches(); 
     }
-
 
 	private IStatus validateClasspath(){
 		Set jars = new HashSet();

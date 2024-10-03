@@ -63,9 +63,9 @@ public class ClientBehaviorRendererValidationVisitor extends EObjectValidationVi
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.render.ClientBehaviorRenderer": //$NON-NLS-1$
-                    "jakarta.faces.render.ClientBehaviorRenderer"; //$NON-NLS-1$
+                    "javax.faces.render.ClientBehaviorRenderer"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {

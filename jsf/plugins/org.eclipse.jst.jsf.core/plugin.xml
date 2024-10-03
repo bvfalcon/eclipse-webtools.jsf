@@ -127,7 +127,6 @@
       	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
         <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider"/>
     </action>  
-      
     <action id="jst.jsf.v11.uninstall" facet="jst.jsf" type="UNINSTALL" version="1.1" >
         <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
 	 	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
@@ -137,7 +136,6 @@
       	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
         <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider"/>
     </action>  
-      
     <action id="jst.jsf.v12.uninstall" facet="jst.jsf" version="1.2" type="UNINSTALL">
         <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
 	 	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
@@ -147,7 +145,6 @@
       	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
         <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider"/>
     </action>  
-      
     <action id="jst.jsf.v20.uninstall" facet="jst.jsf" version="2.0" type="UNINSTALL">
         <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
 	 	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
@@ -157,131 +154,54 @@
       	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
         <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider"/>
     </action>
-
     <action id="jst.jsf.v21.uninstall" facet="jst.jsf" version="2.1" type="UNINSTALL">
         <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
 	 	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
  	</action>
 
-  <action
-        facet="jst.jsf"
-        id="jst.jsf.v22.install"
-        type="INSTALL"
-        version="2.2">
-     <delegate
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate">
-     </delegate>
-     <config-factory
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider">
-     </config-factory>
-  </action>  
-    <action
-          facet="jst.jsf"
-          id="jst.jsf.v22.uninstall"
-          type="UNINSTALL"
-          version="2.2">
-       <config-factory
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory">
-       </config-factory>
-       <delegate
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate">
-       </delegate>
+ 	<action id="jst.jsf.v22.install" facet="jst.jsf" type="INSTALL" version="2.2">
+      	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
+        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider"/>
     </action>
-  <action
-        facet="jst.jsf"
-        id="jst.jsf.v23.install"
-        type="INSTALL"
-        version="2.3">
-     <delegate
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate">
-     </delegate>
-     <config-factory
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider">
-     </config-factory>
-  </action>  
-    <action
-          facet="jst.jsf"
-          id="jst.jsf.v23.uninstall"
-          type="UNINSTALL"
-          version="2.3">
-       <config-factory
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory">
-       </config-factory>
-       <delegate
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate">
-       </delegate>
+    <action id="jst.jsf.v22.uninstall" facet="jst.jsf" version="2.2" type="UNINSTALL">
+        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
+	 	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
+ 	</action>
+
+    <action id="jst.jsf.v23.install" facet="jst.jsf" version="2.3" type="INSTALL">
+        <delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
+        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider"/>
     </action>
-  <action
-        facet="jst.jsf"
-        id="jst.jsf.v30.install"
-        type="INSTALL"
-        version="3.0">
-     <delegate
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate">
-     </delegate>
-     <config-factory
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider">
-     </config-factory>
-  </action>  
-    <action
-          facet="jst.jsf"
-          id="jst.jsf.v30.uninstall"
-          type="UNINSTALL"
-          version="3.0">
-       <config-factory
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory">
-       </config-factory>
-       <delegate
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate">
-       </delegate>
+    <action id="jst.jsf.v23.uninstall" facet="jst.jsf" version="2.3" type="UNINSTALL">
+       <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
+       <delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
     </action>
-  <action
-        facet="jst.jsf"
-        id="jst.jsf.v40.install"
-        type="INSTALL"
-        version="4.0">
-     <delegate
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate">
-     </delegate>
-     <config-factory
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider">
-     </config-factory>
-  </action>  
-    <action
-          facet="jst.jsf"
-          id="jst.jsf.v40.uninstall"
-          type="UNINSTALL"
-          version="4.0">
-       <config-factory
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory">
-       </config-factory>
-       <delegate
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate">
-       </delegate>
+
+    <action id="jst.jsf.v30.install" facet="jst.jsf" version="3.0" type="INSTALL">
+        <delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
+        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetJakartaInstallDataModelProvider"/>
     </action>
-  <action
-        facet="jst.jsf"
-        id="jst.jsf.v41.install"
-        type="INSTALL"
-        version="4.1">
-     <delegate
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate">
-     </delegate>
-     <config-factory
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider">
-     </config-factory>
-  </action>  
-    <action
-          facet="jst.jsf"
-          id="jst.jsf.v41.uninstall"
-          type="UNINSTALL"
-          version="4.1">
-       <config-factory
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory">
-       </config-factory>
-       <delegate
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate">
-       </delegate>
+    <action id="jst.jsf.v30.uninstall" facet="jst.jsf" version="3.0" type="UNINSTALL">
+       <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
+       <delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
+    </action>
+
+    <action id="jst.jsf.v40.install" facet="jst.jsf" version="4.0" type="INSTALL">
+        <delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
+        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetJakartaInstallDataModelProvider"/>
+    </action>
+    <action id="jst.jsf.v40.uninstall" facet="jst.jsf" version="4.0" type="UNINSTALL">
+       <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
+       <delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
+    </action>
+
+    <action id="jst.jsf.v41.install" facet="jst.jsf" version="4.1" type="INSTALL">
+        <delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
+        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetJakartaInstallDataModelProvider"/>
+    </action>
+    <action id="jst.jsf.v41.uninstall" facet="jst.jsf" version="4.1" type="UNINSTALL">
+       <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
+       <delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
     </action>
   </extension> 
   

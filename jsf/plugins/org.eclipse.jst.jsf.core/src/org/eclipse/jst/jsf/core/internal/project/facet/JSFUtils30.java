@@ -16,6 +16,7 @@ import java.io.PrintWriter;
 
 import org.eclipse.jst.j2ee.model.IModelProvider;
 import org.eclipse.jst.jsf.core.JSFVersion;
+import org.eclipse.wst.common.frameworks.datamodel.IDataModel;
 
 /**
  * JSF Utils instance for JSF 3.0.
@@ -39,6 +40,71 @@ class JSFUtils30 extends JSFUtils23 {
 		if (jsfVersion.compareTo(JSFVersion.V3_0) < 0) {
 			throw new IllegalArgumentException("JSF Version must be at least 3.0"); //$NON-NLS-1$
 		}
+	}
+
+	@Override
+	protected String getServletClassname(Object webApp, IDataModel config) {
+		String className = config.getStringProperty(IJSFFacetInstallDataModelProperties.SERVLET_CLASSNAME);
+		if (className == null || className.trim().equals("")) //$NON-NLS-1$
+			className = JSF_SERVLET_CLASS_JAKARTA;
+		return className.trim();
+	}
+
+    protected void removeJSFContextParams(final Object webApp) {
+    	if (isJavaEE(webApp)) {
+    		JEEUtils.removeContextParam((org.eclipse.jst.javaee.web.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM_JAKARTA);
+    	} else {
+    		J2EEUtils.removeContextParam((org.eclipse.jst.j2ee.webapplication.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM);
+    	}
+    }
+
+    /**
+     * @param webApp
+     * @return the default file extension from the context param. Default is
+     *         "xhtml" if no context param.
+     */
+    protected String getDefaultSuffix(Object webApp) {
+    	String contextParam = null;
+    	if (webApp != null) {
+	    	if (isJavaEE(webApp)) {
+	    		contextParam = JEEUtils.getContextParam((org.eclipse.jst.javaee.web.WebApp) webApp, JSF_DEFAULT_SUFFIX_CONTEXT_PARAM_JAKARTA);
+	    	} else {
+	    		contextParam = J2EEUtils.getContextParam((org.eclipse.jst.j2ee.webapplication.WebApp) webApp, JSF_DEFAULT_SUFFIX_CONTEXT_PARAM);
+	    	}
+    	}
+    	if (contextParam == null) {
+    		return getDefaultDefaultSuffix();
+    	}
+   		return normalizeSuffix(contextParam);
+    }
+
+    /**
+	 * Finds and returns a JSF Servlet definition, or null if servlet is not defined.
+	 * 
+	 * @param webApp
+	 * @return Servlet or null
+	 */    
+    protected Object findJSFServlet(Object webApp) {
+    	if(isJavaEE(webApp)) {
+    		return JEEUtils.findServlet((org.eclipse.jst.javaee.web.WebApp) webApp, JSF_SERVLET_CLASS_JAKARTA);
+    	}
+   		return J2EEUtils.findServlet((org.eclipse.jst.j2ee.webapplication.WebApp) webApp, JSF_SERVLET_CLASS);
+    }
+
+    /**
+	 * Creates or updates context-params
+	 * @param webApp
+	 * @param config
+	 */
+	protected void setupContextParams(final Object webApp, final IDataModel config) {
+        final String paramValue = config.getStringProperty(IJSFFacetInstallDataModelProperties.CONFIG_PATH);
+        if (paramValue != null && !paramValue.equals(JSF_DEFAULT_CONFIG_PATH)) {
+        	if (isJavaEE(webApp)) {
+        		JEEUtils.setupContextParam((org.eclipse.jst.javaee.web.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM_JAKARTA, paramValue);
+        	} else {
+        		J2EEUtils.setupContextParam((org.eclipse.jst.j2ee.webapplication.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM, paramValue);
+        	}
+        }
 	}
 
 	@Override

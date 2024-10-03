@@ -12,27 +12,12 @@
  *******************************************************************************/
 package org.eclipse.jst.jsf.ui.internal.templates;
 
-import org.eclipse.jface.text.templates.GlobalTemplateVariables;
-import org.eclipse.jface.text.templates.TemplateContextType;
+import org.eclipse.jst.jsp.ui.internal.templates.TemplateContextTypeJSP;
 
 /**
- * Base class for JSP template context types. Templates of this context type
- * apply to any place within JSP content type.
+ * Base class for JSF template context types. Templates of this context type
+ * apply to any place within JSF content type.
  */
-public class TemplateContextTypeJSF extends TemplateContextType {
-	/**
-	 * 
-	 */
-	public TemplateContextTypeJSF() {
-		super();
-		addResolver(new GlobalTemplateVariables.Cursor());
-		addResolver(new GlobalTemplateVariables.Date());
-		addResolver(new GlobalTemplateVariables.Dollar());
-		addResolver(new GlobalTemplateVariables.LineSelection());
-		addResolver(new GlobalTemplateVariables.Time());
-		addResolver(new GlobalTemplateVariables.User());
-		addResolver(new GlobalTemplateVariables.WordSelection());
-		addResolver(new GlobalTemplateVariables.Year());
-		addResolver(new EncodingTemplateVariableResolverJSF());
-	}
+public class TemplateContextTypeJSF extends TemplateContextTypeJSP {
+	/**/
 }

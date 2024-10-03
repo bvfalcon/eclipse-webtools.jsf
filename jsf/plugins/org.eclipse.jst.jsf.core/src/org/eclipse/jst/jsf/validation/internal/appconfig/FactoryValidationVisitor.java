@@ -78,9 +78,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.application.ApplicationFactory": //$NON-NLS-1$
-                    "jakarta.faces.application.ApplicationFactory"; //$NON-NLS-1$
+                    "javax.faces.application.ApplicationFactory"; //$NON-NLS-1$
         }
 
         @Override
@@ -109,9 +109,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.context.FacesContextFactory": //$NON-NLS-1$
-                    "jakarta.faces.context.FacesContextFactory"; //$NON-NLS-1$
+                    "javax.faces.context.FacesContextFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -142,9 +142,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.lifecycle.LifecycleFactory": //$NON-NLS-1$
-                    "jakarta.faces.lifecycle.LifecycleFactory"; //$NON-NLS-1$
+                    "javax.faces.lifecycle.LifecycleFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -174,9 +174,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ? 
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ? 
                     "jakarta.faces.render.RenderKitFactory": //$NON-NLS-1$
-                    "jakarta.faces.render.RenderKitFactory"; //$NON-NLS-1$
+                    "javax.faces.render.RenderKitFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -204,9 +204,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.context.ExceptionHandlerFactory" : //$NON-NLS-1$
-                    "jakarta.faces.context.ExceptionHandlerFactory"; //$NON-NLS-1$
+                    "javax.faces.context.ExceptionHandlerFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -234,9 +234,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.context.ExternalContextFactory": //$NON-NLS-1$
-                    "jakarta.faces.context.ExternalContextFactory"; //$NON-NLS-1$
+                    "javax.faces.context.ExternalContextFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -265,9 +265,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.view.ViewDeclarationLanguageFactory": //$NON-NLS-1$
-                    "jakarta.faces.view.ViewDeclarationLanguageFactory"; //$NON-NLS-1$
+                    "javax.faces.view.ViewDeclarationLanguageFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -295,9 +295,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.context.PartialViewContextFactory": //$NON-NLS-1$
-                    "jakarta.faces.context.PartialViewContextFactory"; //$NON-NLS-1$
+                    "javax.faces.context.PartialViewContextFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -325,9 +325,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.view.facelets.TagHandlerDelegateFactory": //$NON-NLS-1$
-                    "jakarta.faces.view.facelets.TagHandlerDelegateFactory"; //$NON-NLS-1$
+                    "javax.faces.view.facelets.TagHandlerDelegateFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -355,9 +355,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.component.visit.VisitContextFactory": //$NON-NLS-1$
-                    "jakarta.faces.component.visit.VisitContextFactory"; //$NON-NLS-1$
+                    "javax.faces.component.visit.VisitContextFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {

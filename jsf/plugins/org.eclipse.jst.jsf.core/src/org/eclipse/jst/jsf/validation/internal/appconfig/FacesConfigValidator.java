@@ -89,9 +89,9 @@ public class FacesConfigValidator extends EObjectValidationVisitor
             }
 
             protected String getInstanceOf() {
-                return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+                return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                         "jakarta.faces.event.PhaseListener": //$NON-NLS-1$
-                        "jakarta.faces.event.PhaseListener"; //$NON-NLS-1$
+                        "javax.faces.event.PhaseListener"; //$NON-NLS-1$
             }
 
             protected EObjectValidationVisitor[] getChildNodeValidators() {

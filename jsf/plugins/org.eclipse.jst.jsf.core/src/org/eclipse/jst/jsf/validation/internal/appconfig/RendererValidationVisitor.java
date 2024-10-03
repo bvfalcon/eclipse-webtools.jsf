@@ -66,9 +66,9 @@ public class RendererValidationVisitor extends EObjectValidationVisitor {
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.render.Renderer": //$NON-NLS-1$
-                    "jakarta.faces.render.Renderer"; //$NON-NLS-1$
+                    "javax.faces.render.Renderer"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {

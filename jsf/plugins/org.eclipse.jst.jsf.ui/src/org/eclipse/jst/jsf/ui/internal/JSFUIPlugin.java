@@ -21,7 +21,6 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
-import org.eclipse.jface.text.templates.ContextTypeRegistry;
 import org.eclipse.jface.text.templates.persistence.TemplateStore;
 import org.eclipse.jst.jsf.ui.internal.templates.TemplateContextTypeIdsJSF;
 import org.eclipse.swt.graphics.Image;
@@ -52,7 +51,7 @@ public class JSFUIPlugin extends AbstractUIPlugin {
 	/** 
 	 * The template context type registry for the jsf editor. 
 	 */
-	private ContextTypeRegistry fContextTypeRegistry;
+	private ContributionContextTypeRegistry fContextTypeRegistry;
 
 	/**
 	 * The constructor.
@@ -182,7 +181,7 @@ public class JSFUIPlugin extends AbstractUIPlugin {
 	 * 
 	 * @return the template context type registry for the jsp plugin
 	 */
-	public ContextTypeRegistry getTemplateContextRegistry() {
+	public ContributionContextTypeRegistry getTemplateContextRegistry() {
 		if (fContextTypeRegistry == null) {
 			ContributionContextTypeRegistry registry = new ContributionContextTypeRegistry();
 			registry.addContextType(TemplateContextTypeIdsJSF.ALL);

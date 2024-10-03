@@ -42,9 +42,9 @@ public class TestableJSFUtils extends JSFUtils
         return super.getDisplayName(config);
     }
 
-    public String getServletClassname_testable(final IDataModel config)
+    public String getServletClassname_testable(final Object webApp, final IDataModel config)
     {
-        return super.getServletClassname(config);
+        return super.getServletClassname(webApp, config);
     }
 
     public List<String> getServletMappings_testable(IDataModel config)

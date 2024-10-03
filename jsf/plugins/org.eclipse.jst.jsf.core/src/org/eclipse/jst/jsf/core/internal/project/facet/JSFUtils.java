@@ -57,16 +57,28 @@ public abstract class JSFUtils {
 	/**
 	 * The default name of the Faces servlet class
 	 */
-	public static final String JSF_SERVLET_CLASS = "jakarta.faces.webapp.FacesServlet"; //$NON-NLS-1$
+	public static final String JSF_SERVLET_CLASS = "javax.faces.webapp.FacesServlet"; //$NON-NLS-1$
+	/**
+	 * The default name of the Faces servlet class for Jakarta EE
+	 */
+	public static final String JSF_SERVLET_CLASS_JAKARTA = "jakarta.faces.webapp.FacesServlet"; //$NON-NLS-1$
 	/**
 	 * The name of the context parameter used for JSF configuration files
 	 */
-	public static final String JSF_CONFIG_CONTEXT_PARAM = "jakarta.faces.CONFIG_FILES"; //$NON-NLS-1$
+	public static final String JSF_CONFIG_CONTEXT_PARAM = "javax.faces.CONFIG_FILES"; //$NON-NLS-1$
+	/**
+	 * The name of the context parameter used for JSF configuration files (for Jakarta EE)
+	 */
+	public static final String JSF_CONFIG_CONTEXT_PARAM_JAKARTA = "jakarta.faces.CONFIG_FILES"; //$NON-NLS-1$
 	
 	/**
 	 * The name of the context parameter used for defining the default JSF file extension
 	 */
-	public static final String JSF_DEFAULT_SUFFIX_CONTEXT_PARAM = "jakarta.faces.DEFAULT_SUFFIX"; //$NON-NLS-1$
+	public static final String JSF_DEFAULT_SUFFIX_CONTEXT_PARAM = "javax.faces.DEFAULT_SUFFIX"; //$NON-NLS-1$
+	/**
+	 * The name of the context parameter used for defining the default JSF file extension (for Jakarta EE)
+	 */
+	public static final String JSF_DEFAULT_SUFFIX_CONTEXT_PARAM_JAKARTA = "jakarta.faces.DEFAULT_SUFFIX"; //$NON-NLS-1$
 	
 	/**
 	 * The path to the default application configuration file
@@ -99,7 +111,7 @@ public abstract class JSFUtils {
 	 * mapping.
 	 */
 	private static final String SYS_PROP_SERVLET_MAPPING = "org.eclipse.jst.jsf.servletMapping"; //$NON-NLS-1$
-
+	
 	private final JSFVersion  _version;
     private final IModelProvider _modelProvider;
 	
@@ -133,10 +145,11 @@ public abstract class JSFUtils {
 	}
 	
 	/**
+	 * @param webApp
 	 * @param config
 	 * @return servlet display name to use from wizard data model
 	 */
-	protected final String getServletClassname(IDataModel config) {
+	protected String getServletClassname(Object webApp, IDataModel config) {
 		String className = config.getStringProperty(IJSFFacetInstallDataModelProperties.SERVLET_CLASSNAME);
 		if (className == null || className.trim().equals("")) //$NON-NLS-1$
 			className = JSF_SERVLET_CLASS;
@@ -208,7 +221,7 @@ public abstract class JSFUtils {
      * @param pw
      */
     public abstract void doVersionSpecificConfigFile(final PrintWriter pw);
-    
+
     
     /**
      * @param webAppObj 
@@ -305,10 +318,9 @@ public abstract class JSFUtils {
     protected String getDefaultSuffix(Object webApp) {
     	String contextParam = null;
     	if (webApp != null) {
-	    	if(isJavaEE(webApp)) {
+    		if (isJavaEE(webApp)) {
 	    		contextParam = JEEUtils.getContextParam((org.eclipse.jst.javaee.web.WebApp) webApp, JSF_DEFAULT_SUFFIX_CONTEXT_PARAM);
-	    	}
-	    	else {
+	    	} else {
 	    		contextParam = J2EEUtils.getContextParam((org.eclipse.jst.j2ee.webapplication.WebApp) webApp, JSF_DEFAULT_SUFFIX_CONTEXT_PARAM);
 	    	}
     	}
@@ -334,8 +346,8 @@ public abstract class JSFUtils {
     protected final String calculateSuffix(final String name, final String value)
     {
         if (name != null
-                && JSF_DEFAULT_SUFFIX_CONTEXT_PARAM.equals(name
-                        .trim()))
+                && (JSF_DEFAULT_SUFFIX_CONTEXT_PARAM.equals(name.trim())
+                        || (JSF_DEFAULT_SUFFIX_CONTEXT_PARAM_JAKARTA.equals(name.trim()))))
         {
             return normalizeSuffix(value != null ? value.trim() : null);
         }
@@ -461,7 +473,7 @@ public abstract class JSFUtils {
             final IDataModel config, Object servlet)
     {
         String displayName = getDisplayName(config);
-        String className = getServletClassname(config);
+        String className = getServletClassname(webApp, config);
     	if(isJavaEE(webApp)) {
     		return JEEUtils.createOrUpdateServletRef((org.eclipse.jst.javaee.web.WebApp) webApp, displayName, className, (org.eclipse.jst.javaee.web.Servlet) servlet);
     	}
@@ -521,10 +533,9 @@ public abstract class JSFUtils {
      * @param webApp
      */
     protected void removeJSFContextParams(final Object webApp) {
-    	if(isJavaEE(webApp)) {
+    	if (isJavaEE(webApp)) {
     		JEEUtils.removeContextParam((org.eclipse.jst.javaee.web.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM);
-    	}
-    	else {
+    	} else {
     		J2EEUtils.removeContextParam((org.eclipse.jst.j2ee.webapplication.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM);
     	}
     }
@@ -537,14 +548,12 @@ public abstract class JSFUtils {
 	protected void setupContextParams(final Object webApp, final IDataModel config) {
         final String paramValue = config.getStringProperty(IJSFFacetInstallDataModelProperties.CONFIG_PATH);
         if (paramValue != null && !paramValue.equals(JSF_DEFAULT_CONFIG_PATH)) {
-        	if(isJavaEE(webApp)) {
+        	if (isJavaEE(webApp)) {
         		JEEUtils.setupContextParam((org.eclipse.jst.javaee.web.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM, paramValue);
-        	}
-        	else {
+        	} else {
         		J2EEUtils.setupContextParam((org.eclipse.jst.j2ee.webapplication.WebApp) webApp, JSF_CONFIG_CONTEXT_PARAM, paramValue);
         	}
         }
-
 	}
 	
     /**

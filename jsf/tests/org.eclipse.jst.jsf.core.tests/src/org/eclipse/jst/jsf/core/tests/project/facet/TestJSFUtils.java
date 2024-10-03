@@ -364,7 +364,7 @@ public abstract class TestJSFUtils extends TestCase
     {
         final org.eclipse.jst.javaee.web.WebApp javaEEWebApp = WebFactory.eINSTANCE
                 .createWebApp();
-        assertEquals(WebAppVersionType._30_LITERAL, javaEEWebApp.getVersion());
+        assertEquals(WebAppVersionType._40, javaEEWebApp.getVersion());
         assertTrue(_jsfUtils.isJavaEE(javaEEWebApp));
         javaEEWebApp.setVersion(WebAppVersionType._25_LITERAL);
         assertTrue(_jsfUtils.isJavaEE(javaEEWebApp));
@@ -416,25 +416,26 @@ public abstract class TestJSFUtils extends TestCase
     {
         final Map<String, MockPropertyHolder> propsMap = new HashMap<String, MockPropertyHolder>();
         final MockDataModel model = new MockDataModel("TestID", propsMap);
+        final Object webApp = _webAppAccessor.createWebApp("2.4");
         // when the property is not present, use the default.
         assertEquals(JSFUtils.JSF_SERVLET_CLASS, _jsfUtils
-                .getServletClassname_testable(model));
+                .getServletClassname_testable(webApp, model));
 
         // if property is present but empty or only whitespace, we also use
         // the default.
         model.setProperty(
                 IJSFFacetInstallDataModelProperties.SERVLET_CLASSNAME, "");
         assertEquals(JSFUtils.JSF_SERVLET_CLASS, _jsfUtils
-                .getServletClassname_testable(model));
+                .getServletClassname_testable(webApp, model));
         model.setProperty(
                 IJSFFacetInstallDataModelProperties.SERVLET_CLASSNAME, "");
         assertEquals(JSFUtils.JSF_SERVLET_CLASS, _jsfUtils
-                .getServletClassname_testable(model));
+                .getServletClassname_testable(webApp, model));
 
         // otherwise, we should get back the value
         model.setProperty(
                 IJSFFacetInstallDataModelProperties.SERVLET_CLASSNAME, "foobar");
-        assertEquals("foobar", _jsfUtils.getServletClassname_testable(model));
+        assertEquals("foobar", _jsfUtils.getServletClassname_testable(webApp, model));
     }
 
 //    @Test

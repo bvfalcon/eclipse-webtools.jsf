@@ -67,9 +67,9 @@ public class ConverterValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.convert.Converter": //$NON-NLS-1$
-                    "jakarta.faces.convert.Converter"; //$NON-NLS-1$
+                    "javax.faces.convert.Converter"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {

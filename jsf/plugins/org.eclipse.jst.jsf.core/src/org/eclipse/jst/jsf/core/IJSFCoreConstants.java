@@ -120,7 +120,7 @@ public final class IJSFCoreConstants
 	 */
 	public static final String JSF_VERSION_4_1 = FACET_VERSION_4_1;
 
-	public static List<String> JAVAX_NAMESPACE_VERSIONS = Arrays.asList(
+	private static List<String> JAVAEE_VERSIONS = Arrays.asList(
 			JSF_VERSION_1_0,
 			JSF_VERSION_1_1,
 			JSF_VERSION_1_2,
@@ -144,10 +144,11 @@ public final class IJSFCoreConstants
      * @return true if the jsfVersion is a specification of Jakarta EE.
      * 
      */
-    public static boolean isJakartaNamespace(String jsfVersion)
+    public static boolean isJakartaEE(String jsfVersion)
     {
-        return !JAVAX_NAMESPACE_VERSIONS.contains(jsfVersion);
+        return !JAVAEE_VERSIONS.contains(jsfVersion);
     }
+
     private IJSFCoreConstants()
     {
         // no instantiation

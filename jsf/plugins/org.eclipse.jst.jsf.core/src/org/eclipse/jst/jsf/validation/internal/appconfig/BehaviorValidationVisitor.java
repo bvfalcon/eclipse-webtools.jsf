@@ -70,9 +70,9 @@ public class BehaviorValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return IJSFCoreConstants.isJakartaNamespace(getVersion()) ?
+            return IJSFCoreConstants.isJakartaEE(getVersion()) ?
                     "jakarta.faces.component.behavior.Behavior": //$NON-NLS-1$
-                    "jakarta.faces.component.behavior.Behavior"; //$NON-NLS-1$
+                    "javax.faces.component.behavior.Behavior"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
