@@ -41,10 +41,8 @@ import org.eclipse.jface.viewers.ViewerSorter;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
-import org.eclipse.jst.jsp.core.internal.provisional.contenttype.ContentTypeIdForJSP;
+import org.eclipse.jst.jsf.core.internal.provisional.contenttype.ContentTypeIdForJSF;
 import org.eclipse.jst.jsp.ui.StructuredTextViewerConfigurationJSP;
-import org.eclipse.jst.jsp.ui.internal.editor.IHelpContextIds;
-import org.eclipse.jst.jsp.ui.internal.preferences.JSPUIPreferenceNames;
 import org.eclipse.jst.jsf.ui.internal.templates.TemplateContextTypeIdsJSF;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ControlAdapter;
@@ -63,7 +61,6 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Link;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
-import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.PreferencesUtil;
 import org.eclipse.wst.sse.core.StructuredModelManager;
 import org.eclipse.wst.sse.core.internal.provisional.IStructuredModel;
@@ -305,7 +302,7 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 		configureTableResizing(innerParent, table, column1, column2);
 		loadLastSavedPreferences();
 
-		PlatformUI.getWorkbench().getHelpSystem().setHelp(parent, IHelpContextIds.JSP_NEWWIZARD_TEMPLATE_HELPID);
+		//PlatformUI.getWorkbench().getHelpSystem().setHelp(parent, IHelpContextIds.JSP_NEWWIZARD_TEMPLATE_HELPID);
 		Dialog.applyDialogFont(parent);
 		setControl(parent);
 	}
@@ -333,7 +330,7 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 		};
 		SourceViewer viewer = new StructuredTextViewer(parent, null, null, false, SWT.BORDER | SWT.V_SCROLL | SWT.H_SCROLL);
 		viewer.getTextWidget().setFont(JFaceResources.getFont("org.eclipse.wst.sse.ui.textfont")); //$NON-NLS-1$
-		IStructuredModel scratchModel = StructuredModelManager.getModelManager().createUnManagedStructuredModelFor(ContentTypeIdForJSP.ContentTypeID_JSP);
+		IStructuredModel scratchModel = StructuredModelManager.getModelManager().createUnManagedStructuredModelFor(ContentTypeIdForJSF.ContentTypeID_JSF);
 		IDocument document = scratchModel.getStructuredDocument();
 		viewer.configure(sourceViewerConfiguration);
 		viewer.setDocument(document);
@@ -443,12 +440,12 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 	}
 
 	/**
-	 * Load the last template name used in New JSP File wizard.
+	 * Load the last template name used in New JSF File wizard.
 	 */
 	private void loadLastSavedPreferences() {
 		fLastSelectedTemplateName = ""; //$NON-NLS-1$
 		boolean setSelection = false;
-		String templateName = JSFUiPlugin.getDefault().getPreferenceStore().getString(JSPUIPreferenceNames.NEW_FILE_TEMPLATE_NAME);
+		/*String templateName = JSFUiPlugin.getDefault().getPreferenceStore().getString(JSPUIPreferenceNames.NEW_FILE_TEMPLATE_NAME);
 		if (templateName == null || templateName.length() == 0) {
 			templateName = JSFUiPlugin.getDefault().getPreferenceStore().getString(JSPUIPreferenceNames.NEW_FILE_TEMPLATE_ID);
 			if (templateName != null && templateName.length() > 0) {
@@ -463,6 +460,7 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 			fLastSelectedTemplateName = templateName;
 			setSelection = true;
 		}
+		*/
 		fUseTemplateButton.setSelection(setSelection);
 		enableTemplates();
 	}
@@ -471,7 +469,7 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 	 * Save template name used for next call to New JSP File wizard.
 	 */
 	void saveLastSavedPreferences() {
-		String templateName = ""; //$NON-NLS-1$
+		/*String templateName = ""; //$NON-NLS-1$
 
 		Template template = getSelectedTemplate();
 		if (template != null) {
@@ -479,7 +477,7 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 		}
 
 		JSFUiPlugin.getDefault().getPreferenceStore().setValue(JSPUIPreferenceNames.NEW_FILE_TEMPLATE_NAME, templateName);
-		JSFUiPlugin.getDefault().savePluginPreferences();
+		*/JSFUiPlugin.getDefault().savePluginPreferences();
 	}
 
 	/**

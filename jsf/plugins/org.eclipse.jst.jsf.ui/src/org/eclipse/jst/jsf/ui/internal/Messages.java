@@ -412,4 +412,24 @@ public class Messages extends NLS {
      * see messages.properties
      */
     public static String NewJSFTemplatesWizardPage_7;
+
+    /**
+     * see messages.properties
+     */
+    public static String _ERROR_FILENAME_MUST_END_JSF;
+
+    /**
+     * see messages.properties
+     */
+    public static String ResourceGroup_nameExists;
+
+    /**
+     * see messages.properties
+     */
+    public static String _WARNING_FILE_MUST_BE_INSIDE_JAVA_PROJECT;
+
+    /**
+     * see messages.properties
+     */
+    public static String Creating_files_encoding;
 }

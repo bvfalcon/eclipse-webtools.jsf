@@ -24,17 +24,13 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.core.runtime.Preferences;
 import org.eclipse.core.runtime.content.IContentType;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
-import org.eclipse.jst.jsp.core.internal.JSPCorePlugin;
-import org.eclipse.jst.jsp.core.internal.preferences.JSPCorePreferenceNames;
-import org.eclipse.jst.jsp.core.internal.provisional.contenttype.ContentTypeIdForJSP;
-import org.eclipse.jst.jsp.core.internal.util.FacetModuleCoreSupport;
-import org.eclipse.jst.jsp.ui.internal.JSPUIMessages;
+import org.eclipse.jst.jsf.core.internal.provisional.contenttype.ContentTypeIdForJSF;
+import org.eclipse.jst.jsf.core.internal.util.FacetModuleCoreSupport;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
@@ -112,7 +108,7 @@ class NewJSFFileWizardPage extends WizardNewFileCreationPage {
 		if ((fullPath != null) && (fullPath.isEmpty() == false) && (fileName != null)) {
 			// check that filename does not contain invalid extension
 			if (!extensionValidForContentType(fileName)) {
-				setErrorMessage(NLS.bind(JSPUIMessages._ERROR_FILENAME_MUST_END_JSP, getValidExtensions().toString()));
+				setErrorMessage(NLS.bind(Messages._ERROR_FILENAME_MUST_END_JSF, getValidExtensions().toString()));
 				return false;
 			}
 			// no file extension specified so check adding default
@@ -130,7 +126,7 @@ class NewJSFFileWizardPage extends WizardNewFileCreationPage {
 				}
 
 				if ((workspace.getRoot().getFolder(resourcePath).exists() || workspace.getRoot().getFile(resourcePath).exists())) {
-					setErrorMessage(JSPUIMessages.ResourceGroup_nameExists);
+					setErrorMessage(Messages.ResourceGroup_nameExists);
 					return false;
 				}
 			}
@@ -140,7 +136,7 @@ class NewJSFFileWizardPage extends WizardNewFileCreationPage {
 			// if inside web project, check if inside webContent folder
 			if (project != null) {
 				if (!isJavaProject(project)) {
-					setMessage(JSPUIMessages._WARNING_FILE_MUST_BE_INSIDE_JAVA_PROJECT, WARNING);
+					setMessage(Messages._WARNING_FILE_MUST_BE_INSIDE_JAVA_PROJECT, WARNING);
 				}
 				if (isDynamicWebProject(project) || FacetModuleCoreSupport.isWebFragmentProject(project)) {
 					// check that the path is inside a deployed folder
@@ -168,8 +164,9 @@ class NewJSFFileWizardPage extends WizardNewFileCreationPage {
 	String addDefaultExtension(String filename) {
 		StringBuffer newFileName = new StringBuffer(filename);
 
-		Preferences preference = JSPCorePlugin.getDefault().getPluginPreferences();
-		String ext = preference.getString(JSPCorePreferenceNames.DEFAULT_EXTENSION);
+		//Preferences preference = JSPCorePlugin.getDefault().getPluginPreferences();
+		//String ext = preference.getString(JSPCorePreferenceNames.DEFAULT_EXTENSION);
+		String ext = "xhtml"; //$NON-NLS-1$
 
 		newFileName.append("."); //$NON-NLS-1$
 		newFileName.append(ext);
@@ -184,12 +181,12 @@ class NewJSFFileWizardPage extends WizardNewFileCreationPage {
 	 */
 	private IContentType getContentType() {
 		if (fContentType == null)
-			fContentType = Platform.getContentTypeManager().getContentType(ContentTypeIdForJSP.ContentTypeID_JSP);
+			fContentType = Platform.getContentTypeManager().getContentType(ContentTypeIdForJSF.ContentTypeID_JSF);
 		return fContentType;
 	}
 
 	/**
-	 * Get list of valid extensions for JSP Content type
+	 * Get list of valid extensions for JSF Content type
 	 * 
 	 * @return
 	 */

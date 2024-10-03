@@ -18,6 +18,14 @@
    <extension-point id="jsfAppConfigLocatorProviderFactory" name="%extension-point.name.14" schema="schema/jsfAppConfigLocatorProviderFactory.exsd"/>
    <extension-point id="jsfAppConfigManagerFactory" name="%extension-point.name.15" schema="schema/jsfAppConfigManagerFactory.exsd"/>
    <extension-point id="viewHandlerOverride" name="%extension-point.name.viewHandlerOverride" schema="schema/viewHandlerOverride.exsd"/>
+
+   <extension point="org.eclipse.wst.sse.core.modelHandler">
+        <modelHandler
+            class="org.eclipse.jst.jsf.core.internal.modelhandler.ModelHandlerForJSF"
+            associatedContentTypeId="org.eclipse.jst.jsf.core.jsfsource"
+            id="org.eclipse.jst.jsf.core.internal.modelhandler">
+        </modelHandler>
+   </extension>
    <extension point="org.eclipse.emf.ecore.generated_package">
         <package 
             uri = "http://org.eclipse.jst.jsf.core/constraints.ecore" 
@@ -821,4 +829,16 @@
       </content-type>
    </extension>
 
+    <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            file-extensions="xhtml"
+            priority="high"
+            name="%JSF_Content_Type_Extension_Element.name"
+            id="org.eclipse.jst.jsf.core.jsfsource"
+            base-type="org.eclipse.core.runtime.text"
+            default-charset="UTF-8">
+        <describer
+              class="org.eclipse.jst.jsf.core.internal.contenttype.ContentDescriberForJSF" />
+      </content-type>
+    </extension>
 </plugin>

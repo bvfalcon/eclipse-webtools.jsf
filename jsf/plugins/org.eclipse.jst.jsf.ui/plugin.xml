@@ -295,9 +295,13 @@
 
     <extension
           point="org.eclipse.ui.editors.templates">
+       <contextType
+            name="%JSF_New_context_type_Extension_Element.name"
+            class="org.eclipse.jst.jsf.ui.internal.templates.TemplateContextTypeJSF"
+            id="jsf_new" />
        <template
              autoinsert="true"
-             contextTypeId="jsp_new"
+             contextTypeId="jsf_new"
              description="%NewJSFPage_xhtml_description"
              id="org.eclipse.jst.jsf.ui.new_jsf_page_xhtml"
              name="%NewJSFPage_xhtml">
