@@ -52,7 +52,7 @@ import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibrary;
 import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.PluginProvidedJSFLibrary;
 import org.eclipse.jst.jsf.core.jsfappconfig.JSFAppConfigUtils;
 import org.eclipse.jst.jsf.core.jsflibraryconfiguration.JSFLibraryConfigurationHelper;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -97,7 +97,7 @@ public class JSFLibraryContainerWizardPage extends WizardPage implements
         setTitle(Messages.JSFLibraryContainerWizardPage_Title);
         setDescription(Messages.JSFLibraryContainerWizardPage_Description);
         // TODO: Replace with a custom image.
-        setImageDescriptor( JSFUiPlugin.getImageDescriptor("full/wizban/addlibrary_wiz.gif")); //$NON-NLS-1$
+        setImageDescriptor( JSFUIPlugin.getImageDescriptor("full/wizban/addlibrary_wiz.gif")); //$NON-NLS-1$
 	}
 
 	/* (non-Javadoc)
@@ -490,7 +490,7 @@ public class JSFLibraryContainerWizardPage extends WizardPage implements
 		Image libImg;
 		public Image getImage(Object element) {
 			if (libImg == null){
-				ImageDescriptor libImgDesc = JSFUiPlugin.getImageDescriptor("obj16/library_obj.gif"); //$NON-NLS-1$
+				ImageDescriptor libImgDesc = JSFUIPlugin.getImageDescriptor("obj16/library_obj.gif"); //$NON-NLS-1$
 				libImg = libImgDesc.createImage();
 			}
 			return libImg;

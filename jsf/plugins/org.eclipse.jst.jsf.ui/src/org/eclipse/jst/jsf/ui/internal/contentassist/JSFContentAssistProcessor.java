@@ -38,7 +38,7 @@ import org.eclipse.jst.jsf.context.structureddocument.IStructuredDocumentContext
 import org.eclipse.jst.jsf.metadataprocessors.MetaDataEnabledProcessingFactory;
 import org.eclipse.jst.jsf.metadataprocessors.features.IPossibleValue;
 import org.eclipse.jst.jsf.metadataprocessors.features.IPossibleValues;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.wst.sse.ui.internal.contentassist.CustomCompletionProposal;
 import org.eclipse.wst.xml.core.internal.contentmodel.CMAttributeDeclaration;
@@ -233,11 +233,11 @@ public class JSFContentAssistProcessor implements IContentAssistProcessor {
 		if (icon == null)
 			return null;
 			
-		Image img = JSFUiPlugin.getDefault().getImageRegistry().get(icon.toString());
+		Image img = JSFUIPlugin.getDefault().getImageRegistry().get(icon.toString());
 		if (img == null){
 			try {
 				img = icon.createImage();
-				JSFUiPlugin.getDefault().getImageRegistry().put(icon.toString(), img);
+				JSFUIPlugin.getDefault().getImageRegistry().put(icon.toString(), img);
 			} catch (RuntimeException e) {
                 // empty block; C.B: handle exception?
 			}
@@ -247,7 +247,7 @@ public class JSFContentAssistProcessor implements IContentAssistProcessor {
 
 	private Image getDefaultAttributeValueImage() {
 		if (defaultAttrValImgDesc == null){
-			Bundle bundle = Platform.getBundle(JSFUiPlugin.PLUGIN_ID);
+			Bundle bundle = Platform.getBundle(JSFUIPlugin.PLUGIN_ID);
 			URL url= FileLocator.find(bundle,new Path(defaultIconPath ), null);
 			defaultAttrValImgDesc = ImageDescriptor.createFromURL(url);
 		}

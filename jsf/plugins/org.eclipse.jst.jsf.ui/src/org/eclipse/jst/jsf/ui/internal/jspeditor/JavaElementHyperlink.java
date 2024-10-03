@@ -18,7 +18,7 @@ import org.eclipse.jdt.core.IJavaElement;
 import org.eclipse.jdt.ui.JavaUI;
 import org.eclipse.jface.text.IRegion;
 import org.eclipse.jface.text.hyperlink.IHyperlink;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.ui.IEditorPart;
@@ -88,7 +88,7 @@ class JavaElementHyperlink implements IHyperlink, ITestHyperlink {
 			}
 		}
 		catch (final Exception e) {
-		    JSFUiPlugin.log(IStatus.WARNING, e.getMessage(), e);
+		    JSFUIPlugin.log(IStatus.WARNING, e.getMessage(), e);
 		}
 	}
 

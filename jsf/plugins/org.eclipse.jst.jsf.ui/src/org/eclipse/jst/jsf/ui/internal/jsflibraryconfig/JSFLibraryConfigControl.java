@@ -52,7 +52,7 @@ import org.eclipse.jst.jsf.core.internal.jsflibraryconfig.JSFLibraryRegistryUtil
 import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.ArchiveFile;
 import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibrary;
 import org.eclipse.jst.jsf.core.internal.project.facet.IJSFFacetInstallDataModelProperties;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
 import org.eclipse.jst.jsf.ui.internal.classpath.JSFLibraryWizard;
 import org.eclipse.swt.SWT;
@@ -136,7 +136,7 @@ public class JSFLibraryConfigControl extends Composite {
 		SafeRunnable.run(new ISafeRunnable(){
 			public void handleException(Throwable exception) {
 			    // TODO: should we perhaps do something here?
-			    JSFUiPlugin.log(IStatus.ERROR, exception.getLocalizedMessage());
+			    JSFUIPlugin.log(IStatus.ERROR, exception.getLocalizedMessage());
 			}
 			public void run() throws Exception {
 				for (Iterator it=getChangeListeners().iterator();it.hasNext();){
@@ -169,7 +169,7 @@ public class JSFLibraryConfigControl extends Composite {
 			initializeControlValues();
 			_initing = false;
 		} else {
-			JSFUiPlugin.log(IStatus.ERROR, Messages.JSFLibraryConfigControl_NullProject);
+			JSFUIPlugin.log(IStatus.ERROR, Messages.JSFLibraryConfigControl_NullProject);
 		}
 		
 	}
@@ -628,9 +628,9 @@ public class JSFLibraryConfigControl extends Composite {
 
 		TreeLabelProvider()
 		{
-			ImageDescriptor jarImgDesc = JSFUiPlugin.getImageDescriptor("obj16/jar_obj.gif"); //$NON-NLS-1$
+			ImageDescriptor jarImgDesc = JSFUIPlugin.getImageDescriptor("obj16/jar_obj.gif"); //$NON-NLS-1$
 			jarImg = jarImgDesc.createImage();
-			ImageDescriptor libImgDesc = JSFUiPlugin.getImageDescriptor("obj16/library_obj.gif"); //$NON-NLS-1$
+			ImageDescriptor libImgDesc = JSFUIPlugin.getImageDescriptor("obj16/library_obj.gif"); //$NON-NLS-1$
 			libImg = libImgDesc.createImage();
 		}
 		

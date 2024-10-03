@@ -39,7 +39,7 @@ import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerSorter;
 import org.eclipse.jface.wizard.WizardPage;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
 import org.eclipse.jst.jsf.core.internal.provisional.contenttype.ContentTypeIdForJSF;
 import org.eclipse.jst.jsp.ui.StructuredTextViewerConfigurationJSP;
@@ -284,7 +284,7 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 		// create viewer that displays currently selected template's contents
 		fPatternViewer = doCreateViewer(parent);
 
-		fTemplateStore = JSFUiPlugin.getDefault().getTemplateStore();
+		fTemplateStore = JSFUIPlugin.getDefault().getTemplateStore();
 		fTableViewer.setInput(fTemplateStore);
 
 		// Create linked text to just to templates preference page
@@ -417,7 +417,7 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 
 		Template template = getSelectedTemplate();
 		if (template != null) {
-			TemplateContextType contextType = JSFUiPlugin.getDefault().getTemplateContextRegistry().getContextType(TemplateContextTypeIdsJSF.NEW);
+			TemplateContextType contextType = JSFUIPlugin.getDefault().getTemplateContextRegistry().getContextType(TemplateContextTypeIdsJSF.NEW);
 			IDocument document = new Document();
 			TemplateContext context = new DocumentTemplateContext(contextType, document, 0, 0);
 			try {
@@ -425,7 +425,7 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 				templateString = buffer.getString();
 			}
 			catch (Exception e) {
-				JSFUiPlugin.log(IStatus.WARNING, "Could not create template for new jsf", e); //$NON-NLS-1$
+				JSFUIPlugin.log(IStatus.WARNING, "Could not create template for new jsf", e); //$NON-NLS-1$
 			}
 		}
 
@@ -445,9 +445,9 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 	private void loadLastSavedPreferences() {
 		fLastSelectedTemplateName = ""; //$NON-NLS-1$
 		boolean setSelection = false;
-		/*String templateName = JSFUiPlugin.getDefault().getPreferenceStore().getString(JSPUIPreferenceNames.NEW_FILE_TEMPLATE_NAME);
+		/*String templateName = JSFUIPlugin.getDefault().getPreferenceStore().getString(JSPUIPreferenceNames.NEW_FILE_TEMPLATE_NAME);
 		if (templateName == null || templateName.length() == 0) {
-			templateName = JSFUiPlugin.getDefault().getPreferenceStore().getString(JSPUIPreferenceNames.NEW_FILE_TEMPLATE_ID);
+			templateName = JSFUIPlugin.getDefault().getPreferenceStore().getString(JSPUIPreferenceNames.NEW_FILE_TEMPLATE_ID);
 			if (templateName != null && templateName.length() > 0) {
 				Template template = fTemplateStore.findTemplateById(templateName);
 				if (template != null) {
@@ -476,8 +476,8 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 			templateName = template.getName();
 		}
 
-		JSFUiPlugin.getDefault().getPreferenceStore().setValue(JSPUIPreferenceNames.NEW_FILE_TEMPLATE_NAME, templateName);
-		*/JSFUiPlugin.getDefault().savePluginPreferences();
+		JSFUIPlugin.getDefault().getPreferenceStore().setValue(JSPUIPreferenceNames.NEW_FILE_TEMPLATE_NAME, templateName);
+		*/JSFUIPlugin.getDefault().savePluginPreferences();
 	}
 
 	/**

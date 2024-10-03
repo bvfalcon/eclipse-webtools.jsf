@@ -40,13 +40,13 @@ public final class JSFUITraceOptions
     
     static
     {
-        ENABLED = getBooleanOption(JSFUiPlugin.PLUGIN_ID
+        ENABLED = getBooleanOption(JSFUIPlugin.PLUGIN_ID
                         + KEY_DEBUG_ENABLED);
 
         if (ENABLED)
         {
             TRACE_METADATAGEN = getBooleanOption(
-                    JSFUiPlugin.PLUGIN_ID + KEY_DESIGNTIME);
+                    JSFUIPlugin.PLUGIN_ID + KEY_DESIGNTIME);
         }
         else
         {

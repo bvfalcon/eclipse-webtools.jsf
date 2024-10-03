@@ -21,7 +21,7 @@ import org.eclipse.jst.jsf.core.internal.jsflibraryconfig.JSFLibraryRegistryUtil
 import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibrary;
 import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistryFactory;
 import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFVersion;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -93,7 +93,7 @@ public class JSFLibraryWizard extends Wizard implements INewWizard {
 			try {
 				JSFLibraryRegistryUtil.rebindClasspathContainerEntries(originalID, workingCopyLibrary.getID(), null);
 			} catch (JavaModelException e) {
-				JSFUiPlugin.log(IStatus.ERROR, "Exception while updating JSF Library containers", e); //$NON-NLS-1$
+				JSFUIPlugin.log(IStatus.ERROR, "Exception while updating JSF Library containers", e); //$NON-NLS-1$
 			}
 		}
 		JSFLibraryRegistryUtil.getInstance().saveJSFLibraryRegistry();

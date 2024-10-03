@@ -16,7 +16,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.jst.jsf.core.internal.JSFCorePlugin;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
 import org.eclipse.jst.jsp.ui.internal.editor.JSPEditorPluginImageHelper;
 import org.eclipse.jst.jsp.ui.internal.editor.JSPEditorPluginImages;
@@ -86,7 +86,7 @@ public class NewJSFWizard extends Wizard implements INewWizard {
 						IDE.openEditor(page, file, true);
 					}
 					catch (PartInitException e) {
-						JSFUiPlugin.log(IStatus.WARNING, e.getMessage(), e);
+						JSFUIPlugin.log(IStatus.WARNING, e.getMessage(), e);
 					}
 				}
 			});
@@ -139,7 +139,7 @@ public class NewJSFWizard extends Wizard implements INewWizard {
 						inputStream.close();
 					}
 					catch (Exception e) {
-						JSFUiPlugin.log(IStatus.WARNING, "Could not create contents for new JSP file", e); //$NON-NLS-1$
+						JSFUIPlugin.log(IStatus.WARNING, "Could not create contents for new JSP file", e); //$NON-NLS-1$
 					}
 				}
 			}

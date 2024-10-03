@@ -40,7 +40,7 @@ import org.eclipse.jst.jsf.designtime.internal.view.model.ITagRegistry.TagRegist
 import org.eclipse.jst.jsf.designtime.internal.view.model.ITagRegistry.TagRegistryChangeEvent.EventType;
 import org.eclipse.jst.jsf.designtime.internal.view.model.TagRegistryFactory;
 import org.eclipse.jst.jsf.designtime.internal.view.model.TagRegistryFactory.TagRegistryFactoryException;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.PlatformUI;
@@ -124,7 +124,7 @@ public class TaglibContentProvider implements IStructuredContentProvider,
                 }
                 catch (TagRegistryFactoryException e)
                 {
-                    JSFUiPlugin.log(IStatus.ERROR,
+                    JSFUIPlugin.log(IStatus.ERROR,
                             "Problem getting tag registry", e); //$NON-NLS-1$
                 }
             }
@@ -346,7 +346,7 @@ public class TaglibContentProvider implements IStructuredContentProvider,
             if (!_project.isAccessible()
                     || _registry.isUpToDate())
             {
-                return new Status(IStatus.CANCEL, JSFUiPlugin.PLUGIN_ID, ""); //$NON-NLS-1$
+                return new Status(IStatus.CANCEL, JSFUIPlugin.PLUGIN_ID, ""); //$NON-NLS-1$
             }
 
             final Collection<? extends Namespace> libs = _registry.getRegistry()

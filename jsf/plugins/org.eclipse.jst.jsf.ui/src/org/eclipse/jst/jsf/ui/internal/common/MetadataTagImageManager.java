@@ -29,7 +29,7 @@ import org.eclipse.jst.jsf.common.metadata.query.internal.MetaDataQueryFactory;
 import org.eclipse.jst.jsf.common.metadata.query.internal.taglib.ITaglibDomainMetaDataQuery;
 import org.eclipse.jst.jsf.tagdisplay.internal.paletteinfos.PaletteInfo;
 import org.eclipse.jst.jsf.tagdisplay.internal.paletteinfos.PaletteInfos;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.swt.graphics.Image;
 
 /**
@@ -85,20 +85,20 @@ public class MetadataTagImageManager
         Image image = null;
         if (imgDesc != null)
         {
-            image = JSFUiPlugin.getDefault().getImageRegistry().get(
+            image = JSFUIPlugin.getDefault().getImageRegistry().get(
                     imgDesc.toString());
             if (image == null)
             {
                 image = imgDesc.createImage();
-                JSFUiPlugin.getDefault().getImageRegistry().put(
+                JSFUIPlugin.getDefault().getImageRegistry().put(
                         imgDesc.toString(), image);
             }
             else if (image.isDisposed())
             { // should not occur, but handling just in case
-                JSFUiPlugin.getDefault().getImageRegistry().remove(
+                JSFUIPlugin.getDefault().getImageRegistry().remove(
                         imgDesc.toString());
                 image = imgDesc.createImage();
-                JSFUiPlugin.getDefault().getImageRegistry().put(
+                JSFUIPlugin.getDefault().getImageRegistry().put(
                         imgDesc.toString(), image);
             }
         }

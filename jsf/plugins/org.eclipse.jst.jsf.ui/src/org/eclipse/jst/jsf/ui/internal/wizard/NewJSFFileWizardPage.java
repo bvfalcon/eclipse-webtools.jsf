@@ -27,7 +27,7 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.content.IContentType;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
 import org.eclipse.jst.jsf.core.internal.provisional.contenttype.ContentTypeIdForJSF;
 import org.eclipse.jst.jsf.core.internal.util.FacetModuleCoreSupport;
@@ -273,7 +273,7 @@ class NewJSFFileWizardPage extends WizardNewFileCreationPage {
 			isJava = project.hasNature(JavaCore.NATURE_ID);
 		}
 		catch (CoreException e) {
-			JSFUiPlugin.log(IStatus.WARNING, e.getMessage(), e);
+			JSFUIPlugin.log(IStatus.WARNING, e.getMessage(), e);
 		}
 
 		return isJava;

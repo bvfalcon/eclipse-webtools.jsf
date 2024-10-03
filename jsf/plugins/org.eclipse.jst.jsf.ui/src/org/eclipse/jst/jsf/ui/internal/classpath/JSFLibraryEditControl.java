@@ -34,7 +34,7 @@ import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.ArchiveFile;
 import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibrary;
 import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistryFactory;
 import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFVersion;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CCombo;
@@ -190,7 +190,7 @@ public class JSFLibraryEditControl extends Composite implements ModifyListener, 
 			private Image jarImg = null;
 			public Image getImage(Object element) {
 				if (jarImg == null){
-					ImageDescriptor desc = JSFUiPlugin.getImageDescriptor("obj16/jar_obj.gif"); //$NON-NLS-1$
+					ImageDescriptor desc = JSFUIPlugin.getImageDescriptor("obj16/jar_obj.gif"); //$NON-NLS-1$
 					jarImg = desc.createImage();
 				}
 				return jarImg;

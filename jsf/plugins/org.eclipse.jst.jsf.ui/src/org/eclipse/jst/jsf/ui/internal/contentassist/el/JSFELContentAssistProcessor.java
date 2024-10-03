@@ -32,7 +32,7 @@ import org.eclipse.jst.jsf.designtime.DTAppManagerUtil;
 import org.eclipse.jst.jsf.designtime.internal.view.XMLViewDefnAdapter;
 import org.eclipse.jst.jsf.designtime.internal.view.IDTViewHandler.ViewHandlerException;
 import org.eclipse.jst.jsf.designtime.internal.view.XMLViewDefnAdapter.DTELExpression;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.wst.xml.ui.internal.contentassist.ProposalComparator;
 
 /**
@@ -84,7 +84,7 @@ public class JSFELContentAssistProcessor implements IContentAssistProcessor
                 }
                 catch (ViewHandlerException e)
                 {
-                    JSFUiPlugin.log(IStatus.ERROR, "During el resolution", e); //$NON-NLS-1$
+                    JSFUIPlugin.log(IStatus.ERROR, "During el resolution", e); //$NON-NLS-1$
                 }
             }
         }

@@ -28,7 +28,7 @@ import org.eclipse.jst.common.project.facet.ui.libprov.LibraryProviderFrameworkU
 import org.eclipse.jst.j2ee.project.facet.IJ2EEModuleFacetInstallDataModelProperties;
 import org.eclipse.jst.jsf.core.internal.project.facet.IJSFFacetInstallDataModelProperties;
 import org.eclipse.jst.jsf.core.internal.project.facet.JsfFacetConfigurationUtil;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -77,7 +77,7 @@ public class JSFFacetInstallPage extends DataModelWizardPage implements
 
 	private IDialogSettings dialogSettings;
 	private IDataModel webAppDataModel;
-	private static final String SETTINGS_ROOT = JSFUiPlugin.PLUGIN_ID
+	private static final String SETTINGS_ROOT = JSFUIPlugin.PLUGIN_ID
 			+ ".jsfFacetInstall"; //$NON-NLS-1$
 	private static final String SETTINGS_CONFIG = "configPath"; //$NON-NLS-1$
 	private static final String SETTINGS_SERVLET = "servletName"; //$NON-NLS-1$
@@ -101,7 +101,7 @@ public class JSFFacetInstallPage extends DataModelWizardPage implements
 		}), "jsf.facet.install.page"); //$NON-NLS-1$
 		setTitle(Messages.JSFFacetInstallPage_title);
 		setDescription(Messages.JSFFacetInstallPage_description);
-		dialogSettings = JSFUiPlugin.getDefault().getDialogSettings();
+		dialogSettings = JSFUIPlugin.getDefault().getDialogSettings();
 
 	}
 
@@ -487,7 +487,7 @@ public class JSFFacetInstallPage extends DataModelWizardPage implements
 					webAppDataModel.addListener(this);
 				}
 			} catch (CoreException e) {
-				JSFUiPlugin.log(IStatus.ERROR,
+				JSFUIPlugin.log(IStatus.ERROR,
 						Messages.JSFFacetInstallPage_ErrorNoWebAppDataModel, e);
 			}
 		}
