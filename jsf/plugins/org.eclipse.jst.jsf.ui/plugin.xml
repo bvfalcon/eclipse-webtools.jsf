@@ -84,50 +84,8 @@
      <wizard-pages action="jst.jsf.v11.install">
         <page class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage"/>
      </wizard-pages>
-     <wizard-pages action="jst.jsf.v12.install">
+     <wizard-pages action="jst.jsf.v30.install">
         <page class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage"/>
-     </wizard-pages>
-     <wizard-pages
-           action="jst.jsf.v20.install">
-        <page
-              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
-        </page>
-     </wizard-pages>
-     <wizard-pages
-           action="jst.jsf.v21.install">
-        <page
-              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
-        </page>
-     </wizard-pages>
-     <wizard-pages
-           action="jst.jsf.v22.install">
-        <page
-              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
-        </page>
-     </wizard-pages>
-     <wizard-pages
-           action="jst.jsf.v23.install">
-        <page
-              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
-        </page>
-     </wizard-pages>
-     <wizard-pages
-           action="jst.jsf.v30.install">
-        <page
-              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
-        </page>
-     </wizard-pages>
-     <wizard-pages
-           action="jst.jsf.v40.install">
-        <page
-              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
-        </page>
-     </wizard-pages>
-     <wizard-pages
-           action="jst.jsf.v41.install">
-        <page
-              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
-        </page>
      </wizard-pages>
   </extension>  
   
