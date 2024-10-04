@@ -13,7 +13,7 @@
             <selection class="org.eclipse.core.resources.IResource" />
     </wizard>
   </extension>
-  <!-- Add new JSP wizard to Project Explorer -->
+  <!-- Add new JSF wizard to Project Explorer -->
   <extension
              id="org.eclipse.jst.jsf.commonWizard.newJSF"
              point="org.eclipse.ui.navigator.navigatorContent">
@@ -260,9 +260,9 @@
        <template
              autoinsert="true"
              contextTypeId="jsf_new"
-             description="%NewJSFPage_xhtml_description"
-             id="org.eclipse.jst.jsf.ui.new_jsf_page_xhtml"
-             name="%NewJSFPage_xhtml">
+             description="%NewJSF40Page_description"
+             id="org.eclipse.jst.jsf.ui.new_jsf40_page"
+             name="%NewJSF40Page">
           <pattern>
              &lt;?xml version=&quot;1.0&quot; encoding=&quot;${encoding}&quot;?&gt;
 &lt;!DOCTYPE html&gt;
@@ -280,7 +280,28 @@ ${cursor}
        </template>
        <template
              autoinsert="true"
-             contextTypeId="jsp_attribute_value"
+             contextTypeId="jsf_new"
+             description="%NewJSF30Page_description"
+             id="org.eclipse.jst.jsf.ui.new_jsf30_page"
+             name="%NewJSF30Page">
+          <pattern>
+             &lt;?xml version=&quot;1.0&quot; encoding=&quot;${encoding}&quot;?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:f=&quot;http://xmlns.jcp.org/jsf/core&quot; xmlns:h=&quot;http://xmlns.jcp.org/jsf/html&quot;&gt;
+&lt;f:view contentType=&quot;text/html&quot; encoding=&quot;${encoding}&quot;&gt;
+&lt;h:head&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/h:head&gt;
+&lt;h:body&gt;
+${cursor}
+&lt;/h:body&gt;
+&lt;/f:view&gt;
+&lt;/html&gt;
+          </pattern>
+       </template>
+       <template
+             autoinsert="true"
+             contextTypeId="jsf_attribute_value"
              description="%NewELExpression_description"
              id="org.eclipse.jst.jsf.ui.newelexpression"
              name="%NewELExpression">

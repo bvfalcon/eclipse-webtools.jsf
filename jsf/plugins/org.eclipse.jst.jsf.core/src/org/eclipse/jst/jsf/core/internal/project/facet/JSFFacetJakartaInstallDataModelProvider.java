@@ -5,4 +5,8 @@ public class JSFFacetJakartaInstallDataModelProvider extends JSFFacetInstallData
 	protected String getServletClassName() {
 		return JSFUtils.JSF_SERVLET_CLASS_JAKARTA;
 	}
+
+	protected String getServletUrlMapping() {
+		return JSFUtils.JSF_DEFAULT_URL_MAPPING_JAKARTA;
+	}
 }

@@ -91,6 +91,11 @@ public abstract class JSFUtils {
 	public static final String JSF_DEFAULT_URL_MAPPING = "/faces/*"; //$NON-NLS-1$
 
 	/**
+	 * Default URL mapping to faces servlet (for Jakarta EE)
+	 */
+	public static final String JSF_DEFAULT_URL_MAPPING_JAKARTA = "*.xhtml"; //$NON-NLS-1$
+
+	/**
 	 * the key for implementation libraries in persistent properties
 	 */
 	public static final String PP_JSF_IMPLEMENTATION_LIBRARIES = "jsf.implementation.libraries"; //$NON-NLS-1$
@@ -701,6 +706,13 @@ public abstract class JSFUtils {
     }
 
     /**
+     * @return default url mapping
+     * */
+    protected String getDefaultUrlMapping() {
+        return JSF_DEFAULT_URL_MAPPING;
+    }
+
+    /**
      * This creates a servlet and servlet mapping suitable for
      * {@link #getFileUrlPath(Object, IResource, IPath)} to be able to proceed, but the returned
      * objects are not fully-initialized for any and all purposes. USE WITH CAUTION.
@@ -713,7 +725,7 @@ public abstract class JSFUtils {
     	Object servlet;
     	String sysPropServletMapping = System.getProperty(SYS_PROP_SERVLET_MAPPING);
     	if (sysPropServletMapping == null) {
-    		sysPropServletMapping = JSF_DEFAULT_URL_MAPPING;
+    		sysPropServletMapping = getDefaultUrlMapping();
     	}
     	if (isJavaEE(webApp)) {
     		servlet = WebFactory.eINSTANCE.createServlet();

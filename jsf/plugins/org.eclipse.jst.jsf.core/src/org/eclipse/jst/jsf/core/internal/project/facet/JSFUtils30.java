@@ -59,6 +59,13 @@ class JSFUtils30 extends JSFUtils23 {
     }
 
     /**
+     * @return default url mapping
+     * */
+    protected String getDefaultUrlMapping() {
+        return JSF_DEFAULT_URL_MAPPING_JAKARTA;
+    }
+
+    /**
      * @param webApp
      * @return the default file extension from the context param. Default is
      *         "xhtml" if no context param.

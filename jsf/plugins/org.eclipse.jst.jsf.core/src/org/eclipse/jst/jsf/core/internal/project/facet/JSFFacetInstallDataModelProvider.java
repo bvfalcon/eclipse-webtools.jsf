@@ -136,7 +136,7 @@ public class JSFFacetInstallDataModelProvider extends
 		} else if (propertyName.equals(SERVLET_CLASSNAME)) {
 			return getServletClassName();
 		} else if (propertyName.equals(SERVLET_URL_PATTERNS)) {
-			return new String[] {JSFUtils.JSF_DEFAULT_URL_MAPPING };
+			return new String[] { getServletUrlMapping() };
 		} else if (propertyName.equals(FACET_ID)) {
 			return IJSFCoreConstants.JSF_CORE_FACET_ID;
 		} else if (propertyName.equals(WEBCONTENT_DIR)){
@@ -153,6 +153,10 @@ public class JSFFacetInstallDataModelProvider extends
 
 	protected String getServletClassName() {
 		return JSFUtils.JSF_SERVLET_CLASS;
+	}
+
+	protected String getServletUrlMapping() {
+		return JSFUtils.JSF_DEFAULT_URL_MAPPING;
 	}
 
 	@Override
