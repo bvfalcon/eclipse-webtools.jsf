@@ -12,8 +12,6 @@
 
 package org.eclipse.jst.jsf.core.internal.project.facet;
 
-import java.util.function.Predicate;
-
 import org.eclipse.jst.jsf.common.facet.libraryprovider.UserLibraryVersionValidator;
 
 
@@ -25,8 +23,8 @@ import org.eclipse.jst.jsf.common.facet.libraryprovider.UserLibraryVersionValida
  */
 public class JSFLibraryValidator extends UserLibraryVersionValidator
 {
-    private static final Predicate<String> CLASS_NAME_IDENTIFYING_IMPLEMENTATION_JAR_PREDICATE = jarEntry -> "javax/faces/render/RenderKit.class".equals(jarEntry) || //$NON-NLS-1$
-            "jakarta/faces/render/RenderKit.class".equals(jarEntry); //$NON-NLS-1$
+    private static final String[] CLASS_NAME_IDENTIFYING_IMPLEMENTATION_JARS = new String[] {"javax/faces/render/RenderKit.class", //$NON-NLS-1$
+            "jakarta/faces/render/RenderKit.class" }; //$NON-NLS-1$
 
 
     /**
@@ -34,6 +32,6 @@ public class JSFLibraryValidator extends UserLibraryVersionValidator
      */
     public JSFLibraryValidator ()
     {
-        super(CLASS_NAME_IDENTIFYING_IMPLEMENTATION_JAR_PREDICATE);
+        super(CLASS_NAME_IDENTIFYING_IMPLEMENTATION_JARS);
     }
 }
