@@ -16,8 +16,8 @@ package org.eclipse.jst.jsf.common.facet.libraryprovider;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Enumeration;
-import java.util.function.Predicate;
 import java.util.jar.Attributes;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
@@ -44,17 +44,15 @@ public abstract class UserLibraryVersionValidator extends KeyClassesValidator
     private static final String MANIFEST_SPECIFICATION_VERSION = "Specification-Version"; //$NON-NLS-1$
     private static final String MANIFEST_IMPLEMENTATION_VERSION = "Implementation-Version"; //$NON-NLS-1$
 
-    private final Predicate<String> classNameIdentifyingImplementationJarPredicate;
-
+    private final String[] classNameIdentifyingImplementationJars;
 
     /**
-     * @param classNameIdentifyingImplementationJarPredicate
+     * @param classNameIdentifyingImplementationJars
      */
-    public UserLibraryVersionValidator (final Predicate<String> classNameIdentifyingImplementationJarPredicate)
+    public UserLibraryVersionValidator (final String... classNameIdentifyingImplementationJars)
     {
-        this.classNameIdentifyingImplementationJarPredicate = classNameIdentifyingImplementationJarPredicate;
+        this.classNameIdentifyingImplementationJars = classNameIdentifyingImplementationJars;
     }
-
 
     @Override
     public IStatus validate (final UserLibraryProviderInstallOperationConfig config)
@@ -113,7 +111,7 @@ public abstract class UserLibraryVersionValidator extends KeyClassesValidator
                 {
                     final File libraryFile = cpe.getPath().toFile();
 
-                    if (libraryFile.exists() && isCorrectLibraryJar(cpe, this.classNameIdentifyingImplementationJarPredicate))
+                    if (libraryFile.exists() && isCorrectLibraryJar(cpe, this.classNameIdentifyingImplementationJars))
                     {
                         JarFile jarFile = null;
                         try
@@ -146,7 +144,7 @@ public abstract class UserLibraryVersionValidator extends KeyClassesValidator
 
 
     private boolean isCorrectLibraryJar (final IClasspathEntry cpe,
-                                         final Predicate<String> classNameIdentifyingJarPredicate)
+                                         final String... classNameIdentifyingJars)
     throws IOException
     {
         final File libraryFile = cpe.getPath().toFile();
@@ -164,7 +162,7 @@ public abstract class UserLibraryVersionValidator extends KeyClassesValidator
             {
                 final ZipEntry entry = entries.nextElement();
                 final String entryName = entry.getName();
-                if (classNameIdentifyingJarPredicate.test(entryName))
+                if (classNameIdentifyingJars != null && Arrays.asList(classNameIdentifyingJars).contains(entryName))
                     return true;
             }
         }
