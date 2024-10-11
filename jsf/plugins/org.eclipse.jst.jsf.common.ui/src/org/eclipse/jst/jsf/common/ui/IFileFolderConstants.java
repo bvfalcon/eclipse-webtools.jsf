@@ -45,6 +45,11 @@ public interface IFileFolderConstants {
 	 */
 	public static final String EXT_JAVA = "java"; //$NON-NLS-1$
 
+	/**
+	 * jsp file extension
+	 * @deprecated : JSP is not a part of JSF
+	 */
+	public static final String EXT_JSP = "jsp"; //$NON-NLS-1$
 
 	/**
 	 * jsf file extension
