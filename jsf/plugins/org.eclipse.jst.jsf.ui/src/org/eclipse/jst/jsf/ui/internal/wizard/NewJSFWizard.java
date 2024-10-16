@@ -18,8 +18,8 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.jst.jsf.core.internal.JSFCorePlugin;
 import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
-import org.eclipse.jst.jsp.ui.internal.editor.JSPEditorPluginImageHelper;
-import org.eclipse.jst.jsp.ui.internal.editor.JSPEditorPluginImages;
+import org.eclipse.jst.jsf.ui.internal.editor.JSFEditorPluginImageHelper;
+import org.eclipse.jst.jsf.ui.internal.editor.JSFEditorPluginImages;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.INewWizard;
@@ -71,7 +71,7 @@ public class NewJSFWizard extends Wizard implements INewWizard {
 		fSelection = aSelection;
 		setWindowTitle(Messages._UI_WIZARD_NEW_TITLE);
 
-		ImageDescriptor descriptor = JSPEditorPluginImageHelper.getInstance().getImageDescriptor(JSPEditorPluginImages.IMG_OBJ_WIZBAN_NEWJSPFILE);
+		ImageDescriptor descriptor = JSFEditorPluginImageHelper.getInstance().getImageDescriptor(JSFEditorPluginImages.IMG_OBJ_WIZBAN_NEWJSFFILE);
 		setDefaultPageImageDescriptor(descriptor);
 	}
 
