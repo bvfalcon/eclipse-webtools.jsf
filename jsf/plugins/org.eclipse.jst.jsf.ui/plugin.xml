@@ -8,7 +8,7 @@
             name="%_UI_WIZARD_NAME"
             class="org.eclipse.jst.jsf.ui.internal.wizard.NewJSFWizard"
             category="org.eclipse.wst.web.ui"
-            icon="$nl$/icons/full/etool16/newjsp_wiz.gif">
+            icon="$nl$/icons/full/etool16/newjsf_wiz.gif">
             <description>%_UI_WIZARD_CREATE_NEW_FILE</description>
             <selection class="org.eclipse.core.resources.IResource" />
     </wizard>
