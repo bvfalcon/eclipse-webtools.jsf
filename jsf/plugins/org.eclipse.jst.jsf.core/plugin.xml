@@ -133,6 +133,10 @@
     </action>
 	</extension>
 
+    <extension point="org.eclipse.wst.common.project.facet.ui.images">
+        <image facet="jst.jsf" path="icons/jsf_facet.gif"/>
+    </extension>
+
   <extension
         point="org.eclipse.wst.common.project.facet.core.listeners">
      <listener
