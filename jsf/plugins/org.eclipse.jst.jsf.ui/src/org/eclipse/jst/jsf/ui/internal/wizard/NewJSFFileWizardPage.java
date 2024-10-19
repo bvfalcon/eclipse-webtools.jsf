@@ -24,11 +24,14 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.core.runtime.Preferences;
 import org.eclipse.core.runtime.content.IContentType;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
+import org.eclipse.jst.jsf.core.internal.JSFCorePlugin;
+import org.eclipse.jst.jsf.core.internal.preferences.JSFCorePreferenceNames;
 import org.eclipse.jst.jsf.core.internal.provisional.contenttype.ContentTypeIdForJSF;
 import org.eclipse.jst.jsf.core.internal.util.FacetModuleCoreSupport;
 import org.eclipse.osgi.util.NLS;
@@ -164,9 +167,8 @@ class NewJSFFileWizardPage extends WizardNewFileCreationPage {
 	String addDefaultExtension(String filename) {
 		StringBuffer newFileName = new StringBuffer(filename);
 
-		//Preferences preference = JSPCorePlugin.getDefault().getPluginPreferences();
-		//String ext = preference.getString(JSPCorePreferenceNames.DEFAULT_EXTENSION);
-		String ext = "xhtml"; //$NON-NLS-1$
+		Preferences preference = JSFCorePlugin.getDefault().getPluginPreferences();
+		String ext = preference.getString(JSFCorePreferenceNames.DEFAULT_EXTENSION);
 
 		newFileName.append("."); //$NON-NLS-1$
 		newFileName.append(ext);
