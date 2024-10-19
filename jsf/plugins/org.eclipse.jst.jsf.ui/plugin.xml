@@ -42,21 +42,15 @@
            name="%preferencepage.jsfvalidation.name"/>
      <page
            category="org.eclipse.wst.html.ui.preferences.web"
-           class="org.eclipse.jst.jsf.ui.internal.preferences.EmptyRootPreferencePage"
+           class="org.eclipse.jst.jsf.ui.internal.preferences.JSFFilesPreferencePage"
            id="org.eclipse.jst.jsf.ui.JSFRootPage"
            name="%preferencepage.jsf.name">
      </page>
      <page
-           category="org.eclipse.jst.jsf.ui.viewRoot"
-           class="org.eclipse.jst.jsf.ui.internal.preferences.JSPTagRegistryPreferencePage"
-           id="org.eclipse.jst.jsf.ui.jspTagRegistry"
-           name="%JSF_Tag_Registry_Preferences">
-     </page>
-     <page
            category="org.eclipse.jst.jsf.ui.JSFRootPage"
-           class="org.eclipse.jst.jsf.ui.internal.preferences.EmptyRootPreferencePage"
-           id="org.eclipse.jst.jsf.ui.viewRoot"
-           name="%View_Preference_Root">
+           class="org.eclipse.jst.jsf.ui.internal.preferences.JSPTagRegistryPreferencePage"
+           id="org.eclipse.jst.jsf.ui.jsfTagRegistry"
+           name="%JSF_Tag_Registry_Preferences">
      </page>
   </extension>
   
