@@ -176,7 +176,7 @@
   </extension>
     
   <extension
-     name="JSF JSP File URL"
+     name="JSF File URL"
      point="org.eclipse.jst.j2ee.web.fileURL">
      <fileURL id="jsfPage"><run class="org.eclipse.jst.jsf.core.internal.launch.JSFFileURL"/></fileURL>
   </extension>
@@ -597,5 +597,10 @@
         <describer
               class="org.eclipse.jst.jsf.core.internal.contenttype.ContentDescriberForJSF" />
       </content-type>
+    </extension>
+
+    <!-- initialize jsf core preferences -->
+    <extension point="org.eclipse.core.runtime.preferences">
+        <initializer class="org.eclipse.jst.jsf.core.internal.preferences.JSFCorePreferenceInitializer" />
     </extension>
 </plugin>
