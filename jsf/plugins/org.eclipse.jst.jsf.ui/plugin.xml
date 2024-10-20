@@ -52,6 +52,13 @@
            id="org.eclipse.jst.jsf.ui.jsfTagRegistry"
            name="%JSF_Tag_Registry_Preferences">
      </page>
+     <page
+           name="%JSF_Templates.name"
+           category="org.eclipse.jst.jsf.ui.JSFRootPage"
+           class="org.eclipse.jst.jsf.ui.internal.preferences.ui.JSFTemplatePreferencePage"
+           id="org.eclipse.wst.sse.ui.preferences.jsf.templates">
+           <keywordReference id="org.eclipse.jst.jsf.ui.templates"/>
+     </page>
   </extension>
   
   <extension point="org.eclipse.ui.propertyPages">

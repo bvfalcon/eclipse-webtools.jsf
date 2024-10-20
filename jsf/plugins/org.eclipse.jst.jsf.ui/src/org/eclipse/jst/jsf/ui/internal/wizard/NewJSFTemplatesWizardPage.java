@@ -389,7 +389,7 @@ public class NewJSFTemplatesWizardPage extends WizardPage {
 	 * @return
 	 */
 	private String getPreferencePageId() {
-		return "org.eclipse.wst.sse.ui.preferences.jsp.templates"; //$NON-NLS-1$
+		return "org.eclipse.wst.sse.ui.preferences.jsf.templates"; //$NON-NLS-1$
 	}
 
 	/**
