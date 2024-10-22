@@ -16,21 +16,33 @@ package org.eclipse.jst.jsf.core.jsfappconfig;
 
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.APPLICATION_SCOPED_ANNOTATION_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_APPLICATION_SCOPED_ANNOTATION_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_APPLICATION_SCOPED_ANNOTATION_JAKARTA_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_CONVERSATION_SCOPED_ANNOTATION_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_CONVERSATION_SCOPED_ANNOTATION_JAKARTA_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_MODEL_BEAN_ANNOTATION_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_NAMED_BEAN_ANNOTATION_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_MODEL_BEAN_ANNOTATION_JAKARTA_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_NAMED_BEAN_ANNOTATION_JAKARTA_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_REQUEST_SCOPED_ANNOTATION_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_REQUEST_SCOPED_ANNOTATION_JAKARTA_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_SESSION_SCOPED_ANNOTATION_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CDI_SESSION_SCOPED_ANNOTATION_JAKARTA_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.CUSTOM_SCOPED_ANNOTATION_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.FACES_COMPONENT_ANNOTATION_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.FACES_COMPONENT_ANNOTATION_JAKARTA_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.FACES_CONVERTER_ANNOTATION_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.FACES_CONVERTER_ANNOTATION_JAKARTA_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.FACES_RENDERER_ANNOTATION_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.FACES_RENDERER_ANNOTATION_JAKARTA_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.FACES_VALIDATOR_ANNOTATION_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.FACES_VALIDATOR_ANNOTATION_JAKARTA_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.MANAGED_BEAN_ANNOTATION_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.MANAGED_BEAN_ANNOTATION_JAKARTA_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.NONE_SCOPED_ANNOTATION_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.REFERENCED_BEAN_ANNOTATION_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.SESSION_SCOPED_ANNOTATION_CLASS;
 import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.VIEW_SCOPED_ANNOTATION_CLASS;
+import static org.eclipse.jst.jsf.core.jsfappconfig.AnnotationJSFAppConfigProvider.VIEW_SCOPED_ANNOTATION_JAKARTA_CLASS;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -85,28 +97,40 @@ public class AnnotationSearchRequestor extends SearchRequestor
 {
     private final FacesConfigType facesConfig;
     
-    private static final Set<String> ANNOATION_CANDIDATES = ofAnnotation(
+    private static final Set<String> ANNOTATION_CANDIDATES = ofAnnotation(
             MANAGED_BEAN_ANNOTATION_CLASS, 
+            MANAGED_BEAN_ANNOTATION_JAKARTA_CLASS, 
             REFERENCED_BEAN_ANNOTATION_CLASS, 
             FACES_COMPONENT_ANNOTATION_CLASS, 
+            FACES_COMPONENT_ANNOTATION_JAKARTA_CLASS, 
             FACES_CONVERTER_ANNOTATION_CLASS, 
+            FACES_CONVERTER_ANNOTATION_JAKARTA_CLASS, 
             FACES_RENDERER_ANNOTATION_CLASS,
+            FACES_RENDERER_ANNOTATION_JAKARTA_CLASS,
             FACES_VALIDATOR_ANNOTATION_CLASS, 
+            FACES_VALIDATOR_ANNOTATION_JAKARTA_CLASS, 
             CDI_NAMED_BEAN_ANNOTATION_CLASS, 
-            CDI_MODEL_BEAN_ANNOTATION_CLASS);
-    
+            CDI_MODEL_BEAN_ANNOTATION_CLASS, 
+            CDI_NAMED_BEAN_ANNOTATION_JAKARTA_CLASS, 
+            CDI_MODEL_BEAN_ANNOTATION_JAKARTA_CLASS);
+
     private static final Set<String> SCOPED_ANNOTATION_CANDIDATES = ofAnnotation(
             NONE_SCOPED_ANNOTATION_CLASS,
             VIEW_SCOPED_ANNOTATION_CLASS,
+            VIEW_SCOPED_ANNOTATION_JAKARTA_CLASS,
             SESSION_SCOPED_ANNOTATION_CLASS,
             APPLICATION_SCOPED_ANNOTATION_CLASS,
             CUSTOM_SCOPED_ANNOTATION_CLASS);
 
     private static final Set<String> CDI_SCOPED_ANNOTATION_CANDIDATES = ofAnnotation(
             CDI_REQUEST_SCOPED_ANNOTATION_CLASS,
+            CDI_REQUEST_SCOPED_ANNOTATION_JAKARTA_CLASS,
             CDI_CONVERSATION_SCOPED_ANNOTATION_CLASS,
+            CDI_CONVERSATION_SCOPED_ANNOTATION_JAKARTA_CLASS,
             CDI_SESSION_SCOPED_ANNOTATION_CLASS,
-            CDI_APPLICATION_SCOPED_ANNOTATION_CLASS);
+            CDI_SESSION_SCOPED_ANNOTATION_JAKARTA_CLASS,
+            CDI_APPLICATION_SCOPED_ANNOTATION_CLASS,
+            CDI_APPLICATION_SCOPED_ANNOTATION_JAKARTA_CLASS);
  
     private static Set<String> ofAnnotation(String... annotationClasses)
     {
@@ -127,11 +151,6 @@ public class AnnotationSearchRequestor extends SearchRequestor
     @Override
     public void acceptSearchMatch(SearchMatch match) throws CoreException
     {
-        if (match.getAccuracy() != SearchMatch.A_ACCURATE)
-        {
-            return;
-        }
-
         Object element = match.getElement();
         if (!(element instanceof IType))
         {
@@ -164,7 +183,7 @@ public class AnnotationSearchRequestor extends SearchRequestor
         String annotationClassName = beanIntrospector.resolveFullQualifiedTypeName(annotationType);
         if (annotationClassName != null)
         {
-            if (MANAGED_BEAN_ANNOTATION_CLASS.equals(annotationClassName))
+            if (MANAGED_BEAN_ANNOTATION_CLASS.equals(annotationClassName) || MANAGED_BEAN_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
             {
                 addManagedBean(annotation, type, beanIntrospector);
             }
@@ -172,27 +191,27 @@ public class AnnotationSearchRequestor extends SearchRequestor
             {
                 addReferencedBean(annotation, type);
             }
-            else if (FACES_COMPONENT_ANNOTATION_CLASS.equals(annotationClassName))
+            else if (FACES_COMPONENT_ANNOTATION_CLASS.equals(annotationClassName) || FACES_COMPONENT_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
             {
                 addComponent(annotation, type);
             }
-            else if (FACES_CONVERTER_ANNOTATION_CLASS.equals(annotationClassName))
+            else if (FACES_CONVERTER_ANNOTATION_CLASS.equals(annotationClassName) || FACES_CONVERTER_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
             {
                 addConverter(annotation, type);
             }
-            else if (FACES_RENDERER_ANNOTATION_CLASS.equals(annotationClassName))
+            else if (FACES_RENDERER_ANNOTATION_CLASS.equals(annotationClassName) || FACES_RENDERER_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
             {
                 addRenderer(annotation, type);
             }
-            else if (FACES_VALIDATOR_ANNOTATION_CLASS.equals(annotationClassName))
+            else if (FACES_VALIDATOR_ANNOTATION_CLASS.equals(annotationClassName) || FACES_VALIDATOR_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
             {
                 addValidator(annotation, type);
             }
-            else if (CDI_NAMED_BEAN_ANNOTATION_CLASS.equals(annotationClassName))
+            else if (CDI_NAMED_BEAN_ANNOTATION_CLASS.equals(annotationClassName) || CDI_NAMED_BEAN_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
             {
                 addCDINamedBean(annotation, beanIntrospector, type);
             }
-            else if (CDI_MODEL_BEAN_ANNOTATION_CLASS.equals(annotationClassName))
+            else if (CDI_MODEL_BEAN_ANNOTATION_CLASS.equals(annotationClassName) || CDI_MODEL_BEAN_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
             {
                 addCDIModelBean(type);
             }
@@ -201,7 +220,7 @@ public class AnnotationSearchRequestor extends SearchRequestor
 
     private boolean isAnnotationCandidate(String annotationType)
     {
-        return ANNOATION_CANDIDATES.contains(annotationType);
+        return ANNOTATION_CANDIDATES.contains(annotationType);
     }
 
     private void addReferencedBean(IAnnotation referencedBeanAnnotation, IType beanType)
@@ -303,7 +322,7 @@ public class AnnotationSearchRequestor extends SearchRequestor
         }
         for (IAnnotation annotation : annotations)
         {
-            String scope = processScopeAnnoation(beanType, beanIntrospector, annotation);
+            String scope = processScopeAnnotation(beanType, beanIntrospector, annotation);
             if (scope != null)
             {
                 beanScopeString = scope;
@@ -312,7 +331,7 @@ public class AnnotationSearchRequestor extends SearchRequestor
         return beanScopeString;
     }
 
-    private String processScopeAnnoation(IType beanType, JDTBeanIntrospector beanIntrospector, IAnnotation annotation) throws JavaModelException
+    private String processScopeAnnotation(IType beanType, JDTBeanIntrospector beanIntrospector, IAnnotation annotation) throws JavaModelException
     {
         if (! annotation.exists())
         {
@@ -332,7 +351,7 @@ public class AnnotationSearchRequestor extends SearchRequestor
         {
             return "none"; //$NON-NLS-1$
         }
-        else if (VIEW_SCOPED_ANNOTATION_CLASS.equals(annotationClassName))
+        else if (VIEW_SCOPED_ANNOTATION_CLASS.equals(annotationClassName) || VIEW_SCOPED_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
         {
             return "view"; //$NON-NLS-1$
         }
@@ -632,19 +651,19 @@ public class AnnotationSearchRequestor extends SearchRequestor
         {
             return null;
         }
-        if (CDI_REQUEST_SCOPED_ANNOTATION_CLASS.equals(annotationClassName))
+        if (CDI_REQUEST_SCOPED_ANNOTATION_CLASS.equals(annotationClassName) || CDI_REQUEST_SCOPED_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
         {
             return "request"; //$NON-NLS-1$
         }
-        else if (CDI_CONVERSATION_SCOPED_ANNOTATION_CLASS.equals(annotationClassName))
+        else if (CDI_CONVERSATION_SCOPED_ANNOTATION_CLASS.equals(annotationClassName) || CDI_CONVERSATION_SCOPED_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
         {
             return "conversation"; //$NON-NLS-1$
         }
-        else if (CDI_SESSION_SCOPED_ANNOTATION_CLASS.equals(annotationClassName))
+        else if (CDI_SESSION_SCOPED_ANNOTATION_CLASS.equals(annotationClassName) || CDI_SESSION_SCOPED_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
         {
             return "session"; //$NON-NLS-1$
         }
-        else if (CDI_APPLICATION_SCOPED_ANNOTATION_CLASS.equals(annotationClassName))
+        else if (CDI_APPLICATION_SCOPED_ANNOTATION_CLASS.equals(annotationClassName) || CDI_APPLICATION_SCOPED_ANNOTATION_JAKARTA_CLASS.equals(annotationClassName))
         {
             return "application"; //$NON-NLS-1$
         }
@@ -681,15 +700,15 @@ public class AnnotationSearchRequestor extends SearchRequestor
                     {
                         String resolvedAnnotationClassName = new StringBuffer(resolvedAnnotationTypes[0][0]).append('.')
                                         .append(resolvedAnnotationTypes[0][1]).toString();
-                        if (CDI_CONVERSATION_SCOPED_ANNOTATION_CLASS.equals(resolvedAnnotationClassName))
+                        if (CDI_CONVERSATION_SCOPED_ANNOTATION_CLASS.equals(resolvedAnnotationClassName) || CDI_CONVERSATION_SCOPED_ANNOTATION_JAKARTA_CLASS.equals(resolvedAnnotationClassName))
                         {
                             beanScopeString = "conversation"; //$NON-NLS-1$
                         }
-                        else if (CDI_SESSION_SCOPED_ANNOTATION_CLASS.equals(resolvedAnnotationClassName))
+                        else if (CDI_SESSION_SCOPED_ANNOTATION_CLASS.equals(resolvedAnnotationClassName) || CDI_SESSION_SCOPED_ANNOTATION_JAKARTA_CLASS.equals(resolvedAnnotationClassName))
                         {
                             beanScopeString = "session"; //$NON-NLS-1$
                         }
-                        else if (CDI_APPLICATION_SCOPED_ANNOTATION_CLASS.equals(resolvedAnnotationClassName))
+                        else if (CDI_APPLICATION_SCOPED_ANNOTATION_CLASS.equals(resolvedAnnotationClassName) || CDI_APPLICATION_SCOPED_ANNOTATION_JAKARTA_CLASS.equals(resolvedAnnotationClassName))
                         {
                             beanScopeString = "application"; //$NON-NLS-1$
                         }
