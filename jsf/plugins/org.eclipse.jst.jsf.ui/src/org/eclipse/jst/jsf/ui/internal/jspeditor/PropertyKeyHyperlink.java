@@ -15,7 +15,7 @@ import org.eclipse.jst.jsf.context.symbol.IMapTypeDescriptor;
 import org.eclipse.jst.jsf.context.symbol.IPropertySymbol;
 import org.eclipse.jst.jsf.context.symbol.internal.impl.ResourceBundleKeyMapSource;
 import org.eclipse.jst.jsf.designtime.internal.symbols.ResourceBundleMapSource;
-import org.eclipse.jst.jsf.ui.internal.JSFUiPlugin;
+import org.eclipse.jst.jsf.ui.internal.JSFUIPlugin;
 import org.eclipse.jst.jsf.ui.internal.Messages;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
@@ -73,7 +73,7 @@ public class PropertyKeyHyperlink implements IHyperlink {
 				((ITextEditor) editor).selectAndReveal(offset, _fRegion.getLength());
 			}
 		} catch (Exception e) {
-			JSFUiPlugin.log(IStatus.ERROR, "Error opening properties file: " + e.getMessage(), e); //$NON-NLS-1$
+			JSFUIPlugin.log(IStatus.ERROR, "Error opening properties file: " + e.getMessage(), e); //$NON-NLS-1$
 		}
 	}
 
