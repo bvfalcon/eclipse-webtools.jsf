@@ -1,6 +1,12 @@
 package org.eclipse.jst.jsf.ui.internal.jspeditor;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.jface.text.IRegion;
 import org.eclipse.jface.text.hyperlink.IHyperlink;
@@ -63,12 +69,60 @@ public class PropertyKeyHyperlink implements IHyperlink {
 			IFile rbBaseNameFile = resBundleMapSource.getBundleFile();
 			IEditorPart editor = IDE.openEditor(page, rbBaseNameFile);
 			if (_keySymbol != null) {
-				byte[] content = rbBaseNameFile.readAllBytes();
-				int offset = new String(content, rbBaseNameFile.getCharset()).indexOf(_keySymbol.getName());
+				int offset = getOffset(rbBaseNameFile, _keySymbol.getName());
 				((ITextEditor) editor).selectAndReveal(offset, _fRegion.getLength());
 			}
 		} catch (Exception e) {
 			JSFUiPlugin.log(IStatus.ERROR, "Error opening properties file: " + e.getMessage(), e); //$NON-NLS-1$
+		}
+	}
+
+	private int getOffset(IFile propFile, String key) throws IOException, CoreException {
+		int eolLength = getLineEndingLength(propFile);
+		InputStream in = null;
+		try {
+			in = propFile.getContents();
+			BufferedReader reader = new BufferedReader(new InputStreamReader(in, propFile.getCharset()));
+			int offset = 0;
+			String line;
+			while ((line = reader.readLine()) != null) {
+				if (line.startsWith(key)) {
+					return offset;
+				}
+				offset += (line.length() + eolLength);
+			}
+			return -1;
+		} finally {
+			if (in != null) {
+				in.close();
+			}
+		}
+	}
+
+	private int getLineEndingLength(IFile file) throws IOException, CoreException {
+		final byte CR = 0x0D;
+		final byte LF = 0x0A;
+		InputStream in = null;
+		try {
+			in = file.getContents();
+			byte[] bytes = new byte[256];
+			int bytesRead = in.read(bytes);
+			while (bytesRead != -1) {
+				for (int i = 0; i < bytes.length-2; i++) {
+					if (bytes[i] == CR && bytes[i+1] == LF) {
+						return 2;
+					}
+					if (bytes[i] == CR || bytes[i] == LF) {
+						return 1;
+					}
+				}
+				bytesRead = in.read(bytes);
+			}
+			return System.lineSeparator().length();
+		} finally {
+			if (in != null) {
+				in.close();
+			}
 		}
 	}
 }
