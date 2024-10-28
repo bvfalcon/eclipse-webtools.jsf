@@ -86,7 +86,7 @@ public class PropertyKeyHyperlink implements IHyperlink {
 			int offset = 0;
 			String line;
 			while ((line = reader.readLine()) != null) {
-				if (line.startsWith(key)) {
+				if (line.startsWith(key) && line.substring(line.indexOf(key) + key.length()).trim().startsWith("=")) {
 					return offset;
 				}
 				offset += (line.length() + eolLength);
