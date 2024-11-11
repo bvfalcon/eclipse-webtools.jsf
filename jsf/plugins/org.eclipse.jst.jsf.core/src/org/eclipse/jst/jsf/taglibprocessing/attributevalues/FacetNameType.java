@@ -38,7 +38,7 @@ public class FacetNameType extends StringType {
 				return values;
 			}
 			values = Collections.emptyList();
-			if (getStructuredDocumentContext() != null) {
+			if (getStructuredDocumentContext() == null) {
 				return values;
 			}
 			IDOMContextResolver resolver = IStructuredDocumentContextResolverFactory.INSTANCE.getDOMContextResolver(getStructuredDocumentContext());
