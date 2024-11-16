@@ -52,7 +52,9 @@
 	
 		</entity>
 		<entity id="execute">
-		
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.SearchExpressionType</value>
+			</trait>
 		</entity>
 		<entity id="immediate">
 			<trait id="attribute-value-runtime-type">
@@ -91,9 +93,10 @@
 			</trait>			
 		</entity>
 		<entity id="render">
-		
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.SearchExpressionType</value>
+			</trait>
 		</entity>
-		
 	</entity>	
 	<entity id="attribute" type="tag">
 		<include-entity-group id="common-core-attributes"/>
@@ -570,7 +573,9 @@
 			</trait>				
 		</entity>
 		<entity id="for">
-
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.SearchExpressionType</value>
+			</trait>
 		</entity>					
 	</entity>
 	<entity id="validateDoubleRange" type="tag">
@@ -613,7 +618,9 @@
 			</trait>				
 		</entity>
 		<entity id="for">
-
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.SearchExpressionType</value>
+			</trait>
 		</entity>			
 	</entity>
 	<entity id="validateLength" type="tag">
@@ -658,7 +665,9 @@
 			</trait>				
 		</entity>
 		<entity id="for">
-
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.SearchExpressionType</value>
+			</trait>
 		</entity>				
 	</entity>
 	<entity id="validateLongRange" type="tag">
@@ -701,7 +710,9 @@
 			</trait>				
 		</entity>
 		<entity id="for">
-
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.SearchExpressionType</value>
+			</trait>
 		</entity>		
 	</entity>
 	<entity id="validateRegex" type="tag">
@@ -731,7 +742,9 @@
 			</trait>				
 		</entity>
 		<entity id="for">
-
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.SearchExpressionType</value>
+			</trait>
 		</entity>					
 	</entity>	
 	<entity id="validateRequired" type="tag">
@@ -753,7 +766,9 @@
 			</trait>				
 		</entity>
 		<entity id="for">
-
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.SearchExpressionType</value>
+			</trait>
 		</entity>					
 	</entity>		
 	<entity id="validator" type="tag">
@@ -791,7 +806,9 @@
 			</trait>				
 		</entity>
 		<entity id="for">
-
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.SearchExpressionType</value>
+			</trait>
 		</entity>		
 	</entity>
 	<entity id="valueChangeListener" type="tag">
@@ -953,7 +970,9 @@
 			</trait>	
 		</entity>	
 		<entity id="for">
-		
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.SearchExpressionType</value>
+			</trait>
 		</entity>	
 	</entity>
 	<entityGroup id="common-core-attributes" type="tag">
