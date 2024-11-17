@@ -49,7 +49,9 @@
 			</trait>
 		</entity>
 		<entity id="event">
-	
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.AjaxEventType</value>
+			</trait>
 		</entity>
 		<entity id="execute">
 			<trait id="attribute-value-runtime-type">

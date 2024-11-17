@@ -56,6 +56,22 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>click</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -106,6 +122,25 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>change</item>
+				<item>click</item>
+				<item>action</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+				<item>select</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -176,6 +211,23 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>click</item>
+				<item>action</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -212,6 +264,27 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-facets">
+			<value xsi:type="mdt:ListOfValues">
+				<item>header</item>
+				<item>footer</item>
+				<item>caption</item>
+			</value>
+		</trait>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>click</item>
+				<item>dblclick</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -252,6 +325,20 @@
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
 		<include-entity-group id="form-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>click</item>
+				<item>dblclick</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -286,6 +373,20 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>click</item>
+				<item>dblclick</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -340,6 +441,25 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>change</item>
+				<item>valueChange</item>
+				<item>click</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+				<item>select</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -365,6 +485,25 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>change</item>
+				<item>valueChange</item>
+				<item>click</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+				<item>select</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -404,6 +543,25 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>change</item>
+				<item>valueChange</item>
+				<item>click</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+				<item>select</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -428,6 +586,23 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>click</item>
+				<item>action</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -539,6 +714,22 @@
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
 		<include-entity-group id="for-entity"/>		
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>click</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -555,6 +746,23 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>click</item>
+				<item>action</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -625,6 +833,27 @@
 		</trait>		
 	</entity>
 	<entity id="panelGrid" type="tag">
+		<trait id="valid-facets">
+			<value xsi:type="mdt:ListOfValues">
+				<item>header</item>
+				<item>footer</item>
+				<item>caption</item>
+			</value>
+		</trait>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>click</item>
+				<item>dblclick</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<include-entity-group id="basic-jsf-html-attributes"/>
 		<include-entity-group id="jsf-table-attributes"/>
 		<include-entity-group id="common-jsf-html-attributes"/>
@@ -645,6 +874,20 @@
 		<include-entity-group id="basic-jsf-html-attributes"/>
 		<include-entity-group id="common-html-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>		
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>click</item>
+				<item>dblclick</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -660,6 +903,25 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>change</item>
+				<item>valueChange</item>
+				<item>click</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+				<item>select</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -697,6 +959,25 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>change</item>
+				<item>valueChange</item>
+				<item>click</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+				<item>select</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -756,6 +1037,24 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>change</item>
+				<item>valueChange</item>
+				<item>click</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -795,6 +1094,24 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>		
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>change</item>
+				<item>valueChange</item>
+				<item>click</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -833,6 +1150,24 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>change</item>
+				<item>valueChange</item>
+				<item>click</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -872,6 +1207,24 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>change</item>
+				<item>valueChange</item>
+				<item>click</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
@@ -910,6 +1263,25 @@
 		<include-entity-group id="common-language-attributes" uri="HTML"/>
 		<include-entity-group id="common-core-attributes" uri="HTML"/>
 		<include-entity-group id="common-event-attributes" uri="HTML"/>
+		<trait id="valid-ajax-events">
+			<value xsi:type="mdt:ListOfValues">
+				<item>blur</item>
+				<item>change</item>
+				<item>click</item>
+				<item>valueChange</item>
+				<item>dblclick</item>
+				<item>focus</item>
+				<item>keydown</item>
+				<item>keypress</item>
+				<item>keyup</item>
+				<item>mousedown</item>
+				<item>mousemove</item>
+				<item>mouseout</item>
+				<item>mouseover</item>
+				<item>mouseup</item>
+				<item>select</item>
+			</value>
+		</trait>
 		<trait id="quick-edit-tab">
 			<value xsi:type="qe:QuickEditTabSections">
 				<section id="id"/>
