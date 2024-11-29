@@ -1,6 +1,8 @@
 package org.eclipse.jst.jsf.taglibprocessing.attributevalues;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,22 +24,40 @@ import org.w3c.dom.Node;
  * */
 public class SearchExpressionType extends StringType {
 	private static final String delimiter = " "; //$NON-NLS-1$
-	
+	private static final String[] specialCases = { "@all", "@none"}; //$NON-NLS-1$ //$NON-NLS-2$
+
 	private Map<String, String> standardExpressions;
 
 	@Override
 	public List<PossibleValue> getPossibleValues() {
-		List<PossibleValue> possibleValues = super.getPossibleValues();
 		String currentAttrValue = getCurrentAttrValue();
+		if (containsSpecialCase(currentAttrValue)) {
+			return Collections.emptyList();
+		}
 		if (currentAttrValue.length() > 0 && !currentAttrValue.endsWith(delimiter)) {
 			currentAttrValue += delimiter;
 		}
 		final String currentValue = currentAttrValue;
+		List<PossibleValue> possibleValues = super.getPossibleValues();
 		possibleValues = removeAlreadySelected(possibleValues, currentAttrValue);
 		possibleValues = setDefaultFirst(possibleValues);
+		final List<String> specialCasesList = Arrays.asList(specialCases);
 		return possibleValues.stream()
-			.peek(val -> val.setValue(currentValue + val.getValue()))
+			.peek(val -> val.setValue(specialCasesList.indexOf(val.getValue()) == -1 ?
+					currentValue + val.getValue() : val.getValue()))
 			.collect(Collectors.toList());
+	}
+
+	private boolean containsSpecialCase(String value) {
+		if (value == null) {
+			return false;
+		}
+		for (String specialCase : specialCases) {
+			if (value.indexOf(specialCase) != -1) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private List<PossibleValue> removeAlreadySelected(List<PossibleValue> proposals, String selectionString) {
