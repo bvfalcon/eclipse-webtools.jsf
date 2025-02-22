@@ -72,6 +72,12 @@ public final class JSPSourceUtil
                             return new Region(resolver.getStartOffset(),
                                     resolver.getLength());
                         }
+                        else if (regionType == DOMRegionContext.XML_CONTENT)
+                        {
+                            return new Region(expression.getDocumentContext()
+                                    .getDocumentPosition(), expression
+                                    .getText().length());
+                        }
                     }
                 }
             }
