@@ -39,4 +39,4 @@ Export-Package: org.eclipse.jst.pagedesigner.jsf.core.dom;x-internal:=true,
  org.eclipse.jst.pagedesigner.jsf.ui.elementedit.util;x-internal:=true,
  org.eclipse.jst.pagedesigner.jsf.ui.sections;x-internal:=true,
  org.eclipse.jst.pagedesigner.jsf.ui.util;x-internal:=true
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21

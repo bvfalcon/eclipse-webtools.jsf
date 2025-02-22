@@ -38,5 +38,5 @@ Export-Package: org.eclipse.jst.jsf.common.metadata.tests;x-internal:=true,
  org.eclipse.jst.jsf.metadata.tests.metadataprocessing.types;x-internal:=true,
  org.eclipse.jst.jsf.metadata.tests.taglibprocessing;x-internal:=true
 Plugin-Class: org.eclipse.jst.jsf.metadata.tests.MetadataTestsPlugin
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-Vendor: %Bundle-Vendor.0

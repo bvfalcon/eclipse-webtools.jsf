@@ -47,7 +47,7 @@ Export-Package: org.eclipse.jst.jsf.ui.internal;x-friends:="org.eclipse.jst.jsf.
  org.eclipse.jst.jsf.ui.internal.project.facet;x-friends:="org.eclipse.jst.jsf.ui.tests",
  org.eclipse.jst.jsf.ui.internal.tagregistry;x-internal:=true,
  org.eclipse.jst.jsf.ui.internal.validation;x-internal:=true
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Import-Package: org.eclipse.ui.texteditor.templates,
  org.eclipse.wst.css.core.text,
  org.eclipse.wst.css.ui,
