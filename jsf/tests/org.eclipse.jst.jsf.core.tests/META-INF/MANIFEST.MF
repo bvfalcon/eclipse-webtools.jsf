@@ -55,4 +55,4 @@ Export-Package: org.eclipse.jst.jsf.core.tests;x-friends:="org.eclipse.jst.jsf.u
    org.eclipse.jst.pagedesigner.tests",
  org.eclipse.jst.jsf.core.tests.validation
 Plugin-Class: org.eclipse.jst.jsf.core.tests.TestsPlugin
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21

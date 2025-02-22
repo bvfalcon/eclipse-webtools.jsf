@@ -39,5 +39,5 @@ Export-Package: org.eclipse.jst.jsf.test.util,
  org.eclipse.jst.jsf.test.util.mock.osgi,
  org.eclipse.jst.jsf.test.util.mock.smodel
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-Vendor: %Bundle-Vendor.0

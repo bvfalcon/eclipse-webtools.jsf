@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jst.jsf.common.runtime;bundle-version="[1.0.0,2.0.0)",
  org.junit;bundle-version="3.8.1"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: org.eclipse.jst.jsf.common.runtime.tests.model
 Bundle-Vendor: %Bundle-Vendor.0
 Bundle-Localization: plugin

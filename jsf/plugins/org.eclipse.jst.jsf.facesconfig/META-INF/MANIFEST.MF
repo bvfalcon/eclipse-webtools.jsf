@@ -30,4 +30,4 @@ Export-Package: org.eclipse.jst.jsf.facesconfig,
  org.eclipse.jst.jsf.facesconfig.internal.nls;x-internal:=true,
  org.eclipse.jst.jsf.facesconfig.internal.translator;x-internal:=true,
  org.eclipse.jst.jsf.facesconfig.util
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21

@@ -10,6 +10,6 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)",
  org.eclipse.jst.jsf.core;bundle-version="[1.1.0,2.0.0)",
  org.eclipse.jst.jsf.common;bundle-version="[1.0.0,2.0.0)"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: org.eclipse.jst.jsf.metadataprocessingtests2;x-internal:=true
 Bundle-Vendor: %Bundle-Vendor.0
