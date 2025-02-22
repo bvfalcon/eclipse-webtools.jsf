@@ -55,4 +55,4 @@ Export-Package: org.eclipse.jst.jsf.facesconfig.ui;x-internal:=true,
  org.eclipse.jst.jsf.facesconfig.ui.section;x-internal:=true,
  org.eclipse.jst.jsf.facesconfig.ui.util;x-internal:=true,
  org.eclipse.jst.jsf.facesconfig.ui.wizard;x-internal:=true
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21

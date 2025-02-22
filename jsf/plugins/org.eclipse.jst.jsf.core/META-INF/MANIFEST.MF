@@ -124,5 +124,5 @@ Export-Package: org.eclipse.jst.jsf.core,
  org.eclipse.jst.jsf.validation.internal.el.operators;x-internal:=true,
  org.eclipse.jst.jsf.validation.internal.facelet,
  org.eclipse.jst.jsf.validation.internal.strategy;x-internal:=true
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Import-Package: org.eclipse.core.filebuffers

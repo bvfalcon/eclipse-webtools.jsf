@@ -27,4 +27,4 @@ Require-Bundle: org.eclipse.jst.jsf.core;bundle-version="[1.1.0,2.0.0)",
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.jst.jsf.ui.tests;x-internal:=true,
  org.eclipse.jst.jsf.ui.tests.util;x-internal:=true
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21

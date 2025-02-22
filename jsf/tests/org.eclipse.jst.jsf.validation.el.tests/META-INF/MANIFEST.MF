@@ -28,7 +28,7 @@ Require-Bundle: org.eclipse.ui;bundle-version="[3.2.0,4.0.0)",
  org.eclipse.emf.ecore;bundle-version="2.4.1",
  org.eclipse.jst.common.project.facet.core
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: org.eclipse.jst.jsf.validation.el.tests;x-internal:=true,
  org.eclipse.jst.jsf.validation.el.tests.base;x-internal:=true,
  org.eclipse.jst.jsf.validation.el.tests.jsp;x-internal:=true,

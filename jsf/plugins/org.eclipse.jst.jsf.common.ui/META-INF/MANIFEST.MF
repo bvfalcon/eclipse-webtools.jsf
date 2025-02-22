@@ -34,4 +34,4 @@ Export-Package: org.eclipse.jst.jsf.common.ui;x-friends:="org.eclipse.jst.pagede
  org.eclipse.jst.jsf.common.ui.internal.utils;x-friends:="org.eclipse.jst.pagedesigner,org.eclipse.jst.jsf.facesconfig.ui,org.eclipse.jst.pagedesigner.jsf.ui"
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %pluginProvider
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
