@@ -185,7 +185,7 @@ public final class ContentAssistParser
                         break;
                     case ContentAssistStrategy.PREFIX_TYPE_DOT_COMPLETION:
                         symbol = SymbolResolveUtil.getSymbolForVariableSuffixExpr(context, _symbolPrefix
-                                + "." + substring(_fullText, region), _symbolEndPos == (_fullText != null ? _fullText.length():0)); //$NON-NLS-1$
+                                + "." + substring(_fullText, region)); //$NON-NLS-1$
                         break;
                 }
                 if (symbol != null) { return new SymbolInfo(symbol, region); }

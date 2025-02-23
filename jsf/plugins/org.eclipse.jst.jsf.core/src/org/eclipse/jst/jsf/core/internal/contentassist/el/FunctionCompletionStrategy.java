@@ -67,7 +67,7 @@ public class FunctionCompletionStrategy extends ContentAssistStrategy
         String text = getValue();
         if (text != null)
         {
-            final ISymbol symbol = SymbolResolveUtil.getSymbolForVariableSuffixExpr(context, getValue(), false);
+            final ISymbol symbol = SymbolResolveUtil.getSymbolForVariableSuffixExpr(context, getValue());
     
             // if we get a completion symbol, get it's proposals
             if (symbol instanceof IObjectSymbol)
