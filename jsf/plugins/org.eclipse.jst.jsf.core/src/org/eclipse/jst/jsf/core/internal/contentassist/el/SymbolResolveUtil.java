@@ -68,14 +68,10 @@ public class SymbolResolveUtil {
 	 *            the IStructuredDocumentContext
 	 * @param fullName -
 	 *            full name of the suffix (e. g. bean.property1.property2)
-	 * @param isLastSuffix -
-	 *            set true if there follows no other suffix. Method names will
-	 *            only be considered if true
 	 * @return ISymbol. May be null.
 	 */
 	public static ISymbol getSymbolForVariableSuffixExpr(
-			final IStructuredDocumentContext context, final String fullName,
-			final boolean isLastSuffix) {
+			final IStructuredDocumentContext context, final String fullName) {
 	    if (fullName == null)
 	    {
 	        return null;
@@ -94,24 +90,20 @@ public class SymbolResolveUtil {
 			if (symbol instanceof IBeanInstanceSymbol
 					&& ((IBeanInstanceSymbol) symbol).isTypeResolved()) {
 				for (int curSuffixIdx = 1; curSuffixIdx < ids.length; curSuffixIdx++) {
-					if (isLastSuffix && curSuffixIdx == ids.length - 1
-							&& isMethodBindingExpected(context)) {
-						/*
-						 * TODO Take into acount required method signature,
-						 * since there may be different methods with the same
-						 * name
-						 */
-						return symbolResolver.getMethod((IObjectSymbol) symbol,
-								ids[curSuffixIdx]);
-					}
-
 					final ISymbol property = symbolResolver.getProperty(symbol,
 							ids[curSuffixIdx]);
 
 					if (property == null) {
-						return null;
+						/*
+						 * TODO Take into account required method signature,
+						 * since there may be different methods with the same
+						 * name
+						 */
+						symbol = symbolResolver.getMethod((IObjectSymbol) symbol,
+								ids[curSuffixIdx]);
+					} else {
+						symbol = property;
 					}
-					symbol = property;
 				}
 				return symbol;
 			} else if (symbol instanceof IComponentSymbol
