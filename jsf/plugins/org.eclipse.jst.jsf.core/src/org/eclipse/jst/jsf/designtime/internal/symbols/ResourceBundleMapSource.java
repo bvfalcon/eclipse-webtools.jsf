@@ -39,7 +39,7 @@ import org.eclipse.jst.jsf.context.symbol.internal.impl.IMapSourceInfo;
 import org.eclipse.jst.jsf.core.internal.JSFCorePlugin;
 import org.eclipse.jst.jsf.core.internal.tld.LoadBundleUtil;
 
-class ResourceBundleMapSource extends AbstractMap implements IMapSourceInfo
+public class ResourceBundleMapSource extends AbstractMap implements IMapSourceInfo
 {
     private static final String   PROPERTY_QUALIFIER =
     	"org.eclipse.jst.jsf.designtime.internal.jsp"; //$NON-NLS-1$
@@ -385,5 +385,10 @@ class ResourceBundleMapSource extends AbstractMap implements IMapSourceInfo
         {
             cache.putCachedData(key, value, _lastModificationStamp);
         }
+    }
+
+    public IFile getBundleFile()
+    {
+        return _bundleFile;
     }
 }

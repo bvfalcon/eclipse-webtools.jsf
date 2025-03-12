@@ -357,6 +357,11 @@ public class Messages extends NLS {
     /**
      * see messages.properties
      */
+    public static String Hyperlink_Open_PropertiesFile;
+
+    /**
+     * see messages.properties
+     */
     public static String _UI_WIZARD_NEW_TITLE;
 
     /**

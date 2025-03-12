@@ -22,7 +22,8 @@ import org.eclipse.jst.jsf.context.resolver.structureddocument.IDOMContextResolv
 import org.eclipse.jst.jsf.context.resolver.structureddocument.IStructuredDocumentContextResolverFactory;
 import org.eclipse.jst.jsf.context.resolver.structureddocument.ITaglibContextResolver;
 import org.eclipse.jst.jsf.context.structureddocument.IStructuredDocumentContext;
-import org.eclipse.jst.jsf.context.symbol.IInstanceSymbol;
+import org.eclipse.jst.jsf.context.symbol.IBeanInstanceSymbol;
+import org.eclipse.jst.jsf.context.symbol.IComponentSymbol;
 import org.eclipse.jst.jsf.context.symbol.IObjectSymbol;
 import org.eclipse.jst.jsf.context.symbol.ISymbol;
 import org.eclipse.jst.jsf.designtime.resolver.ISymbolContextResolver;
@@ -90,8 +91,8 @@ public class SymbolResolveUtil {
 				.getInstance().getSymbolContextResolver(context);
 		if (symbolResolver != null) {
 			ISymbol symbol = symbolResolver.getVariable(ids[0]);
-			if (symbol instanceof IInstanceSymbol
-					&& ((IInstanceSymbol) symbol).isTypeResolved()) {
+			if (symbol instanceof IBeanInstanceSymbol
+					&& ((IBeanInstanceSymbol) symbol).isTypeResolved()) {
 				for (int curSuffixIdx = 1; curSuffixIdx < ids.length; curSuffixIdx++) {
 					if (isLastSuffix && curSuffixIdx == ids.length - 1
 							&& isMethodBindingExpected(context)) {
@@ -113,6 +114,18 @@ public class SymbolResolveUtil {
 					symbol = property;
 				}
 				return symbol;
+			} else if (symbol instanceof IComponentSymbol
+					&& ((IComponentSymbol) symbol).isTypeResolved()) {
+				for (int curSuffixIdx = 1; curSuffixIdx < ids.length; curSuffixIdx++) {
+					final ISymbol property = symbolResolver.getProperty(symbol,
+							ids[curSuffixIdx]);
+	
+					if (property == null) {
+						return null;
+					}
+					symbol = property;
+				}
+			return symbol;
 			}
 		}
 		return null;
