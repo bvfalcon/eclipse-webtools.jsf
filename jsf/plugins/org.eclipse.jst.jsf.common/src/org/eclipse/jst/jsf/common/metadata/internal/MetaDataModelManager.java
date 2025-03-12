@@ -251,19 +251,37 @@ public final class MetaDataModelManager extends AbstractMetaDataModelManager {
 					"http://xmlns.jcp.org/jsf/composite", //$NON-NLS-1$
 					"http://java.sun.com/jsf/composite"); //$NON-NLS-1$
 			aliasMap.put(
+					"jakarta.faces.composite", //$NON-NLS-1$
+					"http://java.sun.com/jsf/composite"); //$NON-NLS-1$
+			aliasMap.put(
 					"http://xmlns.jcp.org/jsf/core", //$NON-NLS-1$
+					"http://java.sun.com/jsf/core"); //$NON-NLS-1$
+			aliasMap.put(
+					"jakarta.faces.core", //$NON-NLS-1$
 					"http://java.sun.com/jsf/core"); //$NON-NLS-1$
 			aliasMap.put(
 					"http://xmlns.jcp.org/jsf/html", //$NON-NLS-1$
 					"http://java.sun.com/jsf/html"); //$NON-NLS-1$
 			aliasMap.put(
+					"jakarta.faces.html", //$NON-NLS-1$
+					"http://java.sun.com/jsf/html"); //$NON-NLS-1$
+			aliasMap.put(
 					"http://xmlns.jcp.org/jsf/jstl/core", //$NON-NLS-1$
+					"http://java.sun.com/jsf/jstl/core"); //$NON-NLS-1$
+			aliasMap.put(
+					"jakarta.tags.core", //$NON-NLS-1$
 					"http://java.sun.com/jsf/jstl/core"); //$NON-NLS-1$
 			aliasMap.put(
 					"http://xmlns.jcp.org/jsf/jstl/functions", //$NON-NLS-1$
 					"http://java.sun.com/jsf/jstl/functions"); //$NON-NLS-1$
 			aliasMap.put(
+					"jakarta.tags.functions", //$NON-NLS-1$
+					"http://java.sun.com/jsf/jstl/functions"); //$NON-NLS-1$
+			aliasMap.put(
 					"http://xmlns.jcp.org/jsf/facelets", //$NON-NLS-1$
+					"http://java.sun.com/jsf/facelets"); //$NON-NLS-1$
+			aliasMap.put(
+					"jakarta.faces.facelets", //$NON-NLS-1$
 					"http://java.sun.com/jsf/facelets"); //$NON-NLS-1$
 		}
 
