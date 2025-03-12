@@ -23,6 +23,7 @@ import org.eclipse.jdt.ui.IJavaElementSearchConstants;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerFilter;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigFactory;
 import org.eclipse.jst.jsf.facesconfig.emf.LifecycleType;
 import org.eclipse.jst.jsf.facesconfig.ui.dialog.DialogUtil;
@@ -83,9 +84,8 @@ public class LifecycleSection extends OthersPageBaseSection {
 	 * @return the lifecycle child
 	 */
 	public EObject createLifecycleChildObject() {
-		String superType = ModelUtil.getSuperType(lifecycleChildClass);
-		IProject project = (IProject) this.getPage().getEditor().getAdapter(
-				IProject.class);
+		IProject project = (IProject) this.getPage().getEditor().getAdapter(IProject.class);
+		String superType = ModelUtil.getSuperType(lifecycleChildClass, JSFVersion.valueOfProject(project));
 		String result = DialogUtil.openClassDialog(getSection().getShell(),
 				project, superType,
 				IJavaElementSearchConstants.CONSIDER_ALL_TYPES);

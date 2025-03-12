@@ -13,6 +13,7 @@
  *******************************************************************************/ 
 package org.eclipse.jst.jsf.ui.internal;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -20,7 +21,11 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
+import org.eclipse.jface.text.templates.persistence.TemplateStore;
+import org.eclipse.jst.jsf.ui.internal.templates.TemplateContextTypeIdsJSF;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.ui.editors.text.templates.ContributionContextTypeRegistry;
+import org.eclipse.ui.editors.text.templates.ContributionTemplateStore;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -37,6 +42,16 @@ public class JSFUiPlugin extends AbstractUIPlugin {
 	public static final String PLUGIN_ID = "org.eclipse.jst.jsf.ui"; //$NON-NLS-1$
 	//The shared instance.
 	private static JSFUiPlugin plugin;
+
+	/**
+	 * The template store for the jsf editor. 
+	 */
+	private TemplateStore fTemplateStore;
+	
+	/** 
+	 * The template context type registry for the jsf editor. 
+	 */
+	private ContributionContextTypeRegistry fContextTypeRegistry;
 
 	/**
 	 * The constructor.
@@ -141,5 +156,42 @@ public class JSFUiPlugin extends AbstractUIPlugin {
 	 */
 	public static void log(int severity, String message) {
 		log(severity, message, null);
+	}
+
+	/**
+	 * Returns the template store for the jsf editor templates.
+	 * 
+	 * @return the template store for the jsf editor templates
+	 */
+	public TemplateStore getTemplateStore() {
+		if (fTemplateStore == null) {
+			fTemplateStore= new ContributionTemplateStore(getTemplateContextRegistry(), getPreferenceStore(), "org.eclipse.wst.sse.ui.custom_template"); //$NON-NLS-1$
+
+			try {
+				fTemplateStore.load();
+			} catch (IOException e) {
+				log(IStatus.ERROR, e.getMessage(), e);
+			}
+		}		
+		return fTemplateStore;
+	}
+
+	/**
+	 * Returns the template context type registry for the jsp plugin.
+	 * 
+	 * @return the template context type registry for the jsp plugin
+	 */
+	public ContributionContextTypeRegistry getTemplateContextRegistry() {
+		if (fContextTypeRegistry == null) {
+			ContributionContextTypeRegistry registry = new ContributionContextTypeRegistry();
+			registry.addContextType(TemplateContextTypeIdsJSF.ALL);
+			registry.addContextType(TemplateContextTypeIdsJSF.NEW);
+			registry.addContextType(TemplateContextTypeIdsJSF.ATTRIBUTE);
+			registry.addContextType(TemplateContextTypeIdsJSF.ATTRIBUTE_VALUE);
+			
+			fContextTypeRegistry= registry;
+		}
+
+		return fContextTypeRegistry;
 	}
 }

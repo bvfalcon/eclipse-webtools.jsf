@@ -13,6 +13,7 @@
  *******************************************************************************/
 package org.eclipse.jst.jsf.facesconfig.ui.util;
 
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigPackage;
 import org.eclipse.jst.jsf.facesconfig.ui.IFacesConfigConstants;
 
@@ -42,42 +43,57 @@ public class ModelUtil {
 	 *            the EClass object of the application child.
 	 * @return the expected super type for a particular element
 	 * TODO: could make common with the faces-config validator
+	 * @deprecated use getSuperType(Object, JSFVersion) instead of this
 	 */
 	public static String getSuperType(Object key) {
+		return getSuperType(key, JSFVersion.V2_3);
+	}
+
+	public static String getSuperType(Object key, JSFVersion jsfVersion) {
+		boolean isJakartaEE = jsfVersion != null && jsfVersion.compareTo(JSFVersion.V3_0) >= 0;
 		if (key == FacesConfigPackage.eINSTANCE.getActionListenerType()) {
-			return IFacesConfigConstants.ACTION_LISTENER_INTERFACE;
+			return isJakartaEE ? IFacesConfigConstants.ACTION_LISTENER_INTERFACE_JAKARTA :
+				IFacesConfigConstants.ACTION_LISTENER_INTERFACE;
 		}
 		if (key == FacesConfigPackage.eINSTANCE.getNavigationHandlerType()) {
-			return IFacesConfigConstants.NAVIGATION_HANDLE_SUPER_CLASS;
+			return isJakartaEE ? IFacesConfigConstants.NAVIGATION_HANDLE_SUPER_CLASS_JAKARTA :
+				IFacesConfigConstants.NAVIGATION_HANDLE_SUPER_CLASS;
 		}
 		if (key == FacesConfigPackage.eINSTANCE.getPropertyResolverType()) {
-			return IFacesConfigConstants.PROPERTY_RESOLVER_SUPER_CLASS;
+			return isJakartaEE ? IFacesConfigConstants.PROPERTY_RESOLVER_SUPER_CLASS_JAKARTA :
+				IFacesConfigConstants.PROPERTY_RESOLVER_SUPER_CLASS;
 		}
 		if (key == FacesConfigPackage.eINSTANCE.getStateManagerType()) {
-			return IFacesConfigConstants.STATE_MANAGER_SUPER_CLASS;
+			return isJakartaEE ? IFacesConfigConstants.STATE_MANAGER_SUPER_CLASS_JAKARTA :
+				IFacesConfigConstants.STATE_MANAGER_SUPER_CLASS;
 		}
 		if (key == FacesConfigPackage.eINSTANCE.getVariableResolverType()) {
-			return IFacesConfigConstants.VARIABLE_RESOLVER_SUPER_CLASS;
+			return isJakartaEE ? IFacesConfigConstants.VARIABLE_RESOLVER_SUPER_CLASS_JAKARTA :
+				IFacesConfigConstants.VARIABLE_RESOLVER_SUPER_CLASS;
 		}
 		if (key == FacesConfigPackage.eINSTANCE.getViewHandlerType()) {
-			return IFacesConfigConstants.VIEW_HANDLER_SUPER_CLASS;
+			return isJakartaEE ? IFacesConfigConstants.VIEW_HANDLER_SUPER_CLASS_JAKARTA :
+				IFacesConfigConstants.VIEW_HANDLER_SUPER_CLASS;
 		}
-
 		if (key == FacesConfigPackage.eINSTANCE.getApplicationFactoryType()) {
-			return IFacesConfigConstants.APPLICATION_FACTORY_SUPER_CLASS;
+			return isJakartaEE ? IFacesConfigConstants.APPLICATION_FACTORY_SUPER_CLASS_JAKARTA :
+				IFacesConfigConstants.APPLICATION_FACTORY_SUPER_CLASS;
 		}
 		if (key == FacesConfigPackage.eINSTANCE.getFacesContextFactoryType()) {
-			return IFacesConfigConstants.FACES_CONTEXT_FACTORY_SUPER_CLASS;
+			return isJakartaEE ? IFacesConfigConstants.FACES_CONTEXT_FACTORY_SUPER_CLASS_JAKARTA :
+				IFacesConfigConstants.FACES_CONTEXT_FACTORY_SUPER_CLASS;
 		}
 		if (key == FacesConfigPackage.eINSTANCE.getLifecycleFactoryType()) {
-			return IFacesConfigConstants.LIFECYCLE_FACTORY_SUPER_CLASS;
+			return isJakartaEE ? IFacesConfigConstants.LIFECYCLE_FACTORY_SUPER_CLASS_JAKARTA :
+				IFacesConfigConstants.LIFECYCLE_FACTORY_SUPER_CLASS;
 		}
 		if (key == FacesConfigPackage.eINSTANCE.getRenderKitFactoryType()) {
-			return IFacesConfigConstants.RENDER_KIT_FACTORY_SUPER_CLASS;
+			return isJakartaEE ? IFacesConfigConstants.RENDER_KIT_FACTORY_SUPER_CLASS_JAKARTA :
+				IFacesConfigConstants.RENDER_KIT_FACTORY_SUPER_CLASS;
 		}
-
 		if (key == FacesConfigPackage.eINSTANCE.getPhaseListenerType()) {
-			return IFacesConfigConstants.PHASE_LISTENER_INTERFACE;
+			return isJakartaEE ? IFacesConfigConstants.PHASE_LISTENER_INTERFACE_JAKARTA :
+				IFacesConfigConstants.PHASE_LISTENER_INTERFACE;
 		}
 
 		return null;

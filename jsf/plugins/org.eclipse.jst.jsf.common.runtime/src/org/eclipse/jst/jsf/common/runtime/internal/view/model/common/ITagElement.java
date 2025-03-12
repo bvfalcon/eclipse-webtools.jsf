@@ -36,7 +36,7 @@ public interface ITagElement extends Serializable
     
     /**
      * @return the fully qualified class name in dot separated format
-     * (i.e. javax.faces.webapp.ConverterTag)
+     * (i.e. javax.faces.webapp.ConverterTag or jakarta.faces.webapp.ConverterTag)
      */
     public abstract String getTagHandlerClassName();
     

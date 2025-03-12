@@ -76,7 +76,34 @@ public enum FaceletTaglibVersion implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-	_23(3, "_23", "2.3");  //$NON-NLS-1$//$NON-NLS-2$
+	_23(3, "_23", "2.3"),  //$NON-NLS-1$ //$NON-NLS-2$
+	/**
+	 * The '<em><b>30</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #_30_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	_30(4, "_30", "3.0"),  //$NON-NLS-1$ //$NON-NLS-2$
+	/**
+	 * The '<em><b>40</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #_40_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	_40(5, "_40", "4.0"),  //$NON-NLS-1$ //$NON-NLS-2$
+	/**
+	 * The '<em><b>41</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #_41_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	_41(6, "_41", "4.1");  //$NON-NLS-1$//$NON-NLS-2$
 
     /**
 	 * The '<em><b>20</b></em>' literal value.
@@ -139,6 +166,39 @@ public enum FaceletTaglibVersion implements Enumerator
 	public static final int _23_VALUE = 3;
 
 				/**
+	 * The '<em><b>30</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #_30
+	 * @model literal="3.0"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int _30_VALUE = 4;
+
+	/**
+	 * The '<em><b>40</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #_40
+	 * @model literal="4.0"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int _40_VALUE = 5;
+
+	/**
+	 * The '<em><b>41</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #_41
+	 * @model literal="4.1"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int _41_VALUE = 6;
+
+				/**
 	 * An array of all the '<em><b>Version</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -150,6 +210,9 @@ public enum FaceletTaglibVersion implements Enumerator
 			_21,
 			_22,
 			_23,
+			_30,
+			_40,
+			_41,
 		};
 
     /**
@@ -166,6 +229,8 @@ public enum FaceletTaglibVersion implements Enumerator
      * @param literal 
      * @return the version
      * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
     public static FaceletTaglibVersion get(String literal)
@@ -185,6 +250,8 @@ public enum FaceletTaglibVersion implements Enumerator
      * @param name 
      * @return the version
      * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
     public static FaceletTaglibVersion getByName(String name)
@@ -204,6 +271,8 @@ public enum FaceletTaglibVersion implements Enumerator
      * @param value 
      * @return the version
      * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
     public static FaceletTaglibVersion get(int value)
@@ -213,6 +282,9 @@ public enum FaceletTaglibVersion implements Enumerator
 			case _21_VALUE: return _21;
 			case _22_VALUE: return _22;
 			case _23_VALUE: return _23;
+			case _30_VALUE: return _30;
+			case _40_VALUE: return _40;
+			case _41_VALUE: return _41;
 		}
 		return null;
 	}

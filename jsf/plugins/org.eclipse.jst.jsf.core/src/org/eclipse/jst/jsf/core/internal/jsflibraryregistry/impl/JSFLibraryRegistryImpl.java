@@ -36,15 +36,14 @@ import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.PluginProvidedJSFLib
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl.JSFLibraryRegistryImpl#getDefaultImplementationID <em>Default Implementation ID</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl.JSFLibraryRegistryImpl#getJSFLibraries <em>JSF Libraries</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl.JSFLibraryRegistryImpl#getPluginProvidedJSFLibraries <em>Plugin Provided JSF Libraries</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
- * @deprecated
  */
 public class JSFLibraryRegistryImpl extends EObjectImpl implements JSFLibraryRegistry {
 	/**
@@ -426,7 +425,7 @@ public class JSFLibraryRegistryImpl extends EObjectImpl implements JSFLibraryReg
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (DefaultImplementationID: "); //$NON-NLS-1$
+		result.append(" (DefaultImplementationID: ");
 		result.append(defaultImplementationID);
 		result.append(')');
 		return result.toString();

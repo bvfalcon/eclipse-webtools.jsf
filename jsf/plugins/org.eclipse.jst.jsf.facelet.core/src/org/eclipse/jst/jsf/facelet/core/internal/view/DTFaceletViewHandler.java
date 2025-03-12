@@ -44,6 +44,7 @@ public class DTFaceletViewHandler extends DefaultDTViewHandler
 
     private static final String ORG_ECLIPSE_WST_HTML_CORE_HTMLSOURCE = "org.eclipse.wst.html.core.htmlsource"; //$NON-NLS-1$
     private static final String JAVAX_FACES_VIEW_ROOT = "javax.faces.ViewRoot"; //$NON-NLS-1$
+    private static final String JAKARTA_FACES_VIEW_ROOT = "jakarta.faces.ViewRoot"; //$NON-NLS-1$
 
     @Override
     public String calculateLocale(DTFacesContext context)
@@ -115,8 +116,9 @@ public class DTFaceletViewHandler extends DefaultDTViewHandler
                 {
                     final ComponentInfo child = (ComponentInfo) it.next();
                     
-                    if (child instanceof DTUIViewRoot ||
-                            JAVAX_FACES_VIEW_ROOT.equals(child.getComponentTypeInfo().getComponentType()))
+                    if (child instanceof DTUIViewRoot
+                            || JAVAX_FACES_VIEW_ROOT.equals(child.getComponentTypeInfo().getComponentType())
+                            || JAKARTA_FACES_VIEW_ROOT.equals(child.getComponentTypeInfo().getComponentType()))
                     {
                         // add recursively
                         populateViewRoot(viewRoot, child.getChildren());

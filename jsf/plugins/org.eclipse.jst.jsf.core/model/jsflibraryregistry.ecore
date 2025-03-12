@@ -84,5 +84,12 @@
     <eLiterals name="UNKNOWN" value="-1"/>
     <eLiterals name="v1_1" value="1"/>
     <eLiterals name="v1_2" value="2"/>
+    <eLiterals name="v2_0" value="3"/>
+    <eLiterals name="v2_1" value="4"/>
+    <eLiterals name="v2_2" value="5"/>
+    <eLiterals name="v2_3" value="6"/>
+    <eLiterals name="v3_0" value="7"/>
+    <eLiterals name="v4_0" value="8"/>
+    <eLiterals name="v4_1" value="9"/>
   </eClassifiers>
 </ecore:EPackage>

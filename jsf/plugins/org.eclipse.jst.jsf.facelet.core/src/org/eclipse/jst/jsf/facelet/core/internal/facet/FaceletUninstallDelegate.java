@@ -18,6 +18,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.designtime.DesignTimeApplicationManager;
 import org.eclipse.jst.jsf.facelet.core.internal.FaceletCoreTraceOptions;
 import org.eclipse.jst.jsf.facesconfig.emf.ApplicationType;
@@ -200,7 +201,8 @@ public class FaceletUninstallDelegate extends FaceletChangeDelegate
             }
             configurator
                     .removeContextParam(
-                            FaceletFacet.JAVAX_FACES_DEFAULT_SUFFIX,
+                            JSFVersion.guessAtLeast(JSFVersion.V3_0, configurator.getProject()) ?
+                                    FaceletFacet.JAKARTA_FACES_DEFAULT_SUFFIX : FaceletFacet.JAVAX_FACES_DEFAULT_SUFFIX,
                             FaceletFacet.XHTML);
         }
     }

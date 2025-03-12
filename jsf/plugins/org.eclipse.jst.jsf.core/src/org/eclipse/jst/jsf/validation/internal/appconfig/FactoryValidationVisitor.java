@@ -16,6 +16,7 @@ import java.util.List;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.ApplicationFactoryType;
 import org.eclipse.jst.jsf.facesconfig.emf.ExceptionHandlerFactoryType;
 import org.eclipse.jst.jsf.facesconfig.emf.ExternalContextFactoryType;
@@ -77,7 +78,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.application.ApplicationFactory"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.application.ApplicationFactory" : //$NON-NLS-1$
+                    "javax.faces.application.ApplicationFactory"; //$NON-NLS-1$
         }
 
         @Override
@@ -106,7 +109,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.context.FacesContextFactory"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.context.FacesContextFactory" : //$NON-NLS-1$
+                    "javax.faces.context.FacesContextFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -137,7 +142,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.lifecycle.LifecycleFactory"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.lifecycle.LifecycleFactory" : //$NON-NLS-1$
+                    "javax.faces.lifecycle.LifecycleFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -167,7 +174,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.render.RenderKitFactory"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.render.RenderKitFactory" : //$NON-NLS-1$
+                    "javax.faces.render.RenderKitFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -195,7 +204,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.context.ExceptionHandlerFactory"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.context.ExceptionHandlerFactory": //$NON-NLS-1$
+                    "javax.faces.context.ExceptionHandlerFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -223,7 +234,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.context.ExternalContextFactory"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.context.ExternalContextFactory": //$NON-NLS-1$
+                    "javax.faces.context.ExternalContextFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -252,7 +265,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.view.ViewDeclarationLanguageFactory"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.view.ViewDeclarationLanguageFactory" : //$NON-NLS-1$
+                    "javax.faces.view.ViewDeclarationLanguageFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -280,7 +295,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.context.PartialViewContextFactory"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.context.PartialViewContextFactory": //$NON-NLS-1$
+                    "javax.faces.context.PartialViewContextFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -308,7 +325,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.view.facelets.TagHandlerDelegateFactory"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.view.facelets.TagHandlerDelegateFactory" : //$NON-NLS-1$
+                    "javax.faces.view.facelets.TagHandlerDelegateFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {
@@ -336,7 +355,9 @@ public class FactoryValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.component.visit.VisitContextFactory"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.component.visit.VisitContextFactory" : //$NON-NLS-1$
+                    "javax.faces.component.visit.VisitContextFactory"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {

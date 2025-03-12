@@ -4,6 +4,7 @@ Automatic-Module-Name: org.eclipse.jst.jsf.facelet.core
 Bundle-Name: %Bundle-Name.0
 Bundle-SymbolicName: org.eclipse.jst.jsf.facelet.core;singleton:=true
 Bundle-Version: 1.5.0.qualifier
+Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.jst.jsf.facelet.core.internal.FaceletCorePlugin$Implementation
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
@@ -21,22 +22,23 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.jst.jsf.facesconfig;bundle-version="1.0.1",
  org.eclipse.emf.common;bundle-version="2.4.0",
  org.eclipse.jst.j2ee;bundle-version="1.1.105",
- org.eclipse.emf.ecore;bundle-version="2.4.0",
+ org.eclipse.emf.ecore;bundle-version="2.4.0";visibility:=reexport,
  org.eclipse.ui;bundle-version="3.4.0",
  org.eclipse.emf.edit.ui;bundle-version="2.4.0",
  org.eclipse.jst.j2ee.web;bundle-version="1.1.200",
  org.eclipse.wst.validation;bundle-version="1.2.0",
  org.eclipse.debug.core;bundle-version="[3.5.0,4.0.0)",
- org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.5.0";visibility:=reexport,
  org.eclipse.wst.xml.core;bundle-version="1.1.500",
  org.eclipse.jem.proxy;bundle-version="[2.0.300,3.0.0)",
  org.eclipse.jdt.core;bundle-version="[3.6.0,4.0.0)",
  org.eclipse.jst.j2ee.core;bundle-version="[1.2.0,2.0.0)"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.eclipse.jst.jsf.facelet.core.internal;x-internal:=true,
  org.eclipse.jst.jsf.facelet.core.internal.cm;x-internal:=true,
- org.eclipse.jst.jsf.facelet.core.internal.cm.addtagmd;x-friends:="org.eclipse.jst.jsf.facelet.tagsupport",
+ org.eclipse.jst.jsf.facelet.core.internal.cm.addtagmd;
+  x-friends:="org.eclipse.jst.jsf.facelet.tagsupport",
  org.eclipse.jst.jsf.facelet.core.internal.cm.addtagmd.impl;x-internal:=true,
  org.eclipse.jst.jsf.facelet.core.internal.cm.addtagmd.provider;x-internal:=true,
  org.eclipse.jst.jsf.facelet.core.internal.cm.addtagmd.util;x-internal:=true,
@@ -45,10 +47,14 @@ Export-Package: org.eclipse.jst.jsf.facelet.core.internal;x-internal:=true,
  org.eclipse.jst.jsf.facelet.core.internal.facet;x-internal:=true,
  org.eclipse.jst.jsf.facelet.core.internal.metadata;x-internal:=true,
  org.eclipse.jst.jsf.facelet.core.internal.registry;x-internal:=true,
- org.eclipse.jst.jsf.facelet.core.internal.registry.taglib;x-friends:="org.eclipse.jst.jsf.facelet.core.tests",
- org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib;x-friends:="org.eclipse.jst.jsf.facelet.core.tests",
- org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl;x-friends:="org.eclipse.jst.jsf.facelet.core.tests",
- org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.util;x-friends:="org.eclipse.jst.jsf.facelet.core.tests",
+ org.eclipse.jst.jsf.facelet.core.internal.registry.taglib;
+  x-friends:="org.eclipse.jst.jsf.facelet.core.tests",
+ org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib;
+  x-friends:="org.eclipse.jst.jsf.facelet.core.tests",
+ org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl;
+  x-friends:="org.eclipse.jst.jsf.facelet.core.tests",
+ org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.util;
+  x-friends:="org.eclipse.jst.jsf.facelet.core.tests",
  org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib_1_0;x-internal:=true,
  org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib_1_0.impl;x-internal:=true,
  org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib_1_0.util;x-internal:=true,

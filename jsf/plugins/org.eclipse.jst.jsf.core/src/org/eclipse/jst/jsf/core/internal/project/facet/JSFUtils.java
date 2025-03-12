@@ -136,7 +136,7 @@ public abstract class JSFUtils {
 	 * @param config
 	 * @return servlet display name to use from wizard data model
 	 */
-	protected final String getServletClassname(IDataModel config) {
+	protected String getServletClassname(IDataModel config) {
 		String className = config.getStringProperty(IJSFFacetInstallDataModelProperties.SERVLET_CLASSNAME);
 		if (className == null || className.trim().equals("")) //$NON-NLS-1$
 			className = JSF_SERVLET_CLASS;

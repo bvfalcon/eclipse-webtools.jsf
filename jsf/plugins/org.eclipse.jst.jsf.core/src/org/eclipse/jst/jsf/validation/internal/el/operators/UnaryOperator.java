@@ -15,6 +15,7 @@
 package org.eclipse.jst.jsf.validation.internal.el.operators;
 
 import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.jst.jsf.common.internal.types.MethodType;
 import org.eclipse.jst.jsf.common.internal.types.ValueType;
 import org.eclipse.jst.jsf.validation.internal.el.diagnostics.DiagnosticFactory;
 import org.eclipse.jst.jsp.core.internal.java.jspel.JSPELParserConstants;
@@ -98,11 +99,17 @@ public abstract class UnaryOperator
      */
     public abstract ValueType performOperation(ValueType type);
     
-    
     /**
      * @param type
      * @return a Diagnostic interpreting whether it is valid to perform the
      * operation on this type
      */
     public abstract Diagnostic validate(ValueType type);
+
+    /**
+     * @param type
+     * @return a Diagnostic interpreting whether it is valid to perform the
+     * operation on this type
+     */
+    public abstract Diagnostic validate(MethodType type);
 }

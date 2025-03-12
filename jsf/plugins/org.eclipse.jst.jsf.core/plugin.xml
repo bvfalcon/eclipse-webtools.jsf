@@ -18,6 +18,14 @@
    <extension-point id="jsfAppConfigLocatorProviderFactory" name="%extension-point.name.14" schema="schema/jsfAppConfigLocatorProviderFactory.exsd"/>
    <extension-point id="jsfAppConfigManagerFactory" name="%extension-point.name.15" schema="schema/jsfAppConfigManagerFactory.exsd"/>
    <extension-point id="viewHandlerOverride" name="%extension-point.name.viewHandlerOverride" schema="schema/viewHandlerOverride.exsd"/>
+
+   <extension point="org.eclipse.wst.sse.core.modelHandler">
+        <modelHandler
+            class="org.eclipse.jst.jsf.core.internal.modelhandler.ModelHandlerForJSF"
+            associatedContentTypeId="org.eclipse.jst.jsf.core.jsfsource"
+            id="org.eclipse.jst.jsf.core.internal.modelhandler">
+        </modelHandler>
+   </extension>
    <extension point="org.eclipse.emf.ecore.generated_package">
         <package 
             uri = "http://org.eclipse.jst.jsf.core/constraints.ecore" 
@@ -46,7 +54,7 @@
     <project-facet-version facet="jst.jsf" version="1.1">
        <constraint>
         <and>
-          <requires facet="jst.web" version="[2.3"/>
+          <requires facet="jst.web" version="[2.3-5.0)"/>
         </and>
       </constraint>
     </project-facet-version> 
@@ -54,7 +62,7 @@
     <project-facet-version facet="jst.jsf" version="1.2">
        <constraint>
         <and>
-          <requires facet="jst.web" version="[2.5"/>
+          <requires facet="jst.web" version="[2.5-5.0)"/>
         </and>
       </constraint>
     </project-facet-version> 
@@ -62,7 +70,7 @@
     <project-facet-version facet="jst.jsf" version="2.0">
        <constraint>
         <and>
-          <requires facet="jst.web" version="[2.5"/>
+          <requires facet="jst.web" version="[2.5-5.0)"/>
         </and>
       </constraint>
     </project-facet-version>
@@ -70,120 +78,66 @@
     <project-facet-version facet="jst.jsf" version="2.1">
        <constraint>
         <and>
-          <requires facet="jst.web" version="[2.5"/>
+          <requires facet="jst.web" version="[2.5-5.0)"/>
         </and>
       </constraint>
     </project-facet-version>
-    <project-facet-version
-          facet="jst.jsf"
-          version="2.2">
+    <project-facet-version facet="jst.jsf" version="2.2">
        <constraint>
           <and>
-             <requires
-                   facet="jst.web"
-                   version="[2.5">
-             </requires>
+             <requires facet="jst.web" version="[3.0-5.0)"/>
           </and>
        </constraint>
     </project-facet-version>
-	<project-facet-version facet="jst.jsf" version="2.3">
-	   <constraint>
-	      <and>
-	         <requires facet="jst.web" version="[2.5" />
-	      </and>
-	   </constraint>
-	`</project-facet-version>
+    <project-facet-version facet="jst.jsf" version="2.3">
+       <constraint>
+          <and>
+             <requires facet="jst.web" version="[3.0-5.0)" />
+          </and>
+       </constraint>
+    </project-facet-version>
+    <project-facet-version facet="jst.jsf" version="3.0">
+       <constraint>
+          <and>
+             <requires facet="jst.web" version="[5.0" />
+          </and>
+       </constraint>
+    </project-facet-version>
+    <project-facet-version facet="jst.jsf" version="4.0">
+       <constraint>
+          <and>
+             <requires facet="jst.web" version="[6.0" />
+          </and>
+       </constraint>
+    </project-facet-version>
+    <project-facet-version facet="jst.jsf" version="4.1">
+       <constraint>
+          <and>
+             <requires facet="jst.web" version="[6.0" />
+          </and>
+       </constraint>
+    </project-facet-version>
 
-    <action id="jst.jsf.v11.install" facet="jst.jsf" type="INSTALL" version="1.1">
-      	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
+    <action id="jst.jsf.v11.install" facet="jst.jsf" type="INSTALL" version="3.0)">
+        <delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
         <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider"/>
     </action>  
-      
-    <action id="jst.jsf.v11.uninstall" facet="jst.jsf" type="UNINSTALL" version="1.1" >
-        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
-	 	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
- 	</action>
-	
- 	<action id="jst.jsf.v12.install" facet="jst.jsf" type="INSTALL" version="1.2">
-      	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
-        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider"/>
-    </action>  
-      
-    <action id="jst.jsf.v12.uninstall" facet="jst.jsf" version="1.2" type="UNINSTALL">
-        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
-	 	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
- 	</action>  
-
- 	<action id="jst.jsf.v20.install" facet="jst.jsf" type="INSTALL" version="2.0">
-      	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
-        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider"/>
-    </action>  
-      
-    <action id="jst.jsf.v20.uninstall" facet="jst.jsf" version="2.0" type="UNINSTALL">
-        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
-	 	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
- 	</action>
-
- 	<action id="jst.jsf.v21.install" facet="jst.jsf" type="INSTALL" version="2.1">
-      	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
-        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider"/>
+    <action id="jst.jsf.v30.install" facet="jst.jsf" version="[3.0" type="INSTALL">
+        <delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate"/>
+        <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JakartaFacesFacetInstallDataModelProvider"/>
     </action>
-  <action
-        facet="jst.jsf"
-        id="jst.jsf.v22.install"
-        type="INSTALL"
-        version="2.2">
-     <delegate
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate">
-     </delegate>
-     <config-factory
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider">
-     </config-factory>
-  </action>  
-      
-    <action id="jst.jsf.v21.uninstall" facet="jst.jsf" version="2.1" type="UNINSTALL">
+
+    <action id="jst.jsf.uninstall" facet="jst.jsf" type="UNINSTALL" >
         <config-factory class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory"/>
-	 	<delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
- 	</action>
-    <action
-          facet="jst.jsf"
-          id="jst.jsf.v22.uninstall"
-          type="UNINSTALL"
-          version="2.2">
-       <config-factory
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory">
-       </config-factory>
-       <delegate
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate">
-       </delegate>
-    </action>
-  <action
-        facet="jst.jsf"
-        id="jst.jsf.v23.install"
-        type="INSTALL"
-        version="2.3">
-     <delegate
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDelegate">
-     </delegate>
-     <config-factory
-           class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetInstallDataModelProvider">
-     </config-factory>
-  </action>  
-    <action
-          facet="jst.jsf"
-          id="jst.jsf.v23.uninstall"
-          type="UNINSTALL"
-          version="2.3">
-       <config-factory
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallConfig$Factory">
-       </config-factory>
-       <delegate
-             class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate">
-       </delegate>
+        <delegate class="org.eclipse.jst.jsf.core.internal.project.facet.JSFFacetUninstallDelegate"/>
     </action>
 	      	
-  </extension> 
-  
+  </extension>
+
+  <extension point="org.eclipse.wst.common.project.facet.ui.images">
+        <image facet="jst.jsf" path="icons/jsf_facet.gif"/>
+    </extension>
+
   <extension
         point="org.eclipse.wst.common.project.facet.core.listeners">
      <listener
@@ -191,92 +145,9 @@
            eventTypes="PRIMARY_RUNTIME_CHANGED">
      </listener>
   </extension>
-  
+
   <extension
         point="org.eclipse.wst.common.project.facet.core.presets">
-     <static-preset
-           id="preset.jst.jsf.v1_1" extends="default.configuration">
-        <label>%JSFv11Project</label>
-        <facet id="jst.java" version="1.4" />
-        <facet id="jst.web" version="2.4"/>
-        <facet id="jst.jsf" version="1.1" />
-        <description>%JSFv11PresetDesc</description>
-     </static-preset>
-     <static-preset
-           id="preset.jst.jsf.v1_2" extends="default.configuration">
-	    <label>%JSFv12Project</label>
-	    <facet id="jst.java" version="1.5" />
-	    <facet id="jst.web" version="2.5"/>
-	    <facet id="jst.jsf" version="1.2" />
-     <description>
-        %JSFv12PresetDesc
-     </description>
-     </static-preset>
-     <static-preset
-           id="preset.jst.jsf.v2_0" extends="default.configuration">
-        <label>
-           %JSFv20Project
-        </label>
-        <facet
-              id="jst.java"
-              version="1.6">
-        </facet>
-        <facet
-              id="jst.web"
-              version="3.0">
-        </facet>
-        <facet
-              id="jst.jsf"
-              version="2.0">
-        </facet>
-        <description>
-           %JSFv20PresetDesc
-        </description>
-     </static-preset>
-     <static-preset
-           id="preset.jst.jsf.v2_1" extends="default.configuration">
-        <label>
-           %JSFv21Project
-        </label>
-        <facet
-              id="jst.java"
-              version="1.6">
-        </facet>
-        <facet
-              id="jst.web"
-              version="3.0">
-        </facet>
-        <facet
-              id="jst.jsf"
-              version="2.1">
-        </facet>
-        <description>
-           %JSFv21PresetDesc
-        </description>
-     </static-preset>
-     <static-preset
-           extends="default.configuration"
-           id="preset.jst.jsf.v2_2">
-        <label>
-           %JSFv22Project
-        </label>
-        <facet
-              id="jst.java"
-              version="1.6">
-        </facet>
-        <facet
-              id="jst.web"
-              version="3.0">
-        </facet>
-        <facet
-              id="jst.jsf"
-              version="2.2">
-        </facet>
-        <description>
-           %JSFv22PresetDesc
-        </description>
-     </static-preset>
-     
 	<static-preset extends="default.configuration" id="preset.jst.jsf.v2_3">
 	   <label>%JSFv23Project</label>
 	   <facet id="jst.java" version="1.8" />
@@ -284,16 +155,31 @@
 	   <facet id="jst.jsf" version="2.3" />
 	   <description>%JSFv23PresetDesc</description>
 	</static-preset>
-	
+
+	<static-preset extends="default.configuration" id="preset.jst.jsf.v4_0">
+	   <label>%JSFv40Project</label>
+	   <facet id="jst.java" version="11" />
+	   <facet id="jst.web" version="6.0" />
+	   <facet id="jst.jsf" version="4.0" />
+	   <description>%JSFv40PresetDesc</description>
+	</static-preset>
+
+	<static-preset extends="default.configuration" id="preset.jst.jsf.v4_1">
+	   <label>%JSFv41Project</label>
+	   <facet id="jst.java" version="11" />
+	   <facet id="jst.web" version="6.0" />
+	   <facet id="jst.jsf" version="4.1" />
+	   <description>%JSFv41PresetDesc</description>
+	</static-preset>
   </extension>
 
   <extension point="org.eclipse.wst.common.project.facet.core.runtimes">
     <supported>
 		<runtime-component any="true"/>
-        	<facet id="jst.jsf" version="1.1,1.2,2.0,2.1,2.2,2.3"/> 
+        	<facet id="jst.jsf" version="1.1,1.2,2.0,2.1,2.2,2.3,3.0,4.0,4.1"/> 
     </supported>
   </extension>
-    
+
   <extension
      name="JSF JSP File URL"
      point="org.eclipse.jst.j2ee.web.fileURL">
@@ -435,6 +321,9 @@
             class="org.eclipse.jst.jsf.taglibprocessing.attributevalues.DateTimePatternType"
             id="attributevalues.DateTimePatternType"/>  
       <attributeValueRuntimeType
+            class="org.eclipse.jst.jsf.taglibprocessing.attributevalues.DateTimeType"
+            id="attributevalues.DateTimeType"/>
+      <attributeValueRuntimeType
             class="org.eclipse.jst.jsf.taglibprocessing.attributevalues.NumberPatternType"
             id="attributevalues.NumberPatternType"/>                 
       <attributeValueRuntimeType
@@ -514,13 +403,13 @@
         point="org.eclipse.jst.jsf.core.tagregistry">
      <tagRegistry
            class="org.eclipse.jst.jsf.designtime.internal.view.model.jsp.registry.TLDRegistryManager$MyRegistryFactory"
-           description="%JSP_TAG_REGISTRY_DESCRIPTION"
-           id="default.jsp">
+           description="%JSF_TAG_REGISTRY_DESCRIPTION"
+           id="default.jsf">
         <content-type
-              contentTypeId="org.eclipse.jst.jsp.core.jspsource">
+              contentTypeId="org.eclipse.jst.jsf.core.jsfsource">
         </content-type>
         <content-type
-              contentTypeId="org.eclipse.jst.jsp.core.jspfragmentsource">
+              contentTypeId="org.eclipse.jst.jsf.core.jsffragmentsource">
         </content-type>
      </tagRegistry>
   </extension>
@@ -597,6 +486,33 @@
 
   <extension
         point="org.eclipse.jst.common.project.facet.core.downloadableLibraries">
+
+     <!-- JSF 4.1 Downloadable library provider -->
+     <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-4.1-downloadable-libraries.xml">
+            <enablement>
+                <with variable="requestingProjectFacet">
+                    <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:4.1" forcePluginActivation="true"/>
+                </with>
+            </enablement>
+     </import-definitions>
+   
+     <!-- JSF 4.0 Downloadable library provider -->
+     <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-4.0-downloadable-libraries.xml">
+            <enablement>
+                <with variable="requestingProjectFacet">
+                    <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:4.0" forcePluginActivation="true"/>
+                </with>
+            </enablement>
+     </import-definitions>
+   
+     <!-- JSF 3.0 Downloadable library provider -->
+     <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-3.0-downloadable-libraries.xml">
+            <enablement>
+                <with variable="requestingProjectFacet">
+                    <test property="org.eclipse.wst.common.project.facet.core.projectFacet" value="jst.jsf:3.0" forcePluginActivation="true"/>
+                </with>
+            </enablement>
+     </import-definitions>
    
      <!-- JSF 2.3 Downloadable library provider -->
      <import-definitions url="https://eclipse.dev/webtools/jsf/jsf-library/jsf-2.3-downloadable-libraries.xml">
@@ -678,4 +594,36 @@
       </content-type>
    </extension>
 
+    <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            file-extensions="xhtml"
+            priority="high"
+            name="%JSF_Content_Type_Extension_Element.name"
+            id="org.eclipse.jst.jsf.core.jsfsource"
+            base-type="org.eclipse.core.runtime.text"
+            default-charset="UTF-8">
+        <describer
+              class="org.eclipse.jst.jsf.core.internal.contenttype.ContentDescriberForJSF" />
+      </content-type>
+    </extension>
+
+    <!-- initialize jsf core preferences -->
+    <extension point="org.eclipse.core.runtime.preferences">
+        <initializer class="org.eclipse.jst.jsf.core.internal.preferences.JSFCorePreferenceInitializer" />
+    </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated jsflibraryregistry -->
+      <package
+            uri="http://www.eclipse.org/webtools/jsf/schema/jsflibraryregistry.xsd"
+            class="org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistryPackage"
+            genModel="model/jsflibraryregistry.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated jsflibraryregistry -->
+      <parser
+            type="jsflibraryregistry"
+            class="org.eclipse.jst.jsf.core.internal.jsflibraryregistry.util.JSFLibraryRegistryResourceFactoryImpl"/>
+   </extension>
 </plugin>

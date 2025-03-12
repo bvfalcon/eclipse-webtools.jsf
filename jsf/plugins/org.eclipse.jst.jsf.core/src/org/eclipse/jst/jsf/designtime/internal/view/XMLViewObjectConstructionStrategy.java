@@ -189,27 +189,27 @@ public class XMLViewObjectConstructionStrategy extends
         // if we have a well-established base type, try that first
         // sub-classes must occur before superclasses to ensure most accurate
         // detection.
-        if (typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIINPUT))
+        if (typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIINPUT) || typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIINPUT_JAKARTA))
         {
             bestComponent = ComponentFactory.createUIInputInfo(parent,
                     typeInfo, initMap);
         }
-        else if (typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIOUTPUT))
+        else if (typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIOUTPUT) || typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIOUTPUT_JAKARTA))
         {
             bestComponent = ComponentFactory.createUIOutputInfo(parent,
                     typeInfo, initMap);
         }
-        else if (typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UICOMMAND))
+        else if (typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UICOMMAND) || typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UICOMMAND_JAKARTA))
         {
             bestComponent = ComponentFactory.createUICommandInfo(parent,
                     typeInfo, initMap);
         }
-        else if (typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIDATA))
+        else if (typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIDATA) || typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIDATA_JAKARTA))
         {
             bestComponent = ComponentFactory.createUIDataInfo(parent, typeInfo,
                     initMap);
         }
-        else if (typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIFORM))
+        else if (typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIFORM) || typeInfo.isInstanceOf(ComponentFactory.BASE_CLASS_UIFORM_JAKARTA))
         {
             // TODO: how handle prepend ids?
             bestComponent = ComponentFactory.createUIFormInfo(parent, typeInfo,

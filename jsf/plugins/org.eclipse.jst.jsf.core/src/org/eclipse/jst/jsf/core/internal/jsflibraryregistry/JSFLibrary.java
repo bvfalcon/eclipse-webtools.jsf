@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibrary#getID <em>ID</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibrary#getName <em>Name</em>}</li>
@@ -30,12 +31,10 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibrary#isImplementation <em>Implementation</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibrary#getArchiveFiles <em>Archive Files</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistryPackage#getJSFLibrary()
  * @model
  * @generated
- * @deprecated
  */
 public interface JSFLibrary extends EObject{
 	/**

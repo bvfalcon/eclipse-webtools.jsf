@@ -12,8 +12,10 @@
  *******************************************************************************/ 
 package org.eclipse.jst.jsf.core.jsfappconfig;
 
+import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.jst.jsf.core.IJSFCoreConstants;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.ComponentClassType;
 import org.eclipse.jst.jsf.facesconfig.emf.ComponentType;
 import org.eclipse.jst.jsf.facesconfig.emf.ComponentTypeType;
@@ -70,9 +72,10 @@ public class ImplicitRuntimeJSFAppConfigProvider extends AbstractJSFAppConfigPro
 	 */
 	protected void createModel() {
 		//Bug 340093 - [JSF2.0] Need version mechanism for determining what implicit components are valid
+		IProject project = jsfAppConfigLocater.getJSFAppConfigManager().getProject();
 		final boolean isAtLeastJSF20Project = JSFAppConfigUtils.isValidJSFProject(
-				jsfAppConfigLocater.getJSFAppConfigManager().getProject(),
-				IJSFCoreConstants.FACET_VERSION_2_0);
+				project, IJSFCoreConstants.FACET_VERSION_2_0);
+		boolean isJakartaEE = JSFVersion.guessAtLeast(JSFVersion.V3_0, project);
 		facesConfig = FacesConfigFactory.eINSTANCE.createFacesConfigType();
 		//create and add converters by id
 		EList converters = facesConfig.getConverter();
@@ -92,16 +95,25 @@ public class ImplicitRuntimeJSFAppConfigProvider extends AbstractJSFAppConfigPro
 			converters.add(createConverter("Enum")); //$NON-NLS-1$
 		}
 		// converters by for-class (see spec 3.3.3 -- Standard Converter Implementions
-		converters.add(createForClassConverter("java.lang.Boolean", "javax.faces.convert.BooleanConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Byte", "javax.faces.convert.ByteConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Character", "javax.faces.convert.CharacterConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Double", "javax.faces.convert.DoubleConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Float", "javax.faces.convert.FloatConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Integer", "javax.faces.convert.IntegerConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Long", "javax.faces.convert.LongConverter")); //$NON-NLS-1$ //$NON-NLS-2$
-		converters.add(createForClassConverter("java.lang.Short", "javax.faces.converter.ShortConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Boolean", //$NON-NLS-1$
+				isJakartaEE ? "jakarta.faces.convert.BooleanConverter" : "javax.faces.convert.BooleanConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Byte", //$NON-NLS-1$
+				isJakartaEE ? "jakarta.faces.convert.ByteConverter" : "javax.faces.convert.ByteConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Character", //$NON-NLS-1$
+				isJakartaEE ? "jakarta.faces.convert.CharacterConverter" : "javax.faces.convert.CharacterConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Double", //$NON-NLS-1$
+				isJakartaEE ? "jakarta.faces.convert.DoubleConverter" : "javax.faces.convert.DoubleConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Float", //$NON-NLS-1$
+				isJakartaEE ? "jakarta.faces.convert.FloatConverter" : "javax.faces.convert.FloatConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Integer", //$NON-NLS-1$
+				isJakartaEE ? "jakarta.faces.convert.IntegerConverter" : "javax.faces.convert.IntegerConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Long", //$NON-NLS-1$
+				isJakartaEE ? "jakarta.faces.convert.LongConverter" : "javax.faces.convert.LongConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+		converters.add(createForClassConverter("java.lang.Short", //$NON-NLS-1$
+				isJakartaEE ? "jakarta.faces.convert.ShortConverter" : "javax.faces.converter.ShortConverter")); //$NON-NLS-1$ //$NON-NLS-2$
 		if (isAtLeastJSF20Project) {
-			converters.add(createForClassConverter("java.lang.Enum", "javax.faces.converter.EnumConverter")); //$NON-NLS-1$ //$NON-NLS-2$
+			converters.add(createForClassConverter("java.lang.Enum", //$NON-NLS-1$
+					isJakartaEE ? "jakarta.faces.convert.EnumConverter" : "javax.faces.converter.EnumConverter")); //$NON-NLS-1$ //$NON-NLS-2$
 		}
 		//create and add validators
 		EList validators = facesConfig.getValidator();
@@ -172,18 +184,21 @@ public class ImplicitRuntimeJSFAppConfigProvider extends AbstractJSFAppConfigPro
 	 * @return {@link ConverterType} instance.
 	 */
 	protected ConverterType createConverter(String name) {
+		IProject project = jsfAppConfigLocater.getJSFAppConfigManager().getProject();
+		boolean isJakartaEE = JSFVersion.guessAtLeast(JSFVersion.V3_0, project);
+
 		ConverterType converterType = FacesConfigFactory.eINSTANCE.createConverterType();
 		//set converter-id
 		ConverterIdType converterIdType = FacesConfigFactory.eINSTANCE.createConverterIdType();
 		StringBuffer sb = new StringBuffer();
-		sb.append("javax.faces."); //$NON-NLS-1$
+		sb.append(isJakartaEE ? "jakarta.faces.": "javax.faces."); //$NON-NLS-1$ //$NON-NLS-2$
 		sb.append(name);
 		converterIdType.setTextContent(sb.toString());
 		converterType.setConverterId(converterIdType);
 		//set converter-class
 		ConverterClassType converterClassType = FacesConfigFactory.eINSTANCE.createConverterClassType();
 		sb = new StringBuffer();
-		sb.append("javax.faces.convert."); //$NON-NLS-1$
+		sb.append(isJakartaEE ? "jakarta.faces.convert." : "javax.faces.convert."); //$NON-NLS-1$ //$NON-NLS-2$
 		sb.append(name);
 		sb.append("Converter"); //$NON-NLS-1$
 		converterClassType.setTextContent(sb.toString());
@@ -213,18 +228,21 @@ public class ImplicitRuntimeJSFAppConfigProvider extends AbstractJSFAppConfigPro
 	 * @return {@link ValidatorType} instance.
 	 */
 	protected ValidatorType createValidator(String id, String classname) {
+		IProject project = jsfAppConfigLocater.getJSFAppConfigManager().getProject();
+		boolean isJakartaEE = JSFVersion.guessAtLeast(JSFVersion.V3_0, project);
+
 		ValidatorType validatorType = FacesConfigFactory.eINSTANCE.createValidatorType();
 		//set validator-id
 		ValidatorIdType validatorIdType = FacesConfigFactory.eINSTANCE.createValidatorIdType();
 		StringBuffer sb = new StringBuffer();
-		sb.append("javax.faces."); //$NON-NLS-1$
+		sb.append(isJakartaEE ? "jakarta.faces." : "javax.faces."); //$NON-NLS-1$ //$NON-NLS-2$
 		sb.append(id);
 		validatorIdType.setTextContent(sb.toString());
 		validatorType.setValidatorId(validatorIdType);
 		//set validator-class
 		ValidatorClassType validatorClassType = FacesConfigFactory.eINSTANCE.createValidatorClassType();
 		sb = new StringBuffer();
-		sb.append("javax.faces.validator."); //$NON-NLS-1$
+		sb.append(isJakartaEE ? "jakarta.faces.validator." : "javax.faces.validator."); //$NON-NLS-1$ //$NON-NLS-2$
 		sb.append(classname);
 		sb.append("Validator"); //$NON-NLS-1$
 		validatorClassType.setTextContent(sb.toString());
@@ -252,18 +270,21 @@ public class ImplicitRuntimeJSFAppConfigProvider extends AbstractJSFAppConfigPro
 	 * @return {@link ComponentType} instance.
 	 */
 	protected ComponentType createUIComponent(String name) {
+		IProject project = jsfAppConfigLocater.getJSFAppConfigManager().getProject();
+		boolean isJakartaEE = JSFVersion.guessAtLeast(JSFVersion.V3_0, project);
+
 		ComponentType componentType = FacesConfigFactory.eINSTANCE.createComponentType();
 		//set component-type
 		ComponentTypeType componentTypeType = FacesConfigFactory.eINSTANCE.createComponentTypeType();
 		StringBuffer sb = new StringBuffer();
-		sb.append("javax.faces."); //$NON-NLS-1$
+		sb.append(isJakartaEE ? "jakarta.faces." : "javax.faces."); //$NON-NLS-1$ //$NON-NLS-2$
 		sb.append(name);
 		componentTypeType.setTextContent(sb.toString());
 		componentType.setComponentType(componentTypeType);
 		//set component-class
 		ComponentClassType componentClassType = FacesConfigFactory.eINSTANCE.createComponentClassType();
 		sb = new StringBuffer();
-		sb.append("javax.faces.component.UI"); //$NON-NLS-1$
+		sb.append(isJakartaEE ? "javax.faces.component.UI" : "javax.faces.component.UI"); //$NON-NLS-1$ //$NON-NLS-2$
 		sb.append(name);
 		componentClassType.setTextContent(sb.toString());
 		componentType.setComponentClass(componentClassType);
@@ -279,18 +300,21 @@ public class ImplicitRuntimeJSFAppConfigProvider extends AbstractJSFAppConfigPro
 	 * @return {@link ComponentType} instance.
 	 */
 	protected ComponentType createHTMLComponent(String name) {
+		IProject project = jsfAppConfigLocater.getJSFAppConfigManager().getProject();
+		boolean isJakartaEE = JSFVersion.guessAtLeast(JSFVersion.V3_0, project);
+
 		ComponentType componentType = FacesConfigFactory.eINSTANCE.createComponentType();
 		//set component-type
 		ComponentTypeType componentTypeType = FacesConfigFactory.eINSTANCE.createComponentTypeType();
 		StringBuffer sb = new StringBuffer();
-		sb.append("javax.faces."); //$NON-NLS-1$
+		sb.append(isJakartaEE ? "jakarta.faces." : "javax.faces."); //$NON-NLS-1$ //$NON-NLS-2$
 		sb.append(name);
 		componentTypeType.setTextContent(sb.toString());
 		componentType.setComponentType(componentTypeType);
 		//set component-class
 		ComponentClassType componentClassType = FacesConfigFactory.eINSTANCE.createComponentClassType();
 		sb = new StringBuffer();
-		sb.append("javax.faces.component.html."); //$NON-NLS-1$
+		sb.append(isJakartaEE ? "jakarta.faces.component.html." : "javax.faces.component.html."); //$NON-NLS-1$ //$NON-NLS-2$
 		sb.append(name);
 		componentClassType.setTextContent(sb.toString());
 		componentType.setComponentClass(componentClassType);

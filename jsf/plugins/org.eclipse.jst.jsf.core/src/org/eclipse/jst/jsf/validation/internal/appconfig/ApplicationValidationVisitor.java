@@ -20,6 +20,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.jst.jsf.core.IJSFCoreConstants;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.DefaultLocaleType;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigPackage;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigType;
@@ -145,7 +146,10 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
          */
         public ActionListenerValidationVisitor(final String version) {
             super(FacesConfigPackage.eINSTANCE.getApplicationType_ActionListener(),
-                    version,"javax.faces.event.ActionListener", true); //$NON-NLS-1$
+                    version,
+                    JSFVersion.valueOfString(version).compareTo(JSFVersion.V3_0) >= 0 ?
+                            "jakarta.faces.event.ActionListener" : //$NON-NLS-1$
+                                "javax.faces.event.ActionListener", true); //$NON-NLS-1$
         }
     }
     
@@ -156,7 +160,10 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
          */
         public NavigationHandlerValidationVisitor(final String version) {
             super(FacesConfigPackage.eINSTANCE.getApplicationType_NavigationHandler(),
-                    version,"javax.faces.application.NavigationHandler", true); //$NON-NLS-1$
+                    version,
+                    JSFVersion.valueOfString(version).compareTo(JSFVersion.V3_0) >= 0 ?
+                            "jakarta.faces.application.NavigationHandler" : //$NON-NLS-1$
+                                "javax.faces.application.NavigationHandler", true); //$NON-NLS-1$
         }
     }
     
@@ -165,7 +172,10 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
         ViewHandlerValidationVisitor(final String version)
         {
             super(FacesConfigPackage.eINSTANCE.getApplicationType_ViewHandler(),
-                    version,"javax.faces.application.ViewHandler", true); //$NON-NLS-1$
+                    version,
+                    JSFVersion.valueOfString(version).compareTo(JSFVersion.V3_0) >= 0 ?
+                            "jakarta.faces.application.ViewHandler" : //$NON-NLS-1$
+                                "javax.faces.application.ViewHandler", true); //$NON-NLS-1$
         }
     }
     
@@ -176,7 +186,10 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
             // must a concrete class with a zero arg constructor:
             //   JSF1.1_3.2.3.2 and JSF1.2_3.2.4.2
             super(FacesConfigPackage.eINSTANCE.getApplicationType_StateManager(),
-                    version,"javax.faces.application.StateManager", true); //$NON-NLS-1$
+                    version,
+                    JSFVersion.valueOfString(version).compareTo(JSFVersion.V3_0) >= 0 ?
+                            "jakarta.faces.application.StateManager" : //$NON-NLS-1$
+                                "javax.faces.application.StateManager", true); //$NON-NLS-1$
         }    
     }
     
@@ -185,7 +198,10 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
         PropertyResolverValidationVisitor(final String version)
         {
             super(FacesConfigPackage.eINSTANCE.getApplicationType_PropertyResolver(),
-                    version,"javax.faces.el.PropertyResolver", true); //$NON-NLS-1$
+                    version,
+                    JSFVersion.valueOfString(version).compareTo(JSFVersion.V3_0) >= 0 ?
+                            "jakarta.faces.el.PropertyResolver" : //$NON-NLS-1$
+                                "javax.faces.el.PropertyResolver", true); //$NON-NLS-1$
         }
 
         protected void doValidate(EObject object, List messages, IFile file) {
@@ -209,7 +225,10 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
         VariableResolverValidationVisitor(final String version)
         {
             super(FacesConfigPackage.eINSTANCE.getApplicationType_VariableResolver(),
-                    version, "javax.faces.el.VariableResolver", true); //$NON-NLS-1$
+                    version,
+                    JSFVersion.valueOfString(version).compareTo(JSFVersion.V3_0) >= 0 ?
+                            "jakarta.faces.el.VariableResolver" : //$NON-NLS-1$
+                                "javax.faces.el.VariableResolver", true); //$NON-NLS-1$
         }
 
         protected void doValidate(EObject object, List messages, IFile file) {
@@ -235,7 +254,10 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
             // must be a class and have zero-arg constructor
             //   JSF1.2_5.6.1.4
             super(FacesConfigPackage.eINSTANCE.getApplicationType_ELResolver(),
-               version, "javax.el.ELResolver", true); //$NON-NLS-1$
+               version,
+               JSFVersion.valueOfString(version).compareTo(JSFVersion.V3_0) >= 0 ?
+                       "jakarta.el.ELResolver" : //$NON-NLS-1$
+                           "javax.el.ELResolver", true); //$NON-NLS-1$
         }
 
         protected void doValidate(EObject object, List messages, IFile file) {
@@ -316,7 +338,10 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
 	  ResourceHandlerValidationVisitor(final String version)
       {
           super(FacesConfigPackage.eINSTANCE.getApplicationType_ResourceHandler(),
-                  version,"javax.faces.application.ResourceHandler", true); //$NON-NLS-1$
+                  version,
+                  JSFVersion.valueOfString(version).compareTo(JSFVersion.V3_0) >= 0 ?
+                          "jakarta.faces.application.ResourceHandler" : //$NON-NLS-1$
+                              "javax.faces.application.ResourceHandler", true); //$NON-NLS-1$
       }
   }
     
@@ -376,7 +401,10 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
 	  SystemEventListenerValidationVisitor(final String version)
       {
           super(FacesConfigPackage.eINSTANCE.getSystemEventListenerType_SystemEventListenerClass(),
-                  version,"javax.faces.event.SystemEventListener", true); //$NON-NLS-1$
+                  version,
+                  JSFVersion.valueOfString(version).compareTo(JSFVersion.V3_0) >= 0 ?
+                          "jakarta.faces.event.SystemEventListener" : //$NON-NLS-1$
+                              "javax.faces.event.SystemEventListener", true); //$NON-NLS-1$
       }	  
   }
   
@@ -385,7 +413,10 @@ public class ApplicationValidationVisitor extends EObjectValidationVisitor
 	  SystemEventListenerClassValidationVisitor(final String version)
       {
           super(FacesConfigPackage.eINSTANCE.getSystemEventListenerType_SystemEventClass(),
-                  version,"javax.faces.event.SystemEvent", true); //$NON-NLS-1$
+                  version,
+                  JSFVersion.valueOfString(version).compareTo(JSFVersion.V3_0) >= 0 ?
+                          "jakarta.faces.event.SystemEvent" : //$NON-NLS-1$
+                              "javax.faces.event.SystemEvent", true); //$NON-NLS-1$
       }	  
   }
   

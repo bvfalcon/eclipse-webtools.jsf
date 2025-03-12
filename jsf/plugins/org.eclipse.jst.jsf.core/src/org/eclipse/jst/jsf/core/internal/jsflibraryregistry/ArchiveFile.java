@@ -21,18 +21,17 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.ArchiveFile#isRelativeToWorkspace <em>Relative To Workspace</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.ArchiveFile#getSourceLocation <em>Source Location</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.ArchiveFile#getRelativeDestLocation <em>Relative Dest Location</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.ArchiveFile#getJSFLibrary <em>JSF Library</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistryPackage#getArchiveFile()
  * @model
  * @generated
- * @deprecated
  */
 public interface ArchiveFile extends EObject{
 	/**
@@ -137,7 +136,7 @@ public interface ArchiveFile extends EObject{
 	 * @see #setJSFLibrary(JSFLibrary)
 	 * @see org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistryPackage#getArchiveFile_JSFLibrary()
 	 * @see org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibrary#getArchiveFiles
-	 * @model opposite="ArchiveFiles" required="true"
+	 * @model opposite="ArchiveFiles" required="true" transient="false"
 	 * @generated
 	 */
 	JSFLibrary getJSFLibrary();

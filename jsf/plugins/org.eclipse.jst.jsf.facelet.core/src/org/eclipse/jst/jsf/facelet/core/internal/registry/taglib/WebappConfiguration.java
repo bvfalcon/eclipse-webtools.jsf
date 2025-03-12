@@ -53,6 +53,10 @@ public class WebappConfiguration
      * The param key for Facelet 2.0 libraries declared in web.xml
      */
     public static final String JSF20_FACELET_LIBRARIES_CONTEXT_PARAM_NAME = "javax.faces.FACELETS_LIBRARIES"; //$NON-NLS-1$
+    /**
+     * The param key for Facelet 3.0 libraries declared in web.xml
+     */
+    public static final String JSF30_FACELET_LIBRARIES_CONTEXT_PARAM_NAME = "jakarta.faces.FACELETS_LIBRARIES"; //$NON-NLS-1$
     private final IProject _project;
     /**
      * Cached instance of ContextParamAdapter.
@@ -186,10 +190,9 @@ public class WebappConfiguration
         {
             List<ParamValue> paramValues = modelProvider.getWebAppParamValues();
             for (final ParamValue paramValue : paramValues){
-                if (paramValue.getParamName().equals(
-                        FACELET_10_LIBRARIES_CONTEXT_PARAM_NAME)
-                        || paramValue.getParamName().equals(
-                                JSF20_FACELET_LIBRARIES_CONTEXT_PARAM_NAME))
+                if (paramValue.getParamName().equals(FACELET_10_LIBRARIES_CONTEXT_PARAM_NAME)
+                        || paramValue.getParamName().equals(JSF20_FACELET_LIBRARIES_CONTEXT_PARAM_NAME)
+                        || paramValue.getParamName().equals(JSF30_FACELET_LIBRARIES_CONTEXT_PARAM_NAME))
                 {
                     String filesString = paramValue.getParamValue();
                     filesList.addAll(parseFilesString(filesString));

@@ -27,6 +27,7 @@ import org.eclipse.jdt.ui.IJavaElementSearchConstants;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerFilter;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.ApplicationType;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigFactory;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigPackage;
@@ -125,7 +126,7 @@ public class ApplicationSection extends OthersPageBaseSection {
 			 * For other types children, open a ClassDialog to select a class in
 			 * current project.
 			 */
-			String superType = ModelUtil.getSuperType(applicationChildClass);
+			String superType = ModelUtil.getSuperType(applicationChildClass, JSFVersion.valueOfProject(project));
 			textValue = DialogUtil.openClassDialog(getSection().getShell(),
 					project, superType,
 					IJavaElementSearchConstants.CONSIDER_ALL_TYPES);

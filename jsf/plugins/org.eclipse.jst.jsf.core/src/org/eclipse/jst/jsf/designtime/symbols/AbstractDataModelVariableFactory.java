@@ -134,8 +134,10 @@ public abstract class AbstractDataModelVariableFactory
         // template info, these row containers are opaque to us
         else if (valueType
                 .isInstanceOf(TypeConstants.TYPE_JAVAX_SERVLET_JSP_JSTL_SQL_RESULT)
+                || valueType.isInstanceOf(TypeConstants.TYPE_JAKARTA_SERVLET_JSP_JSTL_SQL_RESULT)
                 || valueType.isInstanceOf(TypeConstants.TYPE_RESULT_SET)
-                || valueType.isInstanceOf(TypeConstants.TYPE_DATA_MODEL))
+                || valueType.isInstanceOf(TypeConstants.TYPE_DATA_MODEL)
+                || valueType.isInstanceOf(TypeConstants.TYPE_DATA_MODEL_JAKARTA))
         {
             return getSymbolFactory().createDefaultSymbol(symbolName, ERuntimeSource.TAG_INSTANTIATED_SYMBOL_LITERAL, Messages
                     .getString("AbstractDataModelVariableFactory.DataModel.Symbol.RowVariable.DetailedDescription")); //$NON-NLS-1$

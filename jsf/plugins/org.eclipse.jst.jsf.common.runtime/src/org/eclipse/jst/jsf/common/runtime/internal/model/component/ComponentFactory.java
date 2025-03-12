@@ -82,42 +82,82 @@ public class ComponentFactory
      */
     public final static String BASE_CLASS_UIINPUT = "javax.faces.component.UIInput"; //$NON-NLS-1$
     /**
+     * Base class name for UIInput's (Jakarta EE)
+     */
+    public final static String BASE_CLASS_UIINPUT_JAKARTA = "jakarta.faces.component.UIInput"; //$NON-NLS-1$
+    /**
      * Base class name for UIOutput's
      */
     public final static String BASE_CLASS_UIOUTPUT = "javax.faces.component.UIOutput"; //$NON-NLS-1$
+    /**
+     * Base class name for UIOutput's (Jakarta EE)
+     */
+    public final static String BASE_CLASS_UIOUTPUT_JAKARTA = "jakarta.faces.component.UIOutput"; //$NON-NLS-1$
     /**
      * Base class name for UICommand's
      */
     public final static String BASE_CLASS_UICOMMAND = "javax.faces.component.UICommand"; //$NON-NLS-1$
     /**
+     * Base class name for UICommand's (Jakarta EE)
+     */
+    public final static String BASE_CLASS_UICOMMAND_JAKARTA = "jakarta.faces.component.UICommand"; //$NON-NLS-1$
+    /**
      * Base class name for UIData's
      */
     public final static String BASE_CLASS_UIDATA = "javax.faces.component.UIData"; //$NON-NLS-1$
     /**
+     * Base class name for UIData's (Jakarta EE)
+     */
+    public final static String BASE_CLASS_UIDATA_JAKARTA = "jakarta.faces.component.UIData"; //$NON-NLS-1$
+    /**
      * Base class name for UIForm's
      */
     public final static String BASE_CLASS_UIFORM = "javax.faces.component.UIForm"; //$NON-NLS-1$
+    /**
+     * Base class name for UIForm's (Jakarta EE)
+     */
+    public final static String BASE_CLASS_UIFORM_JAKARTA = "jakarta.faces.component.UIForm"; //$NON-NLS-1$
 
     /**
      * Interface name for ValueHolder's
      */
     public final static String INTERFACE_VALUEHOLDER = "javax.faces.component.ValueHolder"; //$NON-NLS-1$
     /**
+     * Interface name for ValueHolder's (Jakarta EE)
+     */
+    public final static String INTERFACE_VALUEHOLDER_JAKARTA = "jakarta.faces.component.ValueHolder"; //$NON-NLS-1$
+    /**
      * Interface name for EditableValueHolder's
      */
     public final static String INTERFACE_EDITABLEVALUEHOLDER = "javax.faces.component.EditableValueHolder"; //$NON-NLS-1$
+    /**
+     * Interface name for EditableValueHolder's (Jakarta EE)
+     */
+    public final static String INTERFACE_EDITABLEVALUEHOLDER_JAKARTA = "jakarta.faces.component.EditableValueHolder"; //$NON-NLS-1$
     /**
      * Interface name for ActionSource's
      */
     public final static String INTERFACE_ACTIONSOURCE = "javax.faces.component.ActionSource"; //$NON-NLS-1$
     /**
+     * Interface name for ActionSource's (Jakarta EE)
+     */
+    public final static String INTERFACE_ACTIONSOURCE_JAKARTA = "jakarta.faces.component.ActionSource"; //$NON-NLS-1$
+    /**
      * Interface name for ActionSource2's
      */
     public final static String INTERFACE_ACTIONSOURCE2 = "javax.faces.component.ActionSource2"; //$NON-NLS-1$
     /**
+     * Interface name for ActionSource2's (Jakarta EE)
+     */
+    public final static String INTERFACE_ACTIONSOURCE2_JAKARTA = "jakarta.faces.component.ActionSource2"; //$NON-NLS-1$
+    /**
      * Interface name for NamingContainer's
      */
     public final static String INTERFACE_NAMINGCONTAINER = "javax.faces.component.NamingContainer"; //$NON-NLS-1$
+    /**
+     * Interface name for NamingContainer's (Jakarta EE)
+     */
+    public final static String INTERFACE_NAMINGCONTAINER_JAKARTA = "jakarta.faces.component.NamingContainer"; //$NON-NLS-1$
 
     /**
      * @param id

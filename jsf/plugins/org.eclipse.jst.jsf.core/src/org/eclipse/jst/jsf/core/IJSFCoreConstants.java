@@ -93,6 +93,33 @@ public final class IJSFCoreConstants
 	 */
 	public static final String JSF_VERSION_2_3 = FACET_VERSION_2_3;
 
+	/**
+	 * The facet version for a Jakarta Faces 3.0 project
+	 */
+	public static final String FACET_VERSION_3_0 = "3.0"; //$NON-NLS-1$
+	/**
+	 * The version string for a Jakarta Faces 3.0 project
+	 */
+	public static final String JSF_VERSION_3_0 = FACET_VERSION_3_0;
+
+	/**
+	 * The facet version for a Jakarta Faces 4.0 project
+	 */
+	public static final String FACET_VERSION_4_0 = "4.0"; //$NON-NLS-1$
+	/**
+	 * The version string for a Jakarta Faces 4.0 project
+	 */
+	public static final String JSF_VERSION_4_0 = FACET_VERSION_4_0;
+
+	/**
+	 * The facet version for a Jakarta Faces 4.1 project
+	 */
+	public static final String FACET_VERSION_4_1 = "4.1"; //$NON-NLS-1$
+	/**
+	 * The version string for a Jakarta Faces 4.1 project
+	 */
+	public static final String JSF_VERSION_4_1 = FACET_VERSION_4_1;
+
     /**
      * @param facet
      * @return true if the facet is a jsf facet.

@@ -27,6 +27,7 @@ import org.eclipse.jst.jsf.common.ui.internal.dialogfield.DialogField;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.IDialogFieldApplyListener;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.LayoutUtil;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.StringDialogField;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.DescriptionType;
 import org.eclipse.jst.jsf.facesconfig.emf.DisplayNameType;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigFactory;
@@ -200,8 +201,8 @@ public class RenderkitGeneralSection extends AbstractFacesConfigSection {
 		renderkitClassField
 				.setLabelText(EditorMessages.RenderKitGeneralSection_Label_RenderKitClass);
 		renderkitClassField.doFillIntoGrid(toolkit, container, numberOfColumns);
-		renderkitClassField.setProject((IProject) getPage().getEditor()
-				.getAdapter(IProject.class));
+		IProject project = getPage().getEditor().getAdapter(IProject.class);
+		renderkitClassField.setProject(project);
 		LayoutUtil.setHorizontalGrabbing(renderkitClassField.getTextControl(
 				toolkit, container));
 
@@ -229,7 +230,10 @@ public class RenderkitGeneralSection extends AbstractFacesConfigSection {
 					}
 				});
 		renderkitClassField
-				.setSuperClassName(IFacesConfigConstants.RENDER_KIT_SUPER_CLASS);
+				.setSuperClassName(
+						JSFVersion.guessAtLeast(JSFVersion.V3_0, project) ?
+								IFacesConfigConstants.RENDER_KIT_SUPER_CLASS_JAKARTA :
+									IFacesConfigConstants.RENDER_KIT_SUPER_CLASS);
 	}
 
 	/**

@@ -38,6 +38,7 @@ import org.eclipse.jst.j2ee.model.ModelProviderManager;
 import org.eclipse.jst.javaee.web.WebApp;
 import org.eclipse.jst.jsf.common.facet.libraryprovider.jsf.JsfLibraryUtil;
 import org.eclipse.jst.jsf.common.webxml.WebXmlUpdater;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.core.internal.JSFCorePlugin;
 import org.eclipse.jst.jsf.core.internal.Messages;
 import org.eclipse.osgi.util.NLS;
@@ -222,8 +223,14 @@ public final class JSFFacetInstallDelegate implements IDelegate {
     {
         final WebXmlUpdater updater = new WebXmlUpdater(project, monitor);
         
-        updater.addContextParam("javax.servlet.jsp.jstl.fmt.localizationContext", "resources.application", null);  //$NON-NLS-1$//$NON-NLS-2$
-        updater.addContextParam("javax.faces.STATE_SAVING_METHOD", "client", Messages.JSFFacetInstallDelegate_StateSavingMethod); //$NON-NLS-1$ //$NON-NLS-2$
+        boolean isJakartaEE = JSFVersion.guessAtLeast(JSFVersion.V3_0, project);
+        if (isJakartaEE) {
+            updater.addContextParam("jakarta.servlet.jsp.jstl.fmt.localizationContext", "resources.application", null);  //$NON-NLS-1$//$NON-NLS-2$
+            updater.addContextParam("jakarta.faces.STATE_SAVING_METHOD", "client", Messages.JSFFacetInstallDelegate_StateSavingMethod); //$NON-NLS-1$ //$NON-NLS-2$
+        } else {
+            updater.addContextParam("javax.servlet.jsp.jstl.fmt.localizationContext", "resources.application", null);  //$NON-NLS-1$//$NON-NLS-2$
+            updater.addContextParam("javax.faces.STATE_SAVING_METHOD", "client", Messages.JSFFacetInstallDelegate_StateSavingMethod); //$NON-NLS-1$ //$NON-NLS-2$
+        }
         updater.addContextParam("org.apache.myfaces.ALLOW_JAVASCRIPT", "true", Messages.JSFFacetInstallDelegate_AllowJavascriptDescription); //$NON-NLS-1$ //$NON-NLS-2$
         updater.addContextParam("org.apache.myfaces.PRETTY_HTML", "true", Messages.JSFFacetInstallDelegate_PrettyHtmlDescription); //$NON-NLS-1$ //$NON-NLS-2$
         updater.addContextParam("org.apache.myfaces.DETECT_JAVASCRIPT", "false", null);  //$NON-NLS-1$//$NON-NLS-2$
@@ -264,9 +271,14 @@ public final class JSFFacetInstallDelegate implements IDelegate {
                                              final IProgressMonitor monitor)
     {
         final WebXmlUpdater updater = new WebXmlUpdater(project, monitor);
-        
-        updater.addContextParam("javax.faces.STATE_SAVING_METHOD", "client", Messages.JSFFacetInstallDelegate_StateSavingMethod);  //$NON-NLS-1$//$NON-NLS-2$
-        updater.addContextParam("javax.servlet.jsp.jstl.fmt.localizationContext", "resources.application", null); //$NON-NLS-1$ //$NON-NLS-2$
+        boolean isJakartaEE = JSFVersion.guessAtLeast(JSFVersion.V3_0, project);
+        if (isJakartaEE) {
+            updater.addContextParam("jakarta.faces.STATE_SAVING_METHOD", "client", Messages.JSFFacetInstallDelegate_StateSavingMethod);  //$NON-NLS-1$//$NON-NLS-2$
+            updater.addContextParam("jakarta.servlet.jsp.jstl.fmt.localizationContext", "resources.application", null); //$NON-NLS-1$ //$NON-NLS-2$
+        } else {
+            updater.addContextParam("javax.faces.STATE_SAVING_METHOD", "client", Messages.JSFFacetInstallDelegate_StateSavingMethod);  //$NON-NLS-1$//$NON-NLS-2$
+            updater.addContextParam("javax.servlet.jsp.jstl.fmt.localizationContext", "resources.application", null); //$NON-NLS-1$ //$NON-NLS-2$
+        }
         updater.addListener("com.sun.faces.config.ConfigureListener"); //$NON-NLS-1$
 
 //Following 3 lines disabled for https://bugs.eclipse.org/bugs/show_bug.cgi?id=317865 and https://bugs.eclipse.org/bugs/show_bug.cgi?id=317868        

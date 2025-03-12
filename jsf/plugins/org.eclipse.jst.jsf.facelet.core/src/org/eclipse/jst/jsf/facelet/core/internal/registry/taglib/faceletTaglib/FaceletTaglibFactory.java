@@ -31,236 +31,236 @@ import org.eclipse.emf.ecore.EFactory;
 public interface FaceletTaglibFactory extends EFactory
 {
     /**
-     * The singleton instance of the factory.
-     * <!-- begin-user-doc -->
+	 * The singleton instance of the factory.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     FaceletTaglibFactory eINSTANCE = org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.init();
 
     /**
-     * Returns a new object of class '<em>Description</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Description</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Description</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Description</em>'.
+	 * @generated
+	 */
     Description createDescription();
 
     /**
-     * Returns a new object of class '<em>Display Name</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Display Name</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Display Name</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Display Name</em>'.
+	 * @generated
+	 */
     DisplayName createDisplayName();
 
     /**
-     * Returns a new object of class '<em>Document Root</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Document Root</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Document Root</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Document Root</em>'.
+	 * @generated
+	 */
     DocumentRoot createDocumentRoot();
 
     /**
-     * Returns a new object of class '<em>Canonical Name</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Canonical Name</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Canonical Name</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Canonical Name</em>'.
+	 * @generated
+	 */
     FaceletTaglibCanonicalName createFaceletTaglibCanonicalName();
 
     /**
-     * Returns a new object of class '<em>Extension</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Extension</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Extension</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Extension</em>'.
+	 * @generated
+	 */
     FaceletTaglibExtension createFaceletTaglibExtension();
 
     /**
-     * Returns a new object of class '<em>Function</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Function</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Function</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Function</em>'.
+	 * @generated
+	 */
     FaceletTaglibFunction createFaceletTaglibFunction();
 
     /**
-     * Returns a new object of class '<em>Tag Attribute</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Tag Attribute</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Tag Attribute</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Tag Attribute</em>'.
+	 * @generated
+	 */
     FaceletTaglibTagAttribute createFaceletTaglibTagAttribute();
 
     /**
-     * Returns a new object of class '<em>Tag Behavior Extension</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Tag Behavior Extension</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Tag Behavior Extension</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Tag Behavior Extension</em>'.
+	 * @generated
+	 */
     FaceletTaglibTagBehaviorExtension createFaceletTaglibTagBehaviorExtension();
 
     /**
-     * Returns a new object of class '<em>Tag Behavior</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Tag Behavior</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Tag Behavior</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Tag Behavior</em>'.
+	 * @generated
+	 */
     FaceletTaglibTagBehavior createFaceletTaglibTagBehavior();
 
     /**
-     * Returns a new object of class '<em>Tag Component Extension</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Tag Component Extension</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Tag Component Extension</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Tag Component Extension</em>'.
+	 * @generated
+	 */
     FaceletTaglibTagComponentExtension createFaceletTaglibTagComponentExtension();
 
     /**
-     * Returns a new object of class '<em>Tag Component</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Tag Component</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Tag Component</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Tag Component</em>'.
+	 * @generated
+	 */
     FaceletTaglibTagComponent createFaceletTaglibTagComponent();
 
     /**
-     * Returns a new object of class '<em>Tag Converter Extension</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Tag Converter Extension</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Tag Converter Extension</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Tag Converter Extension</em>'.
+	 * @generated
+	 */
     FaceletTaglibTagConverterExtension createFaceletTaglibTagConverterExtension();
 
     /**
-     * Returns a new object of class '<em>Tag Converter</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Tag Converter</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Tag Converter</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Tag Converter</em>'.
+	 * @generated
+	 */
     FaceletTaglibTagConverter createFaceletTaglibTagConverter();
 
     /**
-     * Returns a new object of class '<em>Tag Extension</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Tag Extension</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Tag Extension</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Tag Extension</em>'.
+	 * @generated
+	 */
     FaceletTaglibTagExtension createFaceletTaglibTagExtension();
 
     /**
-     * Returns a new object of class '<em>Tag</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Tag</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Tag</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Tag</em>'.
+	 * @generated
+	 */
     FaceletTaglibTag createFaceletTaglibTag();
 
     /**
-     * Returns a new object of class '<em>Tag Validator Extension</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Tag Validator Extension</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Tag Validator Extension</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Tag Validator Extension</em>'.
+	 * @generated
+	 */
     FaceletTaglibTagValidatorExtension createFaceletTaglibTagValidatorExtension();
 
     /**
-     * Returns a new object of class '<em>Tag Validator</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Tag Validator</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Tag Validator</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Tag Validator</em>'.
+	 * @generated
+	 */
     FaceletTaglibTagValidator createFaceletTaglibTagValidator();
 
     /**
-     * Returns a new object of class '<em>Facelet Taglib</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Facelet Taglib</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Facelet Taglib</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Facelet Taglib</em>'.
+	 * @generated
+	 */
     FaceletTaglib createFaceletTaglib();
 
     /**
-     * Returns a new object of class '<em>Fully Qualified Class</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Fully Qualified Class</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Fully Qualified Class</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Fully Qualified Class</em>'.
+	 * @generated
+	 */
     FullyQualifiedClass createFullyQualifiedClass();
 
     /**
-     * Returns a new object of class '<em>Generic Boolean</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Generic Boolean</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Generic Boolean</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Generic Boolean</em>'.
+	 * @generated
+	 */
     GenericBoolean createGenericBoolean();
 
     /**
-     * Returns a new object of class '<em>Icon</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Icon</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Icon</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Icon</em>'.
+	 * @generated
+	 */
     Icon createIcon();
 
     /**
-     * Returns a new object of class '<em>Java Identifier</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Java Identifier</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Java Identifier</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Java Identifier</em>'.
+	 * @generated
+	 */
     JavaIdentifier createJavaIdentifier();
 
     /**
-     * Returns a new object of class '<em>Path</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Path</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Path</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Path</em>'.
+	 * @generated
+	 */
     Path createPath();
 
     /**
-     * Returns a new object of class '<em>Identifiable String Value</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Identifiable String Value</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Identifiable String Value</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Identifiable String Value</em>'.
+	 * @generated
+	 */
     IdentifiableStringValue createIdentifiableStringValue();
 
     /**
-     * Returns the package supported by this factory.
-     * <!-- begin-user-doc -->
+	 * Returns the package supported by this factory.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the package supported by this factory.
-     * @generated
-     */
+	 * @return the package supported by this factory.
+	 * @generated
+	 */
     FaceletTaglibPackage getFaceletTaglibPackage();
 
 } //FaceletTaglibFactory

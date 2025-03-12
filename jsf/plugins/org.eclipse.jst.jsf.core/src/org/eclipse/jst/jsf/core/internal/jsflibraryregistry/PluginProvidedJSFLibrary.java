@@ -20,16 +20,15 @@ package org.eclipse.jst.jsf.core.internal.jsflibraryregistry;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.PluginProvidedJSFLibrary#getPluginID <em>Plugin ID</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.PluginProvidedJSFLibrary#getLabel <em>Label</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistryPackage#getPluginProvidedJSFLibrary()
  * @model
  * @generated
- * @deprecated
  */
 public interface PluginProvidedJSFLibrary extends JSFLibrary{
 	/**

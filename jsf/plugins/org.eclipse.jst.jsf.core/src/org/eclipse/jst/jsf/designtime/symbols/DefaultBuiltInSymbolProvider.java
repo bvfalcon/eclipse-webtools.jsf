@@ -23,6 +23,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.jst.jsf.context.symbol.ERuntimeSource;
 import org.eclipse.jst.jsf.context.symbol.IInstanceSymbol;
@@ -73,8 +74,10 @@ public class DefaultBuiltInSymbolProvider
     private static final String PARAM_VALUES_IMPLICIT_OBJ           = "paramValues";                     //$NON-NLS-1$
     private static final String VIEW_IMPLICIT_OBJ                   = "view";                            //$NON-NLS-1$
 
-    private static final String FACES_CONTEXT_FULLY_QUALIFIED_CLASS = "javax.faces.context.FacesContext"; //$NON-NLS-1$
+    private static final String FACES_CONTEXT_FULLY_QUALIFIED_CLASS 		= "javax.faces.context.FacesContext"; //$NON-NLS-1$
+    private static final String FACES_CONTEXT_JAKARTA_FULLY_QUALIFIED_CLASS = "jakarta.faces.context.FacesContext"; //$NON-NLS-1$
     private static final String VIEW_FULLY_QUALIFIED_CLASS          = "javax.faces.component.UIViewRoot"; //$NON-NLS-1$
+    private static final String VIEW_JAKARTA_FULLY_QUALIFIED_CLASS          = "jakarta.faces.component.UIViewRoot"; //$NON-NLS-1$
     
     private static final ISymbol SYMBOL_COOKIE_IMPLICIT_OBJ;
     private static final ISymbol SYMBOL_HEADER_IMPLICIT_OBJ;
@@ -90,7 +93,8 @@ public class DefaultBuiltInSymbolProvider
     private static final String COMPONENT_IMPLICIT_OBJ              = "component";                      //$NON-NLS-1$
     private static final String RESOURCE_IMPLICIT_OBJ               = "resource";                       //$NON-NLS-1$
     
-    private static final String UICOMPONENT_FULLY_QUALIFIED_CLASS       = "javax.faces.component.UIComponent";//$NON-NLS-1$
+    private static final String UICOMPONENT_FULLY_QUALIFIED_CLASS               = "javax.faces.component.UIComponent";//$NON-NLS-1$
+    private static final String UICOMPONENT_JAKARTA_FULLY_QUALIFIED_CLASS       = "jakarta.faces.component.UIComponent";//$NON-NLS-1$
     
     static
     {
@@ -249,32 +253,31 @@ public class DefaultBuiltInSymbolProvider
         requestSymbols.put(SYMBOL_PARAM_IMPLICIT_OBJ.getName(), SYMBOL_PARAM_IMPLICIT_OBJ);
         requestSymbols.put(SYMBOL_PARAM_VALUES_IMPLICIT_OBJ.getName(), SYMBOL_PARAM_VALUES_IMPLICIT_OBJ);
 
+        IProject project = file.getProject();
+        boolean isJakartaEE = JSFVersion.guessAtLeast(JSFVersion.V3_0, project);
         // TODO: these aren't maps; need to find way to handle
-        symbol = _symbolFactory.createBeanOrUnknownInstanceSymbol(file
-                .getProject(), FACES_CONTEXT_FULLY_QUALIFIED_CLASS,
-                FACES_CONTEXT_IMPLICIT_OBJ,
-                ERuntimeSource.BUILT_IN_SYMBOL_LITERAL);
+        symbol = _symbolFactory.createBeanOrUnknownInstanceSymbol(project,
+                isJakartaEE ? FACES_CONTEXT_JAKARTA_FULLY_QUALIFIED_CLASS : FACES_CONTEXT_FULLY_QUALIFIED_CLASS,
+                FACES_CONTEXT_IMPLICIT_OBJ, ERuntimeSource.BUILT_IN_SYMBOL_LITERAL);
         requestSymbols.put(symbol.getName(), symbol);
 
-        symbol = _symbolFactory.createBeanOrUnknownInstanceSymbol(file
-                .getProject(), VIEW_FULLY_QUALIFIED_CLASS, VIEW_IMPLICIT_OBJ,
-                ERuntimeSource.BUILT_IN_SYMBOL_LITERAL);
+        symbol = _symbolFactory.createBeanOrUnknownInstanceSymbol(project,
+                isJakartaEE ? VIEW_JAKARTA_FULLY_QUALIFIED_CLASS : VIEW_FULLY_QUALIFIED_CLASS,
+                VIEW_IMPLICIT_OBJ, ERuntimeSource.BUILT_IN_SYMBOL_LITERAL);
         requestSymbols.put(symbol.getName(), symbol);
         
         //add jsf2.0 implicits
         if (JSFVersion.guessAtLeast(JSFVersion.V2_0, file.getProject()) ) {
-            symbol = _symbolFactory.createBeanOrUnknownInstanceSymbol(file
-                    .getProject(), UICOMPONENT_FULLY_QUALIFIED_CLASS,
-                    CC_IMPLICIT_OBJ,
-                    ERuntimeSource.BUILT_IN_SYMBOL_LITERAL);
+            symbol = _symbolFactory.createBeanOrUnknownInstanceSymbol(project,
+                    isJakartaEE ? UICOMPONENT_JAKARTA_FULLY_QUALIFIED_CLASS : UICOMPONENT_FULLY_QUALIFIED_CLASS,
+                    CC_IMPLICIT_OBJ, ERuntimeSource.BUILT_IN_SYMBOL_LITERAL);
             requestSymbols.put(symbol.getName(), symbol);
             
 
 //            _symbolFactory.createJavaComponentSymbol(CC_IMPLICIT_OBJ, typeDesc, ""); //$NON-NLS-1$
-            symbol = _symbolFactory.createBeanOrUnknownInstanceSymbol(file
-                    .getProject(), UICOMPONENT_FULLY_QUALIFIED_CLASS,
-                    COMPONENT_IMPLICIT_OBJ,
-                    ERuntimeSource.BUILT_IN_SYMBOL_LITERAL);
+            symbol = _symbolFactory.createBeanOrUnknownInstanceSymbol(project,
+                    isJakartaEE ? UICOMPONENT_JAKARTA_FULLY_QUALIFIED_CLASS : UICOMPONENT_FULLY_QUALIFIED_CLASS,
+                    COMPONENT_IMPLICIT_OBJ, ERuntimeSource.BUILT_IN_SYMBOL_LITERAL);
             requestSymbols.put(symbol.getName(), symbol);
                        
         }

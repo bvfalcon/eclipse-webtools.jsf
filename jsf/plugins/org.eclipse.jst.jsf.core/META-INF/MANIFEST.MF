@@ -2,8 +2,9 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Automatic-Module-Name: org.eclipse.jst.jsf.core
 Bundle-Name: %plugin.name
-Bundle-SymbolicName: org.eclipse.jst.jsf.core; singleton:=true
+Bundle-SymbolicName: org.eclipse.jst.jsf.core;singleton:=true
 Bundle-Version: 1.9.3.qualifier
+Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.jst.jsf.core.internal.JSFCorePlugin
 Bundle-Vendor: %plugin.provider
 Bundle-Localization: plugin
@@ -26,9 +27,9 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)",
  org.eclipse.wst.common.emf;bundle-version="[1.1.103,2.0.0)",
  org.eclipse.jem.util;bundle-version="[2.0.0,3.0.0)",
  org.eclipse.emf.common;bundle-version="[2.2.0,3.0.0)",
- org.eclipse.emf.ecore;bundle-version="[2.2.0,3.0.0)",
+ org.eclipse.emf.ecore;bundle-version="[2.2.0,3.0.0)";visibility:=reexport,
  org.eclipse.core.commands;bundle-version="[3.2.0,4.0.0)",
- org.eclipse.emf.ecore.xmi;bundle-version="[2.2.0,3.0.0)",
+ org.eclipse.emf.ecore.xmi;bundle-version="[2.2.0,3.0.0)";visibility:=reexport,
  org.eclipse.emf.edit;bundle-version="[2.2.0,3.0.0)",
  org.eclipse.jst.common.project.facet.core;bundle-version="[1.1.0,2.0.0)",
  org.eclipse.jst.jsf.common.runtime;bundle-version="[1.0.0,2.0.0)",
@@ -37,7 +38,8 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)",
  org.eclipse.wst.css.core;bundle-version="[1.1.200,2.0.0)",
  org.eclipse.debug.core;bundle-version="[3.5.0,4.0.0)",
  org.eclipse.ui;bundle-version="3.6.0"
-Bundle-ActivationPolicy: lazy;exclude:="org.eclipse.jst.jsf.core.internal.contenttype"
+Eclipse-LazyStart: true
+Bundle-ActivationPolicy: lazy;exclude:=org.eclipse.jst.jsf.core.internal.contenttype
 Export-Package: org.eclipse.jst.jsf.core,
  org.eclipse.jst.jsf.core.internal;x-friends:="org.eclipse.jst.jsf.core.tests,org.eclipse.jst.jsf.ui,org.eclipse.jst.jsf.ui.tests",
  org.eclipse.jst.jsf.core.internal.contentassist.el;x-friends:="org.eclipse.jst.jsf.contentassist.tests",
@@ -53,9 +55,12 @@ Export-Package: org.eclipse.jst.jsf.core,
  org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl;x-friends:="org.eclipse.jst.jsf.core.tests,org.eclipse.jst.jsf.ui,org.eclipse.jst.jsf.ui.tests",
  org.eclipse.jst.jsf.core.internal.jsflibraryregistry.util;x-friends:="org.eclipse.jst.jsf.core.tests,org.eclipse.jst.jsf.ui,org.eclipse.jst.jsf.ui.tests",
  org.eclipse.jst.jsf.core.internal.launch;x-internal:=true,
+ org.eclipse.jst.jsf.core.internal.preferences,
  org.eclipse.jst.jsf.core.internal.project.facet;x-friends:="org.eclipse.jst.jsf.core.tests,org.eclipse.jst.jsf.ui,org.eclipse.jst.jsf.ui.tests",
+ org.eclipse.jst.jsf.core.internal.provisional.contenttype,
  org.eclipse.jst.jsf.core.internal.region;x-internal:=true,
  org.eclipse.jst.jsf.core.internal.tld;x-friends:="org.eclipse.jst.pagedesigner,org.eclipse.jst.jsf.core.tests",
+ org.eclipse.jst.jsf.core.internal.util,
  org.eclipse.jst.jsf.core.jsfappconfig,
  org.eclipse.jst.jsf.core.jsfappconfig.internal;x-internal:=true,
  org.eclipse.jst.jsf.core.jsflibraryconfiguration,
@@ -120,3 +125,4 @@ Export-Package: org.eclipse.jst.jsf.core,
  org.eclipse.jst.jsf.validation.internal.facelet,
  org.eclipse.jst.jsf.validation.internal.strategy;x-internal:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-17
+Import-Package: org.eclipse.core.filebuffers

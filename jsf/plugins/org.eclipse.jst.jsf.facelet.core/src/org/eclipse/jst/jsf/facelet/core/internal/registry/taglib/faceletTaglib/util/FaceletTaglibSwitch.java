@@ -21,6 +21,7 @@ package org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.*;
 import org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.Description;
 import org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.DisplayName;
 import org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.DocumentRoot;
@@ -90,7 +91,7 @@ public class FaceletTaglibSwitch<T> extends Switch<T>
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */

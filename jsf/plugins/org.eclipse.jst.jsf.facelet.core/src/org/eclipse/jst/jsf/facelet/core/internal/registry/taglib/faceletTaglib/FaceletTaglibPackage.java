@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.EReference;
  * 
  *       DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *       
- *       Copyright 2003-2013 Sun Microsystems, Inc. All rights reserved.
+ *       Copyright 2003-2009 Sun Microsystems, Inc. All rights reserved.
  *       
  *       The contents of this file are subject to the terms of either the
  *       GNU General Public License Version 2 only ("GPL") or the Common

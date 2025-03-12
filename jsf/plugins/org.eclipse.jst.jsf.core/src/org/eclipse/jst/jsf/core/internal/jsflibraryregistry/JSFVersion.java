@@ -26,7 +26,6 @@ import org.eclipse.emf.common.util.AbstractEnumerator;
  * @see org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistryPackage#getJSFVersion()
  * @model
  * @generated
- * @deprecated
  */
 public final class JSFVersion extends AbstractEnumerator {
 	/**
@@ -82,6 +81,83 @@ public final class JSFVersion extends AbstractEnumerator {
 	public static final int V1_2 = 2;
 
 	/**
+	 * The '<em><b>V2 0</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V2_0_LITERAL
+	 * @model name="v2_0"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int V2_0 = 3;
+
+	/**
+	 * The '<em><b>V2 1</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V2_1_LITERAL
+	 * @model name="v2_1"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int V2_1 = 4;
+
+	/**
+	 * The '<em><b>V2 2</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V2_2_LITERAL
+	 * @model name="v2_2"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int V2_2 = 5;
+
+	/**
+	 * The '<em><b>V2 3</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V2_3_LITERAL
+	 * @model name="v2_3"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int V2_3 = 6;
+
+	/**
+	 * The '<em><b>V3 0</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V3_0_LITERAL
+	 * @model name="v3_0"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int V3_0 = 7;
+
+	/**
+	 * The '<em><b>V4 0</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V4_0_LITERAL
+	 * @model name="v4_0"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int V4_0 = 8;
+
+	/**
+	 * The '<em><b>V4 1</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V4_1_LITERAL
+	 * @model name="v4_1"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int V4_1 = 9;
+
+	/**
 	 * The '<em><b>UNKNOWN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -112,6 +188,76 @@ public final class JSFVersion extends AbstractEnumerator {
 	public static final JSFVersion V1_2_LITERAL = new JSFVersion(V1_2, "v1_2", "v1_2"); //$NON-NLS-1$ //$NON-NLS-2$
 
 	/**
+	 * The '<em><b>V2 0</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V2_0
+	 * @generated
+	 * @ordered
+	 */
+	public static final JSFVersion V2_0_LITERAL = new JSFVersion(V2_0, "v2_0", "v2_0"); //$NON-NLS-1$ //$NON-NLS-2$
+
+	/**
+	 * The '<em><b>V2 1</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V2_1
+	 * @generated
+	 * @ordered
+	 */
+	public static final JSFVersion V2_1_LITERAL = new JSFVersion(V2_1, "v2_1", "v2_1"); //$NON-NLS-1$ //$NON-NLS-2$
+
+	/**
+	 * The '<em><b>V2 2</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V2_2
+	 * @generated
+	 * @ordered
+	 */
+	public static final JSFVersion V2_2_LITERAL = new JSFVersion(V2_2, "v2_2", "v2_2"); //$NON-NLS-1$ //$NON-NLS-2$
+
+	/**
+	 * The '<em><b>V2 3</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V2_3
+	 * @generated
+	 * @ordered
+	 */
+	public static final JSFVersion V2_3_LITERAL = new JSFVersion(V2_3, "v2_3", "v2_3"); //$NON-NLS-1$ //$NON-NLS-2$
+
+	/**
+	 * The '<em><b>V3 0</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V3_0
+	 * @generated
+	 * @ordered
+	 */
+	public static final JSFVersion V3_0_LITERAL = new JSFVersion(V3_0, "v3_0", "v3_0"); //$NON-NLS-1$ //$NON-NLS-2$
+
+	/**
+	 * The '<em><b>V4 0</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V4_0
+	 * @generated
+	 * @ordered
+	 */
+	public static final JSFVersion V4_0_LITERAL = new JSFVersion(V4_0, "v4_0", "v4_0"); //$NON-NLS-1$ //$NON-NLS-2$
+
+	/**
+	 * The '<em><b>V4 1</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #V4_1
+	 * @generated
+	 * @ordered
+	 */
+	public static final JSFVersion V4_1_LITERAL = new JSFVersion(V4_1, "v4_1", "v4_1"); //$NON-NLS-1$ //$NON-NLS-2$
+
+	/**
 	 * An array of all the '<em><b>JSF Version</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -122,6 +268,13 @@ public final class JSFVersion extends AbstractEnumerator {
 			UNKNOWN_LITERAL,
 			V1_1_LITERAL,
 			V1_2_LITERAL,
+			V2_0_LITERAL,
+			V2_1_LITERAL,
+			V2_2_LITERAL,
+			V2_3_LITERAL,
+			V3_0_LITERAL,
+			V4_0_LITERAL,
+			V4_1_LITERAL,
 		};
 
 	/**
@@ -138,6 +291,8 @@ public final class JSFVersion extends AbstractEnumerator {
 	 * @param literal value
 	 * @return the JSF version for name value 
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static JSFVersion get(String literal) {
@@ -156,6 +311,8 @@ public final class JSFVersion extends AbstractEnumerator {
 	 * @param name 
 	 * @return JSFVersion
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static JSFVersion getByName(String name) {
@@ -174,6 +331,8 @@ public final class JSFVersion extends AbstractEnumerator {
 	 * @param value 
 	 * @return the JSFVersion for the integer 'value' 
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static JSFVersion get(int value) {
@@ -181,6 +340,13 @@ public final class JSFVersion extends AbstractEnumerator {
 			case UNKNOWN: return UNKNOWN_LITERAL;
 			case V1_1: return V1_1_LITERAL;
 			case V1_2: return V1_2_LITERAL;
+			case V2_0: return V2_0_LITERAL;
+			case V2_1: return V2_1_LITERAL;
+			case V2_2: return V2_2_LITERAL;
+			case V2_3: return V2_3_LITERAL;
+			case V3_0: return V3_0_LITERAL;
+			case V4_0: return V4_0_LITERAL;
+			case V4_1: return V4_1_LITERAL;
 		}
 		return null;
 	}

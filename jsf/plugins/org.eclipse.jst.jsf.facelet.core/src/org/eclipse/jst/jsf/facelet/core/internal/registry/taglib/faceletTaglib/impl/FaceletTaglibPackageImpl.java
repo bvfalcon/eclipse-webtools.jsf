@@ -321,7 +321,7 @@ public class FaceletTaglibPackageImpl extends EPackageImpl implements FaceletTag
 
     /**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link FaceletTaglibPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -337,7 +337,8 @@ public class FaceletTaglibPackageImpl extends EPackageImpl implements FaceletTag
 		if (isInited) return (FaceletTaglibPackage)EPackage.Registry.INSTANCE.getEPackage(FaceletTaglibPackage.eNS_URI);
 
 		// Obtain or create and register package
-		FaceletTaglibPackageImpl theFaceletTaglibPackage = (FaceletTaglibPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof FaceletTaglibPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new FaceletTaglibPackageImpl());
+		Object registeredFaceletTaglibPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		FaceletTaglibPackageImpl theFaceletTaglibPackage = registeredFaceletTaglibPackage instanceof FaceletTaglibPackageImpl ? (FaceletTaglibPackageImpl)registeredFaceletTaglibPackage : new FaceletTaglibPackageImpl();
 
 		isInited = true;
 
@@ -352,7 +353,7 @@ public class FaceletTaglibPackageImpl extends EPackageImpl implements FaceletTag
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theFaceletTaglibPackage, 
+			(theFaceletTaglibPackage,
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return FaceletTaglibValidator.INSTANCE;
@@ -362,7 +363,6 @@ public class FaceletTaglibPackageImpl extends EPackageImpl implements FaceletTag
 		// Mark meta-data to indicate it can't be changed
 		theFaceletTaglibPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(FaceletTaglibPackage.eNS_URI, theFaceletTaglibPackage);
 		return theFaceletTaglibPackage;
@@ -1831,6 +1831,10 @@ public class FaceletTaglibPackageImpl extends EPackageImpl implements FaceletTag
 		addEEnumLiteral(faceletTaglibVersionEEnum, FaceletTaglibVersion._20);
 		addEEnumLiteral(faceletTaglibVersionEEnum, FaceletTaglibVersion._21);
 		addEEnumLiteral(faceletTaglibVersionEEnum, FaceletTaglibVersion._22);
+		addEEnumLiteral(faceletTaglibVersionEEnum, FaceletTaglibVersion._23);
+		addEEnumLiteral(faceletTaglibVersionEEnum, FaceletTaglibVersion._30);
+		addEEnumLiteral(faceletTaglibVersionEEnum, FaceletTaglibVersion._40);
+		addEEnumLiteral(faceletTaglibVersionEEnum, FaceletTaglibVersion._41);
 
 		initEEnum(genericBooleanBaseEEnum, GenericBooleanBase.class, "GenericBooleanBase"); //$NON-NLS-1$
 		addEEnumLiteral(genericBooleanBaseEEnum, GenericBooleanBase.TRUE);
@@ -1860,780 +1864,780 @@ public class FaceletTaglibPackageImpl extends EPackageImpl implements FaceletTag
 	 */
     protected void createExtendedMetaDataAnnotations()
     {
-		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData"; //$NON-NLS-1$				
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData"; //$NON-NLS-1$
 		addAnnotation
-		  (descriptionEClass, 
-		   source, 
+		  (descriptionEClass,
+		   source,
 		   new String[] {
-			 "name", "descriptionType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getDescription_Any(), 
-		   source, 
-		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "processing", "lax"  //$NON-NLS-1$//$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getDescription_Id(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (getDescription_Lang(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (displayNameEClass, 
-		   source, 
-		   new String[] {
-			 "name", "display-nameType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (documentRootEClass, 
-		   source, 
-		   new String[] {
-			 "name", "", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getDocumentRoot_Mixed(), 
-		   source, 
-		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getDocumentRoot_XMLNSPrefixMap(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "xmlns:prefix" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getDocumentRoot_XSISchemaLocation(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "xsi:schemaLocation" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getDocumentRoot_FaceletTaglib(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "facelet-taglib", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibCanonicalNameEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-canonical-nameType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibCanonicalName_Value(), 
-		   source, 
-		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibCanonicalName_Id(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibExtensionEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibExtension_Any(), 
-		   source, 
-		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibExtension_Id(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibFunctionEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-functionType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibFunction_FunctionName(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "function-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibFunction_FunctionClass(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "function-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibFunction_FunctionSignature(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "function-signature", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibTagAttributeEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-tag-attributeType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagAttribute_NameElement(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (getFaceletTaglibTagAttribute_RequiredElement(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "required", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (getFaceletTaglibTagAttribute_TypeElement(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (getFaceletTaglibTagAttribute_MethodSignatureElement(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "method-signature", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagAttribute_Id(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibTagBehaviorExtensionEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-tag-behavior-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagBehaviorExtension_Any(), 
-		   source, 
-		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagBehaviorExtension_Id(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibTagBehaviorEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-tag-behaviorType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagBehavior_BehaviorId(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "behavior-id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagBehavior_HandlerClass(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagBehavior_BehaviorExtension(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "behavior-extension", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibTagComponentExtensionEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-tag-component-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagComponentExtension_Any(), 
-		   source, 
-		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagComponentExtension_Id(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibTagComponentEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-tag-componentType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagComponent_ComponentType(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "component-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagComponent_RendererType(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "renderer-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagComponent_HandlerClass(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagComponent_ComponentExtension(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "component-extension", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibTagConverterExtensionEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-tag-converter-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagConverterExtension_Any(), 
-		   source, 
-		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagConverterExtension_Id(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibTagConverterEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-tag-converterType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagConverter_ConverterId(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "converter-id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagConverter_HandlerClass(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagConverter_ConverterExtension(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "converter-extension", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibTagExtensionEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-tag-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagExtension_Any(), 
-		   source, 
-		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagExtension_Id(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibTagEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-tagType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTag_TagNameElement(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "tag-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTag_HandlerClassElement(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTag_Behavior(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "behavior", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTag_Component(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "component", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTag_Converter(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "converter", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTag_Validator(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "validator", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTag_Source(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "source", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTag_Attribute(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTag_TagExtension(), 
-		   source, 
-		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "tag-extension", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibTagValidatorExtensionEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-tag-validator-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagValidatorExtension_Any(), 
-		   source, 
-		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
-		addAnnotation
-		  (getFaceletTaglibTagValidatorExtension_Id(), 
-		   source, 
-		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
-		addAnnotation
-		  (faceletTaglibTagValidatorEClass, 
-		   source, 
-		   new String[] {
-			 "name", "facelet-taglib-tag-validatorType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "descriptionType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
 		   });
 		addAnnotation
-		  (faceletTaglibTagValidatorEClass, 
-		   1,
+		  (getDescription_Any(),
+		   source,
+		   new String[] {
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getDescription_Id(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getDescription_Lang(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (displayNameEClass,
+		   source,
+		   new String[] {
+			   "name", "display-nameType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (documentRootEClass,
+		   source,
+		   new String[] {
+			   "name", "", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getDocumentRoot_Mixed(),
+		   source,
+		   new String[] {
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getDocumentRoot_XMLNSPrefixMap(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "xmlns:prefix" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getDocumentRoot_XSISchemaLocation(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "xsi:schemaLocation" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getDocumentRoot_FaceletTaglib(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "facelet-taglib", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibCanonicalNameEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-canonical-nameType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibCanonicalName_Value(),
+		   source,
+		   new String[] {
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibCanonicalName_Id(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibExtensionEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibExtension_Any(),
+		   source,
+		   new String[] {
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibExtension_Id(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibFunctionEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-functionType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibFunction_FunctionName(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "function-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibFunction_FunctionClass(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "function-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibFunction_FunctionSignature(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "function-signature", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagAttributeEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-tag-attributeType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagAttribute_NameElement(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagAttribute_RequiredElement(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "required", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagAttribute_TypeElement(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagAttribute_MethodSignatureElement(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "method-signature", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagAttribute_Id(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagBehaviorExtensionEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-tag-behavior-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagBehaviorExtension_Any(),
+		   source,
+		   new String[] {
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagBehaviorExtension_Id(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagBehaviorEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-tag-behaviorType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagBehavior_BehaviorId(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "behavior-id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagBehavior_HandlerClass(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagBehavior_BehaviorExtension(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "behavior-extension", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagComponentExtensionEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-tag-component-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagComponentExtension_Any(),
+		   source,
+		   new String[] {
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagComponentExtension_Id(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagComponentEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-tag-componentType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagComponent_ComponentType(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "component-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagComponent_RendererType(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "renderer-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagComponent_HandlerClass(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagComponent_ComponentExtension(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "component-extension", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagConverterExtensionEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-tag-converter-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagConverterExtension_Any(),
+		   source,
+		   new String[] {
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagConverterExtension_Id(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagConverterEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-tag-converterType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagConverter_ConverterId(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "converter-id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagConverter_HandlerClass(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagConverter_ConverterExtension(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "converter-extension", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagExtensionEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-tag-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagExtension_Any(),
+		   source,
+		   new String[] {
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagExtension_Id(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-tagType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTag_TagNameElement(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "tag-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTag_HandlerClassElement(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTag_Behavior(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "behavior", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTag_Component(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "component", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTag_Converter(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "converter", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTag_Validator(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "validator", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTag_Source(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "source", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTag_Attribute(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTag_TagExtension(),
+		   source,
+		   new String[] {
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "tag-extension", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagValidatorExtensionEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-tag-validator-extensionType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagValidatorExtension_Any(),
+		   source,
+		   new String[] {
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "wildcards", "##any", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "processing", "lax" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (getFaceletTaglibTagValidatorExtension_Id(),
+		   source,
+		   new String[] {
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagValidatorEClass,
+		   source,
+		   new String[] {
+			   "name", "facelet-taglib-tag-validatorType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
+		addAnnotation
+		  (faceletTaglibTagValidatorEClass,
+		   new boolean[] { true },
 		   "http:///org/eclipse/emf/ecore/util/ExtendedMetaData", //$NON-NLS-1$
 		   new String[] {
-			 "name", "facelet-taglib-tag-validatorType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "facelet-taglib-tag-validatorType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglibTagValidator_ValidatorId(), 
-		   source, 
+		  (getFaceletTaglibTagValidator_ValidatorId(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "validator-id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "validator-id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglibTagValidator_HandlerClass(), 
-		   source, 
+		  (getFaceletTaglibTagValidator_HandlerClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglibTagValidator_ValidatorExtension(), 
-		   source, 
+		  (getFaceletTaglibTagValidator_ValidatorExtension(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "validator-extension", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "validator-extension", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (faceletTaglibEClass, 
-		   source, 
+		  (faceletTaglibEClass,
+		   source,
 		   new String[] {
-			 "name", "facelet-taglibType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "facelet-taglibType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglib_LibraryClass(), 
-		   source, 
+		  (getFaceletTaglib_LibraryClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "library-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "library-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglib_Namespace(), 
-		   source, 
+		  (getFaceletTaglib_Namespace(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "namespace", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "namespace", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglib_CompositeLibraryName(), 
-		   source, 
+		  (getFaceletTaglib_CompositeLibraryName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "composite-library-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "composite-library-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglib_Group(), 
-		   source, 
+		  (getFaceletTaglib_Group(),
+		   source,
 		   new String[] {
-			 "kind", "group", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "group:6" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "group", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "group:6" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglib_Tag(), 
-		   source, 
+		  (getFaceletTaglib_Tag(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "tag", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:6" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "tag", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:6" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglib_Function(), 
-		   source, 
+		  (getFaceletTaglib_Function(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "function", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:6" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "function", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:6" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglib_TaglibExtension(), 
-		   source, 
+		  (getFaceletTaglib_TaglibExtension(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "taglib-extension", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "taglib-extension", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglib_Id(), 
-		   source, 
+		  (getFaceletTaglib_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglib_Version(), 
-		   source, 
+		  (getFaceletTaglib_Version(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "version" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "version" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFaceletTaglib_ShortName(), 
-		   source, 
+		  (getFaceletTaglib_ShortName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "short-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "short-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (faceletTaglibVersionEEnum, 
-		   source, 
+		  (faceletTaglibVersionEEnum,
+		   source,
 		   new String[] {
-			 "name", "facelet-taglib-versionType" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "facelet-taglib-versionType" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (faceletTaglibVersionTypeObjectEDataType, 
-		   source, 
+		  (faceletTaglibVersionTypeObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "facelet-taglib-versionType:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "facelet-taglib-versionType" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "facelet-taglib-versionType:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "facelet-taglib-versionType" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (fullyQualifiedClassEClass, 
-		   source, 
+		  (fullyQualifiedClassEClass,
+		   source,
 		   new String[] {
-			 "name", "fully-qualified-classType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "fully-qualified-classType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (fullyQualifiedClassBaseEDataType, 
-		   source, 
+		  (fullyQualifiedClassBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "fully-qualified-classType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "fully-qualified-classType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (genericBooleanEClass, 
-		   source, 
+		  (genericBooleanEClass,
+		   source,
 		   new String[] {
-			 "name", "generic-booleanType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "generic-booleanType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (genericBooleanBaseEEnum, 
-		   source, 
+		  (genericBooleanBaseEEnum,
+		   source,
 		   new String[] {
-			 "name", "generic-booleanType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "generic-booleanType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (iconEClass, 
-		   source, 
+		  (iconEClass,
+		   source,
 		   new String[] {
-			 "name", "iconType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "iconType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIcon_SmallIcon(), 
-		   source, 
+		  (getIcon_SmallIcon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "small-icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "small-icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIcon_LargeIcon(), 
-		   source, 
+		  (getIcon_LargeIcon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "large-icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "large-icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIcon_Id(), 
-		   source, 
+		  (getIcon_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIcon_Lang(), 
-		   source, 
+		  (getIcon_Lang(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (javaIdentifierEClass, 
-		   source, 
+		  (javaIdentifierEClass,
+		   source,
 		   new String[] {
-			 "name", "java-identifierType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "java-identifierType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (javaIdentifierBaseEDataType, 
-		   source, 
+		  (javaIdentifierBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "java-identifierType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
-			 "pattern", "($|_|\\p{L})(\\p{L}|\\p{Nd}|_|$)*" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "java-identifierType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
+			   "pattern", "($|_|\\p{L})(\\p{L}|\\p{Nd}|_|$)*" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (pathEClass, 
-		   source, 
+		  (pathEClass,
+		   source,
 		   new String[] {
-			 "name", "pathType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "pathType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (pathTypeBaseEDataType, 
-		   source, 
+		  (pathTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "pathType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "pathType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (identifiableStringValueEClass, 
-		   source, 
+		  (identifiableStringValueEClass,
+		   source,
 		   new String[] {
-			 "name", "string", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "string", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIdentifiableStringValue_Value(), 
-		   source, 
+		  (getIdentifiableStringValue_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIdentifiableStringValue_Id(), 
-		   source, 
+		  (getIdentifiableStringValue_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIdentifiableLangStringValue_Lang(), 
-		   source, 
+		  (getIdentifiableLangStringValue_Lang(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });										
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUserVisibleTaglibObject_Description(), 
-		   source, 
+		  (getUserVisibleTaglibObject_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUserVisibleTaglibObject_DisplayName(), 
-		   source, 
+		  (getUserVisibleTaglibObject_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUserVisibleTaglibObject_Icon(), 
-		   source, 
+		  (getUserVisibleTaglibObject_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
 		   });
 	}
 

@@ -27,6 +27,7 @@ import org.eclipse.jst.jsf.common.ui.internal.dialogfield.DialogField;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.IDialogFieldApplyListener;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.LayoutUtil;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.StringDialogField;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.DescriptionType;
 import org.eclipse.jst.jsf.facesconfig.emf.DisplayNameType;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigFactory;
@@ -200,8 +201,8 @@ public class ValidatorGeneralSection extends AbstractFacesConfigSection {
 		// validatorClassField.setRequired(true);
 		validatorClassField
 				.setLabelText(EditorMessages.ValidatorGeneralSection_Label_ValidatorClass);
-		validatorClassField.setProject((IProject) getPage().getEditor()
-				.getAdapter(IProject.class));
+		IProject project = getPage().getEditor().getAdapter(IProject.class);
+		validatorClassField.setProject(project);
 		validatorClassField.doFillIntoGrid(toolkit, container, numberOfColumns);
 		LayoutUtil.setHorizontalGrabbing(validatorClassField.getTextControl(
 				toolkit, container));
@@ -230,7 +231,9 @@ public class ValidatorGeneralSection extends AbstractFacesConfigSection {
 					}
 				});
 		validatorClassField
-				.setInterface(IFacesConfigConstants.VALIDATOR_INTERFACE);
+				.setInterface(JSFVersion.guessAtLeast(JSFVersion.V3_0, project) ?
+						IFacesConfigConstants.VALIDATOR_INTERFACE_JAKARTA :
+							IFacesConfigConstants.VALIDATOR_INTERFACE);
 	}
 
 	/**
