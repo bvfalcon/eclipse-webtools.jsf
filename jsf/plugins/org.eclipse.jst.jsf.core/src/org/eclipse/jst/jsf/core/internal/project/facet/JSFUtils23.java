@@ -13,6 +13,8 @@
 package org.eclipse.jst.jsf.core.internal.project.facet;
 
 import java.io.PrintWriter;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import org.eclipse.jst.j2ee.model.IModelProvider;
 import org.eclipse.jst.jsf.core.JSFVersion;
@@ -67,4 +69,22 @@ class JSFUtils23 extends JSFUtils22 {
 				QUOTE + getVersion().toString() + QUOTE + ">\n\n"); //$NON-NLS-1$
 		pw.write("</faces-config>\n"); //$NON-NLS-1$
 	}
+
+    private static final Map<String, String> SEARCH_EXPRESSIONS = new LinkedHashMap<>();
+    static {
+        SEARCH_EXPRESSIONS.put("@composite", "closest composite component ancestor"); //$NON-NLS-1$ //$NON-NLS-2$
+        SEARCH_EXPRESSIONS.put("@namingcontainer", "closest ancestor naming container of current component"); //$NON-NLS-1$ //$NON-NLS-2$
+        SEARCH_EXPRESSIONS.put("@parent", "parent of the current component"); //$NON-NLS-1$ //$NON-NLS-2$
+        SEARCH_EXPRESSIONS.put("@previous", "previous sibling component"); //$NON-NLS-1$ //$NON-NLS-2$
+        SEARCH_EXPRESSIONS.put("@next", "next sibling component"); //$NON-NLS-1$ //$NON-NLS-2$
+        SEARCH_EXPRESSIONS.put("@root", "UIViewRoot instance of the view"); //$NON-NLS-1$ //$NON-NLS-2$
+    }
+
+    @Override
+    public Map<String, String> getSearchExpressions() {
+        Map<String, String> result = new LinkedHashMap<>();
+        result.putAll(super.getSearchExpressions());
+        result.putAll(SEARCH_EXPRESSIONS);
+        return result;
+    }
 }

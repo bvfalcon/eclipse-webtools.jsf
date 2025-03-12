@@ -1437,7 +1437,7 @@
 	<entityGroup id="for-entity">
 		<entity id="for">
 			<trait id="attribute-value-runtime-type">
-				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.StringType</value>
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.SearchExpressionType</value>
 			</trait>
 			<trait id="category">
 				<value xsi:type="mdt:StringValue">%property.category.jsf</value>
