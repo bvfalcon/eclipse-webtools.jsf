@@ -318,6 +318,9 @@
             class="org.eclipse.jst.jsf.taglibprocessing.attributevalues.TimeZoneType"
             id="attributevalues.TimeZoneType"/>
       <attributeValueRuntimeType
+            class="org.eclipse.jst.jsf.taglibprocessing.attributevalues.FacetNameType"
+            id="attributevalues.FacetNameType"/>  
+      <attributeValueRuntimeType
             class="org.eclipse.jst.jsf.taglibprocessing.attributevalues.DateTimePatternType"
             id="attributevalues.DateTimePatternType"/>  
       <attributeValueRuntimeType

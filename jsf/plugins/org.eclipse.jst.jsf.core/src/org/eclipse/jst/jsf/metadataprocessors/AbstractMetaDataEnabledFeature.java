@@ -177,7 +177,7 @@ public abstract class AbstractMetaDataEnabledFeature implements IMetaDataEnabled
 		return query.getQueryHelper().getTrait(entity, traitName);
 	}
 
-	private IMetaDataDomainContext getMetaDataDomainContext() {
+	protected IMetaDataDomainContext getMetaDataDomainContext() {
 		final IFile file = getFile2();
 		if (file != null)
 		{

@@ -331,6 +331,11 @@
 				<section id="name"/>
 			</value>
 		</trait>
+		<entity id="name">
+			<trait id="attribute-value-runtime-type">
+				<value xsi:type="mdt:StringValue">org.eclipse.jst.jsf.core.attributevalues.FacetNameType</value>
+			</trait>
+		</entity>
 	</entity>
 	<entity id="loadBundle" type="tag">
 		<trait id="quick-edit-tab">
