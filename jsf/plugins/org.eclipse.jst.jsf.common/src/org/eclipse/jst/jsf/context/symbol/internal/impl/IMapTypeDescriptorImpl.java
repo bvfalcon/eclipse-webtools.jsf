@@ -293,7 +293,7 @@ public class IMapTypeDescriptorImpl extends ITypeDescriptorImpl implements IMapT
                         typeDesc = SymbolFactory.eINSTANCE
                                 .createIMapTypeDescriptor();
                         ((IMapTypeDescriptor) typeDesc)
-                                .setMapSource(new HashMap());
+                                .setMapSource(new ResourceBundleKeyMapSource(source));
                         ((IMapTypeDescriptor) typeDesc)
                                 .setTypeSignatureDelegate(typeSignature);
                         // inherit this descriptor's mutability

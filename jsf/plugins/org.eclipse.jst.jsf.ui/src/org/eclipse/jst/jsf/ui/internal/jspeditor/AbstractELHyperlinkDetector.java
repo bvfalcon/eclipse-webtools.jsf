@@ -25,6 +25,8 @@ import org.eclipse.jst.jsf.context.structureddocument.IStructuredDocumentContext
 import org.eclipse.jst.jsf.context.symbol.IBeanInstanceSymbol;
 import org.eclipse.jst.jsf.context.symbol.IBeanMethodSymbol;
 import org.eclipse.jst.jsf.context.symbol.IBeanPropertySymbol;
+import org.eclipse.jst.jsf.context.symbol.IComponentSymbol;
+import org.eclipse.jst.jsf.context.symbol.IPropertySymbol;
 import org.eclipse.jst.jsf.context.symbol.ISymbol;
 import org.eclipse.jst.jsf.core.internal.contentassist.el.SymbolInfo;
 
@@ -85,6 +87,12 @@ public abstract class AbstractELHyperlinkDetector extends AbstractHyperlinkDetec
                 } else if (symbol instanceof IBeanMethodSymbol) {
                     link = createMethodLink(linkRegion,
                             (IBeanMethodSymbol) symbol);
+                } else if (symbol instanceof IComponentSymbol) {
+                    link = createResourceBundleLink(linkRegion,
+                            (IComponentSymbol) symbol);
+                } else if (symbol instanceof IPropertySymbol) {
+                    link = createResourceBundleKeyLink(linkRegion,
+                            (IPropertySymbol) symbol);
                 }
                 if (link != null) {
                     return new IHyperlink[] { link };
@@ -104,7 +112,7 @@ public abstract class AbstractELHyperlinkDetector extends AbstractHyperlinkDetec
     }
 
     private IHyperlink createBeanPropertyLink(
-    		final Region region, final IBeanPropertySymbol symbol) {
+            final Region region, final IBeanPropertySymbol symbol) {
         // defer calculation of access method until user click on link (takes
         // too long otherwise):
         return new BeanSuffixHyperlink(region, symbol);
@@ -115,6 +123,16 @@ public abstract class AbstractELHyperlinkDetector extends AbstractHyperlinkDetec
         // defer calculation of access method until user click on link (takes
         // too long otherwise):
         return new BeanSuffixHyperlink(region, symbol);
+    }
+
+    private IHyperlink createResourceBundleLink(
+            final Region region, final IComponentSymbol symbol) {
+        return new PropertyKeyHyperlink(region, symbol);
+    }
+
+    private IHyperlink createResourceBundleKeyLink(
+            final Region region, final IPropertySymbol symbol) {
+        return new PropertyKeyHyperlink(region, symbol);
     }
 
     /**
