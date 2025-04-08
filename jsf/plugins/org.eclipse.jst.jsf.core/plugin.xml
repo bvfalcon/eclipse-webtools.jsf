@@ -350,6 +350,9 @@
       <attributeValueRuntimeType
             class="org.eclipse.jst.jsf.taglibprocessing.attributevalues.CSSStyleType"
             id="attributevalues.CSSStyleType"/>                                
+      <attributeValueRuntimeType
+            class="org.eclipse.jst.jsf.taglibprocessing.attributevalues.SearchExpressionType"
+            id="attributevalues.SearchExpressionType"/>
    </extension>
    
    <extension

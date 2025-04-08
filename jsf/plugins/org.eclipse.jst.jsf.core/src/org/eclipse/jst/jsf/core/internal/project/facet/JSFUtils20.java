@@ -12,6 +12,9 @@
  *******************************************************************************/
 package org.eclipse.jst.jsf.core.internal.project.facet;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import org.eclipse.jst.j2ee.model.IModelProvider;
 import org.eclipse.jst.jsf.core.JSFVersion;
 
@@ -51,5 +54,21 @@ import org.eclipse.jst.jsf.core.JSFVersion;
     protected String getDefaultDefaultSuffix()
     {
         return DEFAULT_DEFAULT_MAPPING_SUFFIX;
+    }
+
+    private static final Map<String, String> SEARCH_EXPRESSIONS = new LinkedHashMap<>();
+    static {
+        SEARCH_EXPRESSIONS.put("@this", "current component"); //$NON-NLS-1$ //$NON-NLS-2$
+        SEARCH_EXPRESSIONS.put("@all", "all component identifiers"); //$NON-NLS-1$ //$NON-NLS-2$
+        SEARCH_EXPRESSIONS.put("@form", "closest ancestor form of current component"); //$NON-NLS-1$ //$NON-NLS-2$
+        SEARCH_EXPRESSIONS.put("@none", "no identifiers"); //$NON-NLS-1$ //$NON-NLS-2$
+    }
+
+    @Override
+    public Map<String, String> getSearchExpressions() {
+        Map<String, String> result = new LinkedHashMap<>();
+        result.putAll(super.getSearchExpressions());
+        result.putAll(SEARCH_EXPRESSIONS);
+        return result;
     }
 }

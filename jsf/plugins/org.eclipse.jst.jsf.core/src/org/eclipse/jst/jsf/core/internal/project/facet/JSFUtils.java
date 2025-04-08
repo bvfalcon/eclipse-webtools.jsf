@@ -21,8 +21,11 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.IPath;
@@ -725,4 +728,14 @@ public abstract class JSFUtils {
     	return servlet;
     }
 
+    /**
+     * return accessible search expressions
+     * 
+     * @return map, there
+     *   keys are valid-values
+     *   values are displayed-values
+     * */
+    public Map<String, String> getSearchExpressions() {
+        return Collections.emptyMap();
+    }
 }
