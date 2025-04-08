@@ -353,6 +353,9 @@
       <attributeValueRuntimeType
             class="org.eclipse.jst.jsf.taglibprocessing.attributevalues.SearchExpressionType"
             id="attributevalues.SearchExpressionType"/>
+      <attributeValueRuntimeType
+            class="org.eclipse.jst.jsf.taglibprocessing.attributevalues.AjaxEventType"
+            id="attributevalues.AjaxEventType"/>
    </extension>
    
    <extension
