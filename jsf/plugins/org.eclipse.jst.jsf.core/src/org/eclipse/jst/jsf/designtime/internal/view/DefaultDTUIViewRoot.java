@@ -24,6 +24,7 @@ import org.eclipse.jst.jsf.common.runtime.internal.model.component.ComponentType
 import org.eclipse.jst.jsf.context.symbol.ISymbol;
 import org.eclipse.jst.jsf.context.symbol.source.ISymbolSourceProvider;
 import org.eclipse.jst.jsf.context.symbol.source.ISymbolSourceProviderFactory;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.designtime.context.DTFacesContext;
 
 /**
@@ -47,8 +48,10 @@ public class DefaultDTUIViewRoot extends DTUIViewRoot
     public DefaultDTUIViewRoot(final DTFacesContext facesContext)
     {
         // TODO: refactor constants
-        super(null, null, new ComponentTypeInfo("javax.faces.ViewRoot", //$NON-NLS-1$
-                "javax.faces.component.UIViewRoot", "javax.faces.ViewRoot", //$NON-NLS-1$ //$NON-NLS-2$
+        super(null, null, new ComponentTypeInfo(
+                JSFVersion.guessAtLeast(JSFVersion.V3_0, facesContext.adaptContextObject().getProject()) ? "jakarta.faces.ViewRoot" : "javax.faces.ViewRoot", //$NON-NLS-1$ //$NON-NLS-2$
+                JSFVersion.guessAtLeast(JSFVersion.V3_0, facesContext.adaptContextObject().getProject()) ? "jakarta.faces.component.UIViewRoot" : "javax.faces.component.UIViewRoot", //$NON-NLS-1$ //$NON-NLS-2$
+                JSFVersion.guessAtLeast(JSFVersion.V3_0, facesContext.adaptContextObject().getProject()) ? "jakarta.faces.ViewRoot" : "javax.faces.ViewRoot", //$NON-NLS-1$ //$NON-NLS-2$
                 null));
         _defaultServices = new DefaultServices();
     	_facesContext = facesContext;

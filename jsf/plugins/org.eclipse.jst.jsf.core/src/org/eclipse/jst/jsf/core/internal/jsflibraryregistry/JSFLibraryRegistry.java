@@ -23,17 +23,16 @@ import org.eclipse.jst.jsf.core.internal.Messages;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistry#getDefaultImplementationID <em>Default Implementation ID</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistry#getJSFLibraries <em>JSF Libraries</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistry#getPluginProvidedJSFLibraries <em>Plugin Provided JSF Libraries</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.jst.jsf.core.internal.jsflibraryregistry.JSFLibraryRegistryPackage#getJSFLibraryRegistry()
  * @model
  * @generated
- * @deprecated
  */
 public interface JSFLibraryRegistry extends EObject{
 	/**

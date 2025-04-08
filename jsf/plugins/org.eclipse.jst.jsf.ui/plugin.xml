@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.0"?>
 <plugin>
+  <!-- New JSF wizard -->
+  <extension point="org.eclipse.ui.newWizards">
+    <wizard
+            id="org.eclipse.jst.jsf.ui.internal.wizard.NewJSFWizard"
+            name="%_UI_WIZARD_NAME"
+            class="org.eclipse.jst.jsf.ui.internal.wizard.NewJSFWizard"
+            category="org.eclipse.wst.web.ui"
+            icon="$nl$/icons/full/etool16/newjsf_wiz.gif">
+            <description>%_UI_WIZARD_CREATE_NEW_FILE</description>
+            <selection class="org.eclipse.core.resources.IResource" />
+    </wizard>
+  </extension>
+  <!-- Add new JSF wizard to Project Explorer -->
+  <extension
+             id="org.eclipse.jst.jsf.commonWizard.newJSF"
+             point="org.eclipse.ui.navigator.navigatorContent">
+             <commonWizard
+                           menuGroupId="org.eclipse.wst.web.ui"
+                           type="new"
+                           wizardId="org.eclipse.jst.jsf.ui.internal.wizard.NewJSFWizard">
+                           <enablement>
+                             <or>
+                               <adapt type="org.eclipse.core.resources.IResource">
+                                 <test
+                                       property="org.eclipse.wst.common.project.facet.core.projectFacet"
+                                       value="jst.web"/>
+                                 </adapt>
+                               </or>
+                             </enablement>
+             </commonWizard>
+  </extension>
   <!-- JSF Project Facet --> 
   <extension
         point="org.eclipse.ui.preferencePages">
@@ -11,21 +42,22 @@
            name="%preferencepage.jsfvalidation.name"/>
      <page
            category="org.eclipse.wst.html.ui.preferences.web"
-           class="org.eclipse.jst.jsf.ui.internal.preferences.EmptyRootPreferencePage"
+           class="org.eclipse.jst.jsf.ui.internal.preferences.JSFFilesPreferencePage"
            id="org.eclipse.jst.jsf.ui.JSFRootPage"
            name="%preferencepage.jsf.name">
      </page>
      <page
-           category="org.eclipse.jst.jsf.ui.viewRoot"
+           category="org.eclipse.jst.jsf.ui.JSFRootPage"
            class="org.eclipse.jst.jsf.ui.internal.preferences.JSPTagRegistryPreferencePage"
-           id="org.eclipse.jst.jsf.ui.jspTagRegistry"
-           name="%JSP_Tag_Registry_Preferences">
+           id="org.eclipse.jst.jsf.ui.jsfTagRegistry"
+           name="%JSF_Tag_Registry_Preferences">
      </page>
      <page
+           name="%JSF_Templates.name"
            category="org.eclipse.jst.jsf.ui.JSFRootPage"
-           class="org.eclipse.jst.jsf.ui.internal.preferences.EmptyRootPreferencePage"
-           id="org.eclipse.jst.jsf.ui.viewRoot"
-           name="%View_Preference_Root">
+           class="org.eclipse.jst.jsf.ui.internal.preferences.ui.JSFTemplatePreferencePage"
+           id="org.eclipse.wst.sse.ui.preferences.jsf.templates">
+           <keywordReference id="org.eclipse.jst.jsf.ui.templates"/>
      </page>
   </extension>
   
@@ -53,39 +85,15 @@
      <wizard-pages action="jst.jsf.v11.install">
         <page class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage"/>
      </wizard-pages>
-     <wizard-pages action="jst.jsf.v12.install">
+     <wizard-pages action="jst.jsf.v30.install">
         <page class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage"/>
-     </wizard-pages>
-     <wizard-pages
-           action="jst.jsf.v20.install">
-        <page
-              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
-        </page>
-     </wizard-pages>
-     <wizard-pages
-           action="jst.jsf.v21.install">
-        <page
-              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
-        </page>
-     </wizard-pages>
-     <wizard-pages
-           action="jst.jsf.v22.install">
-        <page
-              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
-        </page>
-     </wizard-pages>
-     <wizard-pages
-           action="jst.jsf.v23.install">
-        <page
-              class="org.eclipse.jst.jsf.ui.internal.project.facet.JSFFacetInstallPage">
-        </page>
      </wizard-pages>
   </extension>  
   
   <extension point="org.eclipse.wst.sse.ui.editorConfiguration"> 
 	<sourceViewerConfiguration
             class="org.eclipse.jst.jsp.ui.StructuredTextViewerConfigurationJSP"
-            target="org.eclipse.jst.jsp.core.jspsource"/>
+            target="org.eclipse.jst.jsf.core.jsfsource"/>
                 <provisionalConfiguration 
                         type="contentassistprocessor" 
                         class="org.eclipse.jst.jsf.ui.internal.contentassist.el.JSFELContentAssistProcessor" 
@@ -105,7 +113,7 @@
 			class="org.eclipse.jst.jsf.ui.internal.validation.JSFValidator"
 			id="org.eclipse.jst.jsf.validation.JSFAttributeValueValidator">
 			<contentTypeIdentifier
-				id="org.eclipse.jst.jsp.core.jspsource">
+				id="org.eclipse.jst.jsf.core.jsfsource">
 				<partitionType id="org.eclipse.jst.jsp.DEFAULT_JSP">
 				</partitionType>
 				<partitionType id="org.eclipse.jst.jsp.JSP_DIRECTIVE">
@@ -121,7 +129,7 @@
              class="org.eclipse.jst.jsf.ui.internal.jspeditor.JSPELHyperlinkDetector"
              id="org.eclipse.jst.jsf.ui.elhyperlinkdetector"
              name="%EL_Hyperlinkdetector_name"
-             targetId="org.eclipse.jst.jsp.core.jspsource">
+             targetId="org.eclipse.jst.jsf.core.jsfsource">
        </hyperlinkDetector>
     </extension>
 
@@ -205,11 +213,11 @@
             <rules>
                <contentType
                      exactMatch="false"
-                     id="org.eclipse.jst.jsp.core.jspsource">
+                     id="org.eclipse.jst.jsf.core.jsfsource">
                </contentType>
                <contentType
                      exactMatch="true"
-                     id="org.eclipse.jst.jsp.core.jspfragmentsource">
+                     id="org.eclipse.jst.jsf.core.jsffragmentsource">
                </contentType>
             </rules>
          </include>
@@ -246,92 +254,55 @@
 
     <extension
           point="org.eclipse.ui.editors.templates">
+       <contextType
+            name="%JSF_New_context_type_Extension_Element.name"
+            class="org.eclipse.jst.jsf.ui.internal.templates.TemplateContextTypeJSF"
+            id="jsf_new" />
        <template
              autoinsert="true"
-             contextTypeId="jsp_new"
-             description="%NewJSFPage_html_description"
-             id="org.eclipse.jst.jsf.ui.new_jsf_page_html"
-             name="%NewJSFPage_html">
+             contextTypeId="jsf_new"
+             description="%NewJSF40Page_description"
+             id="org.eclipse.jst.jsf.ui.new_jsf40_page"
+             name="%NewJSF40Page">
           <pattern>
-             &lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=${encoding}&quot; pageEncoding=&quot;${encoding}&quot;%&gt;
-&lt;%@ taglib prefix=&quot;f&quot;  uri=&quot;http://java.sun.com/jsf/core&quot;%&gt;
-&lt;%@ taglib prefix=&quot;h&quot;  uri=&quot;http://java.sun.com/jsf/html&quot;%&gt;
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=${encoding}&quot;&gt;
+             &lt;?xml version=&quot;1.0&quot; encoding=&quot;${encoding}&quot;?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:f=&quot;jakarta.faces.core&quot; xmlns:h=&quot;jakarta.faces.html&quot;&gt;
+&lt;f:view contentType=&quot;text/html&quot; encoding=&quot;${encoding}&quot;&gt;
+&lt;h:head&gt;
 &lt;title&gt;Insert title here&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;f:view&gt;
+&lt;/h:head&gt;
+&lt;h:body&gt;
 ${cursor}
+&lt;/h:body&gt;
 &lt;/f:view&gt;
-&lt;/body&gt;
 &lt;/html&gt;
           </pattern>
        </template>
-      
        <template
              autoinsert="true"
-             contextTypeId="jsp_new"
-             description="%NewJSFPage_xhtml_xmlsyntax_description"
-             id="org.eclipse.jst.jsf.ui.new_jsf_page_html_xhtml_xmllsyntax"
-             name="%NewJSFPage_xhtml_xmlsyntax">
+             contextTypeId="jsf_new"
+             description="%NewJSF30Page_description"
+             id="org.eclipse.jst.jsf.ui.new_jsf30_page"
+             name="%NewJSF30Page">
           <pattern>
-             &lt;?xml version=&quot;1.0&quot; encoding=&quot;${encoding}&quot; ?&gt;
-&lt;jsp:root xmlns:jsp=&quot;http://java.sun.com/JSP/Page&quot; xmlns:f=&quot;http://java.sun.com/jsf/core&quot; xmlns:h=&quot;http://java.sun.com/jsf/html&quot; version=&quot;2.0&quot;&gt;
-    &lt;jsp:directive.page language=&quot;java&quot;
-        contentType=&quot;text/html; charset=${encoding}&quot; pageEncoding=&quot;${encoding}&quot; /&gt;
-    &lt;jsp:text&gt;
-        &lt;![CDATA[ &lt;?xml version=&quot;1.0&quot; encoding=&quot;${encoding}&quot; ?&gt; ]]&gt;
-    &lt;/jsp:text&gt;
-    &lt;jsp:text&gt;
-        &lt;![CDATA[ &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt; ]]&gt;
-    &lt;/jsp:text&gt;
-&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=${encoding}&quot; /&gt;
-&lt;title&gt;Insert title here&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;f:view&gt;
-${cursor}
-&lt;/f:view&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-&lt;/jsp:root&gt;
-             
-             
-             
-          </pattern>
-       </template>
-       <template
-             autoinsert="true"
-             contextTypeId="jsp_new"
-             description="%NewJSFPage_xhtml_description"
-             id="org.eclipse.jst.jsf.ui.new_jsf_page_xhtml"
-             name="%NewJSFPage_xhtml">
-          <pattern>
-             &lt;?xml version=&quot;1.0&quot; encoding=&quot;${encoding}&quot; ?&gt;
-&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=${encoding}&quot;
-    pageEncoding=&quot;${encoding}&quot;%&gt;
+             &lt;?xml version=&quot;1.0&quot; encoding=&quot;${encoding}&quot;?&gt;
 &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
-&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:f=&quot;http://java.sun.com/jsf/core&quot; xmlns:h=&quot;http://java.sun.com/jsf/html&quot;&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=${encoding}&quot; /&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:f=&quot;http://xmlns.jcp.org/jsf/core&quot; xmlns:h=&quot;http://xmlns.jcp.org/jsf/html&quot;&gt;
+&lt;f:view contentType=&quot;text/html&quot; encoding=&quot;${encoding}&quot;&gt;
+&lt;h:head&gt;
 &lt;title&gt;Insert title here&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;f:view&gt;
+&lt;/h:head&gt;
+&lt;h:body&gt;
 ${cursor}
+&lt;/h:body&gt;
 &lt;/f:view&gt;
-&lt;/body&gt;
 &lt;/html&gt;
           </pattern>
        </template>
        <template
              autoinsert="true"
-             contextTypeId="jsp_attribute_value"
+             contextTypeId="jsf_attribute_value"
              description="%NewELExpression_description"
              id="org.eclipse.jst.jsf.ui.newelexpression"
              name="%NewELExpression">

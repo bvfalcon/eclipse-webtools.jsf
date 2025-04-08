@@ -39,7 +39,7 @@ public class JSPELHyperlinkDetector extends AbstractELHyperlinkDetector {
 				if (resource instanceof IFile) {
 					IFile file = (IFile)resource;
 					String filename = file.getFullPath().toString();
-					enabled = hasContentType(filename, "org.eclipse.jst.jsp.core.jspsource"); //$NON-NLS-1$
+					enabled = hasContentType(filename, "org.eclipse.jst.jsf.core.jsfsource"); //$NON-NLS-1$
 				}
 			}
 		}

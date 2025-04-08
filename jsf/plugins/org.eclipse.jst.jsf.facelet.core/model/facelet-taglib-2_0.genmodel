@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.jst.jsf.facelet.core/src"
-    modelPluginID="org.eclipse.jst.jsf.facelet.core" modelName="Facelet-taglib-2_0"
-    nonNLSMarkers="true" importerID="org.eclipse.xsd.ecore.importer" complianceLevel="5.0"
-    copyrightFields="false">
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.jst.jsf.facelet.core/src" modelPluginID="org.eclipse.jst.jsf.facelet.core"
+    modelName="Facelet-taglib-2_0" nonNLSMarkers="true" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="5.0" copyrightFields="false">
   <foreignModel>facelet-taglib.xsd</foreignModel>
   <genPackages prefix="FaceletTaglib" basePackage="org.eclipse.jst.jsf.facelet.core.internal.registry.taglib"
       resource="XML" disposableProviderFactory="true" fileExtensions="taglib.xml"
       ecorePackage="faceletTaglib_2_0.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="faceletTaglib_2_0.ecore#//FaceletTaglibVersion">
       <genEnumLiterals ecoreEnumLiteral="faceletTaglib_2_0.ecore#//FaceletTaglibVersion/_20"/>
+      <genEnumLiterals ecoreEnumLiteral="faceletTaglib_2_0.ecore#//FaceletTaglibVersion/_21"/>
+      <genEnumLiterals ecoreEnumLiteral="faceletTaglib_2_0.ecore#//FaceletTaglibVersion/_22"/>
+      <genEnumLiterals ecoreEnumLiteral="faceletTaglib_2_0.ecore#//FaceletTaglibVersion/_23"/>
+      <genEnumLiterals ecoreEnumLiteral="faceletTaglib_2_0.ecore#//FaceletTaglibVersion/_30"/>
+      <genEnumLiterals ecoreEnumLiteral="faceletTaglib_2_0.ecore#//FaceletTaglibVersion/_40"/>
+      <genEnumLiterals ecoreEnumLiteral="faceletTaglib_2_0.ecore#//FaceletTaglibVersion/_41"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="faceletTaglib_2_0.ecore#//GenericBooleanBase">
       <genEnumLiterals ecoreEnumLiteral="faceletTaglib_2_0.ecore#//GenericBooleanBase/true"/>
@@ -22,7 +26,11 @@
     <genDataTypes ecoreDataType="faceletTaglib_2_0.ecore#//FullyQualifiedClassBase"/>
     <genDataTypes ecoreDataType="faceletTaglib_2_0.ecore#//JavaIdentifierBase"/>
     <genDataTypes ecoreDataType="faceletTaglib_2_0.ecore#//PathTypeBase"/>
-    <genClasses ecoreClass="faceletTaglib_2_0.ecore#//Description"/>
+    <genClasses ecoreClass="faceletTaglib_2_0.ecore#//Description">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute faceletTaglib_2_0.ecore#//Description/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute faceletTaglib_2_0.ecore#//Description/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute faceletTaglib_2_0.ecore#//Description/lang"/>
+    </genClasses>
     <genClasses ecoreClass="faceletTaglib_2_0.ecore#//DisplayName"/>
     <genClasses ecoreClass="faceletTaglib_2_0.ecore#//DocumentRoot">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute faceletTaglib_2_0.ecore#//DocumentRoot/mixed"/>
@@ -119,6 +127,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute faceletTaglib_2_0.ecore#//FaceletTaglib/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute faceletTaglib_2_0.ecore#//FaceletTaglib/version"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute faceletTaglib_2_0.ecore#//FaceletTaglib/namespaceUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute faceletTaglib_2_0.ecore#//FaceletTaglib/shortName"/>
     </genClasses>
     <genClasses ecoreClass="faceletTaglib_2_0.ecore#//FullyQualifiedClass"/>
     <genClasses ecoreClass="faceletTaglib_2_0.ecore#//GenericBoolean"/>

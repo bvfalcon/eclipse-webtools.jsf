@@ -27,6 +27,7 @@ import org.eclipse.jdt.ui.IJavaElementSearchConstants;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerFilter;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigFactory;
 import org.eclipse.jst.jsf.facesconfig.emf.FactoryType;
 import org.eclipse.jst.jsf.facesconfig.ui.dialog.DialogUtil;
@@ -80,9 +81,8 @@ public class FactorySection extends OthersPageBaseSection {
 	 * @return an new object which is instance of <code>factoryChildClass</code>.
 	 */
 	public EObject createFactoryChildObject() {
-		String superType = ModelUtil.getSuperType(factoryChildClass);
-		IProject project = (IProject) this.getPage().getEditor().getAdapter(
-				IProject.class);
+		IProject project = (IProject) this.getPage().getEditor().getAdapter(IProject.class);
+		String superType = ModelUtil.getSuperType(factoryChildClass, JSFVersion.valueOfProject(project));
 		String result = DialogUtil.openClassDialog(getSection().getShell(),
 				project, superType,
 				IJavaElementSearchConstants.CONSIDER_ALL_TYPES);

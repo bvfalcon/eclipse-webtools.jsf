@@ -16,6 +16,7 @@ import java.util.List;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.ConverterClassType;
 import org.eclipse.jst.jsf.facesconfig.emf.ConverterForClassType;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigPackage;
@@ -66,7 +67,9 @@ public class ConverterValidationVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.convert.Converter"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.convert.Converter" : //$NON-NLS-1$
+                    "javax.faces.convert.Converter"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {

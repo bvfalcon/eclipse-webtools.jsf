@@ -15,8 +15,10 @@
 package org.eclipse.jst.jsf.validation.internal.el.operators;
 
 import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.jdt.core.Signature;
 import org.eclipse.jst.jsf.common.internal.types.BooleanLiteralType;
 import org.eclipse.jst.jsf.common.internal.types.LiteralType;
+import org.eclipse.jst.jsf.common.internal.types.MethodType;
 import org.eclipse.jst.jsf.common.internal.types.TypeCoercer;
 import org.eclipse.jst.jsf.common.internal.types.TypeCoercionException;
 import org.eclipse.jst.jsf.common.internal.types.TypeConstants;
@@ -104,4 +106,13 @@ import org.eclipse.jst.jsf.validation.internal.el.diagnostics.DiagnosticFactory;
         return null;
     }
 
+    @Override
+    public Diagnostic validate(MethodType type) {
+        boolean canCoerce = TypeCoercer.canCoerceToBoolean(
+                TypeTransformer.transformBoxPrimitives(Signature.getReturnType(type.getSignature())));
+        if (canCoerce) {
+            return Diagnostic.OK_INSTANCE;
+        }
+        return _diagnosticFactory.create_CANNOT_APPLY_OPERATOR_TO_METHOD_BINDING();
+    }
 }

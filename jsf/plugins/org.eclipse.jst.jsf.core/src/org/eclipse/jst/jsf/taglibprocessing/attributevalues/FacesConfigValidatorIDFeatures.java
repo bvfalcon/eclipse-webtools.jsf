@@ -20,6 +20,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.core.jsfappconfig.JSFAppConfigManager;
 import org.eclipse.jst.jsf.facesconfig.emf.ValidatorType;
 import org.eclipse.jst.jsf.metadataprocessors.features.PossibleValue;
@@ -38,6 +39,10 @@ public class FacesConfigValidatorIDFeatures extends FacesConfigIdentifierFeature
 	 */
 	protected static final String VALIDATOR = "javax.faces.validator.Validator"; //$NON-NLS-1$
 	/**
+	 * Faces validator classname (Jakarta EE)
+	 */
+	protected static final String VALIDATOR_JAKARTA = "jakarta.faces.validator.Validator"; //$NON-NLS-1$
+	/**
 	 * Imagename to use when displaying validator
 	 */
 	protected static final String IMAGE_NAME = "/icons/full/obj16/FacesConfig_Validator.gif"; //$NON-NLS-1$
@@ -45,7 +50,9 @@ public class FacesConfigValidatorIDFeatures extends FacesConfigIdentifierFeature
 	/* (non-Javadoc)
 	 * @see org.eclipse.jst.jsf.taglibprocessing.attributevalues.FacesConfigIdentifierFeatures#getReturnType()
 	 */
-	protected String getReturnType(){ return VALIDATOR;}
+	protected String getReturnType() {
+		return JSFVersion.guessAtLeast(JSFVersion.V3_0, getProject2()) ? VALIDATOR_JAKARTA : VALIDATOR;
+	}
 	
 	/* (non-Javadoc)
 	 * @see org.eclipse.jst.jsf.taglibprocessing.attributevalues.FacesConfigIdentifierFeatures#getElements(org.eclipse.jst.jsf.core.jsfappconfig.JSFAppConfigManager)

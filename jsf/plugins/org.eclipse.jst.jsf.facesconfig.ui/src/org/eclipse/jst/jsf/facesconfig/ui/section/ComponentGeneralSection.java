@@ -27,6 +27,7 @@ import org.eclipse.jst.jsf.common.ui.internal.dialogfield.DialogField;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.IDialogFieldApplyListener;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.LayoutUtil;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.StringDialogField;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.ComponentClassType;
 import org.eclipse.jst.jsf.facesconfig.emf.ComponentType;
 import org.eclipse.jst.jsf.facesconfig.emf.ComponentTypeType;
@@ -207,8 +208,8 @@ public class ComponentGeneralSection extends AbstractFacesConfigSection {
 		componentClassField.doFillIntoGrid(toolkit, container, numberOfColumns);
 		LayoutUtil.setHorizontalGrabbing(componentClassField.getTextControl(
 				toolkit, container));
-		componentClassField.setProject((IProject) getPage().getEditor()
-				.getAdapter(IProject.class));
+		IProject project = (IProject) getPage().getEditor().getAdapter(IProject.class);
+		componentClassField.setProject(project);
 		componentClassField
 				.setDialogFieldApplyListener(new IDialogFieldApplyListener() {
 					public void dialogFieldApplied(DialogField field) {
@@ -233,7 +234,9 @@ public class ComponentGeneralSection extends AbstractFacesConfigSection {
 					}
 				});
 		componentClassField
-				.setSuperClassName(IFacesConfigConstants.COMPONENT_SUPER_CLASS);
+				.setSuperClassName(JSFVersion.guessAtLeast(JSFVersion.V3_0, project) ?
+						IFacesConfigConstants.COMPONENT_SUPER_CLASS_JAKARTA :
+							IFacesConfigConstants.COMPONENT_SUPER_CLASS);
 	}
 
 	/**

@@ -134,8 +134,9 @@ public class XMLComponentTreeConstructionStrategy extends
         {
             final ComponentInfo topLevelChild = (ComponentInfo) it.next();
 
-            if ("javax.faces.ViewRoot".equals(topLevelChild //$NON-NLS-1$
-                    .getComponentTypeInfo().getComponentType()))
+            String topLevelChildType = topLevelChild.getComponentTypeInfo().getComponentType();
+            if ("javax.faces.ViewRoot".equals(topLevelChildType) || //$NON-NLS-1$
+                    "jakarta.faces.ViewRoot".equals(topLevelChildType)) //$NON-NLS-1$
             {
                 foundRoot = topLevelChild;
                 break FIND_VIEWROOT;

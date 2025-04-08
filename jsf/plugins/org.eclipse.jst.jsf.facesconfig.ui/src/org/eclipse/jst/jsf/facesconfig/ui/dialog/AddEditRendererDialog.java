@@ -21,6 +21,7 @@ import org.eclipse.jst.jsf.common.ui.internal.dialogfield.IStringButtonAdapter;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.LayoutUtil;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.StringButtonDialogField;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.StringDialogField;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.ui.EditorMessages;
 import org.eclipse.jst.jsf.facesconfig.ui.EditorPlugin;
 import org.eclipse.jst.jsf.facesconfig.ui.IFacesConfigConstants;
@@ -150,7 +151,10 @@ public class AddEditRendererDialog extends Dialog {
 		rendererClassField
 				.setLabelText(EditorMessages.RendererSection_Dialog_RendererClass);
 		rendererClassField.setProject(getProject());
-		rendererClassField.setSuperClassName(IFacesConfigConstants.RENDERER_SUPER_CLASS);
+		rendererClassField.setSuperClassName(
+				JSFVersion.guessAtLeast(JSFVersion.V3_0, getProject()) ?
+						IFacesConfigConstants.RENDERER_SUPER_CLASS_JAKARTA : 
+							IFacesConfigConstants.RENDERER_SUPER_CLASS);
 		rendererClassField.setAutoOpenResource(false);
 
 		componentFamilyField = new StringButtonDialogField(

@@ -31,6 +31,7 @@ import org.eclipse.jst.jsf.common.ui.internal.dialogfield.DialogField;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.IDialogFieldApplyListener;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.LayoutUtil;
 import org.eclipse.jst.jsf.common.ui.internal.dialogfield.StringDialogField;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.ConverterClassType;
 import org.eclipse.jst.jsf.facesconfig.emf.ConverterForClassType;
 import org.eclipse.jst.jsf.facesconfig.emf.ConverterIdType;
@@ -262,8 +263,8 @@ public class ConverterGeneralSection extends AbstractFacesConfigSection {
 		// converterClassField.setRequired(true);
 		converterClassField
 				.setLabelText(EditorMessages.ConverterGeneralSection_Label_ConverterClass);
-		converterClassField.setProject((IProject) getPage().getEditor()
-				.getAdapter(IProject.class));
+		IProject project = getPage().getEditor().getAdapter(IProject.class);
+		converterClassField.setProject(project);
 		converterClassField.doFillIntoGrid(toolkit, container, numberOfColumns);
 		LayoutUtil.setHorizontalGrabbing(converterClassField.getTextControl(
 				toolkit, container));
@@ -292,7 +293,10 @@ public class ConverterGeneralSection extends AbstractFacesConfigSection {
 					}
 				});
 		converterClassField
-				.setInterface(IFacesConfigConstants.CONVERTER_INTERFACE);
+				.setInterface(
+						JSFVersion.guessAtLeast(JSFVersion.V3_0, project) ?
+								IFacesConfigConstants.CONVERTER_INTERFACE_JAKARTA :
+									IFacesConfigConstants.CONVERTER_INTERFACE);
 	}
 
 	/**

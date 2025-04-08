@@ -47,7 +47,8 @@ import org.eclipse.jst.jsf.designtime.symbols.JSFSymbolFactory;
  */
 public class DefaultDTPropertyResolver extends AbstractDTPropertyResolver
 {
-	private static final String UICOMPONENT_SYMBOL_SIGNATURE 	= "Ljavax.faces.component.UIComponent;"; //$NON-NLS-1$
+	private static final String UICOMPONENT_SYMBOL_SIGNATURE 			= "Ljavax.faces.component.UIComponent;"; //$NON-NLS-1$
+	private static final String UICOMPONENT_JAKARTA_SYMBOL_SIGNATURE 	= "Ljakarta.faces.component.UIComponent;"; //$NON-NLS-1$
 	private static final String ATTRS_SYMBOL_NAME 				= "attrs"; //$NON-NLS-1$
 
 	private JSFSymbolFactory 	_symbolFactory 					= new JSFSymbolFactory();
@@ -257,7 +258,7 @@ public class DefaultDTPropertyResolver extends AbstractDTPropertyResolver
 
     private ISymbol getCCAttrsSymbolIfNecessary(final ITypeDescriptor typeDesc) {
     	ISymbol attrsSymbol = null;
-    	if (typeDesc.instanceOf(UICOMPONENT_SYMBOL_SIGNATURE) &&
+    	if ((typeDesc.instanceOf(UICOMPONENT_SYMBOL_SIGNATURE) || typeDesc.instanceOf(UICOMPONENT_JAKARTA_SYMBOL_SIGNATURE)) &&
     			JSFAppConfigUtils.isValidJSFProject(_project, IJSFCoreConstants.FACET_VERSION_2_0)) {
     		attrsSymbol = _symbolFactory.createUnknownInstanceSymbol(ATTRS_SYMBOL_NAME, ERuntimeSource.BUILT_IN_SYMBOL_LITERAL);    		
     	}

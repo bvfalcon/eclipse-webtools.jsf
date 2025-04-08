@@ -114,11 +114,12 @@ public final class JSFSymbolFactory extends InitializedSymbolFactory
     /**
      * @param type
      * @return <code>true</code>, if the given {@link ValueType} represents
-     *         an instance of <code>javax.faces.model.DataModel</code>
+     *         an instance of <code>javax.faces.model.DataModel</code> or
+     *         <code>jakarta.faces.model.DataModel</code>
      */
     private boolean isFacesDataModel(ValueType type)
     {
-        return type.isInstanceOf(TypeConstants.TYPE_DATA_MODEL);
+        return type.isInstanceOf(TypeConstants.TYPE_DATA_MODEL) || type.isInstanceOf(TypeConstants.TYPE_DATA_MODEL_JAKARTA);
     }
 
     /**

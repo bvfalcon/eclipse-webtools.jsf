@@ -37,6 +37,7 @@ import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.adapter.MaintainDefa
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl.JSFLibraryImpl#getID <em>ID</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl.JSFLibraryImpl#getName <em>Name</em>}</li>
@@ -45,10 +46,8 @@ import org.eclipse.jst.jsf.core.internal.jsflibraryregistry.adapter.MaintainDefa
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl.JSFLibraryImpl#isImplementation <em>Implementation</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl.JSFLibraryImpl#getArchiveFiles <em>Archive Files</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
- * @deprecated
  */
 public class JSFLibraryImpl extends EObjectImpl implements JSFLibrary {
 	/**
@@ -543,15 +542,15 @@ public class JSFLibraryImpl extends EObjectImpl implements JSFLibrary {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (ID: "); //$NON-NLS-1$
+		result.append(" (ID: ");
 		result.append(id);
-		result.append(", Name: "); //$NON-NLS-1$
+		result.append(", Name: ");
 		result.append(name);
-		result.append(", JSFVersion: "); //$NON-NLS-1$
+		result.append(", JSFVersion: ");
 		result.append(jsfVersion);
-		result.append(", Deployed: "); //$NON-NLS-1$
+		result.append(", Deployed: ");
 		result.append(deployed);
-		result.append(", Implementation: "); //$NON-NLS-1$
+		result.append(", Implementation: ");
 		result.append(implementation);
 		result.append(')');
 		return result.toString();

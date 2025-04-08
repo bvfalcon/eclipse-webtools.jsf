@@ -46,7 +46,8 @@ public class ELValidationUtil {
 				if (javaProject != null) {
 					try {
 						final IType type = javaProject.findType("javax.el.ValueReference"); //$NON-NLS-1$
-						isEL22 = (type != null); 
+						final IType typeJakartaEE = javaProject.findType("jakarta.el.ValueReference"); //$NON-NLS-1$
+						isEL22 = (type != null || typeJakartaEE != null); 
 					} catch (JavaModelException ignored) {
 						//ignore; isEL22 will remain false
 					}

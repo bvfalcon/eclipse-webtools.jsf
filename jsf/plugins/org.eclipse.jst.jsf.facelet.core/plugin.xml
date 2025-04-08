@@ -82,4 +82,18 @@
     </domainSourceModelTypeTranslator>                
   </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated facelet-taglib-2_0 -->
+      <package
+            uri="http://java.sun.com/xml/ns/javaee/web-facelettaglibrary_2_0"
+            class="org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.FaceletTaglibPackage"
+            genModel="model/facelet-taglib-2_0.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated facelet-taglib-2_0 -->
+      <parser
+            type="taglib.xml"
+            class="org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.util.FaceletTaglibResourceFactoryImpl"/>
+   </extension>
 </plugin>

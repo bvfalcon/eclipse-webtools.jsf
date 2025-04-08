@@ -77,6 +77,10 @@ public class JSFAppConfigUtils {
 	 * Name of JSF CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES").
 	 */
 	public static final String CONFIG_FILES_CONTEXT_PARAM_NAME = "javax.faces.CONFIG_FILES"; //$NON-NLS-1$
+	/**
+	 * Name of Jakarta Faces CONFIG_FILES context parameter ("jakarta.faces.CONFIG_FILES").
+	 */
+	public static final String CONFIG_FILES_CONTEXT_PARAM_NAME_JAKARTA = "jakarta.faces.CONFIG_FILES"; //$NON-NLS-1$
 
 	/**
 	 * Location in JAR file of application configuration resource file
@@ -227,7 +231,8 @@ public class JSFAppConfigUtils {
 	 * @param project IProject instance for which to get the context
 	 * parameter's value.
 	 * @return List of application configuration file names as listed in the
-	 * JSF CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES"); list
+	 * JSF CONFIG_FILES context parameter ("javax.faces.CONFIG_FILES" or
+	 * "jakarta.faces.CONFIG_FILES"); list
 	 * may be empty.
 	 */
 	public static List getConfigFilesFromContextParam(IProject project) {
@@ -252,7 +257,7 @@ public class JSFAppConfigUtils {
 		Iterator itContextParams = contextParams.iterator();
 		while (itContextParams.hasNext()) {
 			org.eclipse.jst.javaee.core.ParamValue paramValue = (org.eclipse.jst.javaee.core.ParamValue)itContextParams.next();
-			if (paramValue.getParamName().equals(CONFIG_FILES_CONTEXT_PARAM_NAME)) {
+			if (paramValue.getParamName().equals(CONFIG_FILES_CONTEXT_PARAM_NAME) || paramValue.getParamName().equals(CONFIG_FILES_CONTEXT_PARAM_NAME_JAKARTA)) {
 				filesString = paramValue.getParamValue();
 				break;
 			}
@@ -281,7 +286,8 @@ public class JSFAppConfigUtils {
 						Iterator itContexts = contexts.iterator();
 						while (itContexts.hasNext()) {
 							ContextParam contextParam = (ContextParam)itContexts.next();
-							if (contextParam.getParamName().equals(CONFIG_FILES_CONTEXT_PARAM_NAME)) {
+							if (contextParam.getParamName().equals(CONFIG_FILES_CONTEXT_PARAM_NAME)
+									|| contextParam.getParamName().equals(CONFIG_FILES_CONTEXT_PARAM_NAME_JAKARTA)) {
 								filesString = contextParam.getParamValue();
 								break;
 							}
@@ -291,7 +297,8 @@ public class JSFAppConfigUtils {
 						Iterator itContextParams = contextParams.iterator();
 						while (itContextParams.hasNext()) {
 							ParamValue paramValue = (ParamValue)itContextParams.next();
-							if (paramValue.getName().equals(CONFIG_FILES_CONTEXT_PARAM_NAME)) {
+							if (paramValue.getName().equals(CONFIG_FILES_CONTEXT_PARAM_NAME)
+									|| paramValue.getName().equals(CONFIG_FILES_CONTEXT_PARAM_NAME_JAKARTA)) {
 								filesString = paramValue.getValue();
 								break;
 							}

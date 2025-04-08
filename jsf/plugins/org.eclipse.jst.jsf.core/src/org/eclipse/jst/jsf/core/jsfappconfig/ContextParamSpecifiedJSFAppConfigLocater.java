@@ -294,7 +294,9 @@ public class ContextParamSpecifiedJSFAppConfigLocater extends WebContentRelative
 				else if (contextParam instanceof org.eclipse.jst.javaee.core.ParamValue)
 					name = ((org.eclipse.jst.javaee.core.ParamValue)contextParam).getParamName();
 
-				if (name != null && name.equals(JSFAppConfigUtils.CONFIG_FILES_CONTEXT_PARAM_NAME)) {
+				if (name != null &&
+						(name.equals(JSFAppConfigUtils.CONFIG_FILES_CONTEXT_PARAM_NAME)
+								|| name.equals(JSFAppConfigUtils.CONFIG_FILES_CONTEXT_PARAM_NAME_JAKARTA))) {
 					isConfigFiles = true;
 				}
 			}
@@ -318,7 +320,9 @@ public class ContextParamSpecifiedJSFAppConfigLocater extends WebContentRelative
 				else if (paramVal instanceof org.eclipse.jst.javaee.core.ParamValue)
 					name = ((org.eclipse.jst.javaee.core.ParamValue)paramVal).getParamName();
 				
-				if (name != null && name.equals(JSFAppConfigUtils.CONFIG_FILES_CONTEXT_PARAM_NAME)) {
+				if (name != null &&
+						(name.equals(JSFAppConfigUtils.CONFIG_FILES_CONTEXT_PARAM_NAME)
+								|| name.equals(JSFAppConfigUtils.CONFIG_FILES_CONTEXT_PARAM_NAME_JAKARTA))) {
 					isConfigFiles = true;
 				}
 			}

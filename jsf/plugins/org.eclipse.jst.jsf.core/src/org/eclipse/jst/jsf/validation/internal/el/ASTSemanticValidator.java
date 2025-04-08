@@ -18,6 +18,7 @@ import java.io.IOException;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.jdt.core.Signature;
 import org.eclipse.jst.jsf.common.internal.types.BooleanLiteralType;
 import org.eclipse.jst.jsf.common.internal.types.FloatLiteralType;
 import org.eclipse.jst.jsf.common.internal.types.IntegerLiteralType;
@@ -26,6 +27,8 @@ import org.eclipse.jst.jsf.common.internal.types.MethodType;
 import org.eclipse.jst.jsf.common.internal.types.NullLiteralType;
 import org.eclipse.jst.jsf.common.internal.types.SignatureBasedType;
 import org.eclipse.jst.jsf.common.internal.types.StringLiteralType;
+import org.eclipse.jst.jsf.common.internal.types.TypeCoercer;
+import org.eclipse.jst.jsf.common.internal.types.TypeTransformer;
 import org.eclipse.jst.jsf.common.internal.types.ValueType;
 import org.eclipse.jst.jsf.context.resolver.structureddocument.IStructuredDocumentContextResolverFactory;
 import org.eclipse.jst.jsf.context.resolver.structureddocument.IWorkspaceContextResolver;
@@ -299,6 +302,19 @@ class ASTSemanticValidator implements JSPELParserVisitor, IExpressionSemanticVal
                     ((EvaluationTracker)data).
                     setType(unaryOp.performOperation ((ValueType)type));
                 }
+                else if (type instanceof MethodType) {
+                    final UnaryOperator unaryOp = UnaryOperator.createUnaryOperator(firstToken, _diagnosticFactory);
+                    final Diagnostic diagnostic = unaryOp.validate((MethodType)type);
+
+                    if (diagnostic.getSeverity() != Diagnostic.OK)
+                    {
+                        final int offset = _context.getDocumentPosition() + firstToken.beginColumn - 1;
+                        final int length = node.getLastToken().endColumn - firstToken.beginColumn+1;
+                        _reporter.report(diagnostic, offset, length);
+                    }
+
+//                    ((EvaluationTracker)data).setType(unaryOp.performOperation ((MethodType)type));
+                }
                 // cannot apply operations to method bindings
                 else
                 {
@@ -554,10 +570,14 @@ class ASTSemanticValidator implements JSPELParserVisitor, IExpressionSemanticVal
         }
         else if (type instanceof MethodType)
         {
-            final int offset = _context.getDocumentPosition() + node.getFirstToken().beginColumn - 1;
-            final int length = node.getLastToken().endColumn - node.getFirstToken().beginColumn+1;
-            final Diagnostic diagnostic = _diagnosticFactory.create_CANNOT_APPLY_OPERATOR_TO_METHOD_BINDING();
-            _reporter.report(diagnostic, offset, length);
+            boolean canCoerce = TypeCoercer.canCoerceToBoolean(
+                    TypeTransformer.transformBoxPrimitives(Signature.getReturnType(type.getSignature())));
+            if (!canCoerce) {
+                final int offset = _context.getDocumentPosition() + node.getFirstToken().beginColumn - 1;
+                final int length = node.getLastToken().endColumn - node.getFirstToken().beginColumn+1;
+                final Diagnostic diagnostic = _diagnosticFactory.create_CANNOT_APPLY_OPERATOR_TO_METHOD_BINDING();
+                _reporter.report(diagnostic, offset, length);
+            }
         }
 
         return null;

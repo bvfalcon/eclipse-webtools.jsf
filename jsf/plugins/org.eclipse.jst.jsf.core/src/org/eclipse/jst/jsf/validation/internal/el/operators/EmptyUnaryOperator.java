@@ -17,6 +17,7 @@ package org.eclipse.jst.jsf.validation.internal.el.operators;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.jdt.core.Signature;
 import org.eclipse.jst.jsf.common.internal.types.BooleanLiteralType;
+import org.eclipse.jst.jsf.common.internal.types.MethodType;
 import org.eclipse.jst.jsf.common.internal.types.NullLiteralType;
 import org.eclipse.jst.jsf.common.internal.types.StringLiteralType;
 import org.eclipse.jst.jsf.common.internal.types.TypeConstants;
@@ -120,5 +121,10 @@ import org.eclipse.jst.jsf.validation.internal.el.diagnostics.DiagnosticFactory;
         }
         
         return Diagnostic.OK_INSTANCE;
+    }
+
+    @Override
+    public Diagnostic validate(MethodType type) {
+        return _diagnosticFactory.create_CANNOT_APPLY_OPERATOR_TO_METHOD_BINDING();
     }
 }

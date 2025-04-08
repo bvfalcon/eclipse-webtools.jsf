@@ -149,17 +149,10 @@
 				<value xsi:type="mdt:StringValue">default</value>
 			</trait>
 		</entity>
-		<entity id="type">			
+		<entity id="type">
 			<trait id="attribute-value-runtime-type">
 				<value xsi:type="mdt:StringValue">
-					org.eclipse.jst.jsf.core.attributevalues.StringType
-				</value>
-			</trait>
-			<trait id="valid-values">
-				<value xsi:type="mdt:ListOfValues">
-					<item>date</item>
-					<item>time</item>
-					<item>both</item>
+					org.eclipse.jst.jsf.core.attributevalues.DateTimeType
 				</value>
 			</trait>
 			<trait id="default-value">

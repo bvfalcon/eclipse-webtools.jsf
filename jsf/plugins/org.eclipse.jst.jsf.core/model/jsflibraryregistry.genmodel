@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2005 Oracle Corporation"
-    modelDirectory="/org.eclipse.jst.jsf.core/src" editDirectory="/org.eclipse.jst.jsf.core.edit/src"
-    editorDirectory="/org.eclipse.jst.jsf.core.editor/src" modelPluginID="org.eclipse.jst.jsf.core"
-    templateDirectory="templates" dynamicTemplates="true" modelName="JSFLibraryRegistry"
-    importerID="org.eclipse.emf.importer.ecore">
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2005 Oracle Corporation" modelDirectory="/org.eclipse.jst.jsf.core/src"
+    editDirectory="/org.eclipse.jst.jsf.core.edit/src" editorDirectory="/org.eclipse.jst.jsf.core.editor/src"
+    modelPluginID="org.eclipse.jst.jsf.core" templateDirectory="templates" dynamicTemplates="true"
+    modelName="JSFLibraryRegistry" importerID="org.eclipse.emf.importer.ecore">
   <foreignModel>jsflibraryregistry.ecore</foreignModel>
   <genPackages prefix="JSFLibraryRegistry" basePackage="org.eclipse.jst.jsf.core.internal"
       resource="XML" disposableProviderFactory="true" ecorePackage="jsflibraryregistry.ecore#/">
@@ -13,6 +11,13 @@
       <genEnumLiterals ecoreEnumLiteral="jsflibraryregistry.ecore#//JSFVersion/UNKNOWN"/>
       <genEnumLiterals ecoreEnumLiteral="jsflibraryregistry.ecore#//JSFVersion/v1_1"/>
       <genEnumLiterals ecoreEnumLiteral="jsflibraryregistry.ecore#//JSFVersion/v1_2"/>
+      <genEnumLiterals ecoreEnumLiteral="jsflibraryregistry.ecore#//JSFVersion/v2_0"/>
+      <genEnumLiterals ecoreEnumLiteral="jsflibraryregistry.ecore#//JSFVersion/v2_1"/>
+      <genEnumLiterals ecoreEnumLiteral="jsflibraryregistry.ecore#//JSFVersion/v2_2"/>
+      <genEnumLiterals ecoreEnumLiteral="jsflibraryregistry.ecore#//JSFVersion/v2_3"/>
+      <genEnumLiterals ecoreEnumLiteral="jsflibraryregistry.ecore#//JSFVersion/v3_0"/>
+      <genEnumLiterals ecoreEnumLiteral="jsflibraryregistry.ecore#//JSFVersion/v4_0"/>
+      <genEnumLiterals ecoreEnumLiteral="jsflibraryregistry.ecore#//JSFVersion/v4_1"/>
     </genEnums>
     <genClasses ecoreClass="jsflibraryregistry.ecore#//JSFLibraryRegistry">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jsflibraryregistry.ecore#//JSFLibraryRegistry/DefaultImplementationID"/>

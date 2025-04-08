@@ -51,16 +51,15 @@ import org.osgi.framework.Bundle;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl.ArchiveFileImpl#isRelativeToWorkspace <em>Relative To Workspace</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl.ArchiveFileImpl#getSourceLocation <em>Source Location</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl.ArchiveFileImpl#getRelativeDestLocation <em>Relative Dest Location</em>}</li>
  *   <li>{@link org.eclipse.jst.jsf.core.internal.jsflibraryregistry.impl.ArchiveFileImpl#getJSFLibrary <em>JSF Library</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
- * @deprecated
  */
 public class ArchiveFileImpl extends EObjectImpl implements ArchiveFile {
 	/**
@@ -253,8 +252,8 @@ public class ArchiveFileImpl extends EObjectImpl implements ArchiveFile {
 	 * @generated
 	 */
 	public JSFLibrary getJSFLibrary() {
-		if (eContainerFeatureID != JSFLibraryRegistryPackage.ARCHIVE_FILE__JSF_LIBRARY) return null;
-		return (JSFLibrary)eContainer();
+		if (eContainerFeatureID() != JSFLibraryRegistryPackage.ARCHIVE_FILE__JSF_LIBRARY) return null;
+		return (JSFLibrary)eInternalContainer();
 	}
 
 	/**
@@ -277,9 +276,9 @@ public class ArchiveFileImpl extends EObjectImpl implements ArchiveFile {
 	 * @generated
 	 */
 	public void setJSFLibrary(JSFLibrary newJSFLibrary) {
-		if (newJSFLibrary != eInternalContainer() || (eContainerFeatureID != JSFLibraryRegistryPackage.ARCHIVE_FILE__JSF_LIBRARY && newJSFLibrary != null)) {
+		if (newJSFLibrary != eInternalContainer() || (eContainerFeatureID() != JSFLibraryRegistryPackage.ARCHIVE_FILE__JSF_LIBRARY && newJSFLibrary != null)) {
 			if (EcoreUtil.isAncestor(this, newJSFLibrary))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -544,7 +543,7 @@ public class ArchiveFileImpl extends EObjectImpl implements ArchiveFile {
 	 * @generated
 	 */
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID) {
+		switch (eContainerFeatureID()) {
 			case JSFLibraryRegistryPackage.ARCHIVE_FILE__JSF_LIBRARY:
 				return eInternalContainer().eInverseRemove(this, JSFLibraryRegistryPackage.JSF_LIBRARY__ARCHIVE_FILES, JSFLibrary.class, msgs);
 		}
@@ -695,11 +694,11 @@ public class ArchiveFileImpl extends EObjectImpl implements ArchiveFile {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (RelativeToWorkspace: "); //$NON-NLS-1$
+		result.append(" (RelativeToWorkspace: ");
 		result.append(relativeToWorkspace);
-		result.append(", SourceLocation: "); //$NON-NLS-1$
+		result.append(", SourceLocation: ");
 		result.append(sourceLocation);
-		result.append(", RelativeDestLocation: "); //$NON-NLS-1$
+		result.append(", RelativeDestLocation: ");
 		result.append(relativeDestLocation);
 		result.append(')');
 		return result.toString();

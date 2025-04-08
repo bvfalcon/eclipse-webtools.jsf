@@ -684,6 +684,10 @@
     <eLiterals name="_20" literal="2.0"/>
     <eLiterals name="_21" value="1" literal="2.1"/>
     <eLiterals name="_22" value="2" literal="2.2"/>
+    <eLiterals name="_23" value="3" literal="2.3"/>
+    <eLiterals name="_30" value="4" literal="3.0"/>
+    <eLiterals name="_40" value="5" literal="4.0"/>
+    <eLiterals name="_41" value="6" literal="4.1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="FaceletTaglibVersionTypeObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">

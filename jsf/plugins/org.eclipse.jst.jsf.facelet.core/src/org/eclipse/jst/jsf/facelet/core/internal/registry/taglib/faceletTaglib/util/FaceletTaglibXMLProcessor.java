@@ -35,33 +35,32 @@ public class FaceletTaglibXMLProcessor extends XMLProcessor
 {
 
     /**
-     * Public constructor to instantiate the helper.
-     * <!-- begin-user-doc -->
+	 * Public constructor to instantiate the helper.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public FaceletTaglibXMLProcessor()
     {
-        super((EPackage.Registry.INSTANCE));
-        FaceletTaglibPackage.eINSTANCE.eClass();
-    }
+		super((EPackage.Registry.INSTANCE));
+		FaceletTaglibPackage.eINSTANCE.eClass();
+	}
     
     /**
-     * Register for "*" and "xml" file extensions the FaceletTaglibResourceFactoryImpl factory.
-     * <!-- begin-user-doc -->
+	 * Register for "*" and "xml" file extensions the FaceletTaglibResourceFactoryImpl factory.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     protected Map<String, Resource.Factory> getRegistrations()
     {
-        if (registrations == null)
-        {
-            super.getRegistrations();
-            registrations.put(XML_EXTENSION, new FaceletTaglibResourceFactoryImpl());
-            registrations.put(STAR_EXTENSION, new FaceletTaglibResourceFactoryImpl());
-        }
-        return registrations;
-    }
+		if (registrations == null) {
+			super.getRegistrations();
+			registrations.put(XML_EXTENSION, new FaceletTaglibResourceFactoryImpl());
+			registrations.put(STAR_EXTENSION, new FaceletTaglibResourceFactoryImpl());
+		}
+		return registrations;
+	}
 
 } //FaceletTaglibXMLProcessor

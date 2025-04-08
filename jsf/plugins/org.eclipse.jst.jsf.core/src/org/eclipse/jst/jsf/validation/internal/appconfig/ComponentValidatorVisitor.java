@@ -16,6 +16,7 @@ import java.util.List;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.facesconfig.emf.ComponentClassType;
 import org.eclipse.jst.jsf.facesconfig.emf.FacesConfigPackage;
 import org.eclipse.jst.jsf.facesconfig.emf.FacetNameType;
@@ -68,7 +69,9 @@ public class ComponentValidatorVisitor extends EObjectValidationVisitor
         }
 
         protected String getInstanceOf() {
-            return "javax.faces.component.UIComponent"; //$NON-NLS-1$
+            return getJSFVersion().compareTo(JSFVersion.V3_0) >= 0 ?
+                    "jakarta.faces.component.UIComponent" : //$NON-NLS-1$
+                    "javax.faces.component.UIComponent"; //$NON-NLS-1$
         }
 
         protected EObjectValidationVisitor[] getChildNodeValidators() {

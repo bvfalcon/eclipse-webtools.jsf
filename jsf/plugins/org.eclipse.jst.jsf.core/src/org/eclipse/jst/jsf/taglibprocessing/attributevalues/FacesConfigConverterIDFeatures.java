@@ -20,6 +20,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
+import org.eclipse.jst.jsf.core.JSFVersion;
 import org.eclipse.jst.jsf.core.jsfappconfig.JSFAppConfigManager;
 import org.eclipse.jst.jsf.facesconfig.emf.ConverterType;
 import org.eclipse.jst.jsf.metadataprocessors.features.PossibleValue;
@@ -38,6 +39,10 @@ public class FacesConfigConverterIDFeatures extends FacesConfigIdentifierFeature
 	 */
 	protected static final String CONVERTER = "javax.faces.convert.Converter"; //$NON-NLS-1$
 	/**
+	 * Faces converter classname (Jakarta EE)
+	 */
+	protected static final String CONVERTER_JAKARTA = "jakarta.faces.convert.Converter"; //$NON-NLS-1$
+	/**
 	 * Imagename to use when displaying converter
 	 */
 	protected static final String IMAGE_NAME = "/icons/full/obj16/FacesConfig_Converter.gif"; //$NON-NLS-1$
@@ -54,7 +59,9 @@ public class FacesConfigConverterIDFeatures extends FacesConfigIdentifierFeature
 	/* (non-Javadoc)
 	 * @see org.eclipse.jst.jsf.taglibprocessing.attributevalues.FacesConfigIdentifierFeatures#getReturnType()
 	 */
-	protected String getReturnType(){ return CONVERTER;}
+	protected String getReturnType() {
+		return JSFVersion.guessAtLeast(JSFVersion.V3_0, getProject2()) ? CONVERTER_JAKARTA : CONVERTER;
+	}
 	
 	/* (non-Javadoc)
 	 * @see org.eclipse.jst.jsf.taglibprocessing.attributevalues.FacesConfigIdentifierFeatures#getPossibleValueProposals(java.util.List)

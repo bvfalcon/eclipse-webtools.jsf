@@ -20,6 +20,7 @@ import org.eclipse.jst.jsf.common.internal.types.FloatLiteralType;
 import org.eclipse.jst.jsf.common.internal.types.IAssignable;
 import org.eclipse.jst.jsf.common.internal.types.IntegerLiteralType;
 import org.eclipse.jst.jsf.common.internal.types.LiteralType;
+import org.eclipse.jst.jsf.common.internal.types.MethodType;
 import org.eclipse.jst.jsf.common.internal.types.StringLiteralType;
 import org.eclipse.jst.jsf.common.internal.types.TypeCoercer;
 import org.eclipse.jst.jsf.common.internal.types.TypeCoercionException;
@@ -214,4 +215,8 @@ import org.eclipse.jst.jsf.validation.internal.el.diagnostics.DiagnosticFactory;
         return null;
     }
 
+    @Override
+    public Diagnostic validate(MethodType type) {
+        return _diagnosticFactory.create_CANNOT_APPLY_OPERATOR_TO_METHOD_BINDING();
+    }
 }

@@ -20,17 +20,20 @@ Require-Bundle: org.eclipse.jst.jsf.core;bundle-version="[1.1.0,2.0.0)",
  org.eclipse.wst.xml.ui;bundle-version="[1.0.100,2.0.0)",
  org.eclipse.wst.sse.ui;bundle-version="[1.0.101,2.0.0)",
  org.eclipse.emf.ecore;bundle-version="[2.2.0,3.0.0)",
- org.eclipse.jst.jsp.ui;bundle-version="[1.3.0,2.0.0)",
+ org.eclipse.jst.jsf.ui;bundle-version="[1.3.0,2.0.0)",
  org.eclipse.ui.forms;bundle-version="[3.2.0,4.0.0)",
  org.eclipse.wst.sse.core;bundle-version="[1.0.101,2.0.0)",
  org.eclipse.ui.forms;bundle-version="[3.2.0,4.0.0)",
  org.eclipse.jst.jsf.common.runtime;bundle-version="[1.0.0,2.0.0)",
+ org.eclipse.jst.jsf.core;bundle-version="[1.1.0,2.0.0)",
  org.eclipse.jst.jsp.core;bundle-version="[1.1.0,2.0.0)",
+ org.eclipse.jst.jsp.ui;bundle-version="[1.1.0,2.0.0)",
  org.eclipse.wst.validation;bundle-version="[1.1.0,2.0.0)",
  org.eclipse.jst.jsf.common.ui;bundle-version="[1.0.1,2.0.0)",
  org.eclipse.ui.ide;bundle-version="[3.4.0,4.0.0)",
  org.eclipse.jst.common.project.facet.ui;bundle-version="[1.3.1,2.0.0)",
- org.eclipse.jst.common.project.facet.core;bundle-version="[1.3.100,2.0.0)"
+ org.eclipse.jst.common.project.facet.core;bundle-version="[1.3.100,2.0.0)",
+ org.eclipse.wst.html.core
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.jst.jsf.ui.internal;x-friends:="org.eclipse.jst.jsf.ui.tests",
  org.eclipse.jst.jsf.ui.internal.classpath;x-friends:="org.eclipse.jst.jsf.ui.tests",
@@ -45,3 +48,8 @@ Export-Package: org.eclipse.jst.jsf.ui.internal;x-friends:="org.eclipse.jst.jsf.
  org.eclipse.jst.jsf.ui.internal.tagregistry;x-internal:=true,
  org.eclipse.jst.jsf.ui.internal.validation;x-internal:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-17
+Import-Package: org.eclipse.ui.texteditor.templates,
+ org.eclipse.wst.css.core.text,
+ org.eclipse.wst.css.ui,
+ org.eclipse.wst.html.core.text,
+ org.eclipse.wst.html.ui
